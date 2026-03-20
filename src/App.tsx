@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from '@/pages/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-100">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Tailwind CSS v4 + React + TypeScript + Vite 🎉
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

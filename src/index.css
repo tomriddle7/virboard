@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 이벤트 막대 사이의 상하 여백을 줄여줍니다 */
+.rbc-row-segment {
+  padding: 0 1px 3px 1px !important;
+}
+
+/* 이벤트 막대 자체의 높이를 조금 슬림하게 만듭니다 */
+.rbc-event {
+  @apply !bg-transparent !border-none !p-0;
+  min-height: 16px !important; /* 필요하다면 높이를 살짝 줄여주세요 */
+}
+
+/* 일요일 - 헤더 요일과 날짜 숫자를 빨간색으로 */
+.rbc-header:first-child,
+.rbc-date-cell:first-child {
+  @apply text-red-500 dark:text-red-400;
+}
+
+/* 토요일 - 헤더 요일과 날짜 숫자를 파란색으로 */
+.rbc-header:last-child,
+.rbc-date-cell:last-child {
+  @apply text-blue-500 dark:text-blue-400;
+}
+
+/* --- 다크 모드용 RBC 달력 스타일 오버라이딩 --- */
+.dark .rbc-calendar {
+  @apply text-gray-200;
+}
+.dark .rbc-header {
+  @apply border-gray-700 bg-gray-800 text-gray-300;
+}
+.dark .rbc-month-view,
+.dark .rbc-month-row,
+.dark .rbc-day-bg {
+  @apply border-gray-700;
+}
+.dark .rbc-day-bg:hover {
+  @apply bg-gray-800/50; /* 다크 모드에서의 마우스 호버 효과 */
+}
+.dark .rbc-today {
+  @apply bg-gray-800; /* 오늘 날짜 배경색 */
+}
+.dark .rbc-date-cell {
+  @apply text-gray-300;
+}
+.dark .rbc-off-range-bg {
+  @apply bg-gray-900/50; /* 이번 달이 아닌 날짜 배경색 */
+}
+.dark button {
+  @apply text-gray-300 border-gray-700;
+}
