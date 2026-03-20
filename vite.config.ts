@@ -24,6 +24,6 @@ export default defineConfig(({ mode }) => {
     build: {
       sourcemap: false,
     },
-    base: env.VITE_BASE_URL,
+    base: '/virboard',
   };
 })
