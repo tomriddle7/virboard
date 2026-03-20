@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Calendar,
   dateFnsLocalizer,
@@ -9,7 +9,6 @@ import { format, parse, startOfWeek, getDay } from 'date-fns'
 import { ko } from 'date-fns/locale'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import type { VtuberEvent, RawEvent } from '@/types/Event'
-import celebration from '@/../celebration.json'
 
 // 2. date-fns 로컬라이저 설정 (한국어 달력 지원)
 const locales = {
@@ -86,14 +85,32 @@ const CustomEvent: React.FC<EventProps<VtuberEvent>> = ({ event }) => {
 function Home() {
   const [date, setDate] = useState<Date>(new Date(2026, 2, 1));
   const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
+  const [events, setEvents] = useState<VtuberEvent[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const [events, setEvents] = useState<VtuberEvent[]>(() => {
-    return celebration.map((event: RawEvent) => ({
-      ...event,
-      start: new Date(event.start),
-      end: new Date(event.end),
-    }));
-  });
+  useEffect(() => {
+    (async () => {
+      try {
+        const timestamp = new Date().getTime();
+        const response = await fetch(`${import.meta.env.BASE_URL}celebration.json?t=${timestamp}`);
+        
+        if (!response.ok) throw new Error("Faild to load data.");
+        
+        const data = await response.json();
+        const parsedEvents: VtuberEvent[] = data.map((event: RawEvent) => ({
+          ...event,
+          start: new Date(event.start),
+          end: new Date(event.end),
+        }));
+
+        setEvents(parsedEvents);
+      } catch (error) {
+        console.error("fetch error:", error);
+      } finally {
+        setIsLoading(false);
+    }
+    })();
+  }, []);
 
   const closeModal = () => setSelectedEvent(null);
 
