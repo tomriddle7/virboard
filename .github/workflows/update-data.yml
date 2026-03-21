@@ -2,64 +2,75 @@ name: Update Data and Deploy to GitHub Pages
 
 on:
   schedule:
-    - cron: '0 15 * * *' # 매일 한국시간 자정(00:00)에 실행
+    - cron: '0 4,15 * * *' # 매일 한국시간 자정(00:00) 및 낮 12시 실행
   workflow_dispatch: # 수동 실행 버튼
+    inputs:
+      deploy_only:
+        description: '데이터 가져오기(Fetch)를 생략하고 디자인/코드 빌드 배포만 실행'
+        type: boolean
+        required: false
+        default: false
 
 permissions:
-  contents: write # main 및 gh-pages 브랜치에 푸시할 권한 필요
+  contents: write
 
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. 내 깃허브 저장소의 코드를 가져옵니다.
+      # 1. 저장소 체크아웃
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # ✨ 추가됨: 깃 히스토리를 모두 가져와서 당겨오기(pull) 충돌을 방지합니다.
+          fetch-depth: 0 
 
-      # 2. Node.js 환경을 세팅합니다.
+      # 2. Node.js 세팅
       - name: Node.js 세팅
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          cache: 'npm' # npm 캐싱으로 빌드 속도 향상
+          cache: 'npm'
 
       # 3. 프로젝트 패키지 설치
       - name: 패키지 설치 (npm install)
         run: npm install
 
-      # 4. 구글 시트에서 최신 데이터 가져오기 (JSON 갱신)
+      # 4. 구글 시트 데이터 Fetch 
+      # ✨ 수동 배포(deploy_only) 체크박스를 켰다면 이 단계는 건너뜁니다.
       - name: 구글 시트 데이터 Fetch 및 JSON 변환
         run: node scripts/fetch-events.js
 
-      # 5. JSON 파일에 변경 사항이 생겼는지 확인하고 커밋합니다.
+      # 5. 변경 사항 확인 및 커밋
+      # ✨ 변경 사항이 있는지 없는지 깃허브에게(has_changes) 몰래 알려줍니다.
       - name: 변경된 JSON 파일 커밋 및 푸시
+        id: git_commit
+        if: ${{ !inputs.deploy_only }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/celebration.json
           
-          # 변경사항이 있는지 확인하는 더 안전하고 명확한 코드입니다.
           if ! git diff-index --quiet HEAD; then
             echo "변경사항이 감지되었습니다. 커밋을 진행합니다."
             git commit -m "chore: 📅 구글 시트 일정 데이터 자동 동기화"
-            
-            # ✨ 추가됨: 원격 저장소의 최신 변경사항을 부드럽게 병합 (충돌 에러의 핵심 해결책!)
             git pull origin main --rebase --autostash
-            
             git push origin main
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           else
             echo "구글 시트에 새로운 변경사항이 없습니다. 커밋을 건너뜁니다."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
 
       # 6. React 프로젝트 빌드
+      # ✨ 조건: 수동 배포를 눌렀거나 OR 수동 실행이거나 OR 데이터가 변경되었을 때만 빌드!
       - name: 프로젝트 빌드 (npm run build)
+        if: ${{ inputs.deploy_only || github.event_name == 'workflow_dispatch' || steps.git_commit.outputs.has_changes == 'true' }}
         run: npm run build
 
-      # 7. 빌드된 결과물을 gh-pages 브랜치로 자동 배포
+      # 7. GitHub Pages 배포
       - name: GitHub Pages로 배포
+        if: ${{ inputs.deploy_only || github.event_name == 'workflow_dispatch' || steps.git_commit.outputs.has_changes == 'true' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
