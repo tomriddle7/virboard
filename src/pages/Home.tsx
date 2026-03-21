@@ -86,7 +86,7 @@ function Home() {
   const [date, setDate] = useState<Date>(new Date(2026, 2, 1));
   const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
   const [events, setEvents] = useState<VtuberEvent[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
