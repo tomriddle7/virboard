@@ -128,6 +128,7 @@ function Home() {
           onSelectEvent={(event) => setSelectedEvent(event)}
           culture="ko"
           views={["month"]}
+          popup={true}
           components={{
             toolbar: CustomToolbar,
             event: CustomEvent,

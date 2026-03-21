@@ -25,6 +25,16 @@
   @apply text-blue-500 dark:text-blue-400;
 }
 
+/* 팝업 창 전체 박스 스타일링 */
+.rbc-overlay {
+  @apply !bg-white dark:!bg-gray-800 !border !border-gray-200 dark:!border-gray-700 !rounded-xl !shadow-2xl !p-2;
+}
+
+/* 팝업 창 상단의 날짜 제목 부분 */
+.rbc-overlay-header {
+  @apply !font-bold !text-gray-700 dark:!text-gray-200 !border-b !border-gray-100 dark:!border-gray-700 !pb-2 !mb-2;
+}
+
 /* --- 다크 모드용 RBC 달력 스타일 오버라이딩 --- */
 .dark .rbc-calendar {
   @apply text-gray-200;
