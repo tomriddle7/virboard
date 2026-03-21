@@ -2,7 +2,7 @@ name: Update Data and Deploy to GitHub Pages
 
 on:
   schedule:
-    - cron: '0 4,15 * * *' # 매일 한국시간 자정(00:00) 및 낮 12시 실행
+    - cron: '23 5,15 * * *' # 매일 한국시간 자정(00:00) 및 낮 12시 실행
   workflow_dispatch: # 수동 실행 버튼
     inputs:
       deploy_only:
