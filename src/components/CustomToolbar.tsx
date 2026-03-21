@@ -60,4 +60,4 @@ export const CustomEvent: React.FC<EventProps<VtuberEvent>> = ({ event }) => {
       {event.title}
     </div>
   );
-};
+}
