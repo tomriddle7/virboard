@@ -23,7 +23,7 @@ async function fetchAndConvert() {
 
       headers.forEach((header, index) => {
         let value = values[index] ? values[index].replace(/^"|"$/g, '').trim() : "";
-        obj[header] = value;
+        if (!header.startsWith('_')) obj[header] = value;
       });
       return obj;
     });

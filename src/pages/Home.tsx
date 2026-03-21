@@ -92,7 +92,7 @@ function Home() {
     (async () => {
       try {
         const timestamp = new Date().getTime();
-        const response = await fetch(`${import.meta.env.BASE_URL}celebration.json?t=${timestamp}`);
+        const response = await fetch(`${import.meta.env.BASE_URL}/celebration.json?t=${timestamp}`);
         
         if (!response.ok) throw new Error("Faild to load data.");
         
