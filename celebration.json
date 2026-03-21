@@ -70,5 +70,14 @@
     "location": "서울 양재역(3, 신분당) - 3호선 환승통로",
     "link": "https://x.com/suiseiad",
     "memo": "광고가 역사 안에 있음."
+  },
+  {
+    "title": "아마네 카나타 2026년 생일 지하철 광고",
+    "start": "2026-04-17",
+    "end": "2026-05-17",
+    "color": "bg-[#87cefa]",
+    "location": "서울 강남역(2, 신분당)",
+    "link": "https://x.com/kanata260422",
+    "memo": ""
   }
 ]
