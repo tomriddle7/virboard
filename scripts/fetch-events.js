@@ -14,15 +14,13 @@ async function fetchAndConvert() {
     const response = await fetch(CSV_URL);
     const csvText = await response.text();
 
-    // TSV 데이터를 줄바꿈으로 나누고, 헤더 추출
     const rows = csvText.split('\n').map(row => row.trim()).filter(row => row);
     const headers = rows[0].split('\t');
 
     const jsonData = rows.slice(1).map(row => {
-      // 탭을 기준으로 데이터를 나눕니다 (따옴표로 묶인 데이터 처리를 위해 정규식 사용)
       const values = row.split(/\t(?=(?:(?:[^"]*"){2})*[^"]*$)/);
       const obj = {};
-      
+
       headers.forEach((header, index) => {
         let value = values[index] ? values[index].replace(/^"|"$/g, '').trim() : "";
         obj[header] = value;
@@ -30,13 +28,20 @@ async function fetchAndConvert() {
       return obj;
     });
 
-    // 기존 celebration.json 파일 덮어쓰기
+    // ✨ 추가된 핵심 로직: public 폴더가 없으면 자동으로 생성합니다!
+    const outputDir = path.dirname(JSON_OUTPUT_PATH);
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+      console.log('public 폴더가 없어서 새로 생성했습니다.');
+    }
+
+    // 기존 celebration.json 파일 덮어쓰기 (이제 에러가 나지 않습니다!)
     fs.writeFileSync(JSON_OUTPUT_PATH, JSON.stringify(jsonData, null, 2), 'utf-8');
     console.log(`성공적으로 ${jsonData.length}개의 일정을 celebration.json에 저장했습니다! 🚀`);
-    
+
   } catch (error) {
     console.error('데이터 갱신 중 오류가 발생했습니다:', error);
-    process.exit(1); // 오류 시 GitHub Action 실패 처리
+    process.exit(1);
   }
 }
 
