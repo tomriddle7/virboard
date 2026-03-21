@@ -24,7 +24,7 @@ function DetailPopup({ selectedEvent, closeModal }: DetailPopupProps) {
         {/* 닫기 버튼 */}
         <button
           onClick={closeModal}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-1 transition-colors"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-1 transition-colors"
         >
           ✕
         </button>
