@@ -6,7 +6,7 @@ on:
   workflow_dispatch: # 수동 실행 버튼
     inputs:
       deploy_only:
-        description: '데이터 가져오기(Fetch)를 생략하고 디자인/코드 빌드 배포만 실행'
+        description: 'Only Deploy Code(Omit Data Fetching)'
         type: boolean
         required: false
         default: false
@@ -22,6 +22,7 @@ jobs:
       VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
       VITE_GAS_URL: ${{ secrets.VITE_GAS_URL }}
       VITE_EVENT_SHEET_URL: ${{ secrets.VITE_EVENT_SHEET_URL }}
+      VITE_VTUBER_SHEET_URL: ${{ secrets.VITE_VTUBER_SHEET_URL }}
 
     steps:
       # 1. 저장소 체크아웃
