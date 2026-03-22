@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+skaffold.yaml
+.k8s*
+telepresence.log
+
+# local env files
+.env.local
+.env.*.local
+
+# env files
+.env
+
+# i18n
+locales

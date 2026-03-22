@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyQDUa2V4vpEmuGqNWqhE7OrJWmo1hakopNbqLhGO10TtVybeUNo-hsceMJ4-p4FWhaLw/exec";
+const SCRIPT_URL = import.meta.env.VITE_GAS_URL;
 
 export default function SubmitPopup({ closeModal }: { closeModal: () => void }) {
   const [formData, setFormData] = useState({

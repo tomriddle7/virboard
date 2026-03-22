@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSg-yT-5-Jf4gATzS6UIj3HLbfXb2uHok6Wccj5ujEd4YbylqetgNN6fqioYWNVWVj-DPqj6FT0wOQZ/pub?gid=392796143&single=true&output=tsv';
+const EVENT_SHEET_URL = process.env.VITE_EVENT_SHEET_URL;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,10 +11,11 @@ const JSON_OUTPUT_PATH = path.join(__dirname, '../public/celebration.json');
 async function fetchAndConvert() {
   try {
     console.log('구글 시트 데이터 가져오는 중...');
-    const response = await fetch(CSV_URL);
-    const csvText = await response.text();
 
-    const rows = csvText.split('\n').map(row => row.trim()).filter(row => row);
+    const response = await fetch(EVENT_SHEET_URL);
+    const eventText = await response.text();
+
+    const rows = eventText.split('\n').map(row => row.trim()).filter(row => row);
     const headers = rows[0].split('\t');
 
     const jsonData = rows.slice(1).map(row => {
