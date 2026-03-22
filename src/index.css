@@ -30,6 +30,20 @@
   @apply !bg-white dark:!bg-gray-800 !border !border-gray-200 dark:!border-gray-700 !rounded-xl !shadow-2xl !p-2;
 }
 
+.rbc-overlay {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  
+  width: 90vw !important;
+  max-width: 350px !important;
+  
+  /* 혹시 모를 여백 충돌 방지 */
+  margin: 0 !important; 
+  box-sizing: border-box;
+}
+
 /* 팝업 창 상단의 날짜 제목 부분 */
 .rbc-overlay-header {
   @apply !font-bold !text-gray-700 dark:!text-gray-200 !border-b !border-gray-100 dark:!border-gray-700 !pb-2 !mb-2;
