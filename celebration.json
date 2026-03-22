@@ -84,7 +84,7 @@
     "title": "2026 텐코 시부키 생일광고(서울)",
     "start": "2026-03-21 0:00",
     "end": "2026-04-18 23:59",
-    "color": "bg-[#f1e4ff]",
+    "color": "bg-[#f1e4ff] text-black",
     "location": "서울 신촌역&홍대입구역",
     "link": "https://x.com/bukibirth",
     "memo": "신촌역: 현대백화점 통로 b2 위치. 홍대입구역: 지하 1층 개찰구 앞에 위치."
@@ -93,7 +93,7 @@
     "title": "2026 텐코 시부키 생일광고(부산)",
     "start": "2026-03-21 0:00",
     "end": "2026-04-18 23:59",
-    "color": "bg-[#f1e4ff]",
+    "color": "bg-[#f1e4ff] text-black",
     "location": "부산 서면역",
     "link": "https://x.com/bukibirth",
     "memo": "12번 출구 방향 a-7 위치."
@@ -183,7 +183,7 @@
     "title": "🎂 텐코 시부키 2026년 생일",
     "start": "2026-03-21 0:00",
     "end": "2026-03-21 23:59",
-    "color": "bg-[#f1e4ff]",
+    "color": "bg-[#f1e4ff] text-black",
     "type": "생일",
     "location": " ",
     "link": ""
