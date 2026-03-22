@@ -183,7 +183,7 @@
     "title": "🎂 텐코 시부키 2026년 생일",
     "start": "2026-03-21 0:00",
     "end": "2026-03-21 23:59",
-    "color": "bg-[#f1e4ff] text-black",
+    "color": "bg-[#f1e4ff] !text-black",
     "type": "생일",
     "location": " ",
     "link": ""
