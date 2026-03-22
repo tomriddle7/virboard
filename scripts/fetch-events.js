@@ -61,12 +61,12 @@ async function fetchAndConvert() {
 
       finalEvents.push({
         ...event,
-        vtuber_name: vName,
-        agency: vtuber ? vtuber.agency : '기타',
-        generation: vtuber ? vtuber.generation : [],
-        unit: vtuber ? vtuber.unit : [],
+        // vtuber_name: vName,
+        // agency: vtuber ? vtuber.agency : '기타',
+        // generation: vtuber ? vtuber.generation : [],
+        // unit: vtuber ? vtuber.unit : [],
         // ✨ 색상 덮어쓰기: 이벤트 전용 색상이 있으면 쓰고, 없으면 마스터 시트 색상 사용
-        color: event.event_color || vColor
+        color: event.color || vColor
       });
     });
 
@@ -74,9 +74,9 @@ async function fetchAndConvert() {
     const currentYear = new Date().getFullYear();
 
     rawVtubers.forEach(vtuber => {
-      if (!vtuber.birthday) return; // 생일 정보가 없는 행은 건너뜁니다.
+      if (!vtuber.birth) return; // 생일 정보가 없는 행은 건너뜁니다.
 
-      const vBirthday = vtuber.birthday.substring(5);
+      const vBirthday = vtuber.birth.substring(5);
       // 올해와 내년의 생일 데이터를 생성합니다.
       [currentYear].forEach(year => {
         let targetDate = `${year}-${vBirthday}`;
@@ -111,7 +111,7 @@ async function fetchAndConvert() {
     }
 
     fs.writeFileSync(JSON_OUTPUT_PATH, JSON.stringify(finalEvents, null, 2), 'utf-8');
-    console.log(`✅ 성공적으로 ${finalEvents.length}개의 일정(생일 포함)을 celebration.json에 저장했습니다! 🚀`);
+    console.log(`✅ 성공적으로 ${rawEvents.length}개의 일정과 ${rawVtubers.length}개의 생일을 celebration.json에 저장했습니다! 🚀`);
 
   } catch (error) {
     console.error('❌ 데이터 갱신 중 오류가 발생했습니다:', error);
