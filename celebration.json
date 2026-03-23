@@ -1,99 +1,121 @@
 [
   {
+    "vtuber_id": "hololive-fantasy-flare",
     "title": "시라누이 후레아 3기생 라이브 플라스타",
     "start": "2026-01-17 0:00",
     "end": "2026-01-18 23:59",
     "color": "bg-[#0e4c6e]",
+    "type": "전광판",
     "location": "요코하마 K아레나",
     "link": "https://x.com/Flare_annie",
     "memo": ""
   },
   {
+    "vtuber_id": "hololive-advent-fuwawa",
     "title": "후와모코 2026년 생일 지하철 광고",
     "start": "2026-01-30 0:00",
     "end": "2026-02-28 23:59",
     "color": "bg-gradient-to-br from-[#f19bc0] to-[#c9ddff]",
+    "type": "전광판",
     "location": "서울 강남역(2, 신분당) - 상행",
     "link": "https://x.com/fuwamocobday",
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "vtuber_id": "hololive-holox-koyori",
     "title": "하쿠이 코요리 2026년 생일 지하철 광고(서울, 도쿄)",
     "start": "2026-03-01 0:00",
     "end": "2026-03-31 23:59",
     "color": "bg-[#ffacd3]",
+    "type": "전광판",
     "location": "서울 강남역(2, 신분당) - 지하상가 3번 출구",
     "link": "https://x.com/KoyoBirthdayad",
     "memo": "광고가 역사 밖에 있음."
   },
   {
+    "vtuber_id": "hololive-holox-koyori",
     "title": "하쿠이 코요리 2026년 생일 지하철 광고(부산)",
     "start": "2026-03-09 0:00",
     "end": "2026-04-08 23:59",
     "color": "bg-[#ffacd3]",
+    "type": "전광판",
     "location": "부산 서면역",
     "link": "https://x.com/Koyori_BD_Kor",
     "memo": ""
   },
   {
+    "vtuber_id": "hololive-holoro-anya",
     "title": "아냐 멜핏사 2026년 생일 지하철 광고",
     "start": "2026-03-09 0:00",
     "end": "2026-04-08 23:59",
     "color": "bg-[#a07e7e]",
+    "type": "전광판",
     "location": "서울 강남역(2, 신분당) - 신분당선 하행",
     "link": "https://x.com/AnyaBdayAD2026",
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "vtuber_id": "hololive-promise-baelz",
     "title": "하코스 벨즈 2026년 생일 지하철 광고(서울, 도쿄)",
     "start": "2026-02-26 0:00",
     "end": "2026-03-26 23:59",
     "color": "bg-[#e5443c]",
+    "type": "전광판",
     "location": "서울 양재역(3, 신분당) - 교대 쪽 환승통로",
     "link": "https://x.com/hakosbaelzbirth",
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "vtuber_id": "hololive-zero-miko",
     "title": "사쿠라 미코 2026년 생일 지하철 광고",
     "start": "2026-03-05 0:00",
     "end": "2026-04-02 23:59",
     "color": "bg-[#ff85c2]",
+    "type": "전광판",
     "location": "서울 양재역(3, 신분당) - 3호선 환승통로",
     "link": "https://x.com/sakuramikoBDAD",
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "vtuber_id": "hololive-zero-suisei",
     "title": "호시마치 스이세이 2026년 생일&8주년 지하철 광고",
     "start": "2026-03-20 0:00",
     "end": "2026-04-20 23:59",
     "color": "bg-[#91b7ea]",
+    "type": "전광판",
     "location": "서울 양재역(3, 신분당) - 3호선 환승통로",
     "link": "https://x.com/suiseiad",
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "vtuber_id": "hololive-force-kanata",
     "title": "아마네 카나타 2026년 생일 지하철 광고",
     "start": "2026-04-17 0:00",
     "end": "2026-05-17 23:59",
     "color": "bg-[#87cefa]",
+    "type": "전광판",
     "location": "서울 강남역(2, 신분당)",
     "link": "https://x.com/kanata260422",
     "memo": ""
   },
   {
+    "vtuber_id": "stelive-cliche-shibuki",
     "title": "2026 텐코 시부키 생일광고(서울)",
     "start": "2026-03-21 0:00",
     "end": "2026-04-18 23:59",
     "color": "bg-[#f1e4ff] !text-black",
+    "type": "전광판",
     "location": "서울 신촌역&홍대입구역",
     "link": "https://x.com/bukibirth",
     "memo": "신촌역: 현대백화점 통로 b2 위치. 홍대입구역: 지하 1층 개찰구 앞에 위치."
   },
   {
+    "vtuber_id": "stelive-cliche-shibuki",
     "title": "2026 텐코 시부키 생일광고(부산)",
     "start": "2026-03-21 0:00",
     "end": "2026-04-18 23:59",
     "color": "bg-[#f1e4ff] !text-black",
+    "type": "전광판",
     "location": "부산 서면역",
     "link": "https://x.com/bukibirth",
     "memo": "12번 출구 방향 a-7 위치."
@@ -273,7 +295,7 @@
     "title": "🎂 시로가네 노엘 2026년 생일",
     "start": "2026-11-24 0:00",
     "end": "2026-11-24 23:59",
-    "color": "bg-[#f5f5f5]",
+    "color": "bg-[#f5f5f5] !text-black",
     "type": "생일",
     "location": " ",
     "link": ""
@@ -576,19 +598,19 @@
     "link": ""
   },
   {
-    "title": "🎂 츠쿠모 사나 2026년 생일",
-    "start": "2026-06-10 0:00",
-    "end": "2026-06-10 23:59",
-    "color": "bg-[#cf946b]",
+    "title": "🎂 나나시 무메이 2026년 생일",
+    "start": "2026-08-04 0:00",
+    "end": "2026-08-04 23:59",
+    "color": "bg-[#bfad9d]",
     "type": "생일",
     "location": " ",
     "link": ""
   },
   {
-    "title": "🎂 나나시 무메이 2026년 생일",
-    "start": "2026-08-04 0:00",
-    "end": "2026-08-04 23:59",
-    "color": "bg-[#bfad9d]",
+    "title": "🎂 츠쿠모 사나 2026년 생일",
+    "start": "2026-06-10 0:00",
+    "end": "2026-06-10 23:59",
+    "color": "bg-[#cf946b]",
     "type": "생일",
     "location": " ",
     "link": ""
@@ -765,6 +787,87 @@
     "link": ""
   },
   {
+    "title": "🎂 윤소야 2026년 생일",
+    "start": "2026-11-22 0:00",
+    "end": "2026-11-22 23:59",
+    "color": "bg-gray-500",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 아이리 칸나 2026년 생일",
+    "start": "2026-12-02 0:00",
+    "end": "2026-12-02 23:59",
+    "color": "bg-[#373584]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 아야츠노 유니 2026년 생일",
+    "start": "2026-05-21 0:00",
+    "end": "2026-05-21 23:59",
+    "color": "bg-[#857fd8]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 사키하네 후야 2026년 생일",
+    "start": "2026-07-07 0:00",
+    "end": "2026-07-07 23:59",
+    "color": "bg-[#8166a1]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 아카네 리제 2026년 생일",
+    "start": "2026-10-01 0:00",
+    "end": "2026-10-01 23:59",
+    "color": "bg-[#971b2f]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 시라유키 히나 2026년 생일",
+    "start": "2026-01-05 0:00",
+    "end": "2026-01-05 23:59",
+    "color": "bg-[#f2dcbf]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 네네코 마시로 2026년 생일",
+    "start": "2026-02-22 0:00",
+    "end": "2026-02-22 23:59",
+    "color": "bg-[#25282a]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 아라하시 타비 2026년 생일",
+    "start": "2026-09-07 0:00",
+    "end": "2026-09-07 23:59",
+    "color": "bg-[#9adaff]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 아오쿠모 린 2026년 생일",
+    "start": "2026-05-03 0:00",
+    "end": "2026-05-03 23:59",
+    "color": "bg-[#2b66c0]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
     "title": "🎂 텐코 시부키 2026년 생일",
     "start": "2026-03-21 0:00",
     "end": "2026-03-21 23:59",
@@ -774,10 +877,19 @@
     "link": ""
   },
   {
-    "title": "🎂 윤소야 2026년 생일",
-    "start": "2026-11-22 0:00",
-    "end": "2026-11-22 23:59",
-    "color": "",
+    "title": "🎂 유즈하 리코 2026년 생일",
+    "start": "2026-04-13 0:00",
+    "end": "2026-04-13 23:59",
+    "color": "bg-[#a6d0a6]",
+    "type": "생일",
+    "location": " ",
+    "link": ""
+  },
+  {
+    "title": "🎂 하나코 나나 2026년 생일",
+    "start": "2026-08-07 0:00",
+    "end": "2026-08-07 23:59",
+    "color": "bg-[#df7685]",
     "type": "생일",
     "location": " ",
     "link": ""
