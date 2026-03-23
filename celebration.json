@@ -55,7 +55,7 @@
     "memo": "광고가 역사 안에 있음."
   },
   {
-    "vtuber_id": "hololive-promise-bae",
+    "vtuber_id": "hololive-promise-baelz",
     "title": "하코스 벨즈 2026년 생일 지하철 광고(서울, 도쿄)",
     "start": "2026-02-26 0:00",
     "end": "2026-03-26 23:59",
@@ -185,7 +185,7 @@
     "title": "🎂 시라카미 후부키 2026년 생일",
     "start": "2026-10-05 0:00",
     "end": "2026-10-05 23:59",
-    "color": "bg-[#ffffff] !text-black",
+    "color": "bg-white !text-black",
     "type": "생일",
     "location": "",
     "link": " "
@@ -455,7 +455,7 @@
     "title": "🎂 사카마타 클로에 2026년 생일",
     "start": "2026-05-18 0:00",
     "end": "2026-05-18 23:59",
-    "color": "bg-[#f4f4f0]",
+    "color": "bg-[#f4f4f0] !text-black",
     "type": "생일",
     "location": "",
     "link": " "
@@ -621,7 +621,7 @@
     "link": " "
   },
   {
-    "vtuber_id": "hololive-promise-bae",
+    "vtuber_id": "hololive-promise-baelz",
     "title": "🎂 하코스 벨즈 2026년 생일 (윤년 아님)",
     "start": "2026-02-28 0:00",
     "end": "2026-02-28 23:59",
@@ -735,7 +735,7 @@
     "title": "🎂 지지 무린 2026년 생일",
     "start": "2026-10-18 0:00",
     "end": "2026-10-18 23:59",
-    "color": "bg-[#fff2ea]",
+    "color": "bg-[#fff2ea] !text-black",
     "type": "생일",
     "location": "",
     "link": " "
@@ -861,11 +861,21 @@
     "link": " "
   },
   {
+    "vtuber_id": "indie-sayu",
+    "title": "🎂 서사유 2026년 생일",
+    "start": "2026-04-01 0:00",
+    "end": "2026-04-01 23:59",
+    "color": "bg-gradient-to-br from-[#804d34] to-[#12c8cb]",
+    "type": "생일",
+    "location": "",
+    "link": " "
+  },
+  {
     "vtuber_id": "indie-soya",
     "title": "🎂 윤소야 2026년 생일",
     "start": "2026-11-22 0:00",
     "end": "2026-11-22 23:59",
-    "color": "",
+    "color": "bg-gradient-to-br from-[#cd6cb2] to-[#88d9e4]",
     "type": "생일",
     "location": "",
     "link": " "
