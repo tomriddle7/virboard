@@ -74,10 +74,10 @@ async function fetchAndConvert() {
     const currentYear = new Date().getFullYear();
 
     rawVtubers.forEach(vtuber => {
-      if (!vtuber.birth) return; // 생일 정보가 없는 행은 건너뜁니다.
+      if (!vtuber.birth || vtuber.privacy === 'Private') return; // 생일 정보가 없거나 비공개 행은 건너뜁니다.
 
       const vBirthday = vtuber.birth.substring(5);
-      // 올해와 내년의 생일 데이터를 생성합니다.
+      // 올해의 생일 데이터를 생성합니다.
       [currentYear].forEach(year => {
         let targetDate = `${year}-${vBirthday}`;
         let eventTitle = `🎂 ${vtuber.name} ${year}년 생일`;
