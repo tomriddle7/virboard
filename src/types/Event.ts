@@ -22,13 +22,16 @@ export interface VtuberProfile {
   id: string;
   name: string;
   agency: string;
-  generation: string;
+  generation: string[];
   color: string;
   birth: Date;
   debut: Date;
+  unit: string[]
 }
 
-export type RawVTuber = Omit<VtuberProfile, "birth" | "debut"> & {
+export type RawVTuber = Omit<VtuberProfile, "generation" | "birth" | "debut" | "unit"> & {
+  generation: string;
   birth: string;
   debut: string;
+  unit: string;
 };

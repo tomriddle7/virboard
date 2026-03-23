@@ -8,6 +8,7 @@ const VTUBER_SHEET_URL = process.env.VITE_VTUBER_SHEET_URL;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const JSON_OUTPUT_PATH = path.join(__dirname, '../public/celebration.json');
+const VTUBERS_OUTPUT_PATH = path.join(__dirname, '../public/vtubers.json');
 
 const isLeapYear = (year) => {
   return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
@@ -43,12 +44,17 @@ async function fetchAndConvert() {
     
     // 2. 버튜버 마스터 데이터를 딕셔너리(Map) 형태로 변환하여 검색 속도를 높이고 배열화합니다.
     const vtuberMap = {};
+    const formattedVtubers = [];
     rawVtubers.forEach(v => {
-      vtuberMap[v.id] = {
+      const formatted = {
         ...v,
+        // 기수와 유닛을 배열로 쪼개줍니다.
         generation: v.generation ? v.generation.split(',').map(g => g.trim()) : [],
         unit: v.unit ? v.unit.split(',').map(u => u.trim()) : []
       };
+
+      vtuberMap[v.id] = formatted;
+      formattedVtubers.push(formatted); // 배열에도 차곡차곡 담아줍니다.
     });
 
     const finalEvents = [];
@@ -90,15 +96,15 @@ async function fetchAndConvert() {
 
         finalEvents.push({
           // event_id: `bday-${vtuber.id}-${year}`,
-          // vtuber_id: vtuber.id,
+          vtuber_id: vtuber.id,
           // status: '진행중',
           title: eventTitle,
           start: `${targetDate} 0:00`,
           end: `${targetDate} 23:59`,
           color: vtuber.color,
           type: '생일',
-          location: ' ',
-          link: vtuber.link,
+          location: '',
+          link: vtuber.link || ' ',
         });
       });
     });
@@ -112,6 +118,8 @@ async function fetchAndConvert() {
 
     fs.writeFileSync(JSON_OUTPUT_PATH, JSON.stringify(finalEvents, null, 2), 'utf-8');
     console.log(`✅ 성공적으로 ${rawEvents.length}개의 일정과 ${rawVtubers.length}개의 생일을 celebration.json에 저장했습니다! 🚀`);
+    fs.writeFileSync(VTUBERS_OUTPUT_PATH, JSON.stringify(formattedVtubers, null, 2), 'utf-8');
+    console.log(`✅ 성공적으로 ${formattedVtubers.length}개의 버튜버 프로필을 vtubers.json에 저장했습니다! 🚀`);
 
   } catch (error) {
     console.error('❌ 데이터 갱신 중 오류가 발생했습니다:', error);
