@@ -22,11 +22,11 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const pageAgencyMap = new Map([
-  ['Vir', '전체'],
-  ['Holo', '홀로라이브'],
-  ['Stel', '스텔라이브'],
-  ['Indie', '개인'],
+const agencyMap = new Map([
+  ['Vir', 'All VTubers'],
+  ['Holo', 'Hololive'],
+  ['Stel', 'Stelive'],
+  ['Indie', 'Independents'],
 ]);
 
 function Home() {
@@ -38,9 +38,9 @@ function Home() {
   // 3. 필터 상태 관리 (소속, 기수, 유닛)
   const [selectedAgency, setSelectedAgency] = useState(() => {
     if (typeof window !== 'undefined') {
-      return pageAgencyMap.get(localStorage.getItem('current-agency') || 'Vir');
+      return agencyMap.get(localStorage.getItem('current-agency') || 'Vir');
     }
-    return pageAgencyMap.get('Vir');
+    return agencyMap.get('Vir');
   });
   const [selectedGen, setSelectedGen] = useState('전체');
   const [selectedUnit, setSelectedUnit] = useState('전체');
@@ -102,7 +102,7 @@ function Home() {
       if (v.agency) agencySet.add(v.agency);
 
       // 2. 기수(Generation)는 '현재 선택된 소속'에 포함된 버튜버의 기수만 담습니다.
-      const matchAgency = selectedAgency === '전체' || v.agency === selectedAgency;
+      const matchAgency = selectedAgency === 'All VTubers' || v.agency === selectedAgency;
       if (matchAgency && Array.isArray(v.generation)) {
         v.generation.forEach(g => genSet.add(g));
       }
@@ -115,7 +115,7 @@ function Home() {
     });
 
     return {
-      agencies: ['전체', ...Array.from(agencySet)],
+      agencies: ['All VTubers', ...Array.from(agencySet)],
       generations: ['전체', ...Array.from(genSet)],
       units: ['전체', ...Array.from(unitSet)],
     };
@@ -130,11 +130,11 @@ function Home() {
       // 마스터에 정보가 없는 미등록 버튜버의 이벤트일 경우의 안전장치
       if (!vtuberInfo) {
         // 전체 보기 상태일 때만 보여주거나, 아예 false로 숨길 수 있습니다.
-        return selectedAgency === '전체' && selectedGen === '전체' && selectedUnit === '전체';
+        return selectedAgency === 'All VTubers' && selectedGen === '전체' && selectedUnit === '전체';
       }
 
       // 찾아온 버튜버 마스터 정보를 바탕으로 조건에 맞는지 검사합니다!
-      const matchAgency = selectedAgency === '전체' || vtuberInfo.agency === selectedAgency;
+      const matchAgency = selectedAgency === 'All VTubers' || vtuberInfo.agency === selectedAgency;
       const matchGen = selectedGen === '전체' || (vtuberInfo.generation?.includes(selectedGen) ?? false);
       const matchUnit = selectedUnit === '전체' || (vtuberInfo.unit?.includes(selectedUnit) ?? false);
 
@@ -142,9 +142,6 @@ function Home() {
     });
   }, [events, vtuberMap, selectedAgency, selectedGen, selectedUnit]);
 
-  const updateAgency = (key: string) => {
-    setSelectedAgency(pageAgencyMap.get(key)!);
-  };
   const closeDetailModal = () => setSelectedEvent(null);
   const closeSubmitModal = () => setSubmitOpen(false);
 
@@ -152,7 +149,8 @@ function Home() {
     <>
       <CalendarHeader
         submitOpen={setSubmitOpen}
-        updateAgency={updateAgency}
+        updateAgency={setSelectedAgency}
+        agencyMap={agencyMap}
       />
       <main className="bg-gray-50 dark:bg-gray-950 min-h-screen">
         <section className="max-w-6xl mx-auto pt-6 px-0 sm:px-6">
