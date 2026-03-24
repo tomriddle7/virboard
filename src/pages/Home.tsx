@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
 import { format, parse, startOfWeek, getDay } from 'date-fns'
 import { ko } from 'date-fns/locale'
+import CalendarHeader from '@/components/CalendarHeader'
 import { CustomToolbar, CustomEvent } from '@/components/CustomToolbar'
 import DetailPopup from '@/components/DetailPopup'
 import SubmitPopup from '@/components/SubmitPopup'
@@ -21,6 +22,13 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
+const pageAgencyMap = new Map([
+  ['Vir', '전체'],
+  ['Holo', '홀로라이브'],
+  ['Stel', '스텔라이브'],
+  ['Indie', '개인'],
+]);
+
 function Home() {
   const [date, setDate] = useState<Date>(new Date(2026, 2, 1));
   const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
@@ -28,7 +36,12 @@ function Home() {
   const [events, setEvents] = useState<VtuberEvent[]>([]);
   const [vtubers, setVtubers] = useState<VtuberProfile[]>([]);
   // 3. 필터 상태 관리 (소속, 기수, 유닛)
-  const [selectedAgency, setSelectedAgency] = useState('전체');
+  const [selectedAgency, setSelectedAgency] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return pageAgencyMap.get(localStorage.getItem('current-agency') || 'Vir');
+    }
+    return pageAgencyMap.get('Vir');
+  });
   const [selectedGen, setSelectedGen] = useState('전체');
   const [selectedUnit, setSelectedUnit] = useState('전체');
   const [, setIsLoading] = useState(true);
@@ -129,98 +142,55 @@ function Home() {
     });
   }, [events, vtuberMap, selectedAgency, selectedGen, selectedUnit]);
 
+  const updateAgency = (key: string) => {
+    setSelectedAgency(pageAgencyMap.get(key)!);
+  };
   const closeDetailModal = () => setSelectedEvent(null);
   const closeSubmitModal = () => setSubmitOpen(false);
 
   return (
-    <main className="bg-gray-50 dark:bg-gray-950 min-h-screen">
-      <section className="max-w-6xl mx-auto pt-6 px-0 sm:px-6">
-        <div className="flex justify-between items-center">
-          <div className="flex flex-wrap gap-4 mb-4 p-4">
-            {/* 소속 드롭다운 */}
-            <label className="flex flex-col text-sm font-semibold text-gray-700">
-              소속
-              <select
-                className="mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow cursor-pointer"
-                value={selectedAgency}
-                onChange={(e) => setSelectedAgency(e.target.value)}
-              >
-                {agencies.map(agency => (
-                  <option key={agency} value={agency}>{agency}</option>
-                ))}
-              </select>
-            </label>
-            {/* 기수 드롭다운 */}
-            <label className="flex flex-col text-sm font-semibold text-gray-700">
-              기수
-              <select
-                className="mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow cursor-pointer"
-                value={selectedGen}
-                onChange={(e) => setSelectedGen(e.target.value)}
-              >
-                {generations.map(gen => (
-                  <option key={gen} value={gen}>{gen}</option>
-                ))}
-              </select>
-            </label>
-            {/* 유닛 드롭다운 */}
-            <label className="flex flex-col text-sm font-semibold text-gray-700">
-              유닛
-              <select
-                className="mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow cursor-pointer"
-                value={selectedUnit}
-                onChange={(e) => setSelectedUnit(e.target.value)}
-              >
-                {units.map(unit => (
-                  <option key={unit} value={unit}>{unit}</option>
-                ))}
-              </select>
-            </label>
-
+    <>
+      <CalendarHeader
+        submitOpen={setSubmitOpen}
+        updateAgency={updateAgency}
+      />
+      <main className="bg-gray-50 dark:bg-gray-950 min-h-screen">
+        <section className="max-w-6xl mx-auto pt-6 px-0 sm:px-6">
+          <div className="h-[800px] bg-white dark:bg-black p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-900">
+            <Calendar<VtuberEvent, object>
+              localizer={localizer}
+              events={filteredEvents}
+              date={date}
+              onNavigate={(newDate) => setDate(newDate)}
+              onSelectEvent={(event) => setSelectedEvent(event)}
+              culture="ko"
+              views={["month"]}
+              popup={true}
+              formats={{
+                dayHeaderFormat: (date) => {
+                  return new Intl.DateTimeFormat('ko-KR', {
+                    month: 'long',
+                    day: 'numeric',
+                    weekday: 'long'
+                  }).format(date);
+                },
+              }}
+              components={{
+                toolbar: CustomToolbar,
+                event: CustomEvent,
+              }}
+              // 기본 인라인 배경색을 투명하게 만들어 Tailwind 클래스가 적용되게 해요
+              eventPropGetter={() => ({
+                style: { backgroundColor: "transparent" },
+              })}
+            />
           </div>
-          <h1 className="text-center text-[#43c5f5] text-4xl font-bold pr-14 mb-3">
-            버튜버 기념일 달력
-          </h1>
-          <button
-            className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition"
-            onClick={() => {
-              setSubmitOpen(true);
-            }}>제보하기</button>
-        </div>
-        <div className="h-[800px] bg-white dark:bg-black p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-900">
-          <Calendar<VtuberEvent, object>
-            localizer={localizer}
-            events={filteredEvents}
-            date={date}
-            onNavigate={(newDate) => setDate(newDate)}
-            onSelectEvent={(event) => setSelectedEvent(event)}
-            culture="ko"
-            views={["month"]}
-            popup={true}
-            formats={{
-              dayHeaderFormat: (date) => {
-                return new Intl.DateTimeFormat('ko-KR', {
-                  month: 'long',
-                  day: 'numeric',
-                  weekday: 'long'
-                }).format(date);
-              },
-            }}
-            components={{
-              toolbar: CustomToolbar,
-              event: CustomEvent,
-            }}
-            // 기본 인라인 배경색을 투명하게 만들어 Tailwind 클래스가 적용되게 해요
-            eventPropGetter={() => ({
-              style: { backgroundColor: "transparent" },
-            })}
-          />
-        </div>
-        {/* 4. 선택된 이벤트가 있을 때만 렌더링되는 모달 창 */}
-        {selectedEvent && <DetailPopup selectedEvent={selectedEvent} closeModal={closeDetailModal} />}
-        {submitOpen && <SubmitPopup closeModal={closeSubmitModal} />}
-      </section>
-    </main>
+          {/* 4. 선택된 이벤트가 있을 때만 렌더링되는 모달 창 */}
+          {selectedEvent && <DetailPopup selectedEvent={selectedEvent} closeModal={closeDetailModal} />}
+          {submitOpen && <SubmitPopup closeModal={closeSubmitModal} />}
+        </section>
+      </main>
+    </>
   )
 }
 
