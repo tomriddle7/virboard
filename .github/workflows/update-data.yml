@@ -74,6 +74,9 @@ jobs:
         if: ${{ inputs.deploy_only || github.event_name == 'workflow_dispatch' || steps.git_commit.outputs.has_changes == 'true' }}
         run: npm run build
 
+      - name: Create CNAME
+        run: echo "virboard.me" > dist/CNAME
+
       # 7. GitHub Pages 배포
       - name: GitHub Pages로 배포
         if: ${{ inputs.deploy_only || github.event_name == 'workflow_dispatch' || steps.git_commit.outputs.has_changes == 'true' }}

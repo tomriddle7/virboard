@@ -51,8 +51,8 @@ function Home() {
       try {
         const timestamp = new Date().getTime();
         const [eventList, vtuberList] = await Promise.all([
-          fetch(`${import.meta.env.BASE_URL}/celebration.json?t=${timestamp}`).then(res => res.json()),
-          fetch(`${import.meta.env.BASE_URL}/vtubers.json?t=${timestamp}`).then(res => res.json())
+          fetch(`/celebration.json?t=${timestamp}`).then(res => res.json()),
+          fetch(`/vtubers.json?t=${timestamp}`).then(res => res.json())
         ]);
         // const eventList = (await import('@/../public/celebration.json')).default;
         // const vtuberList = (await import('@/../public/vtubers.json')).default;
