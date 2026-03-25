@@ -4,6 +4,7 @@ import { format, parse, startOfWeek, getDay } from 'date-fns'
 import { ko } from 'date-fns/locale'
 import CalendarHeader from '@/components/CalendarHeader'
 import { CustomToolbar, CustomEvent } from '@/components/CustomToolbar'
+import Footer from '@/components/Footer'
 import DetailPopup from '@/components/DetailPopup'
 import SubmitPopup from '@/components/SubmitPopup'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
@@ -188,6 +189,7 @@ function Home() {
           {submitOpen && <SubmitPopup closeModal={closeSubmitModal} />}
         </section>
       </main>
+      <Footer />
     </>
   )
 }
