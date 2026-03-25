@@ -2,15 +2,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* 이벤트 막대 사이의 상하 여백을 줄여줍니다 */
-.rbc-row-segment {
-  padding: 0 1px 3px 1px !important;
+.rbc-show-more, .rbc-event {
+  display: none !important
 }
 
-/* 이벤트 막대 자체의 높이를 조금 슬림하게 만듭니다 */
-.rbc-event {
-  @apply !bg-transparent !border-none !p-0;
-  min-height: 16px !important; /* 필요하다면 높이를 살짝 줄여주세요 */
+.rbc-month-row {
+  min-height: 90px; /* 터치하기 편하도록 모바일 버튼 칸의 최소 높이를 확보합니다 */
 }
 
 /* 일요일 - 헤더 요일과 날짜 숫자를 빨간색으로 */

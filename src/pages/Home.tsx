@@ -7,6 +7,7 @@ import { CustomToolbar, CustomEvent } from '@/components/CustomToolbar'
 import Footer from '@/components/Footer'
 import DetailPopup from '@/components/DetailPopup'
 import SubmitPopup from '@/components/SubmitPopup'
+import BottomDrawer from '@/components/BottomDrawer'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import type { VtuberEvent, RawEvent, VtuberProfile, RawVTuber } from '@/types/Event'
 
@@ -34,6 +35,7 @@ function Home() {
   const [date, setDate] = useState<Date>(new Date(2026, 2, 1));
   const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
   const [submitOpen, setSubmitOpen] = useState<boolean>(false);
+  const [drawerData, setDrawerData] = useState<{ date: Date, events: VtuberEvent[] } | null>(null);
   const [events, setEvents] = useState<VtuberEvent[]>([]);
   const [vtubers, setVtubers] = useState<VtuberProfile[]>([]);
   // 3. 필터 상태 관리 (소속, 기수, 유닛)
@@ -177,6 +179,71 @@ function Home() {
               components={{
                 toolbar: CustomToolbar,
                 event: CustomEvent,
+                month: {
+                  dateHeader: ({ label, date: headerDate }) => {
+                    const dayOfWeek = headerDate.getDay();
+                    const isCurrentMonth = headerDate.getMonth() === date.getMonth();
+
+                    let textColorClass = "text-black dark:text-gray-300";
+                    if (!isCurrentMonth) textColorClass += " opacity-40";
+
+                    if (dayOfWeek === 0) textColorClass = "text-red-500";
+                    if (dayOfWeek === 6) textColorClass = "text-blue-500";
+
+                    const dayEvents = filteredEvents.filter((event) => {
+                      const start = new Date(event.start).setHours(0, 0, 0, 0);
+                      const end = new Date(event.end).setHours(23, 59, 59, 999);
+
+                      const current = headerDate.getTime();
+                      return current >= start && current <= end;
+                    });
+
+                    const birthdays = dayEvents.filter((event) => event.type === '생일');
+                    const otherEvents = dayEvents.filter((event) => event.type !== '생일');
+
+                    return (
+                      <div>
+                        <span className={`w-full text-right font-medium ${textColorClass}`}>
+                          {label}
+                        </span>
+
+                        {/* ✨ 나머지 이벤트(광고 등)를 아래에 점으로 렌더링 */}
+                        {otherEvents.length > 0 && (
+                          <div
+                            className={`bg-gray-50 text-white text-[10px] sm:text-xs font-semibold px-1.5 py-1.5 ml-1 rounded-md truncate shadow-sm ${!isCurrentMonth ? 'opacity-40' : ''}`}
+                          >
+                            <button className="flex flex-row flex-wrap justify-center w-full gap-0.5" onClick={(e) => {
+                              e.stopPropagation(); // 날짜 칸 자체가 클릭되는 것을 방지
+                              setDrawerData({ date, events: dayEvents }); // 서랍 열기!
+                            }}>
+                              {otherEvents.map((event, i) => (
+                                <span
+                                  key={`dot-${event.vtuber_id}-${i}`}
+                                  className={`size-1.5 ${event.color} rounded-full m-0.5 ${!isCurrentMonth ? 'opacity-40' : ''}`}
+                                ></span>
+                              ))}
+                            </button>
+                          </div>
+                        )}
+
+                        {/* ✨ 생일 이벤트를 CustomEvent 대신 여기서 직접 렌더링! */}
+                        <div className="flex flex-col gap-1 mt-1 w-full">
+                          {birthdays.map((event, i) => (
+                            <button
+                              onClick={() => {
+                                setSelectedEvent(event); // 서랍 열기!
+                              }}
+                              key={`bday-${event.vtuber_id}-${i}`}
+                              className={`${event.color} text-white text-[10px] sm:text-xs font-semibold px-1.5 py-1 ml-1 rounded-md truncate shadow-sm ${!isCurrentMonth ? 'opacity-40' : ''}`}
+                            >
+                              {event.title}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  },
+                },
               }}
               // 기본 인라인 배경색을 투명하게 만들어 Tailwind 클래스가 적용되게 해요
               eventPropGetter={() => ({
@@ -187,6 +254,14 @@ function Home() {
           {/* 4. 선택된 이벤트가 있을 때만 렌더링되는 모달 창 */}
           {selectedEvent && <DetailPopup selectedEvent={selectedEvent} closeModal={closeDetailModal} />}
           {submitOpen && <SubmitPopup closeModal={closeSubmitModal} />}
+          <BottomDrawer
+            drawerData={drawerData}
+            onClose={() => setDrawerData(null)}
+            onEventClick={(event) => {
+              setSelectedEvent(event); // 서랍 안의 일정을 누르면 기존 DetailPopup이 뜹니다!
+              // setDrawerData(null); // 원한다면 여기서 서랍을 닫아버릴 수도 있습니다.
+            }}
+          />
         </section>
       </main>
       <Footer />

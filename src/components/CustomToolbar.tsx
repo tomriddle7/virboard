@@ -52,12 +52,6 @@ export const CustomToolbar: React.FC<ToolbarProps<VtuberEvent, object>> = (
 };
 
 // 커스텀 이벤트 UI (EventProps를 통해 event 객체의 타입을 보장받아요)
-export const CustomEvent: React.FC<EventProps<VtuberEvent>> = ({ event }) => {
-  return (
-    <div
-      className={`${event.color} text-white text-xs font-semibold px-2 py-1 mx-1 rounded-md truncate shadow-sm`}
-    >
-      {event.title}
-    </div>
-  );
+export const CustomEvent: React.FC<EventProps<VtuberEvent>> = () => {
+  return null;
 }
