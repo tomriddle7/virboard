@@ -28,6 +28,7 @@ const agencyMap = new Map([
   ['Vir', 'All VTubers'],
   ['Holo', 'Hololive'],
   ['Stel', 'Stelive'],
+  ['Ruli', 'Liveruli'],
   ['Indie', 'Independents'],
 ]);
 
