@@ -14,8 +14,10 @@ export interface VtuberEvent {
 
 // JSON에서 막 읽어온 Raw 데이터 타입 정의
 export type RawEvent = Omit<VtuberEvent, "start" | "end"> & {
-  start: string;
-  end: string;
+  funing_start_at?: string;
+  funding_end_at?: string;
+  event_start_at: string;
+  event_end_at: string;
 };
 
 export interface VtuberProfile {

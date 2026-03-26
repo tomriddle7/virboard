@@ -60,11 +60,23 @@ function Home() {
         // const eventList = (await import('@/../public/celebration.json')).default;
         // const vtuberList = (await import('@/../public/vtubers.json')).default;
 
-        const parsedEvents: VtuberEvent[] = eventList.map((event: RawEvent) => ({
-          ...event,
-          start: new Date(event.start),
-          end: new Date(event.end),
-        }));
+        const parsedEvents: VtuberEvent[] = eventList.map((event: RawEvent) => {
+          // 모금중인 행사는 funding 기간 적용, 진행중인 행사는 evnet 기간 적용
+          let [eventStart, eventEnd] = ['', ''];
+          if (event.status === 'funding') {
+            eventStart = event.funing_start_at!;
+            eventEnd = event.funding_end_at!;
+          } else {
+            eventStart = event.event_start_at;
+            eventEnd = event.event_end_at;
+          }
+
+          return {
+            ...event,
+            start: new Date(eventStart),
+            end: new Date(eventEnd),
+          };
+        });
         setEvents(parsedEvents);
 
         const parsedVTubers: VtuberProfile[] = vtuberList.map((event: RawVTuber) => ({
