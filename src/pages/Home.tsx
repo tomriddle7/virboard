@@ -212,14 +212,14 @@ function Home() {
                           <div
                             className={`bg-gray-50 text-white text-[10px] sm:text-xs font-semibold px-1.5 py-1.5 ml-1 rounded-md truncate shadow-sm ${!isCurrentMonth ? 'opacity-40' : ''}`}
                           >
-                            <button className="flex flex-row flex-wrap justify-center w-full gap-0.5" onClick={(e) => {
+                            <button className="flex flex-row flex-wrap justify-center w-full gap-1" onClick={(e) => {
                               e.stopPropagation(); // 날짜 칸 자체가 클릭되는 것을 방지
-                              setDrawerData({ date, events: dayEvents }); // 서랍 열기!
+                              setDrawerData({ date: headerDate, events: dayEvents }); // 서랍 열기!
                             }}>
                               {otherEvents.map((event, i) => (
                                 <span
                                   key={`dot-${event.vtuber_id}-${i}`}
-                                  className={`size-1.5 ${event.color} rounded-full m-0.5 ${!isCurrentMonth ? 'opacity-40' : ''}`}
+                                  className={`size-1.5 ${event.color} rounded-full ${!isCurrentMonth ? 'opacity-40' : ''}`}
                                 ></span>
                               ))}
                             </button>

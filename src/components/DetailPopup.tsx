@@ -10,8 +10,11 @@ interface DetailPopupProps {
 function DetailPopup({ selectedEvent, closeModal }: DetailPopupProps) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity"
+      // ✨ 핵심 1: pointer-events-auto를 추가하여 vaul의 클릭 무시 효과를 무효화합니다.
+      className="fixed inset-0 z-100 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity pointer-events-auto"
+      // ✨ 핵심 2: 마우스 클릭뿐만 아니라 모바일 터치 이벤트도 뒤로 넘어가지 않게 확실히 막아줍니다.
       onMouseDown={(e) => e.stopPropagation()}
+      onTouchStart={(e) => e.stopPropagation()}
       onClick={(e) => {
         e.stopPropagation();
         closeModal();
