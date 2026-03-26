@@ -185,10 +185,10 @@ function Home() {
                     const isCurrentMonth = headerDate.getMonth() === date.getMonth();
 
                     let textColorClass = "text-black dark:text-gray-300";
-                    if (!isCurrentMonth) textColorClass += " opacity-40";
-
                     if (dayOfWeek === 0) textColorClass = "text-red-500";
                     if (dayOfWeek === 6) textColorClass = "text-blue-500";
+
+                    if (!isCurrentMonth) textColorClass += " opacity-40";
 
                     const dayEvents = filteredEvents.filter((event) => {
                       const start = new Date(event.start).setHours(0, 0, 0, 0);
@@ -210,18 +210,36 @@ function Home() {
                         {/* ✨ 나머지 이벤트(광고 등)를 아래에 점으로 렌더링 */}
                         {otherEvents.length > 0 && (
                           <div
-                            className={`bg-gray-50 text-white text-[10px] sm:text-xs font-semibold px-1.5 py-1.5 ml-1 rounded-md truncate shadow-sm ${!isCurrentMonth ? 'opacity-40' : ''}`}
+                            className={`bg-gray-50 text-white text-[10px] sm:text-xs font-semibold px-0.5 py-1.5 ml-1 rounded-md truncate shadow-sm ${!isCurrentMonth && 'opacity-40'}`}
                           >
                             <button className="flex flex-row flex-wrap justify-center w-full gap-1" onClick={(e) => {
                               e.stopPropagation(); // 날짜 칸 자체가 클릭되는 것을 방지
                               setDrawerData({ date: headerDate, events: dayEvents }); // 서랍 열기!
                             }}>
-                              {otherEvents.map((event, i) => (
-                                <span
-                                  key={`dot-${event.vtuber_id}-${i}`}
-                                  className={`size-1.5 ${event.color} rounded-full ${!isCurrentMonth ? 'opacity-40' : ''}`}
-                                ></span>
-                              ))}
+                              {otherEvents.map((event, i) => {
+                                const isOngoing = event.type !== '생일' && event.status === 'funding';
+
+                                // 이번 달이 아닌 날짜의 투명도 처리 클래스
+                                const opacityClass = !isCurrentMonth ? 'opacity-40' : '';
+
+                                return isOngoing ? (
+                                  /* 🔵 [진행 중] 가운데가 빈 원 (도넛 기법) */
+                                  <span
+                                    key={`dot-${event.vtuber_id}-${i}`}
+                                    // p-[1px] 패딩 값으로 그라데이션 테두리의 두께를 조절합니다.
+                                    className={`size-1.5 p-[1px] rounded-full ${event.color} ${opacityClass}`}
+                                  >
+                                    {/* 안쪽 원: 달력 칸의 기본 배경색(라이트모드 흰색, 다크모드 검은색)으로 덮습니다. */}
+                                    <span className="block w-full h-full rounded-full bg-gray-50" />
+                                  </span>
+                                ) : (
+                                  /* 🔵 [완료 또는 일반 행사] 기존의 꽉 찬 원 */
+                                  <span
+                                    key={`dot-${event.vtuber_id}-${i}`}
+                                    className={`size-1.5 rounded-full ${event.color} ${opacityClass}`}
+                                  />
+                                );
+                              })}
                             </button>
                           </div>
                         )}

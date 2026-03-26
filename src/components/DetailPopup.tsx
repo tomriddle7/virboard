@@ -40,6 +40,13 @@ function DetailPopup({ selectedEvent, closeModal }: DetailPopupProps) {
             {selectedEvent.type}
           </span>
         )}
+        {selectedEvent.status === 'funding' && (
+          <span
+            className={`ml-1 inline-block px-3 py-1 text-xs font-bold text-white rounded-full mb-3 ${selectedEvent.color}`}
+          >
+            모금중
+          </span>
+        )}
 
         {/* 제목 및 날짜 */}
         <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2 transition-colors">

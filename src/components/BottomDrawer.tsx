@@ -59,7 +59,7 @@ function BottomDrawer({
                     style={{ borderLeftColor: event.color || '#43c5f5' }}
                   >
                     <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-                      {event.type}
+                      {event.type}{event.status === 'funding' && '(모금중)'}
                     </div>
                     <div className="font-semibold text-gray-800 dark:text-gray-100">
                       {event.title}
