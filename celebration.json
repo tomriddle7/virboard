@@ -86,7 +86,7 @@
   {
     "vtuber_id": "hololive-zero-suisei",
     "status": "ongoing",
-    "title": "호시마치 스이세이 2026년 생일&8주년 지하철 광고",
+    "title": "호시마치 스이세이 2026년 생일 & 8주년 지하철 광고",
     "start": "2026-03-20 0:00",
     "end": "2026-04-20 23:59",
     "color": "bg-[#91b7ea]",
@@ -97,7 +97,7 @@
   },
   {
     "vtuber_id": "hololive-force-kanata",
-    "status": "funded",
+    "status": "ongoing",
     "title": "아마네 카나타 2026년 생일 지하철 광고",
     "start": "2026-04-17 0:00",
     "end": "2026-05-17 23:59",
@@ -134,13 +134,25 @@
   {
     "vtuber_id": "hololive-holox-dark",
     "status": "funding",
-    "title": "HoloX 1st 라이브 기념 플라워 스탠드 및 광고(모금중)",
+    "title": "HoloX 1st 라이브 기념 플라워 스탠드 & 광고",
     "start": "2026-02-23 0:00",
     "end": "2026-04-15 23:59",
     "color": "bg-gray-900",
     "type": "전광판",
     "location": "",
     "link": "https://x.com/holoX_Livecheer",
+    "memo": ""
+  },
+  {
+    "vtuber_id": "hololive-myth-kiara",
+    "status": "ongoing",
+    "title": "TAKOTORI Concert congratulatory AD",
+    "start": "2026-03-24 0:00",
+    "end": "2026-03-29 23:59",
+    "color": "bg-gradient-to-br from-[#695882] to-[#ff7f00]",
+    "type": "전광판",
+    "location": "Los Angeles, Western & Wilshire Billboard",
+    "link": "https://x.com/PONG_KFP/status/2036268221364576377",
     "memo": ""
   },
   {
