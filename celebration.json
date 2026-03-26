@@ -1,6 +1,7 @@
 [
   {
     "vtuber_id": "hololive-fantasy-flare",
+    "status": "ongoing",
     "title": "시라누이 후레아 3기생 라이브 플라스타",
     "start": "2026-01-17 0:00",
     "end": "2026-01-18 23:59",
@@ -12,6 +13,7 @@
   },
   {
     "vtuber_id": "hololive-advent-fuwawa",
+    "status": "ongoing",
     "title": "후와모코 2026년 생일 지하철 광고",
     "start": "2026-01-30 0:00",
     "end": "2026-02-28 23:59",
@@ -23,6 +25,7 @@
   },
   {
     "vtuber_id": "hololive-holox-koyori",
+    "status": "ongoing",
     "title": "하쿠이 코요리 2026년 생일 지하철 광고(서울, 도쿄)",
     "start": "2026-03-01 0:00",
     "end": "2026-03-31 23:59",
@@ -34,6 +37,7 @@
   },
   {
     "vtuber_id": "hololive-holox-koyori",
+    "status": "ongoing",
     "title": "하쿠이 코요리 2026년 생일 지하철 광고(부산)",
     "start": "2026-03-09 0:00",
     "end": "2026-04-08 23:59",
@@ -45,6 +49,7 @@
   },
   {
     "vtuber_id": "hololive-holoro-anya",
+    "status": "ongoing",
     "title": "아냐 멜핏사 2026년 생일 지하철 광고",
     "start": "2026-03-09 0:00",
     "end": "2026-04-08 23:59",
@@ -56,6 +61,7 @@
   },
   {
     "vtuber_id": "hololive-promise-baelz",
+    "status": "ongoing",
     "title": "하코스 벨즈 2026년 생일 지하철 광고(서울, 도쿄)",
     "start": "2026-02-26 0:00",
     "end": "2026-03-26 23:59",
@@ -67,6 +73,7 @@
   },
   {
     "vtuber_id": "hololive-zero-miko",
+    "status": "ongoing",
     "title": "사쿠라 미코 2026년 생일 지하철 광고",
     "start": "2026-03-05 0:00",
     "end": "2026-04-02 23:59",
@@ -78,6 +85,7 @@
   },
   {
     "vtuber_id": "hololive-zero-suisei",
+    "status": "ongoing",
     "title": "호시마치 스이세이 2026년 생일&8주년 지하철 광고",
     "start": "2026-03-20 0:00",
     "end": "2026-04-20 23:59",
@@ -89,6 +97,7 @@
   },
   {
     "vtuber_id": "hololive-force-kanata",
+    "status": "funded",
     "title": "아마네 카나타 2026년 생일 지하철 광고",
     "start": "2026-04-17 0:00",
     "end": "2026-05-17 23:59",
@@ -100,6 +109,7 @@
   },
   {
     "vtuber_id": "stelive-cliche-shibuki",
+    "status": "ongoing",
     "title": "2026 텐코 시부키 생일광고(서울)",
     "start": "2026-03-21 0:00",
     "end": "2026-04-18 23:59",
@@ -111,6 +121,7 @@
   },
   {
     "vtuber_id": "stelive-cliche-shibuki",
+    "status": "ongoing",
     "title": "2026 텐코 시부키 생일광고(부산)",
     "start": "2026-03-21 0:00",
     "end": "2026-04-18 23:59",
@@ -122,6 +133,7 @@
   },
   {
     "vtuber_id": "hololive-holox-dark",
+    "status": "funding",
     "title": "HoloX 1st 라이브 기념 플라워 스탠드 및 광고(모금중)",
     "start": "2026-02-23 0:00",
     "end": "2026-04-15 23:59",
