@@ -994,6 +994,46 @@
     "link": " "
   },
   {
+    "vtuber_id": "liveruli-rosetta",
+    "title": "🎂 R로제타 2026년 생일",
+    "event_start_at": "2026-11-18 0:00",
+    "event_end_at": "2026-11-18 23:59",
+    "color": "bg-[#e06a8e]",
+    "type": "생일",
+    "location": "",
+    "link": "https://x.com/R_Rosetta_"
+  },
+  {
+    "vtuber_id": "liveruli-renoa",
+    "title": "🎂 R리노아 2026년 생일",
+    "event_start_at": "2026-00-00 0:00",
+    "event_end_at": "2026-00-00 23:59",
+    "color": "bg-[##e18ddc]",
+    "type": "생일",
+    "location": "",
+    "link": "https://x.com/r_linoa"
+  },
+  {
+    "vtuber_id": "liveruli-aren",
+    "title": "🎂 R아렌 2026년 생일",
+    "event_start_at": "2026-07-30 0:00",
+    "event_end_at": "2026-07-30 23:59",
+    "color": "bg-[#3d8d7f]",
+    "type": "생일",
+    "location": "",
+    "link": "https://x.com/r_aren_"
+  },
+  {
+    "vtuber_id": "liveruli-amigyu",
+    "title": "🎂 R아미규 2026년 생일",
+    "event_start_at": "2026-00-00 0:00",
+    "event_end_at": "2026-00-00 23:59",
+    "color": "bg-[#87a1bc]",
+    "type": "생일",
+    "location": "",
+    "link": "2023-11-26"
+  },
+  {
     "vtuber_id": "stelive-mystic-kanna",
     "title": "🎂 아이리 칸나 2026년 생일",
     "event_start_at": "2026-12-02 0:00",
