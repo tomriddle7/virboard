@@ -9,6 +9,7 @@ export default function SubmitPopup({ closeModal }: { closeModal: () => void }) 
     agency: '',
     start: '',
     end: '',
+    color: '',
     location: '',
     link: '',
     memo: ''
@@ -30,7 +31,7 @@ export default function SubmitPopup({ closeModal }: { closeModal: () => void }) 
       const result = await response.json();
       if (result.result === "success") {
         alert("제보가 성공적으로 접수되었습니다! 확인 후 반영하겠습니다.");
-        setFormData({ title: '', name: '', agency: '', start: '', end: '', location: '', link: '', memo: '' }); // 폼 초기화
+        setFormData({ title: '', name: '', agency: '', start: '', end: '', color: '', location: '', link: '', memo: '' }); // 폼 초기화
       }
     } catch (error) {
       console.error("제보 실패:", error);
@@ -84,6 +85,12 @@ export default function SubmitPopup({ closeModal }: { closeModal: () => void }) 
               <input type="text" name="agency" value={formData.agency} onChange={handleChange}
                 className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:text-white" />
             </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium dark:text-gray-300">버튜버 색상(HTML 색상코드)</label>
+            <input required type="text" name="color" value={formData.color} onChange={handleChange}
+              className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
           </div>
 
           <div className="flex space-x-4">
