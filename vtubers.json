@@ -12,7 +12,12 @@
     "birth": "2017-05-15",
     "debut": "2017-09-07",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TokinoSora",
+      "x": "https://x.com/tokino_sora",
+      "hololive": "https://hololive.hololivepro.com/talents/tokino-sora/"
+    }
   },
   {
     "privacy": "Public",
@@ -27,7 +32,12 @@
     "birth": "2016-05-23",
     "debut": "2018-03-09",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@Robococh",
+      "x": "https://x.com/robocosan",
+      "hololive": "https://hololive.hololivepro.com/talents/roboco-san/"
+    }
   },
   {
     "privacy": "Public",
@@ -42,7 +52,12 @@
     "birth": "2018-03-22",
     "debut": "2018-03-22",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HoshimachiSuisei",
+      "x": "https://x.com/suisei_hosimati",
+      "hololive": "https://hololive.hololivepro.com/talents/hoshimachi-suisei/"
+    }
   },
   {
     "privacy": "Public",
@@ -57,7 +72,12 @@
     "birth": "2018-03-05",
     "debut": "2018-08-01",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@SakuraMiko",
+      "hololive-zero-miko": "https://x.com/sakuramiko35",
+      "hololive": "https://hololive.hololivepro.com/talents/sakuramiko/"
+    }
   },
   {
     "privacy": "Public",
@@ -72,7 +92,12 @@
     "birth": "2018-07-01",
     "debut": "2018-11-15",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AZKi",
+      "x": "https://x.com/AZKi_VDiVA",
+      "hololive": "https://hololive.hololivepro.com/talents/azki/"
+    }
   },
   {
     "privacy": "Private",
@@ -87,7 +112,12 @@
     "birth": "2018-10-31",
     "debut": "2018-05-13",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@YozoraMel",
+      "x": "https://x.com/yozoramel",
+      "hololive": "https://hololive.hololivepro.com/talents/yozora-mel/"
+    }
   },
   {
     "privacy": "Public",
@@ -102,7 +132,12 @@
     "birth": "2018-02-17",
     "debut": "2018-06-01",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AkiRosenthal",
+      "x": "https://x.com/akirosenthal",
+      "hololive": "https://hololive.hololivepro.com/talents/aki-rosenthal/"
+    }
   },
   {
     "privacy": "Public",
@@ -118,7 +153,12 @@
     "birth": "2018-10-05",
     "debut": "2018-06-01",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShirakamiFubuki",
+      "x": "https://x.com/shirakamifubuki",
+      "hololive": "https://hololive.hololivepro.com/talents/shirakami-fubuki/"
+    }
   },
   {
     "privacy": "Public",
@@ -133,7 +173,12 @@
     "birth": "2018-07-22",
     "debut": "2018-06-01",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NatsuiroMatsuri",
+      "x": "https://x.com/natsuiromatsuri",
+      "hololive": "https://hololive.hololivepro.com/talents/natsuiro-matsuri/"
+    }
   },
   {
     "privacy": "Public",
@@ -148,7 +193,12 @@
     "birth": "2001-08-10",
     "debut": "2018-06-02",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AkaiHaato",
+      "x": "https://x.com/akaihaato",
+      "hololive": "https://hololive.hololivepro.com/talents/akai-haato/"
+    }
   },
   {
     "privacy": "Public",
@@ -163,7 +213,12 @@
     "birth": "2018-12-01",
     "debut": "2018-08-08",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MinatoAqua",
+      "x": "https://x.com/minatoaqua",
+      "hololive": "https://hololive.hololivepro.com/talents/minato-aqua/"
+    }
   },
   {
     "privacy": "Public",
@@ -178,7 +233,12 @@
     "birth": "2018-12-08",
     "debut": "2018-08-17",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MurasakiShion",
+      "x": "https://x.com/murasakishionch",
+      "hololive": "https://hololive.hololivepro.com/talents/murasaki-shion/"
+    }
   },
   {
     "privacy": "Public",
@@ -193,7 +253,12 @@
     "birth": "2018-12-13",
     "debut": "2018-09-03",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NakiriAyame",
+      "x": "https://x.com/nakiriayame",
+      "hololive": "https://hololive.hololivepro.com/talents/nakiri-ayame/"
+    }
   },
   {
     "privacy": "Public",
@@ -208,7 +273,12 @@
     "birth": "2018-02-14",
     "debut": "2018-09-04",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@YuzukiChoco",
+      "x": "https://x.com/yuzukichococh",
+      "hololive": "https://hololive.hololivepro.com/talents/yuzuki-choco/"
+    }
   },
   {
     "privacy": "Public",
@@ -223,7 +293,12 @@
     "birth": "2018-07-02",
     "debut": "2018-09-16",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OozoraSubaru",
+      "x": "https://x.com/oozorasubaru",
+      "hololive": "https://hololive.hololivepro.com/talents/oozora-subaru/"
+    }
   },
   {
     "privacy": "Public",
@@ -238,7 +313,12 @@
     "birth": "2018-08-20",
     "debut": "2018-12-07",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OokamiMio",
+      "x": "https://x.com/ookamimio",
+      "hololive": "https://hololive.hololivepro.com/talents/ookami-mio/"
+    }
   },
   {
     "privacy": "Public",
@@ -253,7 +333,12 @@
     "birth": "2019-02-22",
     "debut": "2019-04-06",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NekomataOkayu",
+      "x": "https://x.com/nekomataokayu",
+      "hololive": "https://hololive.hololivepro.com/talents/nekomata-okayu/"
+    }
   },
   {
     "privacy": "Public",
@@ -268,7 +353,12 @@
     "birth": "2019-10-01",
     "debut": "2019-04-13",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@InugamiKorone",
+      "x": "https://x.com/inugamikorone",
+      "hololive": "https://hololive.hololivepro.com/talents/inugami-korone/"
+    }
   },
   {
     "privacy": "Public",
@@ -283,7 +373,12 @@
     "birth": "2019-01-12",
     "debut": "2019-07-17",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@UsadaPekora",
+      "x": "https://x.com/usadapekora",
+      "hololive": "https://hololive.hololivepro.com/talents/usada-pekora/"
+    }
   },
   {
     "privacy": "Private",
@@ -298,7 +393,12 @@
     "birth": "2019-01-22",
     "debut": "2019-07-18",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@UruhaRushia",
+      "x": "https://x.com/uruharushia",
+      "hololive": "https://hololive.hololivepro.com/talents/uruha-rushia/"
+    }
   },
   {
     "privacy": "Public",
@@ -313,7 +413,12 @@
     "birth": "2019-04-02",
     "debut": "2019-08-07",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShiranuiFlare",
+      "x": "https://x.com/shiranuiflare",
+      "hololive": "https://hololive.hololivepro.com/talents/shiranui-flare/"
+    }
   },
   {
     "privacy": "Public",
@@ -328,7 +433,12 @@
     "birth": "2019-11-24",
     "debut": "2019-08-08",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShiroganeNoel",
+      "x": "https://x.com/shiroganenoel",
+      "hololive": "https://hololive.hololivepro.com/talents/shirogane-noel/"
+    }
   },
   {
     "privacy": "Public",
@@ -343,7 +453,12 @@
     "birth": "2019-07-30",
     "debut": "2019-08-11",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HoushouMarine",
+      "x": "https://x.com/houshoumarine",
+      "hololive": "https://hololive.hololivepro.com/talents/houshou-marine/"
+    }
   },
   {
     "privacy": "Public",
@@ -358,7 +473,12 @@
     "birth": "2019-04-22",
     "debut": "2019-12-27",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AmaneKanata",
+      "x": "https://x.com/amanekanatach",
+      "hololive": "https://hololive.hololivepro.com/talents/amane-kanata/"
+    }
   },
   {
     "privacy": "Public",
@@ -373,7 +493,12 @@
     "birth": "2019-06-17",
     "debut": "2019-12-28",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KiryuCoco",
+      "x": "https://x.com/kiryucoco",
+      "hololive": "https://hololive.hololivepro.com/talents/kiryu-coco/"
+    }
   },
   {
     "privacy": "Public",
@@ -388,7 +513,12 @@
     "birth": "2019-06-06",
     "debut": "2019-12-29",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TsunomakiWatame",
+      "x": "https://x.com/tsunomakiwatame",
+      "hololive": "https://hololive.hololivepro.com/talents/tsunomaki-watame/"
+    }
   },
   {
     "privacy": "Public",
@@ -403,7 +533,12 @@
     "birth": "2020-08-08",
     "debut": "2020-01-03",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TokoyamiTowa",
+      "x": "https://x.com/tokoyamitowa",
+      "hololive": "https://hololive.hololivepro.com/talents/tokoyami-towa/"
+    }
   },
   {
     "privacy": "Public",
@@ -418,7 +553,12 @@
     "birth": "2020-10-10",
     "debut": "2020-01-04",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HimemoriLuna",
+      "x": "https://x.com/himemoriluna",
+      "hololive": "https://hololive.hololivepro.com/talents/himemori-luna/"
+    }
   },
   {
     "privacy": "Public",
@@ -433,7 +573,12 @@
     "birth": "2020-11-15",
     "debut": "2020-08-12",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@YukihanaLamy",
+      "x": "https://x.com/yukihanalamy",
+      "hololive": "https://hololive.hololivepro.com/talents/yukihana-lamy/"
+    }
   },
   {
     "privacy": "Public",
@@ -448,7 +593,12 @@
     "birth": "2020-03-02",
     "debut": "2020-08-13",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MomosuzuNene",
+      "x": "https://x.com/momosuzunene",
+      "hololive": "https://hololive.hololivepro.com/talents/momosuzu-nene/"
+    }
   },
   {
     "privacy": "Public",
@@ -463,7 +613,12 @@
     "birth": "2020-09-08",
     "debut": "2020-08-14",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShishiroBotan",
+      "x": "https://x.com/shishirobotan",
+      "hololive": "https://hololive.hololivepro.com/talents/shishiro-botan/"
+    }
   },
   {
     "privacy": "Private",
@@ -478,7 +633,12 @@
     "birth": "2020-10-28",
     "debut": "2020-08-15",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ManoAloe",
+      "x": "https://x.com/manoaloe",
+      "hololive": "https://hololive.hololivepro.com/talents/mano-aloe/"
+    }
   },
   {
     "privacy": "Public",
@@ -493,7 +653,12 @@
     "birth": "2020-01-30",
     "debut": "2020-08-16",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OmaruPolka",
+      "x": "https://x.com/omarupolka",
+      "hololive": "https://hololive.hololivepro.com/talents/omaru-polka/"
+    }
   },
   {
     "privacy": "Public",
@@ -508,7 +673,12 @@
     "birth": "2021-05-25",
     "debut": "2021-11-26",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@LaplusDarknesss",
+      "x": "https://x.com/LaplusDarknesss",
+      "hololive": "https://hololive.hololivepro.com/talents/laplus-darknesss/"
+    }
   },
   {
     "privacy": "Public",
@@ -523,7 +693,12 @@
     "birth": "2021-06-11",
     "debut": "2021-11-27",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TakaneLui",
+      "x": "https://x.com/takanelui",
+      "hololive": "https://hololive.hololivepro.com/talents/takane-lui/"
+    }
   },
   {
     "privacy": "Public",
@@ -538,7 +713,12 @@
     "birth": "2021-03-15",
     "debut": "2021-11-28",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HakuiKoyori",
+      "x": "https://x.com/hakuikoyori",
+      "hololive": "https://hololive.hololivepro.com/talents/hakui-koyori/"
+    }
   },
   {
     "privacy": "Public",
@@ -553,7 +733,12 @@
     "birth": "2021-05-18",
     "debut": "2021-11-29",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@SakamataChloe",
+      "x": "https://x.com/sakamatachloe",
+      "hololive": "https://hololive.hololivepro.com/talents/sakamata-chloe/"
+    }
   },
   {
     "privacy": "Public",
@@ -568,7 +753,12 @@
     "birth": "2021-06-18",
     "debut": "2021-11-30",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@kazamairohach",
+      "x": "https://x.com/kazamairohach",
+      "hololive": "https://hololive.hololivepro.com/talents/kazama-iroha/"
+    }
   },
   {
     "privacy": "Public",
@@ -583,7 +773,12 @@
     "birth": "2020-01-15",
     "debut": "2020-04-10",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AyundaRisu",
+      "x": "https://x.com/ayunda_risu",
+      "hololive": "https://hololive.hololivepro.com/talents/ayunda-risu/"
+    }
   },
   {
     "privacy": "Public",
@@ -598,7 +793,12 @@
     "birth": "2020-02-15",
     "debut": "2020-04-11",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MoonaHoshinova",
+      "x": "https://x.com/moonahoshinova",
+      "hololive": "https://hololive.hololivepro.com/talents/moona-hoshinova/"
+    }
   },
   {
     "privacy": "Public",
@@ -613,7 +813,12 @@
     "birth": "2020-07-15",
     "debut": "2020-04-12",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AiraniIofifteen",
+      "x": "https://x.com/airaniiofifteen",
+      "hololive": "https://hololive.hololivepro.com/talents/airani-iofifteen/"
+    }
   },
   {
     "privacy": "Public",
@@ -628,7 +833,12 @@
     "birth": "2020-10-13",
     "debut": "2020-12-04",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KureijiOllie",
+      "x": "https://x.com/kureijiollie",
+      "hololive": "https://hololive.hololivepro.com/talents/kureiji-ollie/"
+    }
   },
   {
     "privacy": "Public",
@@ -643,7 +853,12 @@
     "birth": "2021-03-12",
     "debut": "2021-12-05",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AnyaMelfissa",
+      "x": "https://x.com/anyamelfissa",
+      "hololive": "https://hololive.hololivepro.com/talents/anya-melfissa/"
+    }
   },
   {
     "privacy": "Public",
@@ -658,7 +873,12 @@
     "birth": "2020-09-09",
     "debut": "2020-12-06",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@PavoliaReine",
+      "x": "https://x.com/pavoliareine",
+      "hololive": "https://hololive.hololivepro.com/talents/pavolia-reine/"
+    }
   },
   {
     "privacy": "Public",
@@ -673,7 +893,12 @@
     "birth": "2022-11-07",
     "debut": "2022-03-25",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@VestiaZeta",
+      "x": "https://x.com/vestiazeta",
+      "hololive": "https://hololive.hololivepro.com/talents/vestia-zeta/"
+    }
   },
   {
     "privacy": "Public",
@@ -688,7 +913,12 @@
     "birth": "2022-08-30",
     "debut": "2022-03-26",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KaelaKovalskia",
+      "x": "https://x.com/kaelakovalskia",
+      "hololive": "https://hololive.hololivepro.com/talents/kaela-kovalskia/"
+    }
   },
   {
     "privacy": "Public",
@@ -703,7 +933,12 @@
     "birth": "2022-12-12",
     "debut": "2022-03-27",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KoboKanaeru",
+      "x": "https://x.com/kobokanaeru",
+      "hololive": "https://hololive.hololivepro.com/talents/kobo-kanaeru/"
+    }
   },
   {
     "privacy": "Public",
@@ -718,7 +953,12 @@
     "birth": "2020-04-04",
     "debut": "2020-09-12",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MoriCalliope",
+      "x": "https://x.com/moricalliope",
+      "hololive": "https://hololive.hololivepro.com/talents/mori-calliope/"
+    }
   },
   {
     "privacy": "Public",
@@ -733,7 +973,12 @@
     "birth": "2020-07-06",
     "debut": "2020-09-12",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TakanashiKiara",
+      "x": "https://x.com/takanashikiara",
+      "hololive": "https://hololive.hololivepro.com/talents/takanashi-kiara/"
+    }
   },
   {
     "privacy": "Public",
@@ -748,7 +993,12 @@
     "birth": "2020-01-06",
     "debut": "2020-09-13",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@WatsonAmelia",
+      "x": "https://x.com/watsonameliaen",
+      "hololive": "https://hololive.hololivepro.com/talents/watson-amelia/"
+    }
   },
   {
     "privacy": "Public",
@@ -763,7 +1013,12 @@
     "birth": "2020-05-20",
     "debut": "2020-09-13",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NinomaeInanis",
+      "x": "https://x.com/ninomaeinanis",
+      "hololive": "https://hololive.hololivepro.com/talents/ninomae-inanis/"
+    }
   },
   {
     "privacy": "Public",
@@ -778,7 +1033,12 @@
     "birth": "2020-06-20",
     "debut": "2020-09-13",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@GawrGura",
+      "x": "https://x.com/gawrgura",
+      "hololive": "https://hololive.hololivepro.com/talents/gawr-gura/"
+    }
   },
   {
     "privacy": "Public",
@@ -793,7 +1053,12 @@
     "birth": "2021-03-07",
     "debut": "2021-07-11",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@IRyS",
+      "x": "https://x.com/irys_en",
+      "hololive": "https://hololive.hololivepro.com/talents/irys/"
+    }
   },
   {
     "privacy": "Public",
@@ -808,7 +1073,8 @@
     "birth": "2021-02-29",
     "debut": "2021-08-23",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {}
   },
   {
     "privacy": "Public",
@@ -823,7 +1089,12 @@
     "birth": "2021-03-14",
     "debut": "2021-08-23",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OuroKronii",
+      "x": "https://x.com/ourokronii",
+      "hololive": "https://hololive.hololivepro.com/talents/ouro-kronii/"
+    }
   },
   {
     "privacy": "Public",
@@ -838,7 +1109,12 @@
     "birth": "2021-03-21",
     "debut": "2021-08-23",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@CeresFauna",
+      "x": "https://x.com/ceresfauna",
+      "hololive": "https://hololive.hololivepro.com/talents/ceres-fauna/"
+    }
   },
   {
     "privacy": "Public",
@@ -853,7 +1129,12 @@
     "birth": "2021-08-04",
     "debut": "2021-08-23",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NanashiMumei",
+      "x": "https://x.com/nanashimumei_en",
+      "hololive": "https://hololive.hololivepro.com/talents/nanashi-mumei/"
+    }
   },
   {
     "privacy": "Public",
@@ -868,7 +1149,8 @@
     "birth": "2021-06-10",
     "debut": "2021-08-23",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {}
   },
   {
     "privacy": "Public",
@@ -883,7 +1165,12 @@
     "birth": "2023-05-02",
     "debut": "2023-07-30",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShioriNovella",
+      "x": "https://x.com/shiorinovella",
+      "hololive": "https://hololive.hololivepro.com/talents/shiori-novella/"
+    }
   },
   {
     "privacy": "Public",
@@ -898,7 +1185,12 @@
     "birth": "2023-04-14",
     "debut": "2023-07-30",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KosekiBijou",
+      "x": "https://x.com/kosekibijou",
+      "hololive": "https://hololive.hololivepro.com/talents/koseki-bijou/"
+    }
   },
   {
     "privacy": "Public",
@@ -913,7 +1205,12 @@
     "birth": "2023-11-21",
     "debut": "2023-07-31",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NerissaRavencroft",
+      "x": "https://x.com/nerissa_en",
+      "hololive": "https://hololive.hololivepro.com/talents/nerissa-ravencroft/"
+    }
   },
   {
     "privacy": "Public",
@@ -928,7 +1225,12 @@
     "birth": "2023-02-01",
     "debut": "2023-07-31",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@FUWAMOCOch",
+      "x": "https://x.com/fuwamoco_en",
+      "hololive": "https://hololive.hololivepro.com/talents/fuwamoco/"
+    }
   },
   {
     "privacy": "Public",
@@ -943,7 +1245,12 @@
     "birth": "2023-02-02",
     "debut": "2023-07-31",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@FUWAMOCOch",
+      "x": "https://x.com/fuwamoco_en",
+      "hololive": "https://hololive.hololivepro.com/talents/fuwamoco/"
+    }
   },
   {
     "privacy": "Public",
@@ -958,7 +1265,12 @@
     "birth": "2024-04-25",
     "debut": "2024-06-22",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@holoen_erbloodflame",
+      "x": "https://x.com/ERBloodflame",
+      "hololive": "https://hololive.hololivepro.com/talents/elizabeth-rose-bloodflame/"
+    }
   },
   {
     "privacy": "Public",
@@ -973,7 +1285,12 @@
     "birth": "2024-10-18",
     "debut": "2024-06-22",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@holoen_gigimurin",
+      "x": "https://x.com/gigimurin",
+      "hololive": "https://hololive.hololivepro.com/talents/gigi-murin/"
+    }
   },
   {
     "privacy": "Public",
@@ -988,7 +1305,12 @@
     "birth": "2024-11-11",
     "debut": "2024-06-23",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@holoen_ceciliaimmergreen",
+      "x": "https://x.com/ceciliaimgreen",
+      "hololive": "https://hololive.hololivepro.com/talents/cecilia-immergreen/"
+    }
   },
   {
     "privacy": "Public",
@@ -1003,7 +1325,12 @@
     "birth": "2024-05-11",
     "debut": "2024-06-23",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@holoen_raorapanthera",
+      "x": "https://x.com/raorapanthera",
+      "hololive": "https://hololive.hololivepro.com/talents/raora-panthera/"
+    }
   },
   {
     "privacy": "Public",
@@ -1018,7 +1345,12 @@
     "birth": "2023-02-27",
     "debut": "2023-09-09",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HiodoshiAo",
+      "x": "https://x.com/hiodoshiao",
+      "hololive": "https://hololive.hololivepro.com/talents/hiodoshi-ao/"
+    }
   },
   {
     "privacy": "Public",
@@ -1032,8 +1364,13 @@
     "color": "bg-[#fee7b5]",
     "birth": "2023-04-20",
     "debut": "2023-09-09",
-    "link": "https://x.com/otonosekanade",
-    "unit": []
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OtonoseKanade",
+      "x": "https://x.com/otonosekanade",
+      "hololive": "https://hololive.hololivepro.com/talents/otonose-kanade/"
+    }
   },
   {
     "privacy": "Public",
@@ -1048,7 +1385,12 @@
     "birth": "2023-05-12",
     "debut": "2023-09-09",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@IchijouRirika",
+      "x": "https://x.com/ichijouririka",
+      "hololive": "https://hololive.hololivepro.com/talents/ichijou-ririka/"
+    }
   },
   {
     "privacy": "Public",
@@ -1063,7 +1405,12 @@
     "birth": "2023-02-04",
     "debut": "2023-09-10",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@JuufuuteiRaden",
+      "x": "https://x.com/juufuuteiraden",
+      "hololive": "https://hololive.hololivepro.com/talents/juufuutei-raden/"
+    }
   },
   {
     "privacy": "Public",
@@ -1078,7 +1425,12 @@
     "birth": "2023-06-07",
     "debut": "2023-09-10",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TodorokiHajime",
+      "x": "https://x.com/todoroki_hajime",
+      "hololive": "https://hololive.hololivepro.com/talents/todoroki-hajime/"
+    }
   },
   {
     "privacy": "Public",
@@ -1093,7 +1445,12 @@
     "birth": "2024-05-29",
     "debut": "2024-11-09",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@IsakiRiona",
+      "x": "https://x.com/isakiriona",
+      "hololive": "https://hololive.hololivepro.com/talents/isaki-riona/"
+    }
   },
   {
     "privacy": "Public",
@@ -1108,7 +1465,12 @@
     "birth": "2024-07-25",
     "debut": "2024-11-09",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KoganeiNiko",
+      "x": "https://x.com/koganeiniko",
+      "hololive": "https://hololive.hololivepro.com/talents/koganei-niko/"
+    }
   },
   {
     "privacy": "Public",
@@ -1123,7 +1485,12 @@
     "birth": "2024-06-16",
     "debut": "2024-11-09",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MizumiyaSu",
+      "x": "https://x.com/mizumiya_su",
+      "hololive": "https://hololive.hololivepro.com/talents/mizumiya-su/"
+    }
   },
   {
     "privacy": "Public",
@@ -1138,7 +1505,12 @@
     "birth": "2024-07-08",
     "debut": "2024-11-09",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@RindoChihaya",
+      "x": "https://x.com/rindochihaya",
+      "hololive": "https://hololive.hololivepro.com/talents/rindo-chihaya/"
+    }
   },
   {
     "privacy": "Public",
@@ -1153,7 +1525,12 @@
     "birth": "2024-08-27",
     "debut": "2024-11-09",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KikiraraVivi",
+      "x": "https://x.com/kikiraravivi",
+      "hololive": "https://hololive.hololivepro.com/talents/kikirara-vivi/"
+    }
   },
   {
     "privacy": "Public",
@@ -1166,7 +1543,10 @@
     "birth": "2026-04-01",
     "debut": "2026-01-24",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/36456402c5de56290706cab427698f85"
+    }
   },
   {
     "privacy": "Public",
@@ -1179,7 +1559,10 @@
     "birth": "2025-11-22",
     "debut": "2025-10-19",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/f966fa6decfa7bbb5c60accf817dd9bf"
+    }
   },
   {
     "privacy": "Public",
@@ -1192,7 +1575,10 @@
     "birth": "2025-02-11",
     "debut": "2025-04-19",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/6f377acaaaacc0b5e9bebc70e45eef4f"
+    }
   },
   {
     "privacy": "Public",
@@ -1204,8 +1590,12 @@
     "color": "bg-[#e06a8e]",
     "birth": "2023-11-18",
     "debut": "2023-09-28",
-    "link": "https://x.com/R_Rosetta_",
-    "unit": []
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/faf9cdd37e2ce5e2af6944dbf42739a9",
+      "x": "https://x.com/R_Rosetta_"
+    }
   },
   {
     "privacy": "Public",
@@ -1217,8 +1607,12 @@
     "color": "bg-[##e18ddc]",
     "birth": "2024-00-00",
     "debut": "2024-06-01",
-    "link": "https://x.com/r_linoa",
-    "unit": []
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/2f1107218a8e549f7b9ec5a53c488d33",
+      "x": "https://x.com/r_linoa"
+    }
   },
   {
     "privacy": "Public",
@@ -1230,8 +1624,12 @@
     "color": "bg-[#3d8d7f]",
     "birth": "2024-07-30",
     "debut": "2024-05-01",
-    "link": "https://x.com/r_aren_",
-    "unit": []
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/29573c033c726c2e8aeda78e3a8882a6",
+      "x": "https://x.com/r_aren_"
+    }
   },
   {
     "privacy": "Public",
@@ -1243,8 +1641,12 @@
     "color": "bg-[#87a1bc]",
     "birth": "2023-00-00",
     "debut": "2023-11-26",
-    "link": "https://x.com/ami9yu",
-    "unit": []
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/5a11e1cd1e5f2ec76a538555f4ecfaa8",
+      "x": "https://x.com/ami9yu"
+    }
   },
   {
     "privacy": "Public",
@@ -1259,7 +1661,13 @@
     "birth": "2022-12-02",
     "debut": "2022-08-20",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/f722959d1b8e651bd56209b343932c01",
+      "youtube": "https://www.youtube.com/@AiriKanna",
+      "x": "https://x.com/AiriKanna_KR",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1274,7 +1682,13 @@
     "birth": "2022-05-21",
     "debut": "2022-08-20",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/45e71a76e949e16a34764deb962f9d9f",
+      "youtube": "https://www.youtube.com/@AyatsunoYuni",
+      "x": "https://x.com/AyatsunoYuni_KR",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1289,7 +1703,13 @@
     "birth": "2025-07-07",
     "debut": "2025-09-20",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/36ddb9bb4f17593b60f1b63cec86611d",
+      "youtube": "https://www.youtube.com/@SakihaneHuya",
+      "x": "https://x.com/SakihaneHuya",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1304,7 +1724,13 @@
     "birth": "2023-10-01",
     "debut": "2023-06-11",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/4325b1d5bbc321fad3042306646e2e50",
+      "youtube": "https://www.youtube.com/@AkaneLize",
+      "x": "https://x.com/AkaneLize",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1319,7 +1745,13 @@
     "birth": "2023-01-05",
     "debut": "2023-06-10",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/b044e3a3b9259246bc92e863e7d3f3b8",
+      "youtube": "https://www.youtube.com/@ShirayukiHina",
+      "x": "https://x.com/ShirayukiHina_",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1334,7 +1766,13 @@
     "birth": "2023-02-22",
     "debut": "2023-06-10",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/4515b179f86b67b4981e16190817c580",
+      "youtube": "https://www.youtube.com/@NenekoMashiro",
+      "x": "https://x.com/NenekoMashiro",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1349,7 +1787,13 @@
     "birth": "2023-09-07",
     "debut": "2023-06-11",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/a6c4ddb09cdb160478996007bff35296",
+      "youtube": "https://www.youtube.com/@arahashitabi",
+      "x": "https://x.com/ArahashiTabi",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1364,7 +1808,13 @@
     "birth": "2024-05-03",
     "debut": "2024-05-18",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/516937b5f85cbf2249ce31b0ad046b0f",
+      "youtube": "https://www.youtube.com/@AokumoRin",
+      "x": "https://x.com/AokumoRin",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1379,7 +1829,13 @@
     "birth": "2024-03-21",
     "debut": "2024-05-18",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/64d76089fba26b180d9c9e48a32600d9",
+      "youtube": "https://www.youtube.com/@TenkoShibuki",
+      "x": "https://x.com/TenkoShibuki",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1394,7 +1850,13 @@
     "birth": "2024-04-13",
     "debut": "2024-05-19",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/8fd39bb8de623317de90654718638b10",
+      "youtube": "https://www.youtube.com/@YuzuhaRiko",
+      "x": "https://x.com/YuzuhaRiko",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   },
   {
     "privacy": "Public",
@@ -1409,6 +1871,12 @@
     "birth": "2024-08-07",
     "debut": "2024-05-19",
     "link": "",
-    "unit": []
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/4d812b586ff63f8a2946e64fa860bbf5",
+      "youtube": "https://www.youtube.com/@HanakoNana",
+      "x": "https://x.com/HanakoNana",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
   }
 ]
