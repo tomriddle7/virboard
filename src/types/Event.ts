@@ -29,7 +29,10 @@ export interface VtuberProfile {
   color: string;
   birth: Date;
   debut: Date;
-  unit: string[]
+  unit: string[];
+  platforms: {
+    [label: string]: string;
+  }
 }
 
 export type RawVTuber = Omit<VtuberProfile, "generation" | "birth" | "debut" | "unit"> & {

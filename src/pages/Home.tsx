@@ -160,6 +160,10 @@ function Home() {
 
   const closeDetailModal = () => setSelectedEvent(null);
   const closeSubmitModal = () => setSubmitOpen(false);
+  const selectedVtuberInfo = useMemo(() => {
+    if (!selectedEvent) return null;
+    return vtuberMap[selectedEvent.vtuber_id];
+  }, [selectedEvent, vtuberMap]);
 
   return (
     <>
@@ -283,7 +287,13 @@ function Home() {
             />
           </div>
           {/* 4. 선택된 이벤트가 있을 때만 렌더링되는 모달 창 */}
-          {selectedEvent && <DetailPopup selectedEvent={selectedEvent} closeModal={closeDetailModal} />}
+          {selectedEvent && (
+            <DetailPopup
+              selectedEvent={selectedEvent}
+              closeModal={closeDetailModal}
+              vtuberInfo={selectedVtuberInfo}
+            />
+          )}
           {submitOpen && <SubmitPopup closeModal={closeSubmitModal} />}
           <BottomDrawer
             drawerData={drawerData}

@@ -23,6 +23,7 @@ jobs:
       VITE_GAS_URL: ${{ secrets.VITE_GAS_URL }}
       VITE_EVENT_SHEET_URL: ${{ secrets.VITE_EVENT_SHEET_URL }}
       VITE_VTUBER_SHEET_URL: ${{ secrets.VITE_VTUBER_SHEET_URL }}
+      VITE_PLATFORM_SHEET_URL: ${{ secrets.VITE_PLATFORM_SHEET_URL }}
 
     steps:
       # 1. 저장소 체크아웃
@@ -56,6 +57,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/celebration.json
+          git add public/vtubers.json
           
           if ! git diff --cached --quiet; then
             echo "변경사항이 감지되었습니다. 커밋을 진행합니다."

@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 
 const EVENT_SHEET_URL = process.env.VITE_EVENT_SHEET_URL;
 const VTUBER_SHEET_URL = process.env.VITE_VTUBER_SHEET_URL;
+const PLATFORM_SHEET_URL = process.env.VITE_PLATFORM_SHEET_URL;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -37,24 +38,32 @@ async function fetchAndConvert() {
   try {
     console.log('구글 시트 데이터 가져오는 중...');
 
-    const [rawVtubers, rawEvents] = await Promise.all([
+    const [rawVtubers, rawEvents, rawPlatforms] = await Promise.all([
       fetchAndParseTSV(VTUBER_SHEET_URL),
-      fetchAndParseTSV(EVENT_SHEET_URL)
+      fetchAndParseTSV(EVENT_SHEET_URL),
+      fetchAndParseTSV(PLATFORM_SHEET_URL)
     ])
     
     // 2. 버튜버 마스터 데이터를 딕셔너리(Map) 형태로 변환하여 검색 속도를 높이고 배열화합니다.
     const vtuberMap = {};
     const formattedVtubers = [];
     rawVtubers.forEach(v => {
+      const matchedPlatforms = Object.fromEntries(
+        rawPlatforms
+          .filter(p => p.vtuber_id === v.id)
+          .map(p => [p.platform, p.url])
+      );
+
       const formatted = {
         ...v,
-        // 기수와 유닛을 배열로 쪼개줍니다.
         generation: v.generation ? v.generation.split(',').map(g => g.trim()) : [],
-        unit: v.unit ? v.unit.split(',').map(u => u.trim()) : []
+        unit: v.unit ? v.unit.split(',').map(u => u.trim()) : [],
+        // ✨ 3-2. 조립된 플랫폼 배열을 객체 안에 쏙 넣어줍니다!
+        platforms: matchedPlatforms
       };
 
       vtuberMap[v.id] = formatted;
-      formattedVtubers.push(formatted); // 배열에도 차곡차곡 담아줍니다.
+      formattedVtubers.push(formatted);
     });
 
     const finalEvents = [];
