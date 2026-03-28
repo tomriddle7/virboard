@@ -1,0 +1,1882 @@
+[
+  {
+    "privacy": "Public",
+    "id": "hololive-zero-sora",
+    "name": "토키노 소라",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "0기생"
+    ],
+    "color": "bg-[#324ab2]",
+    "birth": "2017-05-15",
+    "debut": "2017-09-07",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TokinoSora",
+      "x": "https://x.com/tokino_sora",
+      "hololive": "https://hololive.hololivepro.com/talents/tokino-sora/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-zero-roboco",
+    "name": "로보코 씨",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "0기생"
+    ],
+    "color": "bg-[#e8b2bf]",
+    "birth": "2016-05-23",
+    "debut": "2018-03-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@Robococh",
+      "x": "https://x.com/robocosan",
+      "hololive": "https://hololive.hololivepro.com/talents/roboco-san/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-zero-suisei",
+    "name": "호시마치 스이세이",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "0기생"
+    ],
+    "color": "bg-[#91b7ea]",
+    "birth": "2018-03-22",
+    "debut": "2018-03-22",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HoshimachiSuisei",
+      "x": "https://x.com/suisei_hosimati",
+      "hololive": "https://hololive.hololivepro.com/talents/hoshimachi-suisei/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-zero-miko",
+    "name": "사쿠라 미코",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "0기생"
+    ],
+    "color": "bg-[#ff85c2]",
+    "birth": "2018-03-05",
+    "debut": "2018-08-01",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@SakuraMiko",
+      "hololive-zero-miko": "https://x.com/sakuramiko35",
+      "hololive": "https://hololive.hololivepro.com/talents/sakuramiko/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-zero-azki",
+    "name": "AZKi",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "0기생"
+    ],
+    "color": "bg-[#f689cd]",
+    "birth": "2018-07-01",
+    "debut": "2018-11-15",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AZKi",
+      "x": "https://x.com/AZKi_VDiVA",
+      "hololive": "https://hololive.hololivepro.com/talents/azki/"
+    }
+  },
+  {
+    "privacy": "Private",
+    "id": "hololive-first-mel",
+    "name": "요조라 멜",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#f8e378]",
+    "birth": "2018-10-31",
+    "debut": "2018-05-13",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@YozoraMel",
+      "x": "https://x.com/yozoramel",
+      "hololive": "https://hololive.hololivepro.com/talents/yozora-mel/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-first-akirose",
+    "name": "아키 로젠탈",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#5161c1]",
+    "birth": "2018-02-17",
+    "debut": "2018-06-01",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AkiRosenthal",
+      "x": "https://x.com/akirosenthal",
+      "hololive": "https://hololive.hololivepro.com/talents/aki-rosenthal/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-first-fubuki",
+    "name": "시라카미 후부키",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "1기생",
+      "GAMERS"
+    ],
+    "color": "bg-white !text-black",
+    "birth": "2018-10-05",
+    "debut": "2018-06-01",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShirakamiFubuki",
+      "x": "https://x.com/shirakamifubuki",
+      "hololive": "https://hololive.hololivepro.com/talents/shirakami-fubuki/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-first-maturi",
+    "name": "나츠이로 마츠리",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#febd59]",
+    "birth": "2018-07-22",
+    "debut": "2018-06-01",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NatsuiroMatsuri",
+      "x": "https://x.com/natsuiromatsuri",
+      "hololive": "https://hololive.hololivepro.com/talents/natsuiro-matsuri/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-first-haato",
+    "name": "아카이 하아토",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#990000]",
+    "birth": "2001-08-10",
+    "debut": "2018-06-02",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AkaiHaato",
+      "x": "https://x.com/akaihaato",
+      "hololive": "https://hololive.hololivepro.com/talents/akai-haato/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-second-aqua",
+    "name": "미나토 아쿠아",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#ed83b1]",
+    "birth": "2018-12-01",
+    "debut": "2018-08-08",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MinatoAqua",
+      "x": "https://x.com/minatoaqua",
+      "hololive": "https://hololive.hololivepro.com/talents/minato-aqua/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-second-shion",
+    "name": "무라사키 시온",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#8041d9]",
+    "birth": "2018-12-08",
+    "debut": "2018-08-17",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MurasakiShion",
+      "x": "https://x.com/murasakishionch",
+      "hololive": "https://hololive.hololivepro.com/talents/murasaki-shion/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-second-ayame",
+    "name": "나키리 아야메",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#bb0000]",
+    "birth": "2018-12-13",
+    "debut": "2018-09-03",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NakiriAyame",
+      "x": "https://x.com/nakiriayame",
+      "hololive": "https://hololive.hololivepro.com/talents/nakiri-ayame/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-second-choco",
+    "name": "유즈키 초코",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#f1c1d1]",
+    "birth": "2018-02-14",
+    "debut": "2018-09-04",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@YuzukiChoco",
+      "x": "https://x.com/yuzukichococh",
+      "hololive": "https://hololive.hololivepro.com/talents/yuzuki-choco/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-second-subaru",
+    "name": "오오조라 스바루",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#e2f558]",
+    "birth": "2018-07-02",
+    "debut": "2018-09-16",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OozoraSubaru",
+      "x": "https://x.com/oozorasubaru",
+      "hololive": "https://hololive.hololivepro.com/talents/oozora-subaru/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-gamers-mio",
+    "name": "오오카미 미오",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "GAMERS"
+    ],
+    "color": "bg-[#00012e]",
+    "birth": "2018-08-20",
+    "debut": "2018-12-07",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OokamiMio",
+      "x": "https://x.com/ookamimio",
+      "hololive": "https://hololive.hololivepro.com/talents/ookami-mio/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-gamers-okayu",
+    "name": "네코마타 오카유",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "GAMERS"
+    ],
+    "color": "bg-[#ae9bc8]",
+    "birth": "2019-02-22",
+    "debut": "2019-04-06",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NekomataOkayu",
+      "x": "https://x.com/nekomataokayu",
+      "hololive": "https://hololive.hololivepro.com/talents/nekomata-okayu/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-gamers-korone",
+    "name": "이누가미 코로네",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "GAMERS"
+    ],
+    "color": "bg-[#aa544d]",
+    "birth": "2019-10-01",
+    "debut": "2019-04-13",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@InugamiKorone",
+      "x": "https://x.com/inugamikorone",
+      "hololive": "https://hololive.hololivepro.com/talents/inugami-korone/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-fantasy-pekora",
+    "name": "우사다 페코라",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "Fantasy"
+    ],
+    "color": "bg-[#039be5]",
+    "birth": "2019-01-12",
+    "debut": "2019-07-17",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@UsadaPekora",
+      "x": "https://x.com/usadapekora",
+      "hololive": "https://hololive.hololivepro.com/talents/usada-pekora/"
+    }
+  },
+  {
+    "privacy": "Private",
+    "id": "hololive-fantasy-rushia",
+    "name": "우루하 루시아",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "Fantasy"
+    ],
+    "color": "bg-[#40e0d0]",
+    "birth": "2019-01-22",
+    "debut": "2019-07-18",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@UruhaRushia",
+      "x": "https://x.com/uruharushia",
+      "hololive": "https://hololive.hololivepro.com/talents/uruha-rushia/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-fantasy-flare",
+    "name": "시라누이 후레아",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "Fantasy"
+    ],
+    "color": "bg-[#0e4c6e]",
+    "birth": "2019-04-02",
+    "debut": "2019-08-07",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShiranuiFlare",
+      "x": "https://x.com/shiranuiflare",
+      "hololive": "https://hololive.hololivepro.com/talents/shiranui-flare/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-fantasy-noel",
+    "name": "시로가네 노엘",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "Fantasy"
+    ],
+    "color": "bg-[#f5f5f5] !text-black",
+    "birth": "2019-11-24",
+    "debut": "2019-08-08",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShiroganeNoel",
+      "x": "https://x.com/shiroganenoel",
+      "hololive": "https://hololive.hololivepro.com/talents/shirogane-noel/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-fantasy-marine",
+    "name": "호쇼 마린",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "Fantasy"
+    ],
+    "color": "bg-[#bb0000]",
+    "birth": "2019-07-30",
+    "debut": "2019-08-11",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HoushouMarine",
+      "x": "https://x.com/houshoumarine",
+      "hololive": "https://hololive.hololivepro.com/talents/houshou-marine/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-force-kanata",
+    "name": "아마네 카나타",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoForce"
+    ],
+    "color": "bg-[#87cefa]",
+    "birth": "2019-04-22",
+    "debut": "2019-12-27",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AmaneKanata",
+      "x": "https://x.com/amanekanatach",
+      "hololive": "https://hololive.hololivepro.com/talents/amane-kanata/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-force-coco",
+    "name": "키류 코코",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoForce"
+    ],
+    "color": "bg-[#fd915d]",
+    "birth": "2019-06-17",
+    "debut": "2019-12-28",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KiryuCoco",
+      "x": "https://x.com/kiryucoco",
+      "hololive": "https://hololive.hololivepro.com/talents/kiryu-coco/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-force-watame",
+    "name": "츠노마키 와타메",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoForce"
+    ],
+    "color": "bg-[#fef09d]",
+    "birth": "2019-06-06",
+    "debut": "2019-12-29",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TsunomakiWatame",
+      "x": "https://x.com/tsunomakiwatame",
+      "hololive": "https://hololive.hololivepro.com/talents/tsunomaki-watame/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-force-towa",
+    "name": "토코야미 토와",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoForce"
+    ],
+    "color": "bg-[#d63ea7]",
+    "birth": "2020-08-08",
+    "debut": "2020-01-03",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TokoyamiTowa",
+      "x": "https://x.com/tokoyamitowa",
+      "hololive": "https://hololive.hololivepro.com/talents/tokoyami-towa/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-force-luna",
+    "name": "히메모리 루나",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoForce"
+    ],
+    "color": "bg-[#fbb0d9]",
+    "birth": "2020-10-10",
+    "debut": "2020-01-04",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HimemoriLuna",
+      "x": "https://x.com/himemoriluna",
+      "hololive": "https://hololive.hololivepro.com/talents/himemori-luna/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-five-lamy",
+    "name": "유키하나 라미",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoFive"
+    ],
+    "color": "bg-[#6bcdf8]",
+    "birth": "2020-11-15",
+    "debut": "2020-08-12",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@YukihanaLamy",
+      "x": "https://x.com/yukihanalamy",
+      "hololive": "https://hololive.hololivepro.com/talents/yukihana-lamy/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-five-nene",
+    "name": "모모스즈 네네",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoFive"
+    ],
+    "color": "bg-[#ffb65d]",
+    "birth": "2020-03-02",
+    "debut": "2020-08-13",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MomosuzuNene",
+      "x": "https://x.com/momosuzunene",
+      "hololive": "https://hololive.hololivepro.com/talents/momosuzu-nene/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-five-botan",
+    "name": "시시로 보탄",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoFive"
+    ],
+    "color": "bg-[#e4dedc]",
+    "birth": "2020-09-08",
+    "debut": "2020-08-14",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShishiroBotan",
+      "x": "https://x.com/shishirobotan",
+      "hololive": "https://hololive.hololivepro.com/talents/shishiro-botan/"
+    }
+  },
+  {
+    "privacy": "Private",
+    "id": "hololive-five-aloe",
+    "name": "마노 알로에",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoFive"
+    ],
+    "color": "bg-[#f38cc4]",
+    "birth": "2020-10-28",
+    "debut": "2020-08-15",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ManoAloe",
+      "x": "https://x.com/manoaloe",
+      "hololive": "https://hololive.hololivepro.com/talents/mano-aloe/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-five-polka",
+    "name": "오마루 폴카",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoFive"
+    ],
+    "color": "bg-[#f8e9cb]",
+    "birth": "2020-01-30",
+    "debut": "2020-08-16",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OmaruPolka",
+      "x": "https://x.com/omarupolka",
+      "hololive": "https://hololive.hololivepro.com/talents/omaru-polka/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holox-dark",
+    "name": "라플라스 다크니스",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoX"
+    ],
+    "color": "bg-[#936cc6]",
+    "birth": "2021-05-25",
+    "debut": "2021-11-26",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@LaplusDarknesss",
+      "x": "https://x.com/LaplusDarknesss",
+      "hololive": "https://hololive.hololivepro.com/talents/laplus-darknesss/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holox-lui",
+    "name": "타카네 루이",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoX"
+    ],
+    "color": "bg-[#7f104c]",
+    "birth": "2021-06-11",
+    "debut": "2021-11-27",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TakaneLui",
+      "x": "https://x.com/takanelui",
+      "hololive": "https://hololive.hololivepro.com/talents/takane-lui/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holox-koyori",
+    "name": "하쿠이 코요리",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoX"
+    ],
+    "color": "bg-[#ffacd3]",
+    "birth": "2021-03-15",
+    "debut": "2021-11-28",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HakuiKoyori",
+      "x": "https://x.com/hakuikoyori",
+      "hololive": "https://hololive.hololivepro.com/talents/hakui-koyori/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holox-chloe",
+    "name": "사카마타 클로에",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoX"
+    ],
+    "color": "bg-[#f4f4f0] !text-black",
+    "birth": "2021-05-18",
+    "debut": "2021-11-29",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@SakamataChloe",
+      "x": "https://x.com/sakamatachloe",
+      "hololive": "https://hololive.hololivepro.com/talents/sakamata-chloe/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holox-iroha",
+    "name": "카자마 이로하",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "holoX"
+    ],
+    "color": "bg-[#faefe4]",
+    "birth": "2021-06-18",
+    "debut": "2021-11-30",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@kazamairohach",
+      "x": "https://x.com/kazamairohach",
+      "hololive": "https://hololive.hololivepro.com/talents/kazama-iroha/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-area15-risu",
+    "name": "아윤다 리스",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "AREA15"
+    ],
+    "color": "bg-[#b7886f]",
+    "birth": "2020-01-15",
+    "debut": "2020-04-10",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AyundaRisu",
+      "x": "https://x.com/ayunda_risu",
+      "hololive": "https://hololive.hololivepro.com/talents/ayunda-risu/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-area15-moona",
+    "name": "무나 호시노바",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "AREA15"
+    ],
+    "color": "bg-[#7c1bde]",
+    "birth": "2020-02-15",
+    "debut": "2020-04-11",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MoonaHoshinova",
+      "x": "https://x.com/moonahoshinova",
+      "hololive": "https://hololive.hololivepro.com/talents/moona-hoshinova/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-area15-iofi",
+    "name": "아이라니 이오피프틴",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "AREA15"
+    ],
+    "color": "bg-[#f6e9e6]",
+    "birth": "2020-07-15",
+    "debut": "2020-04-12",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AiraniIofifteen",
+      "x": "https://x.com/airaniiofifteen",
+      "hololive": "https://hololive.hololivepro.com/talents/airani-iofifteen/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holoro-ollie",
+    "name": "쿠레이지 올리",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "holoro"
+    ],
+    "color": "bg-[#d2042d]",
+    "birth": "2020-10-13",
+    "debut": "2020-12-04",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KureijiOllie",
+      "x": "https://x.com/kureijiollie",
+      "hololive": "https://hololive.hololivepro.com/talents/kureiji-ollie/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holoro-anya",
+    "name": "아냐 멜핏사",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "holoro"
+    ],
+    "color": "bg-[#a07e7e]",
+    "birth": "2021-03-12",
+    "debut": "2021-12-05",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AnyaMelfissa",
+      "x": "https://x.com/anyamelfissa",
+      "hololive": "https://hololive.hololivepro.com/talents/anya-melfissa/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holoro-reine",
+    "name": "파볼리아 레이네",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "holoro"
+    ],
+    "color": "bg-[#efe2e9]",
+    "birth": "2020-09-09",
+    "debut": "2020-12-06",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@PavoliaReine",
+      "x": "https://x.com/pavoliareine",
+      "hololive": "https://hololive.hololivepro.com/talents/pavolia-reine/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holoh3ro-zeta",
+    "name": "베스티아 제타",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "holoh3ro"
+    ],
+    "color": "bg-[#4e65b1]",
+    "birth": "2022-11-07",
+    "debut": "2022-03-25",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@VestiaZeta",
+      "x": "https://x.com/vestiazeta",
+      "hololive": "https://hololive.hololivepro.com/talents/vestia-zeta/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holoh3ro-kaela",
+    "name": "카엘라 코발스키아",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "holoh3ro"
+    ],
+    "color": "bg-[#ec9948]",
+    "birth": "2022-08-30",
+    "debut": "2022-03-26",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KaelaKovalskia",
+      "x": "https://x.com/kaelakovalskia",
+      "hololive": "https://hololive.hololivepro.com/talents/kaela-kovalskia/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-holoh3ro-kobo",
+    "name": "코보 카나에루",
+    "agency": "Hololive",
+    "nation": "ID",
+    "generation": [
+      "holoh3ro"
+    ],
+    "color": "bg-[#00add0]",
+    "birth": "2022-12-12",
+    "debut": "2022-03-27",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KoboKanaeru",
+      "x": "https://x.com/kobokanaeru",
+      "hololive": "https://hololive.hololivepro.com/talents/kobo-kanaeru/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-myth-calli",
+    "name": "모리 칼리오페",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Myth"
+    ],
+    "color": "bg-[#f090a6]",
+    "birth": "2020-04-04",
+    "debut": "2020-09-12",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MoriCalliope",
+      "x": "https://x.com/moricalliope",
+      "hololive": "https://hololive.hololivepro.com/talents/mori-calliope/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-myth-kiara",
+    "name": "타카나시 키아라",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Myth"
+    ],
+    "color": "bg-[#ff7f00]",
+    "birth": "2020-07-06",
+    "debut": "2020-09-12",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TakanashiKiara",
+      "x": "https://x.com/takanashikiara",
+      "hololive": "https://hololive.hololivepro.com/talents/takanashi-kiara/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-myth-ame",
+    "name": "왓슨 아멜리아",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Myth"
+    ],
+    "color": "bg-[#f9db92]",
+    "birth": "2020-01-06",
+    "debut": "2020-09-13",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@WatsonAmelia",
+      "x": "https://x.com/watsonameliaen",
+      "hololive": "https://hololive.hololivepro.com/talents/watson-amelia/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-myth-ina",
+    "name": "니노마에 이나니스",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Myth"
+    ],
+    "color": "bg-[#695882]",
+    "birth": "2020-05-20",
+    "debut": "2020-09-13",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NinomaeInanis",
+      "x": "https://x.com/ninomaeinanis",
+      "hololive": "https://hololive.hololivepro.com/talents/ninomae-inanis/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-myth-gura",
+    "name": "가우르 구라",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Myth"
+    ],
+    "color": "bg-[#0097ff]",
+    "birth": "2020-06-20",
+    "debut": "2020-09-13",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@GawrGura",
+      "x": "https://x.com/gawrgura",
+      "hololive": "https://hololive.hololivepro.com/talents/gawr-gura/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-promise-irys",
+    "name": "IRyS",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Promise"
+    ],
+    "color": "bg-[#8f00ff]",
+    "birth": "2021-03-07",
+    "debut": "2021-07-11",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@IRyS",
+      "x": "https://x.com/irys_en",
+      "hololive": "https://hololive.hololivepro.com/talents/irys/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-promise-baelz",
+    "name": "하코스 벨즈",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Promise"
+    ],
+    "color": "bg-[#e5443c]",
+    "birth": "2021-02-29",
+    "debut": "2021-08-23",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-promise-kronii",
+    "name": "오로 크로니",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Promise"
+    ],
+    "color": "bg-[#515671]",
+    "birth": "2021-03-14",
+    "debut": "2021-08-23",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OuroKronii",
+      "x": "https://x.com/ourokronii",
+      "hololive": "https://hololive.hololivepro.com/talents/ouro-kronii/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-promise-fauna",
+    "name": "세레스 파우나",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Promise"
+    ],
+    "color": "bg-[#84b48a]",
+    "birth": "2021-03-21",
+    "debut": "2021-08-23",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@CeresFauna",
+      "x": "https://x.com/ceresfauna",
+      "hololive": "https://hololive.hololivepro.com/talents/ceres-fauna/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-promise-mumei",
+    "name": "나나시 무메이",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Promise"
+    ],
+    "color": "bg-[#bfad9d]",
+    "birth": "2021-08-04",
+    "debut": "2021-08-23",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NanashiMumei",
+      "x": "https://x.com/nanashimumei_en",
+      "hololive": "https://hololive.hololivepro.com/talents/nanashi-mumei/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-council-sana",
+    "name": "츠쿠모 사나",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Promise"
+    ],
+    "color": "bg-[#cf946b]",
+    "birth": "2021-06-10",
+    "debut": "2021-08-23",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-advent-shiori",
+    "name": "시오리 노벨라",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Advent"
+    ],
+    "color": "bg-[#624e74]",
+    "birth": "2023-05-02",
+    "debut": "2023-07-30",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@ShioriNovella",
+      "x": "https://x.com/shiorinovella",
+      "hololive": "https://hololive.hololivepro.com/talents/shiori-novella/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-advent-bijou",
+    "name": "코세키 비쥬",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Advent"
+    ],
+    "color": "bg-[#9e74e0]",
+    "birth": "2023-04-14",
+    "debut": "2023-07-30",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KosekiBijou",
+      "x": "https://x.com/kosekibijou",
+      "hololive": "https://hololive.hololivepro.com/talents/koseki-bijou/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-advent-nerisa",
+    "name": "네리사 레이븐크로프트",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Advent"
+    ],
+    "color": "bg-[#423e3f]",
+    "birth": "2023-11-21",
+    "debut": "2023-07-31",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@NerissaRavencroft",
+      "x": "https://x.com/nerissa_en",
+      "hololive": "https://hololive.hololivepro.com/talents/nerissa-ravencroft/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-advent-fuwawa",
+    "name": "후와와 어비스가드",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Advent"
+    ],
+    "color": "bg-[#f19bc0]",
+    "birth": "2023-02-01",
+    "debut": "2023-07-31",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@FUWAMOCOch",
+      "x": "https://x.com/fuwamoco_en",
+      "hololive": "https://hololive.hololivepro.com/talents/fuwamoco/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-advent-mococo",
+    "name": "모코코 어비스가드",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Advent"
+    ],
+    "color": "bg-[#c9ddff]",
+    "birth": "2023-02-02",
+    "debut": "2023-07-31",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@FUWAMOCOch",
+      "x": "https://x.com/fuwamoco_en",
+      "hololive": "https://hololive.hololivepro.com/talents/fuwamoco/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-justice-liz",
+    "name": "엘리자베스 로즈",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Justice"
+    ],
+    "color": "bg-[#efafa9]",
+    "birth": "2024-04-25",
+    "debut": "2024-06-22",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@holoen_erbloodflame",
+      "x": "https://x.com/ERBloodflame",
+      "hololive": "https://hololive.hololivepro.com/talents/elizabeth-rose-bloodflame/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-justice-gigi",
+    "name": "지지 무린",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Justice"
+    ],
+    "color": "bg-[#fff2ea] !text-black",
+    "birth": "2024-10-18",
+    "debut": "2024-06-22",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@holoen_gigimurin",
+      "x": "https://x.com/gigimurin",
+      "hololive": "https://hololive.hololivepro.com/talents/gigi-murin/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-justice-cece",
+    "name": "세실리아 이머그린",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Justice"
+    ],
+    "color": "bg-[#9bfda8]",
+    "birth": "2024-11-11",
+    "debut": "2024-06-23",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@holoen_ceciliaimmergreen",
+      "x": "https://x.com/ceciliaimgreen",
+      "hololive": "https://hololive.hololivepro.com/talents/cecilia-immergreen/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-justice-raora",
+    "name": "라오라 판테라",
+    "agency": "Hololive",
+    "nation": "EN",
+    "generation": [
+      "Justice"
+    ],
+    "color": "bg-[#ffdaf1]",
+    "birth": "2024-05-11",
+    "debut": "2024-06-23",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@holoen_raorapanthera",
+      "x": "https://x.com/raorapanthera",
+      "hololive": "https://hololive.hololivepro.com/talents/raora-panthera/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-regloss-ao",
+    "name": "히오도시 아오",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "ReGLOSS"
+    ],
+    "color": "bg-[#1d3466]",
+    "birth": "2023-02-27",
+    "debut": "2023-09-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HiodoshiAo",
+      "x": "https://x.com/hiodoshiao",
+      "hololive": "https://hololive.hololivepro.com/talents/hiodoshi-ao/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-regloss-kanade",
+    "name": "오토노세 카나데",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "ReGLOSS"
+    ],
+    "color": "bg-[#fee7b5]",
+    "birth": "2023-04-20",
+    "debut": "2023-09-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@OtonoseKanade",
+      "x": "https://x.com/otonosekanade",
+      "hololive": "https://hololive.hololivepro.com/talents/otonose-kanade/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-regloss-ririka",
+    "name": "이치조 리리카",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "ReGLOSS"
+    ],
+    "color": "bg-[#f47daa]",
+    "birth": "2023-05-12",
+    "debut": "2023-09-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@IchijouRirika",
+      "x": "https://x.com/ichijouririka",
+      "hololive": "https://hololive.hololivepro.com/talents/ichijou-ririka/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-regloss-raden",
+    "name": "주우후테이 라덴",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "ReGLOSS"
+    ],
+    "color": "bg-[#3b7c72]",
+    "birth": "2023-02-04",
+    "debut": "2023-09-10",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@JuufuuteiRaden",
+      "x": "https://x.com/juufuuteiraden",
+      "hololive": "https://hololive.hololivepro.com/talents/juufuutei-raden/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-regloss-hajime",
+    "name": "토도로키 하지메",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "ReGLOSS"
+    ],
+    "color": "bg-[#b6b5ff]",
+    "birth": "2023-06-07",
+    "debut": "2023-09-10",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TodorokiHajime",
+      "x": "https://x.com/todoroki_hajime",
+      "hololive": "https://hololive.hololivepro.com/talents/todoroki-hajime/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-flowglow-riona",
+    "name": "이사키 리오나",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "FLOW GLOW"
+    ],
+    "color": "bg-[#fe3480]",
+    "birth": "2024-05-29",
+    "debut": "2024-11-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@IsakiRiona",
+      "x": "https://x.com/isakiriona",
+      "hololive": "https://hololive.hololivepro.com/talents/isaki-riona/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-flowglow-niko",
+    "name": "코가네이 니코",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "FLOW GLOW"
+    ],
+    "color": "bg-[#f58017]",
+    "birth": "2024-07-25",
+    "debut": "2024-11-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KoganeiNiko",
+      "x": "https://x.com/koganeiniko",
+      "hololive": "https://hololive.hololivepro.com/talents/koganei-niko/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-flowglow-su",
+    "name": "미즈미야 스우",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "FLOW GLOW"
+    ],
+    "color": "bg-[#71e5ff]",
+    "birth": "2024-06-16",
+    "debut": "2024-11-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@MizumiyaSu",
+      "x": "https://x.com/mizumiya_su",
+      "hololive": "https://hololive.hololivepro.com/talents/mizumiya-su/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-flowglow-chiha",
+    "name": "린도 치하야",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "FLOW GLOW"
+    ],
+    "color": "bg-[#37baba]",
+    "birth": "2024-07-08",
+    "debut": "2024-11-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@RindoChihaya",
+      "x": "https://x.com/rindochihaya",
+      "hololive": "https://hololive.hololivepro.com/talents/rindo-chihaya/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "hololive-flowglow-vivi",
+    "name": "키키라라 비비",
+    "agency": "Hololive",
+    "nation": "DEV_IS",
+    "generation": [
+      "FLOW GLOW"
+    ],
+    "color": "bg-[#ff90cc]",
+    "birth": "2024-08-27",
+    "debut": "2024-11-09",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "youtube": "https://www.youtube.com/@KikiraraVivi",
+      "x": "https://x.com/kikiraravivi",
+      "hololive": "https://hololive.hololivepro.com/talents/kikirara-vivi/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-sayu",
+    "name": "서사유",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-gradient-to-br from-[#804d34] to-[#12c8cb]",
+    "birth": "2026-04-01",
+    "debut": "2026-01-24",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/36456402c5de56290706cab427698f85"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-soya",
+    "name": "윤소야",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-gradient-to-br from-[#cd6cb2] to-[#88d9e4]",
+    "birth": "2025-11-22",
+    "debut": "2025-10-19",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/f966fa6decfa7bbb5c60accf817dd9bf"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-baejjal",
+    "name": "배쨜이",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-gradient-to-br from-black to-white",
+    "birth": "2025-02-11",
+    "debut": "2025-04-19",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/6f377acaaaacc0b5e9bebc70e45eef4f"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "liveruli-rosetta",
+    "name": "R로제타",
+    "agency": "Liveruli",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[#e06a8e]",
+    "birth": "2023-11-18",
+    "debut": "2023-09-28",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/faf9cdd37e2ce5e2af6944dbf42739a9",
+      "x": "https://x.com/R_Rosetta_"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "liveruli-renoa",
+    "name": "R리노아",
+    "agency": "Liveruli",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[##e18ddc]",
+    "birth": "2024-00-00",
+    "debut": "2024-06-01",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/2f1107218a8e549f7b9ec5a53c488d33",
+      "x": "https://x.com/r_linoa"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "liveruli-aren",
+    "name": "R아렌",
+    "agency": "Liveruli",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[#3d8d7f]",
+    "birth": "2024-07-30",
+    "debut": "2024-05-01",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/29573c033c726c2e8aeda78e3a8882a6",
+      "x": "https://x.com/r_aren_"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "liveruli-amigyu",
+    "name": "R아미규",
+    "agency": "Liveruli",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[#87a1bc]",
+    "birth": "2023-00-00",
+    "debut": "2023-11-26",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/5a11e1cd1e5f2ec76a538555f4ecfaa8",
+      "x": "https://x.com/ami9yu"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-mystic-kanna",
+    "name": "아이리 칸나",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Mystic"
+    ],
+    "color": "bg-[#373584]",
+    "birth": "2022-12-02",
+    "debut": "2022-08-20",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/f722959d1b8e651bd56209b343932c01",
+      "youtube": "https://www.youtube.com/@AiriKanna",
+      "x": "https://x.com/AiriKanna_KR",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-everys-yuni",
+    "name": "아야츠노 유니",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Everys"
+    ],
+    "color": "bg-[#857fd8]",
+    "birth": "2022-05-21",
+    "debut": "2022-08-20",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/45e71a76e949e16a34764deb962f9d9f",
+      "youtube": "https://www.youtube.com/@AyatsunoYuni",
+      "x": "https://x.com/AyatsunoYuni_KR",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-everys-huya",
+    "name": "사키하네 후야",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Everys"
+    ],
+    "color": "bg-[#8166a1]",
+    "birth": "2025-07-07",
+    "debut": "2025-09-20",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/36ddb9bb4f17593b60f1b63cec86611d",
+      "youtube": "https://www.youtube.com/@SakihaneHuya",
+      "x": "https://x.com/SakihaneHuya",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-universe-lize",
+    "name": "아카네 리제",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Universe"
+    ],
+    "color": "bg-[#971b2f]",
+    "birth": "2023-10-01",
+    "debut": "2023-06-11",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/4325b1d5bbc321fad3042306646e2e50",
+      "youtube": "https://www.youtube.com/@AkaneLize",
+      "x": "https://x.com/AkaneLize",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-universe-hina",
+    "name": "시라유키 히나",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Universe"
+    ],
+    "color": "bg-[#f2dcbf]",
+    "birth": "2023-01-05",
+    "debut": "2023-06-10",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/b044e3a3b9259246bc92e863e7d3f3b8",
+      "youtube": "https://www.youtube.com/@ShirayukiHina",
+      "x": "https://x.com/ShirayukiHina_",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-universe-mashiro",
+    "name": "네네코 마시로",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Universe"
+    ],
+    "color": "bg-[#25282a]",
+    "birth": "2023-02-22",
+    "debut": "2023-06-10",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/4515b179f86b67b4981e16190817c580",
+      "youtube": "https://www.youtube.com/@NenekoMashiro",
+      "x": "https://x.com/NenekoMashiro",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-universe-tabi",
+    "name": "아라하시 타비",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Universe"
+    ],
+    "color": "bg-[#9adaff]",
+    "birth": "2023-09-07",
+    "debut": "2023-06-11",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/a6c4ddb09cdb160478996007bff35296",
+      "youtube": "https://www.youtube.com/@arahashitabi",
+      "x": "https://x.com/ArahashiTabi",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-cliche-rin",
+    "name": "아오쿠모 린",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Cliché"
+    ],
+    "color": "bg-[#2b66c0]",
+    "birth": "2024-05-03",
+    "debut": "2024-05-18",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/516937b5f85cbf2249ce31b0ad046b0f",
+      "youtube": "https://www.youtube.com/@AokumoRin",
+      "x": "https://x.com/AokumoRin",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-cliche-shibuki",
+    "name": "텐코 시부키",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Cliché"
+    ],
+    "color": "bg-[#f1e4ff] !text-black",
+    "birth": "2024-03-21",
+    "debut": "2024-05-18",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/64d76089fba26b180d9c9e48a32600d9",
+      "youtube": "https://www.youtube.com/@TenkoShibuki",
+      "x": "https://x.com/TenkoShibuki",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-cliche-riko",
+    "name": "유즈하 리코",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Cliché"
+    ],
+    "color": "bg-[#a6d0a6]",
+    "birth": "2024-04-13",
+    "debut": "2024-05-19",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/8fd39bb8de623317de90654718638b10",
+      "youtube": "https://www.youtube.com/@YuzuhaRiko",
+      "x": "https://x.com/YuzuhaRiko",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "stelive-cliche-nana",
+    "name": "하나코 나나",
+    "agency": "Stelive",
+    "nation": "KR",
+    "generation": [
+      "Cliché"
+    ],
+    "color": "bg-[#df7685]",
+    "birth": "2024-08-07",
+    "debut": "2024-05-19",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/4d812b586ff63f8a2946e64fa860bbf5",
+      "youtube": "https://www.youtube.com/@HanakoNana",
+      "x": "https://x.com/HanakoNana",
+      "cafeNaver": "https://cafe.naver.com/stellive"
+    }
+  }
+]
