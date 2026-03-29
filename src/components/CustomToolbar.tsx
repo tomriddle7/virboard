@@ -1,5 +1,6 @@
 import type { ToolbarProps, EventProps } from 'react-big-calendar'
 import { format } from 'date-fns'
+import { useTranslation } from 'react-i18next'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import type { VtuberEvent } from '@/types/Event'
 
@@ -7,6 +8,7 @@ import type { VtuberEvent } from '@/types/Event'
 export const CustomToolbar: React.FC<ToolbarProps<VtuberEvent, object>> = (
   toolbar
 ) => {
+  const { t } = useTranslation();
   const goToBack = () => {
     toolbar.onNavigate("PREV");
   };
@@ -24,7 +26,7 @@ export const CustomToolbar: React.FC<ToolbarProps<VtuberEvent, object>> = (
           onClick={goToCurrent}
           className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition"
         >
-          오늘
+          {t('calendar.today')}
         </button>
         <div className="flex rounded-md shadow-sm">
           <button
@@ -42,7 +44,7 @@ export const CustomToolbar: React.FC<ToolbarProps<VtuberEvent, object>> = (
         </div>
       </div>
       <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300">
-        {format(toolbar.date, "yyyy년 MM월")}
+        {format(toolbar.date, "yyyy. MM.")}
       </h2>
       <div className="w-[100px]">
         {/* 우측 빈 공간 (레이아웃 균형을 위해 남겨두었어요) */}

@@ -1,4 +1,5 @@
 import { format } from 'date-fns'
+import { useTranslation } from 'react-i18next'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import type { VtuberEvent, VtuberProfile } from '@/types/Event'
 
@@ -9,6 +10,7 @@ interface DetailPopupProps {
 }
 
 function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps) {
+  const { t } = useTranslation();
 
   // ✨ 로고 이미지 경로 매핑 함수 (이미지 유효성 검사 포함)
   const getPlatformLogoInfo = (platform: string) => {
@@ -50,12 +52,12 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
         <div className="flex gap-1.5 mb-3">
           {selectedEvent.type && (
             <span className={`inline-block px-3 py-1 text-xs font-bold text-white rounded-full ${selectedEvent.color}`}>
-              {selectedEvent.type}
+              {t(`event_type.${selectedEvent.type}`, { defaultValue: selectedEvent.type })}
             </span>
           )}
           {selectedEvent.status === 'funding' && (
             <span className="inline-block px-3 py-1 text-xs font-bold text-white rounded-full bg-orange-500">
-              모금중
+              {t('event.funding')}
             </span>
           )}
         </div>
@@ -74,7 +76,7 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
           {selectedEvent.location && (
             <div>
               <p className="text-xs text-gray-400 dark:text-gray-500 font-semibold mb-1">
-                📍 위치
+                📍 {t('popup.location')}
               </p>
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
                 {selectedEvent.location}
@@ -119,14 +121,14 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
             // [B] 생일이 아닐 때: 기존처럼 selectedEvent.link 하나만 보여줌
             selectedEvent.link && (
               <div>
-                <p className="text-xs text-gray-400 dark:text-gray-500 font-semibold mb-1">🔗 출처</p>
+                <p className="text-xs text-gray-400 dark:text-gray-500 font-semibold mb-1">🔗 {t('popup.source')}</p>
                 <a
                   href={selectedEvent.link}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm font-medium text-indigo-500 dark:text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:underline transition-colors"
                 >
-                  바로가기 &rarr;
+                    {t('popup.shortcut')} &rarr;
                 </a>
               </div>
             )
@@ -134,7 +136,7 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
 
           {selectedEvent.memo && (
             <div>
-              <p className="text-xs text-gray-400 dark:text-gray-500 font-semibold mb-1">📝 참고</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 font-semibold mb-1">📝 {t('popup.memo')}</p>
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{selectedEvent.memo}</p>
             </div>
           )}
@@ -146,7 +148,7 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
             onClick={closeModal}
             className="w-full py-3 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-xl hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors"
           >
-            확인
+            {t('common.confirm')}
           </button>
         </div>
       </div>

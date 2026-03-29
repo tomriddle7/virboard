@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next'
 
 function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (key: boolean) => void, updateAgency: (key: string) => void, agencyMap: Map<string, string> }) {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   // 1. 초기 상태를 설정할 때 로컬 스토리지에서 값을 가져옵니다.
@@ -61,7 +63,7 @@ function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (
         className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800"
         onClick={() => submitOpen(true)}
       >
-        제보하기
+        {t('common.report')}
       </button>
     </header>
   );

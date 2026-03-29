@@ -1,4 +1,5 @@
 import { Drawer } from 'vaul'
+import { useTranslation } from 'react-i18next'
 import type { VtuberEvent } from '@/types/Event'
 
 function BottomDrawer({
@@ -10,6 +11,7 @@ function BottomDrawer({
   onClose: () => void;
   onEventClick: (event: VtuberEvent) => void;
 }) {
+  const { t } = useTranslation();
   // vaul은 닫히는 애니메이션 도중에도 컴포넌트를 렌더링하므로,
   // drawerData가 null이 될 때를 대비해 안전하게 값을 추출해 둡니다.
   const month = drawerData?.date ? drawerData.date.getMonth() + 1 : '';
@@ -39,12 +41,12 @@ function BottomDrawer({
           <div className="px-6 pb-12 flex flex-col overflow-y-auto">
             {/* Drawer.Title은 접근성(스크린 리더 등)을 위해 필수로 권장됩니다 */}
             <Drawer.Title className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-100">
-              {month}월 {day}일 일정
+              {t('drawer.title', { month, day })}
             </Drawer.Title>
 
             {/* Drawer.Description 역시 접근성을 위한 숨김 텍스트로 넣어줍니다 */}
             <Drawer.Description className="sr-only">
-              선택하신 날짜의 버튜버 일정 목록입니다.
+              {t('drawer.desc')}
             </Drawer.Description>
 
             {/* 스크롤 가능한 일정 목록 */}
@@ -59,7 +61,10 @@ function BottomDrawer({
                     style={{ borderLeftColor: event.color || '#43c5f5' }}
                   >
                     <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-                      {event.type}{event.status === 'funding' && '(모금중)'}
+                      {t(`event_type.${event.type}`, { defaultValue: event.type })}
+                      {event.status === 'funding' && <span className="inline-block px-3 py-1 ml-2 text-xs font-bold text-white rounded-full bg-orange-500">
+                        {t('event.funding')}
+                      </span>}
                     </div>
                     <div className="font-semibold text-gray-800 dark:text-gray-100">
                       {event.title}

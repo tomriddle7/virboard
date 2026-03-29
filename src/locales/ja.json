@@ -1,0 +1,47 @@
+{
+    "common": {
+        "all": "すべて",
+        "all_vtubers": "すべてのVTuber",
+        "close": "閉じる",
+        "confirm": "確認",
+        "report": "情報提供"
+    },
+    "calendar": {
+        "today": "今日",
+        "month_format": "yyyy年 MM月"
+    },
+    "event": {
+        "birthday": "誕生日",
+        "funding": "募金中"
+    },
+    "drawer": {
+        "title": "{{month}}月{{day}}日の予定",
+        "desc": "選択した日付のVTuberスケジュール一覧です。"
+    },
+    "popup": {
+        "location": "場所",
+        "visit_channel": "公式チャンネルへ",
+        "source": "出典",
+        "shortcut": "リンクへ",
+        "memo": "備考"
+    },
+    "submit": {
+        "title": "📅 スケジュールを報告",
+        "event_title": "イベント名",
+        "vtuber_name": "VTuber名",
+        "agency": "所属",
+        "start_date": "開始日",
+        "end_date": "終了日",
+        "submit_btn": "送信する",
+        "submitting": "送信中...",
+        "success_alert": "報告が正常に送信されました！確認後に反映します。",
+        "error_alert": "送信中にエラーが発生しました。"
+    },
+    "event_type": {
+        "생일": "誕生日",
+        "전광판": "ビジョン広告",
+        "카페": "コラボカフェ",
+        "팝업": "ポップアップ",
+        "지하철": "駅広告"
+    }
+}

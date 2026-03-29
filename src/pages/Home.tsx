@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
+import { useTranslation } from 'react-i18next'
 import { format, parse, startOfWeek, getDay } from 'date-fns'
-import { ko } from 'date-fns/locale'
+import { ko, enUS, ja } from 'date-fns/locale'
 import CalendarHeader from '@/components/CalendarHeader'
 import { CustomToolbar, CustomEvent } from '@/components/CustomToolbar'
 import Footer from '@/components/Footer'
@@ -11,10 +12,8 @@ import BottomDrawer from '@/components/BottomDrawer'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import type { VtuberEvent, RawEvent, VtuberProfile, RawVTuber } from '@/types/Event'
 
-// date-fns 로컬라이저 설정 (한국어 달력 지원)
-const locales = {
-  ko: ko,
-};
+// date-fns 로컬라이저 설정
+const locales = { ko, en: enUS, ja };
 
 const localizer = dateFnsLocalizer({
   format,
@@ -33,6 +32,12 @@ const agencyMap = new Map([
 ]);
 
 function Home() {
+  const { t, i18n } = useTranslation(); // ✨ 번역 훅 호출
+
+  // 현재 선택된 언어의 앞 2글자(ko-KR -> ko)를 따서 캘린더 culture에 넘겨줍니다.
+  const currentLang = i18n.language.split('-')[0];
+  const currentLocale = locales[currentLang as keyof typeof locales] || enUS;
+
   const [date, setDate] = useState<Date>(new Date(2026, 2, 1));
   const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
   const [submitOpen, setSubmitOpen] = useState<boolean>(false);
@@ -124,7 +129,8 @@ function Home() {
       }
 
       // 3. 유닛(Unit)은 '현재 선택된 소속'과 '현재 선택된 기수'까지 모두 일치하는 버튜버의 유닛만 담습니다.
-      const matchGen = selectedGen === '전체' || (v.generation && v.generation.includes(selectedGen));
+      const matchGen = selectedGen === t('common.all') || (v.generation?.includes(selectedGen) ?? false);
+      const matchUnit = selectedUnit === t('common.all') || (v.unit?.includes(selectedUnit) ?? false);
       if (matchAgency && matchGen && Array.isArray(v.unit)) {
         v.unit.forEach(u => unitSet.add(u));
       }
@@ -181,12 +187,12 @@ function Home() {
               date={date}
               onNavigate={(newDate) => setDate(newDate)}
               onSelectEvent={(event) => setSelectedEvent(event)}
-              culture="ko"
+              culture={currentLang}
               views={["month"]}
               popup={true}
               formats={{
                 dayHeaderFormat: (date) => {
-                  return new Intl.DateTimeFormat('ko-KR', {
+                  return new Intl.DateTimeFormat(i18n.language, {
                     month: 'long',
                     day: 'numeric',
                     weekday: 'long'

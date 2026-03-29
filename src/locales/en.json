@@ -1,0 +1,47 @@
+{
+    "common": {
+        "all": "All",
+        "all_vtubers": "All VTubers",
+        "close": "Close",
+        "confirm": "OK",
+        "report": "Suggest"
+    },
+    "calendar": {
+        "today": "Today",
+        "month_format": "MMMM yyyy"
+    },
+    "event": {
+        "birthday": "Birthday",
+        "funding": "Funding"
+    },
+    "drawer": {
+        "title": "Schedule for {{month}}/{{day}}",
+        "desc": "List of VTuber schedules for the selected date."
+    },
+    "popup": {
+        "location": "Location",
+        "visit_channel": "Visit Official Channel",
+        "source": "Source",
+        "shortcut": "Go to Link",
+        "memo": "Note"
+    },
+    "submit": {
+        "title": "📅 Submit Schedule",
+        "event_title": "Event Title",
+        "vtuber_name": "VTuber Name",
+        "agency": "Agency",
+        "start_date": "Start Date",
+        "end_date": "End Date",
+        "submit_btn": "Submit",
+        "submitting": "Submitting...",
+        "success_alert": "Successfully submitted! We will reflect it after review.",
+        "error_alert": "An error occurred during submission."
+    },
+    "event_type": {
+        "생일": "Birthday",
+        "전광판": "Billboard",
+        "카페": "Collab Cafe",
+        "팝업": "Pop-up Store",
+        "지하철": "Subway Ad"
+    }
+}

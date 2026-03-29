@@ -32,6 +32,3 @@ telepresence.log
 
 # env files
 .env
-
-# i18n
-locales

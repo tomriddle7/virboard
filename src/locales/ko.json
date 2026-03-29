@@ -1,0 +1,52 @@
+{
+    "common": {
+        "all": "전체",
+        "all_vtubers": "All VTubers",
+        "close": "닫기",
+        "confirm": "확인",
+        "report": "제보하기"
+    },
+    "calendar": {
+        "today": "오늘",
+        "month_format": "{{year}}년 {{month}}월"
+    },
+    "event": {
+        "birthday": "생일",
+        "funding": "모금중"
+    },
+    "drawer": {
+        "title": "{{month}}월 {{day}}일 일정",
+        "desc": "선택하신 날짜의 버튜버 일정 목록입니다."
+    },
+    "popup": {
+        "location": "위치",
+        "visit_channel": "공식 채널 방문하기",
+        "source": "출처",
+        "shortcut": "바로가기",
+        "memo": "참고"
+    },
+    "submit": {
+        "title": "📅 일정 제보하기",
+        "event_title": "이벤트 제목",
+        "vtuber_name": "버튜버 이름",
+        "agency": "소속",
+        "color": "버튜버 색상(HTML 색상코드)",
+        "start_date": "시작일",
+        "end_date": "종료일",
+        "location": "위치 (광고/팝업스토어 등)",
+        "location_placeholder": "예: 홍대입구역 2번 출구",
+        "link": "관련 링크 (X, 팬카페 등)",
+        "memo": "추가 정보",
+        "submit_btn": "제보하기",
+        "submitting": "전송 중...",
+        "success_alert": "제보가 성공적으로 접수되었습니다! 확인 후 반영하겠습니다.",
+        "error_alert": "전송 중 오류가 발생했습니다."
+    },
+    "event_type": {
+        "생일": "생일",
+        "전광판": "전광판",
+        "카페": "콜라보 카페",
+        "팝업": "팝업스토어",
+        "지하철": "지하철 광고"
+    }
+}
