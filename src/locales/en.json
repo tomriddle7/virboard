@@ -4,7 +4,12 @@
         "all_vtubers": "All VTubers",
         "close": "Close",
         "confirm": "OK",
-        "report": "Suggest"
+        "report": "Suggest",
+        "home": "Home",
+        "favorites": "Favorites",
+        "settings": "Settings",
+        "dark_mode": "Dark Mode",
+        "language": "Language"
     },
     "calendar": {
         "today": "Today",

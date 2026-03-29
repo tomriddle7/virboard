@@ -4,7 +4,12 @@
         "all_vtubers": "すべてのVTuber",
         "close": "閉じる",
         "confirm": "確認",
-        "report": "情報提供"
+        "report": "情報提供",
+        "home": "ホーム",
+        "favorites": "お気に入り",
+        "settings": "設定",
+        "dark_mode": "ダークモード",
+        "language": "言語"
     },
     "calendar": {
         "today": "今日",

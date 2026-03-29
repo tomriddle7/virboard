@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next'
+import { Menu } from 'lucide-react'; // ✨ 햄버거 아이콘 불러오기
+import Sidebar from '@/components/Sidebar';    // ✨ 방금 만든 사이드바 불러오기
 
 function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (key: boolean) => void, updateAgency: (key: string) => void, agencyMap: Map<string, string> }) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // 1. 초기 상태를 설정할 때 로컬 스토리지에서 값을 가져옵니다.
   const [selectedKey, setSelectedKey] = useState(() => {
@@ -24,8 +27,13 @@ function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (
   return (
     <header className="h-14 bg-[#266ba1] px-4 flex justify-between items-center">
       <div className="flex items-center gap-4">
-        {/* 왼쪽 아이콘 버튼 */}
-        <button className="text-2xl text-white pb-1">☰</button>
+        {/* ✨ 햄버거 버튼 */}
+        <button
+          onClick={() => setIsSidebarOpen(true)}
+          className="p-2 -ml-2 rounded-xl hover:bg-white/20 text-white transition-colors"
+        >
+          <Menu className="w-6 h-6" />
+        </button>
 
         {/* 드롭다운 기준점 */}
         <div className="relative text-2xl font-bold">
@@ -37,7 +45,7 @@ function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (
               {selectedKey}
             </span>
             <span className="text-[#e8b2bf]">
-              board <span className="ml-1 text-sm text-white">▾</span>
+              board <span className="text-sm text-white">▾</span>
             </span>
           </button>
 
@@ -65,6 +73,12 @@ function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (
       >
         {t('common.report')}
       </button>
+
+      {/* ✨ 사이드바 컴포넌트 렌더링 (isSidebarOpen 상태를 프롭스로 넘겨줍니다) */}
+      <Sidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+      />
     </header>
   );
 }
