@@ -191,7 +191,7 @@
     "event_end_at": "",
     "color": "bg-[#695882]",
     "type": "전광판",
-    "location": "서울 강남역",
+    "location": "서울 강남역(2, 신분당)",
     "link": "https://x.com/Inalove_0520",
     "memo": ""
   },
@@ -221,6 +221,34 @@
     "type": "전광판",
     "location": "서울 양재역 지하철 지하 3층",
     "link": "https://x.com/subarubirth",
+    "memo": ""
+  },
+  {
+    "vtuber_id": "hololive-regloss-hajime",
+    "status": "funding",
+    "title": "2026년 토도로키 하지메 생일 기념광고",
+    "funing_start_at": "2026-03-30 0:00",
+    "funding_end_at": "2026-05-26 23:59",
+    "event_start_at": "2026-06-01 0:00",
+    "event_end_at": "2026-07-01 23:59",
+    "color": "bg-[#b6b5ff]",
+    "type": "전광판",
+    "location": "서울 강남역(2, 신분당)",
+    "link": "https://x.com/massgumi",
+    "memo": ""
+  },
+  {
+    "vtuber_id": "hololive-flowglow-su",
+    "status": "funding",
+    "title": "미즈미야 스우 2026년 생일 지하철 광고",
+    "funing_start_at": "2026-03-28 0:00",
+    "funding_end_at": "2026-05-28 23:59",
+    "event_start_at": "2026-06-08 0:00",
+    "event_end_at": "2026-07-07 23:59",
+    "color": "bg-[#71e5ff]",
+    "type": "전광판",
+    "location": "서울 강남역(2, 신분당)",
+    "link": "https://x.com/Su_Kawaii0616",
     "memo": ""
   },
   {
