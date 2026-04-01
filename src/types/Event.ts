@@ -25,6 +25,8 @@ export interface VtuberProfile {
   privacy: "Public" | "Private";
   id: string;
   name: string;
+  name_en?: string;
+  name_ja?: string;
   agency: string;
   generation: string[];
   color: string;
@@ -33,7 +35,7 @@ export interface VtuberProfile {
   unit: string[];
   platforms: {
     [label: string]: string;
-  }
+  };
 }
 
 export type RawVTuber = Omit<VtuberProfile, "generation" | "birth" | "debut" | "unit"> & {

@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next'
 import { Menu } from 'lucide-react'; // ✨ 햄버거 아이콘 불러오기
 import Sidebar from '@/components/Sidebar';    // ✨ 방금 만든 사이드바 불러오기
+import { useAtom } from 'jotai';
+import { selectedAgencyAtom, submitModalOpenAtom, agencyMap } from '@/store/atoms';
 
-function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (key: boolean) => void, updateAgency: (key: string) => void, agencyMap: Map<string, string> }) {
+function CalenderHeader() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,11 +20,17 @@ function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (
 
   // 2. 드롭다운의 항목을 클릭했을 때 실행되는 함수입니다.
   const handleSelect = (key: string) => {
-    setSelectedKey(key); // 헤더에 보일 key값을 상태에 업데이트합니다.
-    updateAgency(agencyMap.get(key || 'Vir')!);
-    localStorage.setItem('current-agency', key); // 로컬 스토리지에 저장해요.
-    setIsOpen(false); // 선택 후에는 드롭다운을 닫아줍니다.
+    const value = agencyMap.get(key) || 'All VTubers';
+
+    setSelectedKey(key); // 헤더 UI 글씨 업데이트 (예: 'Holo')
+    setSelectedAgency(value); // Jotai 전역 상태 업데이트 -> Home의 달력 데이터가 즉시 필터링됨! (예: 'Hololive')
+    localStorage.setItem('current-agency', key); // 브라우저에 저장
+    setIsOpen(false); // 드롭다운 메뉴 닫기
   };
+
+  // ✨ Jotai 상태 연결
+  const [, setSelectedAgency] = useAtom(selectedAgencyAtom);
+  const [, setSubmitOpen] = useAtom(submitModalOpenAtom);
 
   return (
     <header className="h-14 bg-[#266ba1] px-4 flex justify-between items-center">
@@ -69,7 +77,7 @@ function CalenderHeader({ submitOpen, updateAgency, agencyMap }: { submitOpen: (
       </div>
       <button
         className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800"
-        onClick={() => submitOpen(true)}
+        onClick={() => setSubmitOpen(true)}
       >
         {t('common.report')}
       </button>
