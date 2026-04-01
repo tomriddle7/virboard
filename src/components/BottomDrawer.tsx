@@ -52,7 +52,7 @@ function BottomDrawer({
             </Drawer.Description>
 
             {/* ✨ 핵심: 일렬 목록(space-y-3)을 2열 그리드(grid grid-cols-2)로 변경합니다! */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 pr-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {drawerData?.events
                 .filter((event) => event.type !== '생일')
                 // 기존의 안정 정렬(Stable Sort) 로직은 그대로 유지합니다.
@@ -70,24 +70,26 @@ function BottomDrawer({
                     onClick={() => onEventClick(event)}
                     className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm cursor-pointer hover:shadow-lg transition active:scale-[0.98] overflow-hidden group border border-gray-100 dark:border-gray-700 flex flex-col"
                   >
-                    {/* 1. 썸네일 이미지 영역 (✨ relative를 추가해서 배지의 기준점이 되게 합니다) */}
-                    <div className="relative w-full aspect-video bg-gray-200 dark:bg-gray-700">
+                    {/* ✨ 1. 부모 박스에 shrink-0(flex 쪼그라듦 방지)과 overflow-hidden(삐져나옴 방지) 추가 */}
+                    <div className="relative w-full aspect-video shrink-0 bg-gray-200 dark:bg-gray-700 overflow-hidden">
                       {event.thumbnail ? (
                         <img
                           src={event.thumbnail}
                           alt={event.title}
-                          className="w-full h-full object-cover"
+                          // ✨ 2. 핵심: absolute inset-0을 추가해 이미지를 공중에 띄우고 16:9 박스에 강제로 가둡니다!
+                          className="absolute inset-0 w-full h-full object-cover"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
-                          No Thumbnail
+                        // 대체 텍스트 영역도 똑같이 꽉 채워줍니다
+                        <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-sm">
+                          Preparing Thumbnail
                         </div>
                       )}
 
                       {/* ✨ 모금중 배지를 좌측 상단(top-2 left-2)에 띄웁니다 */}
                       {event.status === 'funding' && (
                         <div className="absolute top-2 left-2 z-10">
-                          <span className="inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full bg-orange-500">
+                          <span className="inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full bg-orange-500 shadow-sm">
                             {t('event.funding', { defaultValue: '모금중' })}
                           </span>
                         </div>

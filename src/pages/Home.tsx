@@ -38,7 +38,7 @@ function Home() {
   const currentLang = i18n.language.split('-')[0];
   const currentLocale = locales[currentLang as keyof typeof locales] || enUS;
 
-  const [date, setDate] = useState<Date>(new Date(2026, 2, 1));
+  const [date, setDate] = useState<Date>(new Date());
   const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
   const [submitOpen, setSubmitOpen] = useState<boolean>(false);
   const [drawerData, setDrawerData] = useState<{ date: Date, events: VtuberEvent[] } | null>(null);
@@ -239,30 +239,39 @@ function Home() {
                               e.stopPropagation(); // 날짜 칸 자체가 클릭되는 것을 방지
                               setDrawerData({ date: headerDate, events: dayEvents }); // 서랍 열기!
                             }}>
-                              {otherEvents.map((event, i) => {
-                                const isOngoing = event.type !== '생일' && event.status === 'funding';
+                              {otherEvents
+                                .toSorted((a, b) => {
+                                  const getStatusWeight = (status?: string) => {
+                                    if (status === 'ongoing') return 1;
+                                    if (status === 'funding') return 2;
+                                    return 3;
+                                  };
+                                  return getStatusWeight(a.status) - getStatusWeight(b.status);
+                                })
+                                .map((event, i) => {
+                                  const isOngoing = event.type !== '생일' && event.status === 'funding';
 
-                                // 이번 달이 아닌 날짜의 투명도 처리 클래스
-                                const opacityClass = !isCurrentMonth ? 'opacity-40' : '';
+                                  // 이번 달이 아닌 날짜의 투명도 처리 클래스
+                                  const opacityClass = !isCurrentMonth ? 'opacity-40' : '';
 
-                                return isOngoing ? (
-                                  /* 🔵 [진행 중] 가운데가 빈 원 (도넛 기법) */
-                                  <span
-                                    key={`dot-${event.vtuber_id}-${i}`}
-                                    // p-[1px] 패딩 값으로 그라데이션 테두리의 두께를 조절합니다.
-                                    className={`size-1.5 p-[1px] rounded-full ${event.color} ${opacityClass}`}
-                                  >
-                                    {/* 안쪽 원: 달력 칸의 기본 배경색(라이트모드 흰색, 다크모드 검은색)으로 덮습니다. */}
-                                    <span className="block w-full h-full rounded-full bg-gray-50" />
-                                  </span>
-                                ) : (
-                                  /* 🔵 [완료 또는 일반 행사] 기존의 꽉 찬 원 */
-                                  <span
-                                    key={`dot-${event.vtuber_id}-${i}`}
-                                    className={`size-1.5 rounded-full ${event.color} ${opacityClass}`}
-                                  />
-                                );
-                              })}
+                                  return isOngoing ? (
+                                    /* 🔵 [진행 중] 가운데가 빈 원 (도넛 기법) */
+                                    <span
+                                      key={`dot-${event.vtuber_id}-${i}`}
+                                      // p-[1px] 패딩 값으로 그라데이션 테두리의 두께를 조절합니다.
+                                      className={`size-1.5 p-[1px] rounded-full ${event.color} ${opacityClass}`}
+                                    >
+                                      {/* 안쪽 원: 달력 칸의 기본 배경색(라이트모드 흰색, 다크모드 검은색)으로 덮습니다. */}
+                                      <span className="block w-full h-full rounded-full bg-gray-50" />
+                                    </span>
+                                  ) : (
+                                    /* 🔵 [완료 또는 일반 행사] 기존의 꽉 찬 원 */
+                                    <span
+                                      key={`dot-${event.vtuber_id}-${i}`}
+                                      className={`size-1.5 rounded-full ${event.color} ${opacityClass}`}
+                                    />
+                                  );
+                                })}
                             </button>
                           </div>
                         )}
