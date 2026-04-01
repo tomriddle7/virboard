@@ -59,7 +59,7 @@ function CalenderHeader() {
 
           {/* 드롭다운 메뉴 */}
           {isOpen && (
-            <ul className="absolute left-0 top-full mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 text-base font-normal">
+            <ul className="absolute left-0 top-full mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 text-base font-normal">
               {/* 3. Map 객체를 배열로 변환하여 화면에 그려줍니다. */}
               {Array.from(agencyMap.entries()).map(([key, value]) => (
                 <li key={key}>

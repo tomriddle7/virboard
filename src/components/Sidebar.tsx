@@ -68,11 +68,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
           {/* 즐겨찾기 영역 */}
           <div className="mb-8">
-            <Link to="/" className="flex items-center gap-2 mb-5 text-gray-700 dark:text-gray-200 font-semibold px-2">
+            <Link to="/" onClick={onClose} className="flex items-center gap-2 mb-5 text-gray-700 dark:text-gray-200 font-semibold px-2">
               <House className="w-5 h-5 text-gray-700 dark:text-gray-300" />
               {t('common.home')}
             </Link>
-            <Link to="/streamer" className="flex items-center gap-2 mb-5 text-gray-700 dark:text-gray-200 font-semibold px-2">
+            <Link to="/streamer" onClick={onClose} className="flex items-center gap-2 mb-5 text-gray-700 dark:text-gray-200 font-semibold px-2">
               <Heart className="w-5 h-5 text-gray-700 fill-gray-700 dark:text-gray-300 dark:fill-gray-300" />
               {t('common.favorites')}
             </Link>

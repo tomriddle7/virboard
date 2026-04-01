@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
 import { useTranslation } from 'react-i18next'
 import { format, parse, startOfWeek, getDay } from 'date-fns'
@@ -8,10 +8,10 @@ import DetailPopup from '@/components/DetailPopup'
 import SubmitPopup from '@/components/SubmitPopup'
 import BottomDrawer from '@/components/BottomDrawer'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import type { VtuberEvent, RawEvent, VtuberProfile, RawVTuber } from '@/types/Event'
+import type { VtuberEvent, VtuberProfile } from '@/types/Event'
 
 import { useAtom, useAtomValue } from 'jotai';
-import { selectedAgencyAtom, submitModalOpenAtom } from '@/store/atoms';
+import { selectedAgencyAtom, submitModalOpenAtom, eventsAtom, vtubersAtom, favoritesAtom } from '@/store/atoms';
 
 const locales = { ko, en: enUS, ja };
 
@@ -24,53 +24,22 @@ const localizer = dateFnsLocalizer({
 });
 
 function Home() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const currentLang = i18n.language.split('-')[0];
 
   // 전역 상태 (Jotai)
   const selectedAgency = useAtomValue(selectedAgencyAtom);
+  const events = useAtomValue(eventsAtom);
+  const vtubers = useAtomValue(vtubersAtom);
+
   const [submitOpen, setSubmitOpen] = useAtom(submitModalOpenAtom);
 
   // 로컬 상태
   const [date, setDate] = useState<Date>(new Date());
   const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
   const [drawerData, setDrawerData] = useState<{ date: Date, events: VtuberEvent[] } | null>(null);
-  const [events, setEvents] = useState<VtuberEvent[]>([]);
-  const [vtubers, setVtubers] = useState<VtuberProfile[]>([]);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const timestamp = new Date().getTime();
-        const [eventList, vtuberList] = await Promise.all([
-          fetch(`/celebration.json?t=${timestamp}`).then(res => res.json()),
-          fetch(`/vtubers.json?t=${timestamp}`).then(res => res.json())
-        ]);
-
-        const parsedEvents: VtuberEvent[] = eventList.map((event: RawEvent) => {
-          // 코드가 훨씬 깔끔해졌습니다!
-          const eventStart = event.status === 'funding' ? event.funing_start_at! : event.event_start_at;
-          const eventEnd = event.status === 'funding' ? event.funding_end_at! : event.event_end_at;
-
-          return {
-            ...event,
-            start: new Date(eventStart),
-            end: new Date(eventEnd),
-          };
-        });
-        setEvents(parsedEvents);
-
-        const parsedVTubers: VtuberProfile[] = vtuberList.map((event: RawVTuber) => ({
-          ...event,
-          birth: new Date(event.birth),
-          debut: new Date(event.debut),
-        }));
-        setVtubers(parsedVTubers);
-      } catch (error) {
-        console.error("fetch error:", error);
-      }
-    })();
-  }, []);
+  const favorites = useAtomValue(favoritesAtom);
 
   // 1. 마스터 데이터 사전 만들기
   interface VTuberMap {
@@ -90,15 +59,17 @@ function Home() {
     return events.filter(event => {
       const vtuberInfo = vtuberMap[event.vtuber_id];
 
-      // 마스터에 정보가 없는 미등록 버튜버일 경우의 안전장치
       if (!vtuberInfo) {
         return selectedAgency === 'All VTubers';
       }
 
-      // 소속(Agency) 조건만 검사합니다.
-      return selectedAgency === 'All VTubers' || vtuberInfo.agency === selectedAgency;
+      // ✨ 3. 달력의 필터링 로직에도 즐겨찾기 조건 추가!
+      if (selectedAgency === 'All VTubers') return true;
+      if (selectedAgency === 'Favorite') return favorites.includes(vtuberInfo.id);
+
+      return vtuberInfo.agency === selectedAgency;
     });
-  }, [events, vtuberMap, selectedAgency]);
+  }, [events, vtuberMap, selectedAgency, favorites]); // ✨ 의존성 배열에 favorites 추가
 
   const closeDetailModal = () => setSelectedEvent(null);
   const closeSubmitModal = () => setSubmitOpen(false);

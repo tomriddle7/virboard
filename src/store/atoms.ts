@@ -1,7 +1,10 @@
 import { atom } from 'jotai';
+import { atomWithStorage } from 'jotai/utils';
+import type { VtuberEvent, VtuberProfile } from '@/types/Event';
 
 export const agencyMap = new Map([
   ['Vir', 'All VTubers'],
+  ['Fav', 'Favorite'],
   ['Holo', 'Hololive'],
   ['Stel', 'Stelive'],
   ['Ruli', 'Liveruli'],
@@ -13,8 +16,12 @@ const initialAgency = typeof window !== 'undefined'
   ? agencyMap.get(localStorage.getItem('current-agency') || 'Vir') || 'All VTubers'
   : 'All VTubers';
 
-// 1. 선택된 소속(Agency) 상태
 export const selectedAgencyAtom = atom<string>(initialAgency);
-
-// 2. 제보하기(Submit) 모달 열림 여부 상태
 export const submitModalOpenAtom = atom<boolean>(false);
+
+export const eventsAtom = atom<VtuberEvent[]>([]);
+export const vtubersAtom = atom<VtuberProfile[]>([]);
+export const isDataLoadingAtom = atom<boolean>(true);
+
+// ✨ 3. 즐겨찾기 전역 상태 생성
+export const favoritesAtom = atomWithStorage<string[]>('my-favorites', []);
