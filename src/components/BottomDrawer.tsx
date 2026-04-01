@@ -1,3 +1,5 @@
+// src/components/BottomDrawer.tsx
+
 import { Drawer } from 'vaul'
 import { useTranslation } from 'react-i18next'
 import type { VtuberEvent } from '@/types/Event'
@@ -49,25 +51,55 @@ function BottomDrawer({
               {t('drawer.desc')}
             </Drawer.Description>
 
-            {/* 스크롤 가능한 일정 목록 */}
-            <div className="space-y-3 pr-2">
+            {/* ✨ 핵심: 일렬 목록(space-y-3)을 2열 그리드(grid grid-cols-2)로 변경합니다! */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 pr-2">
               {drawerData?.events
                 .filter((event) => event.type !== '생일')
+                // 기존의 안정 정렬(Stable Sort) 로직은 그대로 유지합니다.
+                .toSorted((a, b) => {
+                  const getStatusWeight = (status?: string) => {
+                    if (status === 'ongoing') return 1;
+                    if (status === 'funding') return 2;
+                    return 3;
+                  };
+                  return getStatusWeight(a.status) - getStatusWeight(b.status);
+                })
                 .map((event, idx) => (
                   <div
                     key={idx}
                     onClick={() => onEventClick(event)}
-                    className="p-3 bg-gray-50 dark:bg-gray-800 rounded-xl border-l-4 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition active:scale-[0.98]"
-                    style={{ borderLeftColor: event.color || '#43c5f5' }}
+                    className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm cursor-pointer hover:shadow-lg transition active:scale-[0.98] overflow-hidden group border border-gray-100 dark:border-gray-700 flex flex-col"
                   >
-                    <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-                      {t(`event_type.${event.type}`, { defaultValue: event.type })}
-                      {event.status === 'funding' && <span className="inline-block px-3 py-1 ml-2 text-xs font-bold text-white rounded-full bg-orange-500">
-                        {t('event.funding')}
-                      </span>}
+                    {/* 1. 썸네일 이미지 영역 (✨ relative를 추가해서 배지의 기준점이 되게 합니다) */}
+                    <div className="relative w-full aspect-video bg-gray-200 dark:bg-gray-700">
+                      {event.thumbnail ? (
+                        <img
+                          src={event.thumbnail}
+                          alt={event.title}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
+                          No Thumbnail
+                        </div>
+                      )}
+
+                      {/* ✨ 모금중 배지를 좌측 상단(top-2 left-2)에 띄웁니다 */}
+                      {event.status === 'funding' && (
+                        <div className="absolute top-2 left-2 z-10">
+                          <span className="inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full bg-orange-500">
+                            {t('event.funding', { defaultValue: '모금중' })}
+                          </span>
+                        </div>
+                      )}
                     </div>
-                    <div className="font-semibold text-gray-800 dark:text-gray-100">
-                      {event.title}
+
+                    {/* 2. 텍스트 컨텐츠 영역 */}
+                    <div className="p-3 sm:p-4 flex flex-col flex-grow">
+                      {/* 제목 */}
+                      <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm mb-2 line-clamp-2">
+                        {event.title}
+                      </h3>
                     </div>
                   </div>
                 ))}

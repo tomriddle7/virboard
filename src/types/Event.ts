@@ -1,5 +1,6 @@
 // 팬 광고 이벤트 인터페이스
 export interface VtuberEvent {
+  thumbnail: string;
   vtuber_id: string;
   status?: string;
   title: string;
