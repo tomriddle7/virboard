@@ -36,6 +36,24 @@ export default function Streamers() {
     return v.name;
   };
 
+  // ✨ 로고 이미지 경로 매핑 함수 (이미지 유효성 검사 포함)
+  const getPlatformLogoInfo = (platform: string) => {
+    const key = platform.toLowerCase();
+
+    // public 폴더 내 이미지 경로 매핑
+    const logoMap: { [key: string]: { name: string, src: string } } = {
+      youtube: { name: 'YouTube', src: '/images/platforms/youtube.svg' },
+      x: { name: 'X', src: '/images/platforms/x.svg' },
+      hololive: { name: 'Hololive', src: '/images/platforms/hololive.svg' },
+      chzzk: { name: '치지직', src: '/images/platforms/chzzk.svg' },
+      twitch: { name: 'Twitch', src: '/images/platforms/twitch.svg' },
+      cafenaver: { name: '네이버 카페', src: '/images/platforms/cafe-naver.svg' },
+    };
+
+    // 등록되지 않은 플랫폼이 들어올 경우를 대비한 안전장치
+    return logoMap[key] || { name: platform, src: '/images/platforms/default_link.png' };
+  };
+
   // ✨ 핵심: 소속 필터와 검색 필터를 결합하여 목록을 계산합니다.
   const filteredVtubers = useMemo(() => {
     return vtubers.filter(v => {
@@ -58,9 +76,6 @@ export default function Streamers() {
       return searchTarget.includes(query);
     });
   }, [vtubers, selectedAgency, searchQuery, favorites]); // ✨ 의존성 배열에 favorites 추가
-
-  console.log('현재 선택된 필터:', selectedAgency);
-  console.log('현재 즐겨찾기 배열:', favorites);
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -134,9 +149,38 @@ export default function Streamers() {
                     <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm mb-1 line-clamp-1">
                       {displayName}
                     </h3>
-                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-md">
+                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-md mb-2">
                       {vtuber.agency || '개인세'}
                     </span>
+
+                    {/* ✨ SVG 로고를 사용한 SNS 링크 영역 */}
+                    {vtuber.platforms && Object.keys(vtuber.platforms).length > 0 && (
+                      <div className="flex flex-wrap items-center justify-center gap-2.5 w-full border-t border-gray-100 dark:border-gray-700">
+                        {Object.entries(vtuber.platforms).map(([platform, url]) => {
+                          const logoInfo = getPlatformLogoInfo(platform);
+                          return (
+                            <a
+                              key={platform}
+                              href={url as string}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()} // 카드 전체 클릭 이벤트 방지
+                              className="block hover:opacity-70 transition-opacity transform hover:scale-110 duration-200"
+                              title={`${logoInfo.name} 채널로 이동`}
+                            >
+                              <img
+                                src={logoInfo.src}
+                                alt={`${logoInfo.name} 로고`}
+                                className="w-[18px] h-[18px] object-contain dark:brightness-110"
+                                onError={(e) => {
+                                  (e.target as HTMLImageElement).style.display = 'none';
+                                }}
+                              />
+                            </a>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
                 );
               })}
