@@ -254,7 +254,7 @@ export default function Streamers() {
 
                     {/* ✨ SVG 로고를 사용한 SNS 링크 영역 */}
                     {vtuber.platforms && Object.keys(vtuber.platforms).length > 0 && (
-                      <div className="flex flex-wrap items-center justify-center gap-2.5 w-full border-t border-gray-100 dark:border-gray-700">
+                      <div className="flex flex-wrap items-center justify-center gap-2.5 w-full">
                         {Object.entries(vtuber.platforms).map(([platform, url]) => {
                           const logoInfo = getPlatformLogoInfo(platform);
                           return (

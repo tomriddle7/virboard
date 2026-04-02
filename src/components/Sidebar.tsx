@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useGoogleLogin, googleLogout } from '@react-oauth/google';
 import { useTranslation } from 'react-i18next';
-import { X, Moon, Sun, Globe, House, Heart, Star, LogIn, CheckCircle, Loader2 } from 'lucide-react';
+import { X, Moon, Sun, Globe, House, Heart, LogIn, Loader2 } from 'lucide-react';
 import { useAtom, useSetAtom } from 'jotai';
-// ✨ 프로젝트에 맞게 경로를 수정해주세요. (accessTokenAtom, driveFileIdAtom 추가 필요)
-import { themeAtom, favoritesAtom, accessTokenAtom, driveFileIdAtom } from '@/store/atoms';
+import { themeAtom, favoritesAtom, accessTokenAtom, driveFileIdAtom, userInfoAtom } from '@/store/atoms';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -39,9 +38,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   // 상태 관리 (Jotai 연동)
   const [favorites, setFavorites] = useAtom(favoritesAtom);
   const [accessToken, setAccessToken] = useAtom(accessTokenAtom);
+  const [userInfo, setUserInfo] = useAtom(userInfoAtom);
   const setDriveFileId = useSetAtom(driveFileIdAtom);
 
-  const [isSyncing, setIsSyncing] = useState(false); // 동기화 로딩 상태
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   const [theme, setTheme] = useAtom(themeAtom);
   const isDarkMode = theme === 'dark';
@@ -65,28 +65,31 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     onSuccess: async (tokenResponse) => {
       const token = tokenResponse.access_token;
       setAccessToken(token);
-      setIsSyncing(true); // 로딩 스피너 켜기
+      setIsLoggingIn(true);
 
       try {
-        // 1. 드라이브에서 파일 찾기
+        // 1. 구글 프로필 정보 가져오기 (이름, 사진)
+        const userInfoRes = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const userData = await userInfoRes.json();
+        setUserInfo({ name: userData.name, picture: userData.picture });
+
+        // 2. 기존 드라이브 동기화 로직 (백그라운드 실행)
         const fileId = await findFavoritesFileId(token);
         setDriveFileId(fileId);
-
-        // 2. 파일이 존재한다면 데이터 읽어와서 Jotai 상태 덮어쓰기
         if (fileId) {
           const savedFavorites = await readFavorites(fileId, token);
-          if (Array.isArray(savedFavorites)) {
-            setFavorites(savedFavorites);
-          }
+          if (Array.isArray(savedFavorites)) setFavorites(savedFavorites);
         }
       } catch (error) {
-        console.error('동기화 중 오류 발생:', error);
+        console.error('로그인 처리 중 오류:', error);
       } finally {
-        setIsSyncing(false); // 로딩 스피너 끄기
+        setIsLoggingIn(false);
       }
     },
-    onError: () => console.log('Login Failed'),
-    scope: 'https://www.googleapis.com/auth/drive.appdata',
+    // ✨ 프로필 정보를 가져오기 위해 scope 추가
+    scope: 'https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/userinfo.profile',
   });
 
   // 로그아웃 처리 함수
@@ -94,8 +97,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     googleLogout();
     setAccessToken(null);
     setDriveFileId(null);
-    // 로그아웃 시 즐겨찾기 목록을 초기화할지 여부는 기획에 따라 결정하시면 됩니다.
-    // setFavorites([]); 
+    setUserInfo(null);
   };
 
   return (
@@ -112,32 +114,28 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* 헤더 영역 (유저 & 닫기 버튼) */}
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center ${accessToken ? 'bg-green-50 dark:bg-green-900/20' : 'bg-gray-100 dark:bg-gray-800'}`}>
-                {accessToken ? (
-                  <CheckCircle className="w-6 h-6 text-green-500" />
-                ) : (
-                  <LogIn className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-                )}
-              </div>
+              {accessToken && userInfo ? (
+                <img src={userInfo.picture} alt="profile" className="w-12 h-12 rounded-full border border-gray-100 dark:border-gray-700" />
+              ) : (
+                <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                  <LogIn className="w-5 h-5 text-gray-500" />
+                </div>
+              )}
               <div>
-                <p className="font-bold text-gray-800 dark:text-gray-100">
-                  {accessToken ? '동기화 연결됨' : '게스트'}
+                <p className="font-bold text-gray-800 dark:text-gray-100 truncate max-w-[150px]">
+                  {accessToken && userInfo ? userInfo.name : '게스트'}
                 </p>
                 {accessToken ? (
-                  <button onClick={handleLogout} className="text-xs text-red-500 hover:underline">
-                    연결 해제
-                  </button>
+                  <button onClick={handleLogout} className="text-xs text-gray-400 hover:text-red-500 transition-colors">로그아웃</button>
                 ) : (
                   <button onClick={() => login()} className="text-xs text-blue-500 hover:underline flex items-center gap-1">
-                    {isSyncing ? <Loader2 className="w-3 h-3 animate-spin" /> : null}
-                    구글 드라이브 연동
+                    {isLoggingIn && <Loader2 className="w-3 h-3 animate-spin" />}
+                    구글 계정으로 로그인
                   </button>
                 )}
               </div>
             </div>
-            <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-              <X className="w-6 h-6 text-gray-600 dark:text-gray-300" />
-            </button>
+            <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"><X /></button>
           </div>
 
           {/* 즐겨찾기 영역 */}

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { atom } from 'jotai';
 import { atomWithStorage, createJSONStorage } from 'jotai/utils';
 import type { VtuberEvent, VtuberProfile } from '@/types/Event';
@@ -40,7 +41,7 @@ export const isDataLoadingAtom = atom<boolean>(true);
 export const favoritesAtom = atomWithStorage<string[]>('my-favorites', []);
 
 // ✨ 세션 스토리지를 사용하기 위한 설정
-const sessionStorageConfig = createJSONStorage<string | null>(() => sessionStorage);
+const sessionStorageConfig = createJSONStorage<any>(() => sessionStorage);
 
 // ✨ 일반 atom에서 atomWithStorage로 변경 (sessionStorage 사용)
 export const accessTokenAtom = atomWithStorage<string | null>(
@@ -51,6 +52,15 @@ export const accessTokenAtom = atomWithStorage<string | null>(
 
 export const driveFileIdAtom = atomWithStorage<string | null>(
   'google-drive-file-id',
+  null,
+  sessionStorageConfig
+);
+
+export const userInfoAtom = atomWithStorage<{
+  name: string;
+  picture: string;
+} | null>(
+  'user-info',
   null,
   sessionStorageConfig
 );
