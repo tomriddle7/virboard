@@ -1545,7 +1545,8 @@
     "link": "",
     "unit": [],
     "platforms": {
-      "chzzk": "https://chzzk.naver.com/36456402c5de56290706cab427698f85"
+      "chzzk": "https://chzzk.naver.com/36456402c5de56290706cab427698f85",
+      "youtube": "https://www.youtube.com/@%EC%84%9C%EC%82%AC%EC%9C%A0"
     }
   },
   {
@@ -1561,7 +1562,8 @@
     "link": "",
     "unit": [],
     "platforms": {
-      "chzzk": "https://chzzk.naver.com/f966fa6decfa7bbb5c60accf817dd9bf"
+      "chzzk": "https://chzzk.naver.com/f966fa6decfa7bbb5c60accf817dd9bf",
+      "youtube": "https://www.youtube.com/@yunsoyabok"
     }
   },
   {
@@ -1577,7 +1579,9 @@
     "link": "",
     "unit": [],
     "platforms": {
-      "chzzk": "https://chzzk.naver.com/6f377acaaaacc0b5e9bebc70e45eef4f"
+      "chzzk": "https://chzzk.naver.com/6f377acaaaacc0b5e9bebc70e45eef4f",
+      "youtube": "https://www.youtube.com/@Baejjal0_0",
+      "x": "https://x.com/BAEJJAL0_0"
     }
   },
   {
