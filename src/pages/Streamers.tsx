@@ -2,8 +2,10 @@ import { useState, useMemo } from 'react';
 import { Search, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useAtom, useAtomValue } from 'jotai';
-import { vtubersAtom, isDataLoadingAtom, selectedAgencyAtom, favoritesAtom } from '@/store/atoms';
+import { vtubersAtom, isDataLoadingAtom, selectedAgencyAtom, favoritesAtom, accessTokenAtom, driveFileIdAtom } from '@/store/atoms';
 import type { VtuberProfile } from '@/types/Event'
+
+const FILE_NAME = 'virboard_favorites.json';
 
 export default function Streamers() {
   const { t, i18n } = useTranslation();
@@ -18,14 +20,33 @@ export default function Streamers() {
   // 즐겨찾기 상태 (차후 로컬 스토리지/Jotai 연동 예정)
   const [favorites, setFavorites] = useAtom(favoritesAtom);
 
-  // 즐겨찾기 토글 함수
-  const toggleFavorite = (id: string) => {
-    setFavorites(prev => {
-      // 이제 직접 localStorage.setItem을 호출하지 않아도 됩니다!
-      return prev.includes(id)
-        ? prev.filter((favId: string) => favId !== id)
-        : [...prev, id];
-    });
+  // ✨ 추가: 로그인/동기화를 위한 상태 (추후 atoms.ts에서 전역 관리하는 것을 권장합니다)
+  const accessToken = useAtomValue(accessTokenAtom); // 구글 로그인 시 발급받은 토큰
+  const [driveFileId, setDriveFileId] = useAtom(driveFileIdAtom); // 드라이브 파일 ID
+
+  // 즐겨찾기 토글 및 동기화 함수
+  const toggleFavorite = async (id: string) => {
+    // 1. 현재 상태를 바탕으로 새로운 배열을 먼저 계산합니다.
+    const isFav = favorites.includes(id);
+    const newFavorites = isFav
+      ? favorites.filter((favId) => favId !== id)
+      : [...favorites, id];
+
+    // 2. 화면(Jotai 상태)을 즉시 업데이트합니다. (Optimistic UI)
+    setFavorites(newFavorites);
+
+    // 3. 구글 로그인이 되어 있다면 백그라운드에서 드라이브에 저장합니다.
+    if (accessToken) {
+      try {
+        const newFileId = await saveFavorites(accessToken, newFavorites, driveFileId);
+
+        // 만약 최초 생성이라 driveFileId가 없었다면, 방금 만든 파일의 ID를 저장해둡니다.
+        if (!driveFileId) setDriveFileId(newFileId); 
+      } catch (error) {
+        console.error("구글 드라이브 동기화 실패:", error);
+        // 에러 시 토스트 알림을 띄우거나, setFavorites를 다시 호출해 원래 상태로 롤백할 수도 있습니다.
+      }
+    }
   };
 
   // 현재 언어 설정에 맞춰 이름을 반환하는 헬퍼 함수
@@ -77,6 +98,83 @@ export default function Streamers() {
     });
   }, [vtubers, selectedAgency, searchQuery, favorites]); // ✨ 의존성 배열에 favorites 추가
 
+  const findFavoritesFileId = async (accessToken: string) => {
+    const query = encodeURIComponent(`name='${FILE_NAME}'`);
+    // spaces=appDataFolder 를 명시하여 숨김 폴더 안에서만 검색합니다.
+    const response = await fetch(
+      `https://www.googleapis.com/drive/v3/files?spaces=appDataFolder&q=${query}`,
+      {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      }
+    );
+
+    const data = await response.json();
+    if (data.files && data.files.length > 0) {
+      return data.files[0].id; // 파일이 존재하면 ID 반환
+    }
+    return null; // 파일이 없으면 null 반환
+  };
+
+  const readFavorites = async (fileId: string, accessToken: string) => {
+    const response = await fetch(
+      `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
+      {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      }
+    );
+
+    const data = await response.json();
+    return data; // 저장된 즐겨찾기 배열 반환 (예: ["vtuber_1", "vtuber_2"])
+  };
+
+  const saveFavorites = async (
+    accessToken: string,
+    favoritesData: string[],
+    existingFileId: string | null
+  ) => {
+    let fileId = existingFileId;
+
+    try {
+      // 1. 파일이 구글 드라이브에 없다면, 먼저 껍데기(메타데이터) 파일부터 생성합니다.
+      if (!fileId) {
+        const metaRes = await fetch('https://www.googleapis.com/drive/v3/files', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: FILE_NAME,
+            parents: ['appDataFolder'],
+          }),
+        });
+
+        if (!metaRes.ok) throw new Error('메타데이터 생성 실패');
+        const metaData = await metaRes.json();
+        fileId = metaData.id;
+      }
+
+      // 2. 생성된 파일(또는 기존 파일)에 실제 JSON 배열 데이터를 덮어씁니다. (uploadType=media)
+      if (fileId) {
+        const uploadRes = await fetch(`https://www.googleapis.com/upload/drive/v3/files/${fileId}?uploadType=media`, {
+          method: 'PATCH',
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+            'Content-Type': 'application/json', // JSON 데이터를 직접 전송
+          },
+          body: JSON.stringify(favoritesData),
+        });
+
+        if (!uploadRes.ok) throw new Error('파일 데이터 업로드 실패');
+      }
+
+      return fileId;
+    } catch (error) {
+      console.error("Save Favorites Error:", error);
+      throw error;
+    }
+  };
+
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <section className="max-w-4xl mx-auto p-4 sm:p-6 pb-20">
@@ -120,8 +218,8 @@ export default function Streamers() {
                     >
                       <Star
                         className={`w-5 h-5 transition-colors ${isFav
-                            ? 'text-yellow-400 fill-yellow-400'
-                            : 'text-gray-300 dark:text-gray-600 hover:text-yellow-400'
+                          ? 'text-yellow-400 fill-yellow-400'
+                          : 'text-gray-300 dark:text-gray-600 hover:text-yellow-400'
                           }`}
                       />
                     </button>
