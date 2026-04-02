@@ -285,6 +285,21 @@
     "memo": ""
   },
   {
+    "vtuber_id": "hololive-force-watame",
+    "status": "funding",
+    "title": "츠노마키 와타메 2026년 생일기념 지하철 광고",
+    "thumbnail": "",
+    "funing_start_at": "2026-04-01 0:00",
+    "funding_end_at": "2026-05-23 0:00",
+    "event_start_at": "",
+    "event_end_at": "",
+    "color": "bg-[#fef09d]",
+    "type": "전광판",
+    "location": "",
+    "link": "https://x.com/watame0606bd",
+    "memo": ""
+  },
+  {
     "vtuber_id": "hololive-zero-sora",
     "title": "🎂 토키노 소라 2026년 생일",
     "event_start_at": "2026-05-15 0:00",

@@ -34,7 +34,7 @@
     "link": "",
     "unit": [],
     "platforms": {
-      "youtube": "https://www.youtube.com/@Robococh",
+      "youtube": "https://www.youtube.com/@Robocosan",
       "x": "https://x.com/robocosan",
       "hololive": "https://hololive.hololivepro.com/talents/roboco-san/"
     }
@@ -755,7 +755,7 @@
     "link": "",
     "unit": [],
     "platforms": {
-      "youtube": "https://www.youtube.com/@kazamairohach",
+      "youtube": "https://www.youtube.com/@kazamairoha",
       "x": "https://x.com/kazamairohach",
       "hololive": "https://hololive.hololivepro.com/talents/kazama-iroha/"
     }
@@ -1074,7 +1074,11 @@
     "debut": "2021-08-23",
     "link": "",
     "unit": [],
-    "platforms": {}
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HakosBaelz",
+      "x": "https://x.com/hakosbaelz",
+      "hololive": "https://hololive.hololivepro.com/talents/hakos-baelz/"
+    }
   },
   {
     "privacy": "Public",
@@ -1150,7 +1154,11 @@
     "debut": "2021-08-23",
     "link": "",
     "unit": [],
-    "platforms": {}
+    "platforms": {
+      "youtube": "https://www.youtube.com/@TsukumoSana",
+      "x": "https://x.com/tsukumosana",
+      "hololive": "https://hololive.hololivepro.com/talents/tsukumo-sana/"
+    }
   },
   {
     "privacy": "Public",
@@ -1598,7 +1606,9 @@
     "unit": [],
     "platforms": {
       "chzzk": "https://chzzk.naver.com/faf9cdd37e2ce5e2af6944dbf42739a9",
-      "x": "https://x.com/R_Rosetta_"
+      "youtube": "https://www.youtube.com/@R.Rosetta",
+      "x": "https://x.com/R_Rosetta_",
+      "liveruli": "https://liveruli.com/members/viewer.php?id=rosetta"
     }
   },
   {
@@ -1615,7 +1625,9 @@
     "unit": [],
     "platforms": {
       "chzzk": "https://chzzk.naver.com/2f1107218a8e549f7b9ec5a53c488d33",
-      "x": "https://x.com/r_linoa"
+      "youtube": "https://www.youtube.com/@Re_noa",
+      "x": "https://x.com/r_linoa",
+      "liveruli": "https://liveruli.com/members/viewer.php?id=linoa"
     }
   },
   {
@@ -1632,7 +1644,9 @@
     "unit": [],
     "platforms": {
       "chzzk": "https://chzzk.naver.com/29573c033c726c2e8aeda78e3a8882a6",
-      "x": "https://x.com/r_aren_"
+      "youtube": "https://www.youtube.com/@aren_clip",
+      "x": "https://x.com/r_aren_",
+      "liveruli": "https://liveruli.com/members/viewer.php?id=aren"
     }
   },
   {
@@ -1649,7 +1663,8 @@
     "unit": [],
     "platforms": {
       "chzzk": "https://chzzk.naver.com/5a11e1cd1e5f2ec76a538555f4ecfaa8",
-      "x": "https://x.com/ami9yu"
+      "x": "https://x.com/ami9yu",
+      "liveruli": "https://liveruli.com/members/viewer.php?id=amigyu"
     }
   },
   {
@@ -1710,7 +1725,7 @@
     "unit": [],
     "platforms": {
       "chzzk": "https://chzzk.naver.com/36ddb9bb4f17593b60f1b63cec86611d",
-      "youtube": "https://www.youtube.com/@SakihaneHuya",
+      "youtube": "https://www.youtube.com/@Sakihanechannel",
       "x": "https://x.com/SakihaneHuya",
       "cafeNaver": "https://cafe.naver.com/stellive"
     }
@@ -1773,7 +1788,7 @@
     "unit": [],
     "platforms": {
       "chzzk": "https://chzzk.naver.com/4515b179f86b67b4981e16190817c580",
-      "youtube": "https://www.youtube.com/@NenekoMashiro",
+      "youtube": "https://www.youtube.com/@neneko_mashiro",
       "x": "https://x.com/NenekoMashiro",
       "cafeNaver": "https://cafe.naver.com/stellive"
     }
