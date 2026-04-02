@@ -24,10 +24,11 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
       chzzk: { name: '치지직', src: '/images/platforms/chzzk.svg' },
       twitch: { name: 'Twitch', src: '/images/platforms/twitch.svg' },
       cafenaver: { name: '네이버 카페', src: '/images/platforms/cafe-naver.svg' },
+      liveruli: { name: '라이브루리', src: '/images/platforms/liveruli.webp' },
     };
 
     // 등록되지 않은 플랫폼이 들어올 경우를 대비한 안전장치
-    return logoMap[key] || { name: platform, src: '/images/platforms/default_link.png' };
+    return logoMap[key] || { name: platform, src: '/images/platforms/website.svg' };
   };
 
   return (
