@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react'; // ✨ useRef, useEffect 추가
 import { useTranslation } from 'react-i18next'
-import { Menu } from 'lucide-react'; // ✨ 햄버거 아이콘 불러오기
-import Sidebar from '@/components/Sidebar';    // ✨ 방금 만든 사이드바 불러오기
+import { Menu } from 'lucide-react';
+import Sidebar from '@/components/Sidebar';
 import { useAtom } from 'jotai';
 import { selectedAgencyAtom, submitModalOpenAtom, agencyMap } from '@/store/atoms';
 
@@ -9,6 +9,24 @@ function CalenderHeader() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // ✨ 드롭다운 영역을 가리킬 Ref 생성
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // ✨ 외부 클릭 감지 로직
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // 드롭다운이 열려있고, 클릭한 곳이 드롭다운 영역(dropdownRef) 바깥이라면 닫기
+      if (isOpen && dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   // 1. 초기 상태를 설정할 때 로컬 스토리지에서 값을 가져옵니다.
   const [selectedKey, setSelectedKey] = useState(() => {
@@ -22,20 +40,20 @@ function CalenderHeader() {
   const handleSelect = (key: string) => {
     const value = agencyMap.get(key) || 'All VTubers';
 
-    setSelectedKey(key); // 헤더 UI 글씨 업데이트 (예: 'Holo')
-    setSelectedAgency(value); // Jotai 전역 상태 업데이트 -> Home의 달력 데이터가 즉시 필터링됨! (예: 'Hololive')
-    localStorage.setItem('current-agency', key); // 브라우저에 저장
+    setSelectedKey(key);
+    setSelectedAgency(value);
+    localStorage.setItem('current-agency', key);
     setIsOpen(false); // 드롭다운 메뉴 닫기
   };
 
-  // ✨ Jotai 상태 연결
+  // Jotai 상태 연결
   const [, setSelectedAgency] = useAtom(selectedAgencyAtom);
   const [, setSubmitOpen] = useAtom(submitModalOpenAtom);
 
   return (
     <header className="h-14 bg-[#266ba1] px-4 flex justify-between items-center">
       <div className="flex items-center gap-4">
-        {/* ✨ 햄버거 버튼 */}
+        {/* 햄버거 버튼 */}
         <button
           onClick={() => setIsSidebarOpen(true)}
           className="p-2 -ml-2 rounded-xl hover:bg-white/20 text-white transition-colors"
@@ -44,7 +62,8 @@ function CalenderHeader() {
         </button>
 
         {/* 드롭다운 기준점 */}
-        <div className="relative text-2xl font-bold">
+        {/* ✨ 이 <div>에 ref={dropdownRef}를 달아줍니다! */}
+        <div className="relative text-2xl font-bold" ref={dropdownRef}>
           <button
             className="flex items-baseline focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
@@ -76,13 +95,13 @@ function CalenderHeader() {
         </div>
       </div>
       <button
-        className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800"
+        className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
         onClick={() => setSubmitOpen(true)}
       >
         {t('common.report')}
       </button>
 
-      {/* ✨ 사이드바 컴포넌트 렌더링 (isSidebarOpen 상태를 프롭스로 넘겨줍니다) */}
+      {/* 사이드바 컴포넌트 렌더링 */}
       <Sidebar
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}

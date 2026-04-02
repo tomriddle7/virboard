@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { X, Moon, Sun, Globe, House, Heart, Star, LogIn, CheckCircle, Loader2 } from 'lucide-react';
 import { useAtom, useSetAtom } from 'jotai';
 // ✨ 프로젝트에 맞게 경로를 수정해주세요. (accessTokenAtom, driveFileIdAtom 추가 필요)
-import { favoritesAtom, accessTokenAtom, driveFileIdAtom } from '@/store/atoms';
+import { themeAtom, favoritesAtom, accessTokenAtom, driveFileIdAtom } from '@/store/atoms';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -41,26 +41,23 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [accessToken, setAccessToken] = useAtom(accessTokenAtom);
   const setDriveFileId = useSetAtom(driveFileIdAtom);
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSyncing, setIsSyncing] = useState(false); // 동기화 로딩 상태
 
-  // 다크 모드 초기화
-  useEffect(() => {
-    const isDark = document.documentElement.classList.contains('dark') || localStorage.getItem('theme') === 'dark';
-    setIsDarkMode(isDark);
-    if (isDark) document.documentElement.classList.add('dark');
-  }, []);
+  const [theme, setTheme] = useAtom(themeAtom);
+  const isDarkMode = theme === 'dark';
 
-  const toggleDarkMode = () => {
+  // 테마가 바뀔 때마다 HTML 태그에 dark 클래스 적용/해제
+  useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setIsDarkMode(false);
-    } else {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      setIsDarkMode(true);
+    } else {
+      document.documentElement.classList.remove('dark');
     }
+  }, [isDarkMode]);
+
+  // 토글 버튼 클릭 시 상태만 변경하면 로컬 스토리지까지 알아서 저장됩니다!
+  const toggleDarkMode = () => {
+    setTheme(isDarkMode ? 'light' : 'dark');
   };
 
   // ✨ 구글 로그인 및 드라이브 동기화 처리

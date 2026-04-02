@@ -11,6 +11,19 @@ export const agencyMap = new Map([
   ['Indie', 'Independents'],
 ]);
 
+const getSystemTheme = (): 'light' | 'dark' => {
+  // 브라우저 환경이 아닐 경우(안전장치) 기본값 'light' 반환
+  if (typeof window === 'undefined') return 'light';
+
+  // OS/브라우저가 다크 모드인지 확인
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
+// ✨ 기본값 자리에 getSystemTheme() 호출 결과를 넣어줍니다.
+// 사용자가 이미 사이트에서 테마를 수동으로 바꾼 적이 있다면(로컬 스토리지에 값이 있다면) 그 값을 우선하고,
+// 처음 접속한 사용자라면 기기 설정값을 따라갑니다.
+export const themeAtom = atomWithStorage<'light' | 'dark'>('theme', getSystemTheme());
+
 // 초기값을 localStorage에서 가져오는 로직
 const initialAgency = typeof window !== 'undefined'
   ? agencyMap.get(localStorage.getItem('current-agency') || 'Vir') || 'All VTubers'
