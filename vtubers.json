@@ -1684,7 +1684,7 @@
     "platforms": {
       "chzzk": "https://chzzk.naver.com/f722959d1b8e651bd56209b343932c01",
       "youtube": "https://www.youtube.com/@AiriKanna",
-      "x": "https://x.com/AiriKanna_KR",
+      "x": "https://x.com/airikannaKR",
       "cafeNaver": "https://cafe.naver.com/stellive"
     }
   },
@@ -1705,8 +1705,9 @@
     "platforms": {
       "chzzk": "https://chzzk.naver.com/45e71a76e949e16a34764deb962f9d9f",
       "youtube": "https://www.youtube.com/@AyatsunoYuni",
-      "x": "https://x.com/AyatsunoYuni_KR",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "x": "https://x.com/AyatsunoYuni",
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/yuni"
     }
   },
   {
@@ -1727,7 +1728,8 @@
       "chzzk": "https://chzzk.naver.com/36ddb9bb4f17593b60f1b63cec86611d",
       "youtube": "https://www.youtube.com/@Sakihanechannel",
       "x": "https://x.com/SakihaneHuya",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/huya"
     }
   },
   {
@@ -1748,7 +1750,8 @@
       "chzzk": "https://chzzk.naver.com/4325b1d5bbc321fad3042306646e2e50",
       "youtube": "https://www.youtube.com/@AkaneLize",
       "x": "https://x.com/AkaneLize",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/lize"
     }
   },
   {
@@ -1769,7 +1772,8 @@
       "chzzk": "https://chzzk.naver.com/b044e3a3b9259246bc92e863e7d3f3b8",
       "youtube": "https://www.youtube.com/@ShirayukiHina",
       "x": "https://x.com/ShirayukiHina_",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/hina"
     }
   },
   {
@@ -1790,7 +1794,8 @@
       "chzzk": "https://chzzk.naver.com/4515b179f86b67b4981e16190817c580",
       "youtube": "https://www.youtube.com/@neneko_mashiro",
       "x": "https://x.com/NenekoMashiro",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/mashiro"
     }
   },
   {
@@ -1811,7 +1816,8 @@
       "chzzk": "https://chzzk.naver.com/a6c4ddb09cdb160478996007bff35296",
       "youtube": "https://www.youtube.com/@arahashitabi",
       "x": "https://x.com/ArahashiTabi",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/tabi"
     }
   },
   {
@@ -1832,7 +1838,8 @@
       "chzzk": "https://chzzk.naver.com/516937b5f85cbf2249ce31b0ad046b0f",
       "youtube": "https://www.youtube.com/@AokumoRin",
       "x": "https://x.com/AokumoRin",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/rin"
     }
   },
   {
@@ -1853,7 +1860,8 @@
       "chzzk": "https://chzzk.naver.com/64d76089fba26b180d9c9e48a32600d9",
       "youtube": "https://www.youtube.com/@TenkoShibuki",
       "x": "https://x.com/TenkoShibuki",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/shibuki"
     }
   },
   {
@@ -1874,7 +1882,8 @@
       "chzzk": "https://chzzk.naver.com/8fd39bb8de623317de90654718638b10",
       "youtube": "https://www.youtube.com/@YuzuhaRiko",
       "x": "https://x.com/YuzuhaRiko",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/riko"
     }
   },
   {
@@ -1894,8 +1903,9 @@
     "platforms": {
       "chzzk": "https://chzzk.naver.com/4d812b586ff63f8a2946e64fa860bbf5",
       "youtube": "https://www.youtube.com/@HanakoNana",
-      "x": "https://x.com/HanakoNana",
-      "cafeNaver": "https://cafe.naver.com/stellive"
+      "x": "https://x.com/HanakoNana_",
+      "cafeNaver": "https://cafe.naver.com/stellive",
+      "stellive": "https://stellive.me/nana"
     }
   }
 ]
