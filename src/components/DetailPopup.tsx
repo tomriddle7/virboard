@@ -24,6 +24,7 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
       chzzk: { name: '치지직', src: '/images/platforms/chzzk.svg' },
       twitch: { name: 'Twitch', src: '/images/platforms/twitch.svg' },
       cafenaver: { name: '네이버 카페', src: '/images/platforms/cafe-naver.svg' },
+      stellive: { name: '스텔라이브', src: '/images/platforms/stellive.svg' },
       liveruli: { name: '라이브루리', src: '/images/platforms/liveruli.webp' },
     };
 
