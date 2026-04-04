@@ -1,10 +1,14 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SCRIPT_URL = import.meta.env.VITE_GAS_URL;
 
 export default function SubmitPopup({ closeModal }: { closeModal: () => void }) {
   const { t } = useTranslation();
+
+  // ✨ 탭 상태 관리 추가
+  const [activeTab, setActiveTab] = useState<'event' | 'vtuber'>('event');
+
   const [formData, setFormData] = useState({
     title: '',
     name: '',
@@ -23,11 +27,17 @@ export default function SubmitPopup({ closeModal }: { closeModal: () => void }) 
     setIsSubmitting(true);
 
     try {
+      // ✨ GAS 스크립트에서 구분할 수 있도록 탭 종류(submitType)를 함께 보냅니다.
+      const payload = {
+        ...formData,
+        submitType: activeTab
+      };
+
       const response = await fetch(SCRIPT_URL, {
         method: "POST",
         // GAS는 text/plain으로 보내야 CORS 에러를 우회하기 쉽습니다.
         headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
@@ -69,69 +79,139 @@ export default function SubmitPopup({ closeModal }: { closeModal: () => void }) 
           ✕
         </button>
         <h2 className="text-xl font-bold mb-4 dark:text-white">{t('submit.title')}</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium dark:text-gray-300">{t('submit.event_title')}</label>
-            <input required type="text" name="title" value={formData.title} onChange={handleChange}
-              className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-          </div>
 
-          <div className="flex space-x-4">
-            <div className="w-1/2">
-              <label className="block text-sm font-medium dark:text-gray-300">{t('submit.vtuber_name')}</label>
-              <input required type="text" name="name" value={formData.name} onChange={handleChange}
-                className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:text-white" />
-            </div>
-            <div className="w-1/2">
-              <label className="block text-sm font-medium dark:text-gray-300">{t('submit.agency')}</label>
-              <input type="text" name="agency" value={formData.agency} onChange={handleChange}
-                className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:text-white" />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium dark:text-gray-300">{t('submit.color')}</label>
-            <input required type="text" name="color" value={formData.color} onChange={handleChange}
-              className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-          </div>
-
-          <div className="flex space-x-4">
-            <div className="w-1/2">
-              <label className="block text-sm font-medium dark:text-gray-300">{t('submit.start_date')}</label>
-              <input required type="date" name="start" value={formData.start} onChange={handleChange}
-                className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:text-white" />
-            </div>
-            <div className="w-1/2">
-              <label className="block text-sm font-medium dark:text-gray-300">{t('submit.end_date')}</label>
-              <input type="date" name="end" value={formData.end} onChange={handleChange}
-                className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:text-white" />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium dark:text-gray-300">{t('submit.location')}</label>
-            <input type="text" name="location" value={formData.location} onChange={handleChange} placeholder={t('submit.location_placeholder')}
-              className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:text-white" />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium dark:text-gray-300">{t('submit.link')}</label>
-            <input required type="url" name="link" value={formData.link} onChange={handleChange}
-              className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:text-white" />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium dark:text-gray-300">{t('submit.memo')}</label>
-            <textarea name="memo" rows={5} value={formData.memo} onChange={handleChange}
-              className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:text-white resize-none" />
-          </div>
-
-          <button type="submit" disabled={isSubmitting}
-            className="w-full py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md transition-colors disabled:opacity-50">
-            {isSubmitting ? t('submit.submitting') : t('submit.submit_btn')}
+        {/* ✨ 탭 네비게이션 영역 */}
+        <div className="flex border-b border-gray-200 dark:border-gray-700 mb-6">
+          <button
+            type="button"
+            className={`flex-1 py-2.5 text-sm font-semibold text-center transition-all border-b-2 ${activeTab === 'event'
+                ? 'border-blue-500 text-blue-500 dark:text-blue-400'
+                : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+              }`}
+            onClick={() => setActiveTab('event')}
+          >
+            {t('submit.tab_event')}
           </button>
+          <button
+            type="button"
+            className={`flex-1 py-2.5 text-sm font-semibold text-center transition-all border-b-2 ${activeTab === 'vtuber'
+                ? 'border-blue-500 text-blue-500 dark:text-blue-400'
+                : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+              }`}
+            onClick={() => setActiveTab('vtuber')}
+          >
+            {t('submit.tab_vtuber')}
+          </button>
+        </div>
+
+        {/* 폼 영역 (스크롤 가능하도록 처리) */}
+        <form onSubmit={handleSubmit} className="space-y-4">
+
+          {/* 1️⃣ 행사/광고 탭 일 때 보이는 필드 */}
+          {activeTab === 'event' && (
+            <>
+              <div>
+                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.event_title')}</label>
+                <input required type="text" name="title" value={formData.title} onChange={handleChange}
+                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.vtuber_name')}</label>
+                <input required type="text" name="name" value={formData.name} onChange={handleChange}
+                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+              </div>
+
+              <div className="flex space-x-4">
+                <div className="w-3/5">
+                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.agency')}</label>
+                  <input type="text" name="agency" value={formData.agency} onChange={handleChange} placeholder={t('submit.agency_placeholder')}
+                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                </div>
+                <div className="w-2/5">
+                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.color')}</label>
+                  <input type="text" name="color" value={formData.color} onChange={handleChange} placeholder="#FF85C2"
+                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                </div>
+              </div>
+
+              <div className="flex space-x-4">
+                <div className="w-1/2">
+                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.start_date')}</label>
+                  <input required type="date" name="start" value={formData.start} onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                </div>
+                <div className="w-1/2">
+                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.end_date')}</label>
+                  <input type="date" name="end" value={formData.end} onChange={handleChange}
+                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.location')}</label>
+                <input type="text" name="location" value={formData.location} onChange={handleChange} placeholder={t('submit.location_placeholder')}
+                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.link')}</label>
+                <input required type="url" name="link" value={formData.link} onChange={handleChange} placeholder="X, YouTube, Twitch, etc..."
+                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.memo')}</label>
+                <textarea name="memo" rows={4} value={formData.memo} onChange={handleChange}
+                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+              </div>
+            </>
+          )}
+
+          {/* 2️⃣ 버튜버 추가 탭 일 때 보이는 필드 */}
+          {activeTab === 'vtuber' && (
+            <>
+              <div>
+                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.vtuber_name')}</label>
+                <input required type="text" name="name" value={formData.name} onChange={handleChange}
+                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+              </div>
+
+              <div className="flex space-x-4">
+                <div className="w-3/5">
+                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.agency')}</label>
+                  <input type="text" name="agency" value={formData.agency} onChange={handleChange} placeholder={t('submit.agency_placeholder')}
+                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                </div>
+                <div className="w-2/5">
+                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.color')}</label>
+                  <input type="text" name="color" value={formData.color} onChange={handleChange} placeholder="#FF85C2"
+                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.link')}</label>
+                <input required={activeTab === 'vtuber'} type="url" name="link" value={formData.link} onChange={handleChange} placeholder="https://youtube.com/@..."
+                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.memo')}</label>
+                <textarea name="memo" rows={4} value={formData.memo} onChange={handleChange}
+                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+              </div>
+            </>
+          )}
+
+          <div className="pt-2 sticky bottom-0 bg-white dark:bg-gray-800 pb-2">
+            <button type="submit" disabled={isSubmitting}
+              className="w-full py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg shadow-md transition-colors disabled:opacity-50">
+              {isSubmitting ? t('submit.submitting') : t('submit.submit_btn')}
+            </button>
+          </div>
         </form>
       </div>
     </div>
-  )
+  );
 }
