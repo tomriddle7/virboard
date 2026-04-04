@@ -114,23 +114,27 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* 헤더 영역 (유저 & 닫기 버튼) */}
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
-              {accessToken && userInfo ? (
-                <img src={userInfo.picture} alt="profile" className="w-12 h-12 rounded-full border border-gray-100 dark:border-gray-700" />
+              {/* {accessToken && userInfo ? (
+                
               ) : (
                 <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                   <LogIn className="w-5 h-5 text-gray-500" />
                 </div>
-              )}
+              )} */}
+              <img src={accessToken && userInfo ? userInfo.picture : '/images/platforms/google.svg'} alt="profile" className="w-12 h-12 rounded-full border border-gray-100 dark:border-gray-700" />
               <div>
-                <p className="font-bold text-gray-800 dark:text-gray-100 truncate max-w-[150px]">
-                  {accessToken && userInfo ? userInfo.name : '게스트'}
-                </p>
+
                 {accessToken ? (
-                  <button onClick={handleLogout} className="text-xs text-gray-400 hover:text-red-500 transition-colors">로그아웃</button>
+                  <>
+                    {userInfo && <p className="font-bold text-gray-800 dark:text-gray-100 truncate max-w-[150px]">
+                      {userInfo.name}
+                    </p>}
+                    <button onClick={handleLogout} className="text-xs text-gray-400 hover:text-red-500 transition-colors">{t('common.sign_out')}</button>
+                  </>
                 ) : (
-                  <button onClick={() => login()} className="text-xs text-blue-500 hover:underline flex items-center gap-1">
+                  <button onClick={() => login()} className="text-base text-blue-500 hover:underline flex items-center gap-1">
                     {isLoggingIn && <Loader2 className="w-3 h-3 animate-spin" />}
-                    구글 계정으로 로그인
+                    {t('common.google_sign_in')}
                   </button>
                 )}
               </div>

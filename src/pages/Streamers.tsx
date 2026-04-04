@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
+import toast from 'react-hot-toast';
 import { Search, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useAtom, useAtomValue } from 'jotai';
@@ -24,30 +25,61 @@ export default function Streamers() {
   const accessToken = useAtomValue(accessTokenAtom); // 구글 로그인 시 발급받은 토큰
   const [driveFileId, setDriveFileId] = useAtom(driveFileIdAtom); // 드라이브 파일 ID
 
+  const [isDirty, setIsDirty] = useState(false);
+  const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const latestFavoritesRef = useRef(favorites);
+
+  useEffect(() => {
+    latestFavoritesRef.current = favorites;
+  }, [favorites]);
+
   // 즐겨찾기 토글 및 동기화 함수
-  const toggleFavorite = async (id: string) => {
-    // 1. 현재 상태를 바탕으로 새로운 배열을 먼저 계산합니다.
+  const toggleFavorite = (id: string) => {
     const isFav = favorites.includes(id);
     const newFavorites = isFav
       ? favorites.filter((favId) => favId !== id)
       : [...favorites, id];
 
-    // 2. 화면(Jotai 상태)을 즉시 업데이트합니다. (Optimistic UI)
     setFavorites(newFavorites);
-
-    // 3. 구글 로그인이 되어 있다면 백그라운드에서 드라이브에 저장합니다.
-    if (accessToken) {
-      try {
-        const newFileId = await saveFavorites(accessToken, newFavorites, driveFileId);
-
-        // 만약 최초 생성이라 driveFileId가 없었다면, 방금 만든 파일의 ID를 저장해둡니다.
-        if (!driveFileId) setDriveFileId(newFileId); 
-      } catch (error) {
-        console.error("구글 드라이브 동기화 실패:", error);
-        // 에러 시 토스트 알림을 띄우거나, setFavorites를 다시 호출해 원래 상태로 롤백할 수도 있습니다.
-      }
-    }
+    // ✨ 별을 누르는 순간 즉시 '변경됨' 상태로 전환
+    setIsDirty(true);
   };
+
+  useEffect(() => {
+    if (!accessToken || !isDirty) return;
+
+    if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
+
+    saveTimerRef.current = setTimeout(async () => {
+      // ✨ 클로저(Closure)에 의해 이 타이머가 만들어질 당시의 favorites가 캡처됨
+      const favoritesToSave = favorites;
+
+      const toastId = toast.loading('변경사항을 저장하는 중...');
+
+      try {
+        const newFileId = await saveFavorites(accessToken, favoritesToSave, driveFileId);
+        if (!driveFileId && newFileId) setDriveFileId(newFileId);
+
+        // ✨ 핵심 2: 저장이 끝난 후, 유저가 그사이 딴짓(추가 클릭)을 안 했는지 검사!
+        if (latestFavoritesRef.current === favoritesToSave) {
+          setIsDirty(false);
+          toast.success('즐겨찾기가 안전하게 저장되었습니다!', { id: toastId });
+        } else {
+          // 유저가 그사이 별을 또 눌렀다면?
+          // isDirty를 풀지 않고, 토스트만 살짝 닫아줍니다. (새로운 타이머가 돌고 있을 테니까요)
+          toast.dismiss(toastId);
+        }
+
+      } catch (error) {
+        console.error("구글 드라이브 저장 실패:", error);
+        toast.error('저장에 실패했습니다. 나중에 다시 시도해 주세요.', { id: toastId });
+      }
+    }, 1200);
+
+    return () => {
+      if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
+    };
+  }, [favorites, isDirty, accessToken, driveFileId]);
 
   // 현재 언어 설정에 맞춰 이름을 반환하는 헬퍼 함수
   const getLocalizedName = (v: VtuberProfile) => {

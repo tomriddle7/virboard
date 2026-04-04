@@ -9,7 +9,9 @@
         "favorites": "즐겨찾기",
         "settings": "설정",
         "dark_mode": "다크 모드",
-        "language": "언어"
+        "language": "언어",
+        "google_sign_in": "구글 계정으로 로그인",
+        "sign_out": "로그아웃"
     },
     "calendar": {
         "today": "오늘",

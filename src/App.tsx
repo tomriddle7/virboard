@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import { useAtom } from 'jotai';
 import { eventsAtom, vtubersAtom, isDataLoadingAtom } from '@/store/atoms';
 import type { RawEvent, RawVTuber, VtuberEvent, VtuberProfile } from '@/types/Event';
@@ -61,6 +62,7 @@ function App() {
         <Route path="/streamer" element={<Streamers />} />
       </Routes>
       <Footer />
+      <Toaster />
     </BrowserRouter>
   );
 }

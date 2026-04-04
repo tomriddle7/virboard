@@ -9,7 +9,9 @@
         "favorites": "Favorites",
         "settings": "Settings",
         "dark_mode": "Dark Mode",
-        "language": "Language"
+        "language": "Language",
+        "google_sign_in": "Sign in with Google",
+        "sign_out": "Sign Out"
     },
     "calendar": {
         "today": "Today",
