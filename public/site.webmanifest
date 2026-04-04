@@ -1,7 +1,7 @@
 {
   "name": "Virboard",
   "short_name": "Virboard",
-  "description": "V-Tuber Spot Board",
+  "description": "VTuber Spot Board",
   "icons": [
     {
       "src": "./favicon.ico",
@@ -26,10 +26,11 @@
     {
       "src": "./512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#266ba1",
   "background_color": "#ffffff",
   "display": "standalone"
 }

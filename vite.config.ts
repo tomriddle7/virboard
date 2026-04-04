@@ -21,7 +21,22 @@ export default defineConfig(() => {
       host: true,
     },
     build: {
+      target: 'esnext',
       sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            if (id.indexOf("node_modules") !== -1) {
+              const module = id.split("node_modules/").pop();
+              if (module) {
+                return `vendor-${module.split("/")[0]}`;
+              } else {
+                return 'vendor-unknown';
+              }
+            }
+          },
+        }
+      }
     },
     base: '/',
   };
