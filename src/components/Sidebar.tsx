@@ -114,13 +114,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* 헤더 영역 (유저 & 닫기 버튼) */}
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
-              {/* {accessToken && userInfo ? (
-                
-              ) : (
-                <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                  <LogIn className="w-5 h-5 text-gray-500" />
-                </div>
-              )} */}
               <img src={accessToken && userInfo ? userInfo.picture : '/images/platforms/google.svg'} alt="profile" className="w-12 h-12 rounded-full border border-gray-100 dark:border-gray-700" />
               <div>
 

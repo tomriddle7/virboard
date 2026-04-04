@@ -54,7 +54,7 @@ export default function Streamers() {
       // ✨ 클로저(Closure)에 의해 이 타이머가 만들어질 당시의 favorites가 캡처됨
       const favoritesToSave = favorites;
 
-      const toastId = toast.loading('변경사항을 저장하는 중...');
+      const toastId = toast.loading(t('common.favorite_saving'));
 
       try {
         const newFileId = await saveFavorites(accessToken, favoritesToSave, driveFileId);
@@ -63,7 +63,7 @@ export default function Streamers() {
         // ✨ 핵심 2: 저장이 끝난 후, 유저가 그사이 딴짓(추가 클릭)을 안 했는지 검사!
         if (latestFavoritesRef.current === favoritesToSave) {
           setIsDirty(false);
-          toast.success('즐겨찾기가 안전하게 저장되었습니다!', { id: toastId });
+          toast.success(t('common.favorite_saved'), { id: toastId });
         } else {
           // 유저가 그사이 별을 또 눌렀다면?
           // isDirty를 풀지 않고, 토스트만 살짝 닫아줍니다. (새로운 타이머가 돌고 있을 테니까요)
@@ -72,7 +72,7 @@ export default function Streamers() {
 
       } catch (error) {
         console.error("구글 드라이브 저장 실패:", error);
-        toast.error('저장에 실패했습니다. 나중에 다시 시도해 주세요.', { id: toastId });
+        toast.error(t('common.favorite_failed'), { id: toastId });
       }
     }, 1200);
 

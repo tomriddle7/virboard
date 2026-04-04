@@ -11,7 +11,11 @@
         "dark_mode": "Dark Mode",
         "language": "Language",
         "google_sign_in": "Sign in with Google",
-        "sign_out": "Sign Out"
+        "sign_out": "Sign Out",
+        "favorite_saving": "Saving changes...",
+        "favorite_saved": "Your favorites have been\nsuccessfully saved!",
+        "favorite_failed": "Failed to save. Please try again later."
+
     },
     "calendar": {
         "today": "Today",

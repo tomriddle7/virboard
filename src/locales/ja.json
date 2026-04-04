@@ -11,7 +11,10 @@
         "dark_mode": "ダークモード",
         "language": "言語",
         "google_sign_in": "Googleアカウントでログイン",
-        "sign_out": "ログアウト"
+        "sign_out": "ログアウト",
+        "favorite_saving": "変更を保存中···",
+        "favorite_saved": "ブックマークが正常に保存されました！",
+        "favorite_failed": "保存に失敗しました。 後ほどもう一度お試しください。"
     },
     "calendar": {
         "today": "今日",
