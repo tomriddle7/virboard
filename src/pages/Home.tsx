@@ -55,21 +55,24 @@ function Home() {
   }, [vtubers]);
 
   // 2. 이벤트 필터링 (사용하지 않는 기수/유닛 필터 로직 삭제)
-  const filteredEvents: VtuberEvent[] = useMemo(() => {
-    return events.filter(event => {
-      const vtuberInfo = vtuberMap[event.vtuber_id];
+  const filteredEvents = useMemo(() => {
+    // 1. "전체 보기"일 때는 모든 이벤트 표시
+    if (selectedAgency === 'All VTubers') return events;
 
-      if (!vtuberInfo) {
-        return selectedAgency === 'All VTubers';
-      }
+    // 2. "즐겨찾기"일 때는 favorites 배열에 포함된 vtuber_id만 필터링
+    if (selectedAgency === 'Favorite') {
+      return events.filter(event => favorites.includes(event.vtuber_id));
+    }
 
-      // ✨ 3. 달력의 필터링 로직에도 즐겨찾기 조건 추가!
-      if (selectedAgency === 'All VTubers') return true;
-      if (selectedAgency === 'Favorite') return favorites.includes(vtuberInfo.id);
+    // 3. 특정 소속(Hololive 등)이 선택된 경우
+    // 먼저 해당 소속에 포함된 버튜버들의 ID 목록을 만듭니다.
+    const agencyVtuberIds = vtubers
+      .filter(v => v.agency === selectedAgency)
+      .map(v => v.id);
 
-      return vtuberInfo.agency === selectedAgency;
-    });
-  }, [events, vtuberMap, selectedAgency, favorites]); // ✨ 의존성 배열에 favorites 추가
+    // 그 ID 목록에 속한 버튜버의 이벤트만 결과에 포함시킵니다.
+    return events.filter(event => agencyVtuberIds.includes(event.vtuber_id));
+  }, [events, vtubers, selectedAgency, favorites]);
 
   const closeDetailModal = () => setSelectedEvent(null);
   const closeSubmitModal = () => setSubmitOpen(false);
