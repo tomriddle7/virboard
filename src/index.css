@@ -73,3 +73,11 @@
 .dark button {
   @apply text-gray-300 border-gray-700;
 }
+
+/* --- 스타일 재사용을 위한 커스텀 스타일 --- */
+.vir-primary-label {
+    @apply block text-sm font-medium dark:text-gray-300;
+}
+.vir-primary-input {
+    @apply w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white;
+}

@@ -111,59 +111,50 @@ export default function SubmitPopup({ closeModal }: { closeModal: () => void }) 
           {activeTab === 'event' && (
             <>
               <div>
-                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.event_title')}</label>
-                <input required type="text" name="title" value={formData.title} onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <label className="vir-primary-label">{t('submit.event_title')}</label>
+                <input required type="text" name="title" value={formData.title} onChange={handleChange} className="vir-primary-input" />
               </div>
 
               <div>
-                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.vtuber_name')}</label>
-                <input required type="text" name="name" value={formData.name} onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <label className="vir-primary-label">{t('submit.vtuber_name')}</label>
+                <input required type="text" name="name" value={formData.name} onChange={handleChange} className="vir-primary-input" />
               </div>
 
               <div className="flex space-x-4">
                 <div className="w-3/5">
-                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.agency')}</label>
-                  <input type="text" name="agency" value={formData.agency} onChange={handleChange} placeholder={t('submit.agency_placeholder')}
-                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                  <label className="vir-primary-label">{t('submit.agency')}</label>
+                  <input type="text" name="agency" value={formData.agency} onChange={handleChange} placeholder={t('submit.agency_placeholder')} className="vir-primary-input" />
                 </div>
                 <div className="w-2/5">
-                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.color')}</label>
-                  <input type="text" name="color" value={formData.color} onChange={handleChange} placeholder="#FF85C2"
-                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                  <label className="vir-primary-label">{t('submit.color')}</label>
+                  <input type="text" name="color" value={formData.color} onChange={handleChange} placeholder="#FF85C2" className="vir-primary-input" />
                 </div>
               </div>
 
               <div className="flex space-x-4">
                 <div className="w-1/2">
-                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.start_date')}</label>
-                  <input required type="date" name="start" value={formData.start} onChange={handleChange}
-                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                  <label className="vir-primary-label">{t('submit.start_date')}</label>
+                  <input required type="date" name="start" value={formData.start} onChange={handleChange} className="vir-primary-input" />
                 </div>
                 <div className="w-1/2">
-                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.end_date')}</label>
-                  <input type="date" name="end" value={formData.end} onChange={handleChange}
-                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                  <label className="vir-primary-label">{t('submit.end_date')}</label>
+                  <input type="date" name="end" value={formData.end} onChange={handleChange} className="vir-primary-input" />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.location')}</label>
-                <input type="text" name="location" value={formData.location} onChange={handleChange} placeholder={t('submit.location_placeholder')}
-                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <label className="vir-primary-label">{t('submit.location')}</label>
+                <input type="text" name="location" value={formData.location} onChange={handleChange} placeholder={t('submit.location_placeholder')} className="vir-primary-input" />
               </div>
 
               <div>
-                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.link')}</label>
-                <input required type="url" name="link" value={formData.link} onChange={handleChange} placeholder="X, YouTube, Twitch, etc..."
-                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <label className="vir-primary-label">{t('submit.link')}</label>
+                <input required type="url" name="link" value={formData.link} onChange={handleChange} placeholder="X, YouTube, Twitch, etc..." className="vir-primary-input" />
               </div>
 
               <div>
-                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.memo')}</label>
-                <textarea name="memo" rows={4} value={formData.memo} onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <label className="vir-primary-label">{t('submit.memo')}</label>
+                <textarea name="memo" rows={4} value={formData.memo} onChange={handleChange} className="vir-primary-input" />
               </div>
             </>
           )}
@@ -172,34 +163,29 @@ export default function SubmitPopup({ closeModal }: { closeModal: () => void }) 
           {activeTab === 'vtuber' && (
             <>
               <div>
-                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.vtuber_name')}</label>
-                <input required type="text" name="name" value={formData.name} onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <label className="vir-primary-label">{t('submit.vtuber_name')}</label>
+                <input required type="text" name="name" value={formData.name} onChange={handleChange} className="vir-primary-input" />
               </div>
 
               <div className="flex space-x-4">
                 <div className="w-3/5">
-                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.agency')}</label>
-                  <input type="text" name="agency" value={formData.agency} onChange={handleChange} placeholder={t('submit.agency_placeholder')}
-                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                  <label className="vir-primary-label">{t('submit.agency')}</label>
+                  <input type="text" name="agency" value={formData.agency} onChange={handleChange} placeholder={t('submit.agency_placeholder')} className="vir-primary-input" />
                 </div>
                 <div className="w-2/5">
-                  <label className="block text-sm font-medium dark:text-gray-300">{t('submit.color')}</label>
-                  <input type="text" name="color" value={formData.color} onChange={handleChange} placeholder="#FF85C2"
-                    className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                  <label className="vir-primary-label">{t('submit.color')}</label>
+                  <input type="text" name="color" value={formData.color} onChange={handleChange} placeholder="#FF85C2" className="vir-primary-input" />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.link')}</label>
-                <input required={activeTab === 'vtuber'} type="url" name="link" value={formData.link} onChange={handleChange} placeholder="https://youtube.com/@..."
-                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <label className="vir-primary-label">{t('submit.link')}</label>
+                <input required={activeTab === 'vtuber'} type="url" name="link" value={formData.link} onChange={handleChange} placeholder="https://youtube.com/@..." className="vir-primary-input" />
               </div>
 
               <div>
-                <label className="block text-sm font-medium dark:text-gray-300">{t('submit.memo')}</label>
-                <textarea name="memo" rows={4} value={formData.memo} onChange={handleChange}
-                  className="w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <label className="vir-primary-label">{t('submit.memo')}</label>
+                <textarea name="memo" rows={4} value={formData.memo} onChange={handleChange} className="vir-primary-input" />
               </div>
             </>
           )}
