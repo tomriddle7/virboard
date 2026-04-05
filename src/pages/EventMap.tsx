@@ -66,25 +66,25 @@ export default function EventMap() {
 
     // 2. 소속사/즐겨찾기 필터링 적용 (기존 로직 활용)
     if (selectedAgency === 'All VTubers') return activeEvents;
-    
+
     if (selectedAgency === 'Favorite') {
       return activeEvents.filter(event => favorites.includes(event.vtuber_id));
     }
-    
+
     const agencyVtuberIds = vtubers
       .filter(v => v.agency === selectedAgency)
       .map(v => v.id);
-      
+
     return activeEvents.filter(event => agencyVtuberIds.includes(event.vtuber_id));
   }, [events, vtubers, selectedAgency, favorites, today]);
 
   const groupedEvents = useMemo(() => {
     const groups: Record<string, VtuberEvent[]> = {};
-    
+
     filteredEvents.forEach(event => {
       // 위경도가 없는 데이터(온라인 행사나 주소 변환 실패 건)는 지도 표시 대상에서 제외
-      if (!event.latitude || !event.longitude) return; 
-      
+      if (!event.latitude || !event.longitude) return;
+
       const key = `${event.latitude},${event.longitude}`;
       if (!groups[key]) groups[key] = [];
       groups[key].push(event);
@@ -96,53 +96,55 @@ export default function EventMap() {
   const position: [number, number] = [37.5665, 126.978];
 
   return (
-    <div className="w-full h-[600px] rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
-      <MapContainer
-        center={position}
-        zoom={13}
-        scrollWheelZoom={true}
-        className="w-full h-full z-0"
-      >
-        {/* ✨ OSM 표준 타일 레이어 */}
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+    <main className="w-full flex-1 flex flex-col rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
+      <section className="flex-1 flex flex-col min-h-0">
+        <MapContainer
+          center={position}
+          zoom={13}
+          scrollWheelZoom={true}
+          className="w-full h-full z-0"
+        >
+          {/* ✨ OSM 표준 타일 레이어 */}
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
 
-        <LocationController />
+          <LocationController />
 
-        {/* ✨ 이벤트 마커 렌더링 */}
-        {groupedEvents.map((group, index) => {
-          const { latitude, longitude } = group[0];
-          
-          return (
-            <Marker key={`marker-${index}`} position={[latitude!, longitude!]}>
-              <Popup className="custom-popup">
-                <div className="max-h-48 overflow-y-auto pr-2 custom-scrollbar">
-                  {group.map((event, i) => (
-                    <div key={i} className="mb-3 last:mb-0 border-b last:border-0 pb-2 last:pb-0">
-                      <h4 className="font-bold text-sm text-gray-800 break-words">
-                        {event.title}
-                      </h4>
-                      <p className="text-xs text-gray-600 mt-0.5">{event.location}</p>
-                      <p className="text-xs text-blue-500 font-medium mt-1">
-                        {event.start.toLocaleDateString()} ~ {event.end.toLocaleDateString()}
-                      </p>
-                    </div>
-                  ))}
-                  
-                  {/* 행사가 여러 개일 경우 하단에 요약 텍스트 추가 */}
-                  {group.length > 1 && (
-                    <div className="text-[10px] text-gray-400 text-right mt-2 font-medium">
-                      총 {group.length}개의 행사가 이 장소에 있습니다.
-                    </div>
-                  )}
-                </div>
-              </Popup>
-            </Marker>
-          );
-        })}
-      </MapContainer>
-    </div>
+          {/* ✨ 이벤트 마커 렌더링 */}
+          {groupedEvents.map((group, index) => {
+            const { latitude, longitude } = group[0];
+
+            return (
+              <Marker key={`marker-${index}`} position={[latitude!, longitude!]}>
+                <Popup className="custom-popup">
+                  <div className="max-h-48 overflow-y-auto pr-2 custom-scrollbar">
+                    {group.map((event, i) => (
+                      <div key={i} className="mb-3 last:mb-0 border-b last:border-0 pb-2 last:pb-0">
+                        <h4 className="font-bold text-sm text-gray-800 break-words">
+                          {event.title}
+                        </h4>
+                        <p className="text-xs text-gray-600 mt-0.5">{event.location}</p>
+                        <p className="text-xs text-blue-500 font-medium mt-1">
+                          {event.start.toLocaleDateString()} ~ {event.end.toLocaleDateString()}
+                        </p>
+                      </div>
+                    ))}
+
+                    {/* 행사가 여러 개일 경우 하단에 요약 텍스트 추가 */}
+                    {group.length > 1 && (
+                      <div className="text-[10px] text-gray-400 text-right mt-2 font-medium">
+                        총 {group.length}개의 행사가 이 장소에 있습니다.
+                      </div>
+                    )}
+                  </div>
+                </Popup>
+              </Marker>
+            );
+          })}
+        </MapContainer>
+      </section>
+    </main>
   );
 }

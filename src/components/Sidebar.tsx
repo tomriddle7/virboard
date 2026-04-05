@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useGoogleLogin, googleLogout } from '@react-oauth/google';
 import { useTranslation } from 'react-i18next';
-import { X, Moon, Sun, Globe, House, Heart, LogIn, Loader2 } from 'lucide-react';
+import { X, Moon, Sun, Globe, House, Heart, Map, Loader2 } from 'lucide-react';
 import { useAtom, useSetAtom } from 'jotai';
 import { themeAtom, favoritesAtom, accessTokenAtom, driveFileIdAtom, userInfoAtom } from '@/store/atoms';
 
@@ -36,7 +36,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const { t, i18n } = useTranslation();
 
   // 상태 관리 (Jotai 연동)
-  const [favorites, setFavorites] = useAtom(favoritesAtom);
+  const [, setFavorites] = useAtom(favoritesAtom);
   const [accessToken, setAccessToken] = useAtom(accessTokenAtom);
   const [userInfo, setUserInfo] = useAtom(userInfoAtom);
   const setDriveFileId = useSetAtom(driveFileIdAtom);
@@ -137,14 +137,55 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
           {/* 즐겨찾기 영역 */}
           <div className="mb-8">
-            <Link to="/" onClick={onClose} className="flex items-center gap-2 mb-5 text-gray-700 dark:text-gray-200 font-semibold px-2">
-              <House className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-              {t('common.home')}
-            </Link>
-            <Link to="/streamer" onClick={onClose} className="flex items-center gap-2 mb-5 text-gray-700 dark:text-gray-200 font-semibold px-2">
-              <Heart className="w-5 h-5 text-gray-700 fill-gray-700 dark:text-gray-300 dark:fill-gray-300" />
-              {t('common.favorites')}
-            </Link>
+            <NavLink
+              to="/"
+              onClick={onClose}
+              className={({ isActive }) =>
+                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  <House className={`w-5 h-5 transition-colors ${
+                    isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
+                    }`} />
+                  {t('common.home')}
+                </>
+              )}
+            </NavLink>
+            <NavLink
+              to="/map"
+              onClick={onClose}
+              className={({ isActive }) =>
+                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  <Map className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
+                    }`} />
+                  {t('common.map')}
+                </>
+              )}
+            </NavLink>
+            <NavLink
+              to="/streamer"
+              onClick={onClose}
+              className={({ isActive }) =>
+                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  <Heart className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
+                    }`} />
+                  {t('common.favorites')}
+                </>
+              )}
+            </NavLink>
             <div className="space-y-1">
               {/* Note: 현재 favorites는 id 배열이므로, 차후 vtubers 데이터와 매핑하여 이름과 이미지를 보여주는 작업이 필요합니다. */}
               {/* {favorites.map((id, idx) => (

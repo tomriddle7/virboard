@@ -80,9 +80,9 @@ function Home() {
   }, [selectedEvent, vtuberMap]);
 
   return (
-    <main className="bg-gray-50 dark:bg-gray-950 min-h-screen">
-      <section className="max-w-6xl mx-auto pt-6 px-0 sm:px-6">
-        <div className="h-[800px] bg-white dark:bg-black p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-900">
+    <main className="bg-gray-50 dark:bg-gray-950 h-[100dvh] flex flex-col">
+      <section className="w-full max-w-6xl mx-auto pt-4 px-0 sm:px-6 flex-1 flex flex-col min-h-0 overflow-y-auto custom-scrollbar">
+        <div className="flex-1 min-h-[700px] sm:min-h-0 bg-white dark:bg-black p-2 sm:p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-900 flex flex-col">
           <Calendar<VtuberEvent, object>
             localizer={localizer}
             events={filteredEvents}

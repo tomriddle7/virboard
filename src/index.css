@@ -2,6 +2,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+#root {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
 .rbc-show-more, .rbc-event {
   display: none !important
 }
