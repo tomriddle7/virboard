@@ -7,13 +7,11 @@ import { ja } from 'date-fns/locale/ja'
 import { enUS } from 'date-fns/locale/en-US'
 import { CustomToolbar, CustomEvent } from '@/components/CustomToolbar'
 import DetailPopup from '@/components/DetailPopup'
-import SubmitPopup from '@/components/SubmitPopup'
 import BottomDrawer from '@/components/BottomDrawer'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import type { VtuberEvent, VtuberProfile } from '@/types/Event'
-
-import { useAtom, useAtomValue } from 'jotai';
-import { selectedAgencyAtom, submitModalOpenAtom, eventsAtom, vtubersAtom, favoritesAtom } from '@/store/atoms';
+import { useAtomValue } from 'jotai';
+import { selectedAgencyAtom, eventsAtom, vtubersAtom, favoritesAtom } from '@/store/atoms';
 
 const locales = { ko, en: enUS, ja };
 
@@ -33,8 +31,6 @@ function Home() {
   const selectedAgency = useAtomValue(selectedAgencyAtom);
   const events = useAtomValue(eventsAtom);
   const vtubers = useAtomValue(vtubersAtom);
-
-  const [submitOpen, setSubmitOpen] = useAtom(submitModalOpenAtom);
 
   // 로컬 상태
   const [date, setDate] = useState<Date>(new Date());
@@ -77,7 +73,6 @@ function Home() {
   }, [events, vtubers, selectedAgency, favorites]);
 
   const closeDetailModal = () => setSelectedEvent(null);
-  const closeSubmitModal = () => setSubmitOpen(false);
 
   const selectedVtuberInfo = useMemo(() => {
     if (!selectedEvent) return null;
@@ -210,7 +205,7 @@ function Home() {
             vtuberInfo={selectedVtuberInfo}
           />
         )}
-        {submitOpen && <SubmitPopup closeModal={closeSubmitModal} />}
+        
         <BottomDrawer
           drawerData={drawerData}
           onClose={() => setDrawerData(null)}

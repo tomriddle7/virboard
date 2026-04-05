@@ -9,6 +9,8 @@ export interface VtuberEvent {
   color: string;
   type?: string;
   location?: string;
+  latitude?: number;
+  longitude?: number;
   link?: string;
   memo?: string;
 }
