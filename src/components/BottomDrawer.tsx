@@ -19,7 +19,7 @@ function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) 
 
   const renderTitle = () => {
     if (!drawerData) return '';
-    if (drawerData.location) return drawerData.location;
+    if (drawerData.location) return drawerData.location.split('|').join(', ');
     if (drawerData.date) {
       const month = drawerData.date.getMonth() + 1;
       const day = drawerData.date.getDate();

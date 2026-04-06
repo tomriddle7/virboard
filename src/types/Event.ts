@@ -1,3 +1,10 @@
+// ✨ 위치 정보를 담는 개별 타입 생성
+export interface EventLocation {
+  name: string;
+  lat: number;
+  lng: number;
+}
+
 // 팬 광고 이벤트 인터페이스
 export interface VtuberEvent {
   thumbnail: string;
@@ -9,15 +16,15 @@ export interface VtuberEvent {
   color: string;
   type?: string;
   location?: string;
-  latitude?: number;
-  longitude?: number;
+  latitude?: string;
+  longitude?: string;
   link?: string;
   memo?: string;
 }
 
 // JSON에서 막 읽어온 Raw 데이터 타입 정의
 export type RawEvent = Omit<VtuberEvent, "start" | "end"> & {
-  funing_start_at?: string;
+  funding_start_at?: string;
   funding_end_at?: string;
   event_start_at: string;
   event_end_at: string;

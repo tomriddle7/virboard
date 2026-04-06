@@ -7,9 +7,10 @@ interface DetailPopupProps {
   selectedEvent: VtuberEvent;
   closeModal: () => void;
   vtuberInfo: VtuberProfile | null;
+  specificLocation?: string;
 }
 
-function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps) {
+function DetailPopup({ selectedEvent, closeModal, vtuberInfo, specificLocation }: DetailPopupProps) {
   const { t } = useTranslation();
 
   // ✨ 로고 이미지 경로 매핑 함수 (이미지 유효성 검사 포함)
@@ -31,6 +32,10 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
     // 등록되지 않은 플랫폼이 들어올 경우를 대비한 안전장치
     return logoMap[key] || { name: platform, src: '/images/platforms/website.svg' };
   };
+
+  const displayLocation = specificLocation
+    ? specificLocation // 지도에서 특정 마커를 눌러서 열었을 때
+    : selectedEvent.location?.split('|').join(', ');
 
   return (
     <div
@@ -74,7 +79,7 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
         </h3>
         <p className="text-sm text-gray-500 mb-6 dark:text-gray-400 mb-6 transition-colors">
           🗓️ {format(selectedEvent.start, "yyyy.MM.dd")}
-          {selectedEvent.type !== '생일' && `~ ${format(selectedEvent.end, "yyyy.MM.dd")}`}
+          {selectedEvent.type !== '생일' && ` ~ ${format(selectedEvent.end, "yyyy.MM.dd")}`}
         </p>
 
         {/* 상세 정보 리스트 */}
@@ -85,7 +90,7 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
                 📍 {t('popup.location')}
               </p>
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                {selectedEvent.location}
+                {displayLocation}
               </p>
             </div>
           )}
@@ -143,7 +148,10 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo }: DetailPopupProps
           {selectedEvent.memo && (
             <div>
               <p className="text-xs text-gray-400 dark:text-gray-500 font-semibold mb-1">📝 {t('popup.memo')}</p>
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{selectedEvent.memo}</p>
+              
+            {selectedEvent.memo.split('\\n').map((text, idx) => (
+              <p key={`memo-${idx}`} className="text-sm font-medium text-gray-700 dark:text-gray-300">{text}</p>
+            ))}
             </div>
           )}
         </div>

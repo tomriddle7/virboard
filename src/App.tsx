@@ -32,7 +32,7 @@ function App() {
 
         // 이벤트 데이터 가공
         const parsedEvents: VtuberEvent[] = eventList.map((event: RawEvent) => {
-          const eventStart = event.status === 'funding' ? event.funing_start_at! : event.event_start_at;
+          const eventStart = event.status === 'funding' ? event.funding_start_at! : event.event_start_at;
           const eventEnd = event.status === 'funding' ? event.funding_end_at! : event.event_end_at;
           return {
             ...event,

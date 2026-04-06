@@ -82,13 +82,13 @@ export default function EventMap() {
   const [drawerData, setDrawerData] = useState<DrawerDataType | null>(null);
 
   // ✨ 서랍 안에서 개별 이벤트를 클릭했을 때 보여줄 상세 팝업용 상태 추가
-  const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
+  const [selectedEventInfo, setSelectedEventInfo] = useState<{ event: VtuberEvent, specificLocation: string } | null>(null);
 
   // 선택된 이벤트의 버튜버 정보를 찾는 로직 (Home.tsx와 동일)
   const selectedVtuberInfo = useMemo(() => {
-    if (!selectedEvent) return null;
-    return vtubers.find(v => v.id === selectedEvent.vtuber_id) || null;
-  }, [selectedEvent, vtubers]);
+    if (!selectedEventInfo) return null;
+    return vtubers.find(v => v.id === selectedEventInfo.event.vtuber_id) || null;
+  }, [selectedEventInfo, vtubers]);
 
   const filteredEvents = useMemo(() => {
     // 1. 기본 필터링 (기간이 지나지 않은 이벤트만 먼저 거름)
@@ -115,15 +115,41 @@ export default function EventMap() {
   }, [events, vtubers, selectedAgency, favorites, today]);
 
   const groupedEvents = useMemo(() => {
-    const groups: Record<string, VtuberEvent[]> = {};
+    const groups: Record<string, { locationName: string; lat: number; lng: number; events: VtuberEvent[] }> = {};
 
     filteredEvents.forEach(event => {
       // 위경도가 없는 데이터(온라인 행사나 주소 변환 실패 건)는 지도 표시 대상에서 제외
       if (!event.latitude || !event.longitude) return;
 
-      const key = `${event.latitude},${event.longitude}`;
-      if (!groups[key]) groups[key] = [];
-      groups[key].push(event);
+      // 1. 파이프(|)를 기준으로 문자열을 배열로 분할
+      const locArray = (event.location || '').split('|').map(s => s.trim());
+      const latArray = String(event.latitude).split('|').map(s => parseFloat(s.trim()));
+      const lngArray = String(event.longitude).split('|').map(s => parseFloat(s.trim()));
+
+      // 2. 위경도 개수가 다를 수 있는 휴먼 에러를 방어하기 위해 최소 길이로 순회
+      const minLength = Math.min(latArray.length, lngArray.length);
+
+      for (let i = 0; i < minLength; i++) {
+        const lat = latArray[i];
+        const lng = lngArray[i];
+
+        // 유효한 숫자인지 방어 코드 추가
+        if (isNaN(lat) || isNaN(lng)) continue;
+
+        const key = `${lat},${lng}`;
+
+        if (!groups[key]) {
+          groups[key] = {
+            // 장소명이 누락되었을 경우 첫 번째 장소명으로 폴백(Fallback) 처리
+            locationName: locArray[i] || locArray[0] || '상세 주소 없음',
+            lat: lat,
+            lng: lng,
+            events: []
+          };
+        }
+        // 해당 마커 그룹에 이벤트 추가
+        groups[key].events.push(event);
+      }
     });
 
     return Object.values(groups);
@@ -153,18 +179,16 @@ export default function EventMap() {
 
           {/* ✨ 이벤트 마커 렌더링 */}
           {groupedEvents.map((group, index) => {
-            const { latitude, longitude } = group[0];
-
             return (
               <Marker
                 key={`marker-${index}`}
-                position={[latitude!, longitude!]}
+                position={[group.lat, group.lng]}
                 eventHandlers={{
                   click: () => {
                     // 마커를 클릭하면 해당 위치의 행사 배열(group) 전체를 서랍으로 넘깁니다!
                     setDrawerData({
-                      location: group[0].location || '상세 주소 없음', // 대표 장소명
-                      events: group // 필터링 없이 그대로 넘김
+                      location: group.locationName, // 대표 장소명
+                      events: group.events // 필터링 없이 그대로 넘김
                     });
                   }
                 }}
@@ -178,15 +202,19 @@ export default function EventMap() {
           onClose={() => setDrawerData(null)}
           onEventClick={(event) => {
             // 서랍 안의 행사 카드를 누르면 상세 팝업을 띄웁니다!
-            setSelectedEvent(event);
+            setSelectedEventInfo({
+              event,
+              specificLocation: drawerData!.location || '상세 주소 없음'
+            });
           }}
         />
 
         {/* ✨ 상세 팝업 렌더링 (Home.tsx와 동일한 방식) */}
-        {selectedEvent && (
+        {selectedEventInfo && (
           <DetailPopup
-            selectedEvent={selectedEvent}
-            closeModal={() => setSelectedEvent(null)}
+            selectedEvent={selectedEventInfo.event}
+            specificLocation={selectedEventInfo.specificLocation} // ✨ 새로 만든 prop 전달
+            closeModal={() => setSelectedEventInfo(null)}
             vtuberInfo={selectedVtuberInfo}
           />
         )}
