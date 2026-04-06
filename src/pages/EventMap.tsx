@@ -28,13 +28,15 @@ function LocateButton() {
   return (
     // leaflet 기본 줌 컨트롤(top: 10px, height: 약 74px) 바로 아래에 오도록 top 값을 90px로 강제 지정합니다.
     // 왼쪽 여백은 기본 컨트롤과 동일하게 10px(left-[10px])로 맞춥니다.
-    <div className="absolute top-[90px] left-[10px] z-[1000]">
+    <div className="absolute top-[90px] left-[10px] z-1000">
       <button
         onClick={() => map.locate({ setView: false })}
-        className="box-content w-[30px] h-[30px] flex items-center justify-center bg-white dark:bg-gray-800 bg-clip-padding rounded border-2 border-black/20 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none group cursor-pointer"
+        className="box-content w-[30px] h-[30px] flex items-center justify-center bg-white bg-clip-padding rounded border-2 border-black/20! hover:bg-gray-100 transition-colors focus:outline-none group cursor-pointer"
         title="내 위치 찾기"
       >
-        <Navigation className="w-[18px] h-[18px] text-black dark:text-white fill-blue-500/10 group-hover:fill-blue-500/30" />
+        <Navigation
+          className="w-[18px] h-[18px] text-black fill-blue-500/10 group-hover:fill-blue-500/30"
+        />
       </button>
     </div>
   );
@@ -130,7 +132,7 @@ export default function EventMap() {
   const position: [number, number] = [37.5665, 126.978];
 
   return (
-    <main className="w-full flex-1 flex flex-col rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
+    <main className="w-full flex-1 flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm">
       <section className="flex-1 flex flex-col min-h-0">
         <MapContainer
           center={position}
