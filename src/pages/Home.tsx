@@ -124,7 +124,17 @@ function Home() {
                   });
 
                   const birthdays = dayEvents.filter((event) => event.type === '생일');
-                  const otherEvents = dayEvents.filter((event) => event.type !== '생일');
+                  const otherEvents = dayEvents.filter((event) => event.type !== '생일')
+                    .toSorted((a, b) => {
+                      const getStatusWeight = (status?: string) => {
+                        if (status === 'ongoing') return 1;
+                        if (status === 'ended') return 2;
+                        if (status === 'funded') return 3;
+                        if (status === 'funding') return 4;
+                        return 5;
+                      };
+                      return getStatusWeight(a.status) - getStatusWeight(b.status);
+                    });
 
                   return (
                     <div>
@@ -141,20 +151,11 @@ function Home() {
                             e.stopPropagation();
                             setDrawerData({ date: headerDate, events: otherEvents });
                           }}>
-                            {otherEvents
-                              .toSorted((a, b) => {
-                                const getStatusWeight = (status?: string) => {
-                                  if (status === 'ongoing') return 1;
-                                  if (status === 'funding') return 2;
-                                  return 3;
-                                };
-                                return getStatusWeight(a.status) - getStatusWeight(b.status);
-                              })
-                              .map((event, i) => {
-                                const isOngoing = event.type !== '생일' && event.status === 'funding';
+                            {otherEvents.map((event, i) => {
+                                const isFunding = event.type !== '생일' && (event.status === 'funding' || event.status === 'funded');
                                 const opacityClass = !isCurrentMonth ? 'opacity-40' : '';
 
-                                return isOngoing ? (
+                                return isFunding ? (
                                   <span
                                     key={`dot-${event.vtuber_id}-${i}`}
                                     className={`size-1.5 p-[1px] rounded-full ${event.color} ${opacityClass}`}
@@ -205,7 +206,7 @@ function Home() {
             vtuberInfo={selectedVtuberInfo}
           />
         )}
-        
+
         <BottomDrawer
           drawerData={drawerData}
           onClose={() => setDrawerData(null)}

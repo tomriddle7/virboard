@@ -62,13 +62,16 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo, specificLocation }
         {/* 배지 영역 */}
         <div className="flex gap-1.5 mb-3">
           {selectedEvent.type && (
-            <span className={`inline-block px-3 py-1 text-xs font-bold text-white rounded-full ${selectedEvent.color}`}>
+            <span className={`inline-block px-3 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full ${selectedEvent.color}`}>
               {t(`event_type.${selectedEvent.type}`, { defaultValue: selectedEvent.type })}
             </span>
           )}
-          {selectedEvent.status === 'funding' && (
-            <span className="inline-block px-3 py-1 text-xs font-bold text-white rounded-full bg-orange-500">
-              {t('event.funding')}
+          {(selectedEvent.status === 'funding' || selectedEvent.status === 'funded') && (
+            <span className={`inline-block px-3 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full ${selectedEvent.status === 'funded' ? 'bg-gray-500' : 'bg-orange-500'
+              }`}>
+              {selectedEvent.status === 'funded'
+                ? t('event.funded', { defaultValue: '모금완료' })
+                : t('event.funding', { defaultValue: '모금중' })}
             </span>
           )}
         </div>
@@ -139,7 +142,7 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo, specificLocation }
                   rel="noreferrer"
                   className="text-sm font-medium text-indigo-500 dark:text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:underline transition-colors"
                 >
-                    {t('popup.shortcut')} &rarr;
+                  {t('popup.shortcut')} &rarr;
                 </a>
               </div>
             )
@@ -148,10 +151,10 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo, specificLocation }
           {selectedEvent.memo && (
             <div>
               <p className="text-xs text-gray-400 dark:text-gray-500 font-semibold mb-1">📝 {t('popup.memo')}</p>
-              
-            {selectedEvent.memo.split('\\n').map((text, idx) => (
-              <p key={`memo-${idx}`} className="text-sm font-medium text-gray-700 dark:text-gray-300">{text}</p>
-            ))}
+
+              {selectedEvent.memo.split('\\n').map((text, idx) => (
+                <p key={`memo-${idx}`} className="text-sm font-medium text-gray-700 dark:text-gray-300">{text}</p>
+              ))}
             </div>
           )}
         </div>

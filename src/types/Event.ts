@@ -26,6 +26,7 @@ export interface VtuberEvent {
 export type RawEvent = Omit<VtuberEvent, "start" | "end"> & {
   funding_start_at?: string;
   funding_end_at?: string;
+  funding_over_at?: string;
   event_start_at: string;
   event_end_at: string;
 };

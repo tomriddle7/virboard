@@ -64,14 +64,6 @@ function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {/* ✨ Drawer는 필터링을 하지 않고, 부모가 준 events를 정렬해서 보여주기만 함 */}
               {drawerData?.events
-                .toSorted((a, b) => {
-                  const getStatusWeight = (status?: string) => {
-                    if (status === 'ongoing') return 1;
-                    if (status === 'funding') return 2;
-                    return 3;
-                  };
-                  return getStatusWeight(a.status) - getStatusWeight(b.status);
-                })
                 .map((event, idx) => (
                   <div
                     key={idx}
@@ -95,10 +87,13 @@ function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) 
                       )}
 
                       {/* ✨ 모금중 배지를 좌측 상단(top-2 left-2)에 띄웁니다 */}
-                      {event.status === 'funding' && (
+                      {(event.status === 'funding' || event.status === 'funded') && (
                         <div className="absolute top-2 left-2 z-10">
-                          <span className="inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full bg-orange-500 shadow-sm">
-                            {t('event.funding', { defaultValue: '모금중' })}
+                          <span className={`inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full ${event.status === 'funded' ? 'bg-gray-500' : 'bg-orange-500'
+                            }`}>
+                            {event.status === 'funded'
+                              ? t('event.funded', { defaultValue: '모금완료' })
+                              : t('event.funding', { defaultValue: '모금중' })}
                           </span>
                         </div>
                       )}
