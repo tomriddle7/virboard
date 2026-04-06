@@ -2,7 +2,11 @@ import { useState, useMemo, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import BottomDrawer from '@/components/BottomDrawer';
+import type { DrawerDataType } from '@/components/BottomDrawer';
+import DetailPopup from '@/components/DetailPopup'; // 상세 모달 띄우기용
 // 라이브러리 기본 아이콘 깨짐 방지 설정
+import { Navigation } from "lucide-react";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import type { VtuberEvent } from '@/types/Event';
@@ -17,6 +21,24 @@ const DefaultIcon = L.icon({
   iconAnchor: [12, 41],
 });
 L.Marker.prototype.options.icon = DefaultIcon;
+
+function LocateButton() {
+  const map = useMap();
+
+  return (
+    // leaflet 기본 줌 컨트롤(top: 10px, height: 약 74px) 바로 아래에 오도록 top 값을 90px로 강제 지정합니다.
+    // 왼쪽 여백은 기본 컨트롤과 동일하게 10px(left-[10px])로 맞춥니다.
+    <div className="absolute top-[90px] left-[10px] z-[1000]">
+      <button
+        onClick={() => map.locate({ setView: false })}
+        className="box-content w-[30px] h-[30px] flex items-center justify-center bg-white dark:bg-gray-800 bg-clip-padding rounded border-2 border-black/20 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors focus:outline-none group cursor-pointer"
+        title="내 위치 찾기"
+      >
+        <Navigation className="w-[18px] h-[18px] text-black dark:text-white fill-blue-500/10 group-hover:fill-blue-500/30" />
+      </button>
+    </div>
+  );
+}
 
 function LocationController() {
   const map = useMap();
@@ -53,6 +75,18 @@ export default function EventMap() {
     d.setHours(0, 0, 0, 0);
     return d;
   }, []);
+
+  // ✨ 서랍(Drawer)에 넘겨줄 데이터를 관리할 상태 추가
+  const [drawerData, setDrawerData] = useState<DrawerDataType | null>(null);
+
+  // ✨ 서랍 안에서 개별 이벤트를 클릭했을 때 보여줄 상세 팝업용 상태 추가
+  const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
+
+  // 선택된 이벤트의 버튜버 정보를 찾는 로직 (Home.tsx와 동일)
+  const selectedVtuberInfo = useMemo(() => {
+    if (!selectedEvent) return null;
+    return vtubers.find(v => v.id === selectedEvent.vtuber_id) || null;
+  }, [selectedEvent, vtubers]);
 
   const filteredEvents = useMemo(() => {
     // 1. 기본 필터링 (기간이 지나지 않은 이벤트만 먼저 거름)
@@ -112,38 +146,48 @@ export default function EventMap() {
 
           <LocationController />
 
+          {/* ✨ 여기에 버튼 컴포넌트를 추가합니다! */}
+          <LocateButton />
+
           {/* ✨ 이벤트 마커 렌더링 */}
           {groupedEvents.map((group, index) => {
             const { latitude, longitude } = group[0];
 
             return (
-              <Marker key={`marker-${index}`} position={[latitude!, longitude!]}>
-                <Popup className="custom-popup">
-                  <div className="max-h-48 overflow-y-auto pr-2 custom-scrollbar">
-                    {group.map((event, i) => (
-                      <div key={i} className="mb-3 last:mb-0 border-b last:border-0 pb-2 last:pb-0">
-                        <h4 className="font-bold text-sm text-gray-800 break-words">
-                          {event.title}
-                        </h4>
-                        <p className="text-xs text-gray-600 mt-0.5">{event.location}</p>
-                        <p className="text-xs text-blue-500 font-medium mt-1">
-                          {event.start.toLocaleDateString()} ~ {event.end.toLocaleDateString()}
-                        </p>
-                      </div>
-                    ))}
-
-                    {/* 행사가 여러 개일 경우 하단에 요약 텍스트 추가 */}
-                    {group.length > 1 && (
-                      <div className="text-[10px] text-gray-400 text-right mt-2 font-medium">
-                        총 {group.length}개의 행사가 이 장소에 있습니다.
-                      </div>
-                    )}
-                  </div>
-                </Popup>
-              </Marker>
+              <Marker
+                key={`marker-${index}`}
+                position={[latitude!, longitude!]}
+                eventHandlers={{
+                  click: () => {
+                    // 마커를 클릭하면 해당 위치의 행사 배열(group) 전체를 서랍으로 넘깁니다!
+                    setDrawerData({
+                      location: group[0].location || '상세 주소 없음', // 대표 장소명
+                      events: group // 필터링 없이 그대로 넘김
+                    });
+                  }
+                }}
+              />
             );
           })}
         </MapContainer>
+        {/* ✨ 서랍 컴포넌트 렌더링 */}
+        <BottomDrawer
+          drawerData={drawerData}
+          onClose={() => setDrawerData(null)}
+          onEventClick={(event) => {
+            // 서랍 안의 행사 카드를 누르면 상세 팝업을 띄웁니다!
+            setSelectedEvent(event);
+          }}
+        />
+
+        {/* ✨ 상세 팝업 렌더링 (Home.tsx와 동일한 방식) */}
+        {selectedEvent && (
+          <DetailPopup
+            selectedEvent={selectedEvent}
+            closeModal={() => setSelectedEvent(null)}
+            vtuberInfo={selectedVtuberInfo}
+          />
+        )}
       </section>
     </main>
   );

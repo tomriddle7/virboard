@@ -1,23 +1,32 @@
-// src/components/BottomDrawer.tsx
+import { Drawer } from 'vaul';
+import { useTranslation } from 'react-i18next';
+import type { VtuberEvent } from '@/types/Event';
 
-import { Drawer } from 'vaul'
-import { useTranslation } from 'react-i18next'
-import type { VtuberEvent } from '@/types/Event'
+export interface DrawerDataType {
+  date?: Date;
+  location?: string;
+  events: VtuberEvent[]; // 부모가 이미 필터링을 끝낸 순수한 데이터
+}
 
-function BottomDrawer({
-  drawerData,
-  onClose,
-  onEventClick,
-}: {
-  drawerData: { date: Date; events: VtuberEvent[] } | null;
+interface BottomDrawerProps {
+  drawerData: DrawerDataType | null;
   onClose: () => void;
   onEventClick: (event: VtuberEvent) => void;
-}) {
+}
+
+function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) {
   const { t } = useTranslation();
-  // vaul은 닫히는 애니메이션 도중에도 컴포넌트를 렌더링하므로,
-  // drawerData가 null이 될 때를 대비해 안전하게 값을 추출해 둡니다.
-  const month = drawerData?.date ? drawerData.date.getMonth() + 1 : '';
-  const day = drawerData?.date ? drawerData.date.getDate() : '';
+
+  const renderTitle = () => {
+    if (!drawerData) return '';
+    if (drawerData.location) return drawerData.location;
+    if (drawerData.date) {
+      const month = drawerData.date.getMonth() + 1;
+      const day = drawerData.date.getDate();
+      return t('drawer.title', { month, day });
+    }
+    return '';
+  };
 
   return (
     <Drawer.Root
@@ -43,7 +52,7 @@ function BottomDrawer({
           <div className="px-6 pb-12 flex flex-col overflow-y-auto">
             {/* Drawer.Title은 접근성(스크린 리더 등)을 위해 필수로 권장됩니다 */}
             <Drawer.Title className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-100">
-              {t('drawer.title', { month, day })}
+              {renderTitle()}
             </Drawer.Title>
 
             {/* Drawer.Description 역시 접근성을 위한 숨김 텍스트로 넣어줍니다 */}
@@ -53,9 +62,8 @@ function BottomDrawer({
 
             {/* ✨ 핵심: 일렬 목록(space-y-3)을 2열 그리드(grid grid-cols-2)로 변경합니다! */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              {/* ✨ Drawer는 필터링을 하지 않고, 부모가 준 events를 정렬해서 보여주기만 함 */}
               {drawerData?.events
-                .filter((event) => event.type !== '생일')
-                // 기존의 안정 정렬(Stable Sort) 로직은 그대로 유지합니다.
                 .toSorted((a, b) => {
                   const getStatusWeight = (status?: string) => {
                     if (status === 'ongoing') return 1;

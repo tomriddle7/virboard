@@ -139,7 +139,7 @@ function Home() {
                         >
                           <button className="flex flex-row flex-wrap justify-center w-full gap-1" onClick={(e) => {
                             e.stopPropagation();
-                            setDrawerData({ date: headerDate, events: dayEvents });
+                            setDrawerData({ date: headerDate, events: otherEvents });
                           }}>
                             {otherEvents
                               .toSorted((a, b) => {
