@@ -23,7 +23,10 @@
     },
     "event": {
         "birthday": "생일",
-        "funding": "모금중"
+        "funding": "모금중",
+        "funded": "모금완료",
+        "ongoing": "진행중",
+        "ended": "종료"
     },
     "drawer": {
         "title": "{{month}}월 {{day}}일 일정",

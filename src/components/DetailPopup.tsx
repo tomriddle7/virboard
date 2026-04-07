@@ -66,12 +66,18 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo, specificLocation }
               {t(`event_type.${selectedEvent.type}`, { defaultValue: selectedEvent.type })}
             </span>
           )}
-          {(selectedEvent.status === 'funding' || selectedEvent.status === 'funded') && (
-            <span className={`inline-block px-3 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full ${selectedEvent.status === 'funded' ? 'bg-gray-500' : 'bg-orange-500'
-              }`}>
-              {selectedEvent.status === 'funded'
-                ? t('event.funded', { defaultValue: '모금완료' })
-                : t('event.funding', { defaultValue: '모금중' })}
+          {selectedEvent.status && (
+            <span className={`inline-block px-3 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full
+              ${selectedEvent.status === 'ongoing' ? 'bg-[#43c5f5]' : ''}
+              ${selectedEvent.status === 'ended' ? 'bg-gray-700' : ''}
+              ${selectedEvent.status === 'funding' ? 'bg-orange-500' : ''}
+              ${selectedEvent.status === 'funded' ? 'bg-gray-500' : ''}
+              `}
+            >
+              {selectedEvent.status === 'funding' && t('event.funding')}
+              {selectedEvent.status === 'funded' && t('event.funded')}
+              {selectedEvent.status === 'ongoing' && t('event.ongoing')}
+              {selectedEvent.status === 'ended' && t('event.ended')}
             </span>
           )}
         </div>

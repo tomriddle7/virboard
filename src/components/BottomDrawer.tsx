@@ -87,13 +87,20 @@ function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) 
                       )}
 
                       {/* ✨ 모금중 배지를 좌측 상단(top-2 left-2)에 띄웁니다 */}
-                      {(event.status === 'funding' || event.status === 'funded') && (
+                      {event.status && (
                         <div className="absolute top-2 left-2 z-10">
-                          <span className={`inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full ${event.status === 'funded' ? 'bg-gray-500' : 'bg-orange-500'
-                            }`}>
-                            {event.status === 'funded'
-                              ? t('event.funded', { defaultValue: '모금완료' })
-                              : t('event.funding', { defaultValue: '모금중' })}
+                          <span
+                            className={`inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full
+                              ${event.status === 'ongoing' ? 'bg-[#43c5f5]' : ''}
+                              ${event.status === 'ended' ? 'bg-gray-700' : ''}
+                              ${event.status === 'funding' ? 'bg-orange-500' : ''}
+                              ${event.status === 'funded' ? 'bg-gray-500' : ''}
+                            `}
+                          >
+                            {event.status === 'funding' && t('event.funding')}
+                            {event.status === 'funded' && t('event.funded')}
+                            {event.status === 'ongoing' && t('event.ongoing')}
+                            {event.status === 'ended' && t('event.ended')}
                           </span>
                         </div>
                       )}

@@ -24,7 +24,10 @@
     },
     "event": {
         "birthday": "Birthday",
-        "funding": "Funding"
+        "funding": "Funding",
+        "funded": "Funding Compldted",
+        "ongoing": "Ongoing",
+        "ended": "Ended"
     },
     "drawer": {
         "title": "Schedule for {{month}}/{{day}}",

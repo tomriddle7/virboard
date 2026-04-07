@@ -23,7 +23,10 @@
     },
     "event": {
         "birthday": "誕生日",
-        "funding": "募金中"
+        "funding": "募金中",
+        "funded": "募金完了",
+        "ongoing": "進行中",
+        "ended": "終了"
     },
     "drawer": {
         "title": "{{month}}月{{day}}日の予定",
