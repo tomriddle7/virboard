@@ -236,6 +236,13 @@
     "@eslint/core" "^0.17.0"
     levn "^0.4.1"
 
+"@gracefullight/saju@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@gracefullight/saju/-/saju-1.3.0.tgz#63c81d5b908d51917699f847d4945d025730734d"
+  integrity sha512-7KSvqK1sDTDEJN+bTOzm6bKEb76ZPuXJ3m6uNmYR8BuFh9HzWk9p1eCmkND3nRBpqq3k3EaK0NmPw58Sj3O9og==
+  dependencies:
+    lunar-javascript "^1.7.7"
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz#17c55ca7d426733fe3c561906b8173c336b40a77"
@@ -685,6 +692,11 @@
   integrity sha512-TbAd9DaPGSnzp6QvtYngntMZgcRk+igFELwR2N99XZn7RXUdKgsXMR+28bUO0rPsWp8MIu/f47luLIQuSLYv/w==
   dependencies:
     "@types/geojson" "*"
+
+"@types/luxon@^3.7.1":
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.7.1.tgz#ef51b960ff86801e4e2de80c68813a96e529d531"
+  integrity sha512-H3iskjFIAn5SlJU7OuxUmTEpebK6TKB8rxZShDslBMZJ5u9S//KM1sbdAisiSrqwLQncVjnpi2OK2J51h+4lsg==
 
 "@types/node@^24.12.0":
   version "24.12.0"
@@ -1626,7 +1638,12 @@ lucide-react@^1.7.0:
   resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-1.7.0.tgz#ad72fe48ebe1e5631a9cffdc94fc99dd853aa247"
   integrity sha512-yI7BeItCLZJTXikmK4KNUGCKoGzSvbKlfCvw44bU4fXAL6v3gYS4uHD1jzsLkfwODYwI6Drw5Tu9Z5ulDe0TSg==
 
-luxon@^3.2.1:
+lunar-javascript@^1.7.7:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/lunar-javascript/-/lunar-javascript-1.7.7.tgz#2c7a359f2ffc414ce2b0214f59148ff7a823851f"
+  integrity sha512-u/KYiwPIBo/0bT+WWfU7qO1d+aqeB90Tuy4ErXenr2Gam0QcWeezUvtiOIyXR7HbVnW2I1DKfU0NBvzMZhbVQw==
+
+luxon@^3.2.1, luxon@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.7.2.tgz#d697e48f478553cca187a0f8436aff468e3ba0ba"
   integrity sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==
