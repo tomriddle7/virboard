@@ -1542,133 +1542,6 @@
   },
   {
     "privacy": "Public",
-    "id": "indie-sayu",
-    "name": "서사유",
-    "agency": "Independents",
-    "nation": "KR",
-    "generation": [],
-    "color": "bg-gradient-to-br from-[#804d34] to-[#12c8cb]",
-    "birth": "2026-04-01",
-    "debut": "2026-01-24",
-    "link": "",
-    "unit": [],
-    "platforms": {
-      "chzzk": "https://chzzk.naver.com/36456402c5de56290706cab427698f85",
-      "youtube": "https://www.youtube.com/@%EC%84%9C%EC%82%AC%EC%9C%A0"
-    }
-  },
-  {
-    "privacy": "Public",
-    "id": "indie-soya",
-    "name": "윤소야",
-    "agency": "Independents",
-    "nation": "KR",
-    "generation": [],
-    "color": "bg-gradient-to-br from-[#cd6cb2] to-[#88d9e4]",
-    "birth": "2025-11-22",
-    "debut": "2025-10-19",
-    "link": "",
-    "unit": [],
-    "platforms": {
-      "chzzk": "https://chzzk.naver.com/f966fa6decfa7bbb5c60accf817dd9bf",
-      "youtube": "https://www.youtube.com/@yunsoyabok"
-    }
-  },
-  {
-    "privacy": "Public",
-    "id": "indie-baejjal",
-    "name": "배쨜이",
-    "agency": "Independents",
-    "nation": "KR",
-    "generation": [],
-    "color": "bg-gradient-to-br from-black to-white",
-    "birth": "2025-02-11",
-    "debut": "2025-04-19",
-    "link": "",
-    "unit": [],
-    "platforms": {
-      "chzzk": "https://chzzk.naver.com/6f377acaaaacc0b5e9bebc70e45eef4f",
-      "youtube": "https://www.youtube.com/@Baejjal0_0",
-      "x": "https://x.com/BAEJJAL0_0"
-    }
-  },
-  {
-    "privacy": "Public",
-    "id": "liveruli-rosetta",
-    "name": "R로제타",
-    "agency": "Liveruli",
-    "nation": "KR",
-    "generation": [],
-    "color": "bg-[#e06a8e]",
-    "birth": "2023-11-18",
-    "debut": "2023-09-28",
-    "link": "",
-    "unit": [],
-    "platforms": {
-      "chzzk": "https://chzzk.naver.com/faf9cdd37e2ce5e2af6944dbf42739a9",
-      "youtube": "https://www.youtube.com/@R.Rosetta",
-      "x": "https://x.com/R_Rosetta_",
-      "liveruli": "https://liveruli.com/members/viewer.php?id=rosetta"
-    }
-  },
-  {
-    "privacy": "Public",
-    "id": "liveruli-renoa",
-    "name": "R리노아",
-    "agency": "Liveruli",
-    "nation": "KR",
-    "generation": [],
-    "color": "bg-[##e18ddc]",
-    "birth": "2024-00-00",
-    "debut": "2024-06-01",
-    "link": "",
-    "unit": [],
-    "platforms": {
-      "chzzk": "https://chzzk.naver.com/2f1107218a8e549f7b9ec5a53c488d33",
-      "youtube": "https://www.youtube.com/@Re_noa",
-      "x": "https://x.com/r_linoa",
-      "liveruli": "https://liveruli.com/members/viewer.php?id=linoa"
-    }
-  },
-  {
-    "privacy": "Public",
-    "id": "liveruli-aren",
-    "name": "R아렌",
-    "agency": "Liveruli",
-    "nation": "KR",
-    "generation": [],
-    "color": "bg-[#3d8d7f]",
-    "birth": "2024-07-30",
-    "debut": "2024-05-01",
-    "link": "",
-    "unit": [],
-    "platforms": {
-      "chzzk": "https://chzzk.naver.com/29573c033c726c2e8aeda78e3a8882a6",
-      "youtube": "https://www.youtube.com/@aren_clip",
-      "x": "https://x.com/r_aren_",
-      "liveruli": "https://liveruli.com/members/viewer.php?id=aren"
-    }
-  },
-  {
-    "privacy": "Public",
-    "id": "liveruli-amigyu",
-    "name": "R아미규",
-    "agency": "Liveruli",
-    "nation": "KR",
-    "generation": [],
-    "color": "bg-[#87a1bc]",
-    "birth": "2023-00-00",
-    "debut": "2023-11-26",
-    "link": "",
-    "unit": [],
-    "platforms": {
-      "chzzk": "https://chzzk.naver.com/5a11e1cd1e5f2ec76a538555f4ecfaa8",
-      "x": "https://x.com/ami9yu",
-      "liveruli": "https://liveruli.com/members/viewer.php?id=amigyu"
-    }
-  },
-  {
-    "privacy": "Public",
     "id": "stelive-mystic-kanna",
     "name": "아이리 칸나",
     "agency": "Stelive",
@@ -1906,6 +1779,176 @@
       "x": "https://x.com/HanakoNana_",
       "cafeNaver": "https://cafe.naver.com/stellive",
       "stellive": "https://stellive.me/nana"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "liveruli-rosetta",
+    "name": "R로제타",
+    "agency": "Liveruli",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[#e06a8e]",
+    "birth": "2023-11-18",
+    "debut": "2023-09-28",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/faf9cdd37e2ce5e2af6944dbf42739a9",
+      "youtube": "https://www.youtube.com/@R.Rosetta",
+      "x": "https://x.com/R_Rosetta_",
+      "liveruli": "https://liveruli.com/members/viewer.php?id=rosetta"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "liveruli-renoa",
+    "name": "R리노아",
+    "agency": "Liveruli",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[##e18ddc]",
+    "birth": "2024-00-00",
+    "debut": "2024-06-01",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/2f1107218a8e549f7b9ec5a53c488d33",
+      "youtube": "https://www.youtube.com/@Re_noa",
+      "x": "https://x.com/r_linoa",
+      "liveruli": "https://liveruli.com/members/viewer.php?id=linoa"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "liveruli-aren",
+    "name": "R아렌",
+    "agency": "Liveruli",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[#3d8d7f]",
+    "birth": "2024-07-30",
+    "debut": "2024-05-01",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/29573c033c726c2e8aeda78e3a8882a6",
+      "youtube": "https://www.youtube.com/@aren_clip",
+      "x": "https://x.com/r_aren_",
+      "liveruli": "https://liveruli.com/members/viewer.php?id=aren"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "liveruli-amigyu",
+    "name": "R아미규",
+    "agency": "Liveruli",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[#87a1bc]",
+    "birth": "2023-00-00",
+    "debut": "2023-11-26",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/5a11e1cd1e5f2ec76a538555f4ecfaa8",
+      "x": "https://x.com/ami9yu",
+      "liveruli": "https://liveruli.com/members/viewer.php?id=amigyu"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-sayu",
+    "name": "서사유",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-gradient-to-br from-[#804d34] to-[#12c8cb]",
+    "birth": "2026-04-01",
+    "debut": "2026-01-24",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/36456402c5de56290706cab427698f85",
+      "youtube": "https://www.youtube.com/@%EC%84%9C%EC%82%AC%EC%9C%A0",
+      "x": "https://x.com/seosayu",
+      "cafeNaver": "https://cafe.naver.com/seosayu"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-soya",
+    "name": "윤소야",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-gradient-to-br from-[#cd6cb2] to-[#88d9e4]",
+    "birth": "2025-11-22",
+    "debut": "2025-10-19",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/f966fa6decfa7bbb5c60accf817dd9bf",
+      "youtube": "https://www.youtube.com/@yunsoyabok",
+      "x": "https://x.com/yunsoyabok",
+      "cafeNaver": "https://cafe.naver.com/soyabok"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-baejjal",
+    "name": "배쨜이",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-gradient-to-br from-black to-white",
+    "birth": "2025-02-11",
+    "debut": "2025-04-19",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/6f377acaaaacc0b5e9bebc70e45eef4f",
+      "youtube": "https://www.youtube.com/@Baejjal0_0",
+      "x": "https://x.com/BAEJJAL0_0",
+      "cafeNaver": "https://cafe.naver.com/baejjal00"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-lepi",
+    "name": "레피 돌 라이트",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-olive-300",
+    "birth": "2025-08-14",
+    "debut": "2025-03-04",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/c4a867051fca980c13961bb6d88b1b2d",
+      "youtube": "https://www.youtube.com/@%EB%A0%88%ED%94%BC%EB%8F%8C",
+      "x": "https://x.com/AT_Lepidolite",
+      "cafeNaver": "https://cafe.naver.com/lepi"
+    }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-tsubasa",
+    "name": "하야부사 츠바사",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-olive-300",
+    "birth": "2024-05-11",
+    "debut": "2024-12-21",
+    "link": "",
+    "unit": [],
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/e7104b41f018bb2db3dca526d9f00e53",
+      "youtube": "https://www.youtube.com/@hayabusa_tsubasa",
+      "x": "https://x.com/S2_tsubasa",
+      "cafeNaver": "https://cafe.naver.com/tsubasaplace"
     }
   }
 ]
