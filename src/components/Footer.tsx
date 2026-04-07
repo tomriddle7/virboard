@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-900 py-4">
+    <footer className="w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-900 py-4 pb-[env(safe-area-inset-bottom)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-row justify-between items-center gap-6">
         {/* 📝 왼쪽: 사이트 정보 및 저작권 */}
         <div className="text-left">

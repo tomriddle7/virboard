@@ -51,7 +51,7 @@ function CalenderHeader() {
   const [, setSubmitOpen] = useAtom(submitModalOpenAtom);
 
   return (
-    <header className="bg-[#266ba1] px-4 flex justify-between items-center">
+    <header className="bg-[#266ba1] px-4 flex justify-between items-center pt-[env(safe-area-inset-top)]">
       <div className="flex items-center gap-4 py-2">
         {/* 햄버거 버튼 */}
         <button
