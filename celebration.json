@@ -1500,7 +1500,7 @@
     "title": "🎂 레피 돌 라이트 2026년 생일",
     "event_start_at": "2026-08-14 0:00",
     "event_end_at": "2026-08-14 23:59",
-    "color": "",
+    "color": "bg-olive-300",
     "type": "생일",
     "location": "",
     "link": " "
@@ -1510,7 +1510,7 @@
     "title": "🎂 하야부사 츠바사 2026년 생일",
     "event_start_at": "2026-05-11 0:00",
     "event_end_at": "2026-05-11 23:59",
-    "color": "",
+    "color": "bg-olive-300",
     "type": "생일",
     "location": "",
     "link": " "
