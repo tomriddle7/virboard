@@ -1,282 +1,197 @@
 import React, { useState } from 'react';
-import { Loader2, Heart, Share2, ArrowRight } from 'lucide-react';
-import { DateTime } from "luxon";
-import { createLuxonAdapter } from "@gracefullight/saju/adapters/luxon";
-import { getSaju } from "@gracefullight/saju";
-import { processNaming } from '@/utils/naming';
+import { Sparkles, Globe, Swords, Flame, Droplet, Mountain, Wind, Loader2, Sun, Moon } from 'lucide-react';
 
-// --- Fisher-Yates Shuffle 알고리즘 함수 ---
-const shuffleArray = <T,>(array: T[]): T[] => {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // 두 요소를 스왑
-  }
-  return shuffled;
-};
+export default function VTuberNamingStudio() {
+  const [activeTab, setActiveTab] = useState('korean');
+  const [isGenerating, setIsGenerating] = useState(false);
 
-export default function Naming() {
-  const [step, setStep] = useState<'input' | 'loading' | 'result'>('input');
-
-  const [formData, setFormData] = useState({
-    lastNameHangul: '',
-    lastNameHanja: '',
-    birthDate: '1990-01-01',
-    birthTime: '00:00',
-    gender: 'male',
-  });
-
-  const [topRecommendedNames, setTopRecommendedNames] = useState([]);
-
-  const getOwnNaming = async (lastName, birthDate, gender, len = 2) => {
-    const adapter = await createLuxonAdapter();
-    const { yongShen: { primary, secondary } } = getSaju(birthDate, { adapter, gender });
-    return processNaming(lastName, [primary.hanja, secondary.hanja], gender, len);
-  };
-
-  const handleStartAnalysis = async () => {
-    setStep('loading');
-
-    setTimeout(async () => {
-      try {
-        const [year, month, day] = formData.birthDate.split('-');
-        const [hour, minute] = formData.birthTime.split(':');
-
-        const birthDateTime = DateTime.fromObject(
-          {
-            year: Number(year),
-            month: Number(month),
-            day: Number(day),
-            hour: Number(hour),
-            minute: Number(minute)
-          },
-          { zone: "Asia/Seoul" }
-        );
-
-        if (!birthDateTime.isValid) {
-          throw new Error(`유효하지 않은 날짜입니다: ${birthDateTime.invalidReason}`);
-        }
-
-        const lastNameObj = { hanja: formData.lastNameHanja, hangul: formData.lastNameHangul };
-
-        const finalResult = await getOwnNaming(lastNameObj, birthDateTime, formData.gender);
-
-        let nameList = [];
-        let tempObj = {};
-        for (let i = 0; i < finalResult.length; i++) {
-          if (tempObj.hangul === finalResult[i].hangul) {
-            tempObj.children = tempObj.children.concat(finalResult[i]);
-          } else {
-            nameList = nameList.concat(tempObj);
-            tempObj = {
-              hangul: finalResult[i].hangul,
-              children: [finalResult[i]]
-            };
-          }
-        }
-        nameList = nameList.concat(tempObj);
-        nameList.splice(0, 1);
-
-        // --- [핵심 수정 포인트: Fisher-Yates 적용] ---
-        // 1. 그룹화된 전체 리스트를 무작위로 섞습니다.
-        const shuffledList = shuffleArray(nameList);
-
-        // 2. 섞인 리스트에서 상위 4개만 추출합니다.
-        const top4 = shuffledList.slice(0, 4).map(item => {
-          // 각 한글 이름에서도 첫 번째 한자만 가져오는 대신, 
-          // 한자 리스트도 무작위로 하나 뽑고 싶으시다면 여기서도 셔플을 적용할 수 있습니다.
-          // 현재는 해당 한글 이름의 첫 번째 한자 조합을 가져옵니다.
-          const bestHanja = item.children[0];
-
-          return {
-            hangul: item.hangul,
-            hanja: formData.lastNameHanja + bestHanja.hanja,
-            tags: ['#사주보완', '#수리성명학_길(吉)'],
-            desc: '음양오행과 81수리가 조화롭게 어우러져 평안하고 길한 기운을 이끄는 좋은 이름입니다.'
-          };
-        });
-
-        setTopRecommendedNames(top4);
-        setStep('result');
-
-      } catch (error) {
-        console.error("작명 분석 중 오류 발생:", error);
-        alert(`분석 중 오류가 발생했습니다: ${error.message}`);
-        setStep('input');
-      }
-    }, 100);
+  // 로딩 시뮬레이션
+  const handleGenerate = () => {
+    setIsGenerating(true);
+    setTimeout(() => setIsGenerating(false), 1500);
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center py-12 px-4 font-sans selection:bg-indigo-100">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 font-sans transition-colors duration-300 selection:bg-indigo-500/30">
 
-      {/* 공통 헤더 */}
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-slate-900 mb-2">새로운 시작을 위한 이름</h1>
-        <p className="text-slate-500">사주 명리학 기반 맞춤 개명 추천 서비스</p>
-      </div>
+      <div className="max-w-4xl mx-auto space-y-8 pt-12 md:pt-16 p-6">
 
-      {/* 1. 입력 폼 화면 */}
-      {step === 'input' && (
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          <div className="p-6 border-b border-slate-100">
-            <h2 className="text-xl font-semibold text-slate-900">기본 정보 입력</h2>
-          </div>
-          <div className="p-6 space-y-5">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-1.5">
-                <label className="block text-sm font-medium text-slate-700">성씨 (한글)</label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none transition-all"
-                  value={formData.lastNameHangul}
-                  onChange={(e) => setFormData({ ...formData, lastNameHangul: e.target.value })}
-                />
-              </div>
-              <div className="space-y-1.5">
-                <label className="block text-sm font-medium text-slate-700">성씨 (한자)</label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none transition-all"
-                  value={formData.lastNameHanja}
-                  onChange={(e) => setFormData({ ...formData, lastNameHanja: e.target.value })}
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-1.5">
-                <label className="block text-sm font-medium text-slate-700">생년월일</label>
-                <input
-                  type="date"
-                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none transition-all"
-                  value={formData.birthDate}
-                  onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })}
-                />
-              </div>
-              <div className="space-y-1.5">
-                <label className="block text-sm font-medium text-slate-700">태어난 시간</label>
-                <input
-                  type="time"
-                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 outline-none bg-white transition-all"
-                  value={formData.birthTime}
-                  onChange={(e) => setFormData({ ...formData, birthTime: e.target.value })}
-                />
-              </div>
-            </div>
-            <div className="space-y-2 pt-1">
-              <label className="block text-sm font-medium text-slate-700">성별</label>
-              <div className="flex space-x-6">
-                <label className="flex items-center space-x-2 cursor-pointer group">
-                  <input
-                    type="radio"
-                    value="male"
-                    checked={formData.gender === 'male'}
-                    onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-                    className="w-4 h-4 text-slate-900 focus:ring-slate-900 border-slate-300"
-                  />
-                  <span className="text-sm text-slate-700 group-hover:text-slate-900">남성</span>
-                </label>
-                <label className="flex items-center space-x-2 cursor-pointer group">
-                  <input
-                    type="radio"
-                    value="female"
-                    checked={formData.gender === 'female'}
-                    onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-                    className="w-4 h-4 text-slate-900 focus:ring-slate-900 border-slate-300"
-                  />
-                  <span className="text-sm text-slate-700 group-hover:text-slate-900">여성</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div className="p-6 bg-slate-50 border-t border-slate-100">
+        {/* 헤더 섹션 */}
+        <div className="text-center space-y-3">
+          <span className="inline-flex items-center px-3 py-1 rounded-full border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-transparent text-sm font-medium transition-colors">
+            버튜버 데뷔 준비
+          </span>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors">세계관 맞춤 작명 스튜디오</h1>
+          <p className="text-slate-500 dark:text-slate-400 transition-colors">캐릭터의 종족, 속성, 활동 지역에 맞는 완벽한 이름을 찾아보세요.</p>
+        </div>
+
+        {/* 탭 기반 메인 컨트롤러 */}
+        <div className="w-full">
+          {/* 탭 리스트 */}
+          <div className="grid w-full grid-cols-3 bg-slate-200/50 dark:bg-slate-900 h-14 rounded-xl p-1 gap-1 mb-6 transition-colors">
             <button
-              className="w-full h-12 flex items-center justify-center text-lg font-medium bg-[#111827] text-white rounded-lg hover:bg-slate-800 transition-colors"
-              onClick={handleStartAnalysis}
+              onClick={() => setActiveTab('korean')}
+              className={`flex items-center justify-center text-sm md:text-base font-medium rounded-lg transition-all ${activeTab === 'korean'
+                ? 'bg-white text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white'
+                : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800/50'
+                }`}
             >
-              내게 맞는 이름 찾기
+              <Sparkles className="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400" />
+              모던/동양 (K-Style)
+            </button>
+            <button
+              onClick={() => setActiveTab('japanese')}
+              className={`flex items-center justify-center text-sm md:text-base font-medium rounded-lg transition-all ${activeTab === 'japanese'
+                ? 'bg-white text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white'
+                : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800/50'
+                }`}
+            >
+              <Globe className="w-4 h-4 mr-2 text-rose-500 dark:text-rose-400" />
+              서브컬처 (JP-Style)
+            </button>
+            <button
+              onClick={() => setActiveTab('western')}
+              className={`flex items-center justify-center text-sm md:text-base font-medium rounded-lg transition-all ${activeTab === 'western'
+                ? 'bg-white text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white'
+                : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800/50'
+                }`}
+            >
+              <Swords className="w-4 h-4 mr-2 text-emerald-500 dark:text-emerald-400" />
+              판타지 (EN-Style)
             </button>
           </div>
-        </div>
-      )}
 
-      {/* 2. 로딩 화면 */}
-      {step === 'loading' && (
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-sm border border-slate-200 py-16 px-6 text-center">
-          <div className="flex flex-col items-center justify-center space-y-6">
-            <Loader2 className="h-10 w-10 animate-spin text-slate-900" />
-            <div className="space-y-2">
-              <h3 className="text-lg font-medium text-slate-900">최적의 이름을 선별 중입니다...</h3>
-              <p className="text-sm text-slate-500">수천 개의 조합 중 무작위로 4개를 찾고 있습니다.</p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* 3. 결과 화면 */}
-      {step === 'result' && (
-        <div className="w-full max-w-4xl space-y-6 animate-[fadeIn_0.5s_ease-out]">
-
-          {/* 사주 요약 정보 카드 */}
-          <div className="bg-[#0f172a] text-slate-50 rounded-2xl p-8 shadow-lg">
-            <h2 className="text-xl font-bold mb-2">사주 오행 분석 결과</h2>
-            <p className="text-sm text-slate-400 mb-5">
-              사주의 기운을 바탕으로 분석했습니다.
-            </p>
-            <div className="bg-[#1e293b] p-5 rounded-xl border border-slate-700/50">
-              <p className="text-slate-300 leading-relaxed text-sm md:text-base">
-                사용자님의 사주에서 부족한 오행의 기운을 보완하고, 전체적인 조화를 이룰 수 있는 맑고 단단한 한자들을 무작위로 선별했습니다.
-              </p>
-            </div>
-          </div>
-
-          {/* 추천 이름 리스트 (2x2 그리드) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            {topRecommendedNames.map((item, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex items-baseline space-x-2">
-                    <h3 className="text-2xl font-serif font-bold text-slate-900 tracking-tight">
-                      {item.hangul}
-                    </h3>
-                    <span className="text-lg text-slate-400 font-sans font-normal">
-                      {item.hanja}
-                    </span>
+          {/* 1. K-Style 탭 컨텐츠 */}
+          {activeTab === 'korean' && (
+            <div className="space-y-6 animate-[fadeIn_0.4s_ease-out]">
+              <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm transition-colors">
+                <div className="p-6 border-b border-slate-100 dark:border-slate-800/50 transition-colors">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white">오행 기반 2~3글자 조합</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">현대적이고 세련된 발음의 이름을 생성합니다.</p>
+                </div>
+                <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">데뷔(예정)일</label>
+                    <input
+                      type="date"
+                      className="w-full px-3 py-2.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors [color-scheme:light] dark:[color-scheme:dark]"
+                    />
                   </div>
-                  <button className="text-slate-300 hover:text-rose-500 transition-colors focus:outline-none">
-                    <Heart className="h-6 w-6 stroke-[1.5]" />
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">캐릭터 속성 (오행)</label>
+                    <select className="w-full px-3 py-2.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors">
+                      <option value="wood">목(木) - 요정, 숲, 엘프</option>
+                      <option value="fire">화(火) - 악마, 드래곤, 열정</option>
+                      <option value="earth">토(土) - 대지, 광물, 친근함</option>
+                      <option value="metal">금(金) - 사이보그, 기사, 차가움</option>
+                      <option value="water" selected>수(水) - 해양, 심해, 얼음</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="p-6 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50 transition-colors">
+                  <button
+                    className="w-full h-11 flex items-center justify-center font-medium bg-[#1e40af] hover:bg-[#1e3a8a] dark:bg-indigo-600 dark:hover:bg-indigo-700 text-white rounded-lg transition-colors disabled:opacity-70"
+                    onClick={handleGenerate}
+                    disabled={isGenerating}
+                  >
+                    {isGenerating ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> 세계관 분석 중...</> : '이름 조합하기'}
                   </button>
                 </div>
-
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {item.tags.map((tag) => (
-                    <span key={tag} className="inline-flex items-center px-2 py-1 bg-slate-50 text-slate-500 text-xs font-medium rounded-md border border-slate-100">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <p className="text-sm text-slate-600 leading-relaxed border-t border-slate-50 pt-4">
-                  {item.desc}
-                </p>
               </div>
-            ))}
-          </div>
 
-          {/* 하단 버튼 영역 */}
-          <div className="flex justify-center pt-8 space-x-4">
-            <button
-              className="px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-colors focus:ring-2 focus:ring-slate-200 outline-none"
-              onClick={() => setStep('input')}
-            >
-              다시 분석하기
-            </button>
-            <button className="px-6 py-3 flex items-center bg-[#0f172a] text-white font-medium rounded-lg hover:bg-slate-800 transition-colors focus:ring-2 focus:ring-slate-900 outline-none shadow-sm">
-              <Share2 className="mr-2 h-4 w-4" /> 결과 공유하기
-            </button>
-          </div>
+              {/* 결과 예시 (K-Style) */}
+              {!isGenerating && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm transition-colors">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <h4 className="text-2xl font-bold text-slate-900 dark:text-white">루미나</h4>
+                      <span className="inline-flex items-center px-2 py-1 bg-blue-50 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300 text-xs font-medium rounded-md border border-blue-200 dark:border-blue-500/20">
+                        수(水) + 수(水)
+                      </span>
+                    </div>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                      부드럽게 흘러가는 해양 속성 발음. 글로벌 표기(Rumina)가 직관적입니다.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* 2. JP-Style 탭 컨텐츠 */}
+          {activeTab === 'japanese' && (
+            <div className="space-y-6 animate-[fadeIn_0.4s_ease-out]">
+              <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm transition-colors">
+                <div className="p-6 border-b border-slate-100 dark:border-slate-800/50 transition-colors">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white">서브컬처 일본식 조합</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">한자의 뜻(자원오행)과 발음오행을 매칭하여 애니메이션 스타일의 이름을 만듭니다.</p>
+                </div>
+                <div className="p-6 space-y-4">
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">캐릭터 모티브</label>
+                    <input
+                      type="text"
+                      placeholder="예: 구미호, 무녀, 우주, 해적..."
+                      className="w-full px-3 py-2.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 placeholder-slate-400 dark:placeholder-slate-500 transition-colors"
+                    />
+                  </div>
+                </div>
+                <div className="p-6 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50 transition-colors">
+                  <button
+                    className="w-full h-11 flex items-center justify-center font-medium bg-rose-600 hover:bg-rose-700 text-white rounded-lg transition-colors disabled:opacity-70"
+                    onClick={handleGenerate}
+                    disabled={isGenerating}
+                  >
+                    {isGenerating ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> 생성 중...</> : '서브컬처 이름 생성'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* 3. EN-Style 탭 컨텐츠 */}
+          {activeTab === 'western' && (
+            <div className="space-y-6 animate-[fadeIn_0.4s_ease-out]">
+              <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm transition-colors">
+                <div className="p-6 border-b border-slate-100 dark:border-slate-800/50 transition-colors">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white">4대 원소 서양식 판타지</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">서양의 4원소(불, 물, 땅, 바람)에 기반한 영어권 닉네임입니다.</p>
+                </div>
+                <div className="p-6">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <button className="h-24 flex flex-col items-center justify-center gap-2 bg-slate-50 dark:bg-slate-800 border border-red-200 dark:border-red-900/50 rounded-xl hover:bg-red-50 dark:hover:bg-red-950 hover:border-red-300 dark:hover:border-red-800 text-slate-600 dark:text-slate-200 hover:text-red-600 dark:hover:text-red-400 transition-all group">
+                      <Flame className="w-6 h-6 text-red-500 group-hover:scale-110 transition-transform" />
+                      <span className="font-medium">불 (Fire)</span>
+                    </button>
+                    <button className="h-24 flex flex-col items-center justify-center gap-2 bg-slate-50 dark:bg-slate-800 border border-blue-200 dark:border-blue-900/50 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-950 hover:border-blue-300 dark:hover:border-blue-800 text-slate-600 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all group">
+                      <Droplet className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
+                      <span className="font-medium">물 (Water)</span>
+                    </button>
+                    <button className="h-24 flex flex-col items-center justify-center gap-2 bg-slate-50 dark:bg-slate-800 border border-amber-200 dark:border-amber-900/50 rounded-xl hover:bg-amber-50 dark:hover:bg-amber-950 hover:border-amber-300 dark:hover:border-amber-800 text-slate-600 dark:text-slate-200 hover:text-amber-600 dark:hover:text-amber-400 transition-all group">
+                      <Mountain className="w-6 h-6 text-amber-500 group-hover:scale-110 transition-transform" />
+                      <span className="font-medium">땅 (Earth)</span>
+                    </button>
+                    <button className="h-24 flex flex-col items-center justify-center gap-2 bg-slate-50 dark:bg-slate-800 border border-teal-200 dark:border-teal-900/50 rounded-xl hover:bg-teal-50 dark:hover:bg-teal-950 hover:border-teal-300 dark:hover:border-teal-800 text-slate-600 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 transition-all group">
+                      <Wind className="w-6 h-6 text-teal-500 group-hover:scale-110 transition-transform" />
+                      <span className="font-medium">바람 (Wind)</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="p-6 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50 transition-colors">
+                  <button
+                    className="w-full h-11 flex items-center justify-center font-medium bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors disabled:opacity-70"
+                    onClick={handleGenerate}
+                    disabled={isGenerating}
+                  >
+                    {isGenerating ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> 생성 중...</> : '영문 판타지 이름 조합'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
-      )}
+      </div>
     </div>
   );
 }
