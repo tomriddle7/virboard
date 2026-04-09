@@ -37,7 +37,7 @@
   },
   {
     "vtuber_id": "hololive-holox-koyori",
-    "status": "funding",
+    "status": "ended",
     "title": "하쿠이 코요리 2026년 생일 지하철 광고(서울, 도쿄)",
     "thumbnail": "https://hololivepro.com/wp-content/uploads/2026/03/Koyori_AD_KR-1440x694.webp",
     "funding_start_at": "",
@@ -559,7 +559,7 @@
   },
   {
     "vtuber_id": "hololive-advent-bijou",
-    "status": "funded",
+    "status": "ongoing",
     "title": "코세키 비쥬 2026 생일광고",
     "thumbnail": "https://virboard.me/images/ads/G_RdsbFbkAEbDbN.webp",
     "funding_start_at": "2025-11-10 0:00",
@@ -569,9 +569,9 @@
     "event_end_at": "2026-05-12 23:59",
     "color": "bg-[#9e74e0]",
     "type": "지하철 광고",
-    "location": "",
-    "latitude": "",
-    "longitude": "",
+    "location": "서울 강남역(2, 신분당)",
+    "latitude": "37.49799",
+    "longitude": "127.027912",
     "link": "https://x.com/BIBOO2026AD",
     "memo": ""
   },
@@ -1440,7 +1440,7 @@
     "title": "🎂 R리노아 2026년 생일",
     "event_start_at": "2026-00-00 0:00",
     "event_end_at": "2026-00-00 23:59",
-    "color": "bg-[##e18ddc]",
+    "color": "bg-[#e18ddc]",
     "type": "생일",
     "location": "",
     "link": " "
