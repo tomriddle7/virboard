@@ -33,7 +33,7 @@ function Footer() {
             </svg>
           </a>
           <a
-            href="https://x.com/tomriddle7"
+            href="https://x.com/virboard320"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-2 px-2 py-2.5 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-[#266ba1] dark:text-[#43c5f5] text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:text-[#1e5480] dark:hover:text-blue-300 transition-all transform hover:-translate-y-0.5"
