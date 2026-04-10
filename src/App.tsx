@@ -8,6 +8,10 @@ import type { RawEvent, RawVTuber, VtuberEvent, VtuberProfile } from '@/types/Ev
 import Home from '@/pages/Home';
 import EventMap from '@/pages/EventMap';
 import Streamers from '@/pages/Streamers';
+import Labs from '@/pages/Labs';
+import LabGuard from '@/components/LabGuard';
+import Naming from '@/pages/naming/Index';
+import Appraisal from './pages/naming/Appraisal';
 import CalendarHeader from '@/components/CalendarHeader';
 import Footer from '@/components/Footer';
 import SubmitPopup from '@/components/SubmitPopup';
@@ -113,6 +117,19 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<EventMap />} />
         <Route path="/streamer" element={<Streamers />} />
+        <Route path="/appraisal" element={<Appraisal />} />
+        <Route path="/naming">
+          <Route
+            path=""
+            element={
+              <LabGuard>
+                <Naming />
+              </LabGuard>
+            }
+          />
+          <Route path="appraisal" element={<Appraisal />} />
+        </Route>
+        <Route path="/labs" element={<Labs />} />
       </Routes>
       <Footer />
       <Toaster />
