@@ -13,6 +13,7 @@ import {
   getStrokeCount,
   detectLanguage
 } from '@/utils/naming';
+import { toBlob } from 'html-to-image';
 
 export default function Appraisal() {
   const [appraisalStep, setAppraisalStep] = useState<'input' | 'loading' | 'result'>('input');
@@ -27,6 +28,73 @@ export default function Appraisal() {
 
   const [appraisalResult, setAppraisalResult] = useState<any>(null);
   const [nameLanguage, setNameLanguage] = useState<'korean' | 'english' | 'japanese' | 'mixed' | 'empty'>('empty');
+  const [isCapturing, setIsCapturing] = useState(false); // 💡 캡처 중 상태 (버튼 연타 방지 및 로딩용)
+
+  // 💡 2. 완성된 캡처 및 공유 함수
+  const handleShareAsImage = async () => {
+    if (isCapturing) return;
+
+    const captureElement = document.getElementById('capture-target');
+    if (!captureElement) {
+      alert("공유할 영역을 찾을 수 없습니다.");
+      return;
+    }
+
+    try {
+      setIsCapturing(true);
+
+      // 💡 2. html-to-image의 toBlob 함수를 사용합니다.
+      // 캔버스를 거치지 않고 바로 Blob(이미지 파일)을 만들어주어 코드가 훨씬 간결해집니다.
+      const blob = await toBlob(captureElement, {
+        quality: 1,
+        pixelRatio: 2, // 레티나 디스플레이 대응 (선명도)
+        backgroundColor: '#ffffff', // 필요시 다크모드 대응을 위한 배경색 강제 지정 가능
+        // 💡 폰트가 잘리거나 로드 안 되는 현상을 방지하는 옵션
+        style: { transform: 'scale(1)', transformOrigin: 'top left' }
+      });
+
+      if (!blob) throw new Error("이미지 변환 실패");
+
+      const fileName = `${formData.customName}_감정결과.png`;
+      const file = new File([blob], fileName, { type: 'image/png' });
+
+      // 💡 3. 공유 API (기존 코드와 동일)
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({
+            files: [file],
+            title: `HoloBoard - "${formData.customName}" 감정 결과`,
+            text: `데뷔 성공운 ${appraisalResult.totalScore}점! 홀로보드에서 운명적인 이름을 감정받아 보세요.`
+          });
+        } catch (shareError: any) {
+          if (shareError.name !== 'AbortError') {
+            console.error("공유 실패:", shareError);
+          }
+        }
+      }
+      // PC 등 공유 미지원 환경 (다운로드 폴백)
+      else {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+
+        alert("감정 결과 이미지가 다운로드되었습니다! 트위터나 디스코드에 업로드해 보세요.");
+      }
+
+    } catch (error) {
+      console.error('이미지 캡처 중 오류:', error);
+      alert('이미지 생성에 실패했습니다. 다시 시도해 주세요.');
+    } finally {
+      setIsCapturing(false);
+    }
+  };
 
   const handleNameBlur = () => {
     setNameLanguage(detectLanguage(formData.customName));
@@ -152,18 +220,18 @@ export default function Appraisal() {
   };
 
   return (
-    <div className="space-y-6 animate-[fadeIn_0.4s_ease-out]  h-[100dvh] flex flex-col">
+    <main className="space-y-6 animate-[fadeIn_0.4s_ease-out] min-h-100dvh flex flex-col">
       {/* 1. 입력창 영역 (기존과 동일하여 생략 가능하지만 전체 구조 유지를 위해 포함) */}
       {appraisalStep === 'input' && (
-        <div className="bg-white dark:bg-slate-900 overflow-hidden">
+        <section className="bg-white dark:bg-slate-900">
           <div className="p-8 text-center border-b border-slate-100 dark:border-slate-800/50">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">이미 생각해둔 이름이 있나요?</h3>
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">이미 생각해 둔 이름이 있나요?</h3>
             <p className="text-slate-500 dark:text-slate-400 mt-2">입력하신 이름이 데뷔 성공운과 얼마나 맞는지 감정해 드립니다.</p>
           </div>
 
           <div className="p-8 space-y-6">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-700 dark:text-slate-300">감정받을 이름 (성 포함)</label>
+              <label className="vir-primary-label">감정받을 이름</label>
               <div className="relative">
                 <input
                   type="text"
@@ -174,14 +242,14 @@ export default function Appraisal() {
                     if (nameLanguage === 'mixed') setNameLanguage('empty');
                   }}
                   onBlur={handleNameBlur}
-                  className={`w-full px-4 py-4 bg-slate-50 dark:bg-slate-800 border-2 rounded-xl outline-none text-xl font-bold transition-all ${nameLanguage === 'mixed'
+                  className={`vir-primary-input ${nameLanguage === 'mixed'
                     ? 'border-amber-400 focus:border-amber-500'
                     : 'border-slate-200 dark:border-slate-700 focus:border-indigo-500'
                     }`}
                 />
               </div>
 
-              <div className="h-6 mt-1 transition-all duration-300">
+              <div className="h-5 mt-1 transition-all duration-300">
                 {nameLanguage === 'mixed' && (
                   <p className="text-sm text-amber-600 dark:text-amber-400 flex items-center animate-[fadeIn_0.2s_ease-out]">
                     <AlertCircle className="w-4 h-4 mr-1.5" />
@@ -211,11 +279,11 @@ export default function Appraisal() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">캐릭터 컨셉 (오행)</label>
+                <label className="vir-primary-label">캐릭터 컨셉 (오행)</label>
                 <select
                   value={formData.nameTheme}
                   onChange={(e) => setFormData({ ...formData, nameTheme: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl focus:border-indigo-500 outline-none transition-all"
+                  className="vir-primary-input"
                 >
                   <option value="water">수(水) - 해양, 심해, 얼음</option>
                   <option value="wood">목(木) - 학생, 요정, 숲</option>
@@ -226,11 +294,11 @@ export default function Appraisal() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">MBTI (선택)</label>
+                <label className="vir-primary-label">MBTI (선택)</label>
                 <select
                   value={formData.mbti}
                   onChange={(e) => setFormData({ ...formData, mbti: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl focus:border-indigo-500 outline-none transition-all"
+                  className="vir-primary-input"
                 >
                   <option value="">선택 안함</option>
                   {Object.keys(mbtiWeights).map(m => <option key={m} value={m}>{m}</option>)}
@@ -238,20 +306,18 @@ export default function Appraisal() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-700 dark:text-slate-300 flex justify-between">
-                  <span>생일 / 데뷔일</span>
-                </label>
+                <label className="vir-primary-label">생일 / 데뷔일</label>
                 <input
                   type="date"
                   value={formData.birthDate}
                   onChange={(e) => setFormData({ ...formData, birthDate: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl focus:border-indigo-500 outline-none transition-all"
+                  className="vir-primary-input"
                 />
               </div>
 
               {/* 💡 성별 선택 영역: '없음/모름' 옵션 추가 */}
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">성별</label>
+                <label className="vir-primary-label">성별</label>
                 <div className="flex space-x-5 pt-3 px-1">
                   <label className="flex items-center space-x-2 cursor-pointer">
                     <input
@@ -297,12 +363,12 @@ export default function Appraisal() {
               <BarChart3 className="w-5 h-5" /> 무료 감정 리포트 보기
             </button>
           </div>
-        </div>
+        </section>
       )}
 
       {/* 로딩 화면 (기존과 동일) */}
       {appraisalStep === 'loading' && (
-        <div className="w-full bg-white dark:bg-slate-900 py-20 px-6 text-center">
+        <section className="w-full bg-white dark:bg-slate-900 py-20 px-6 text-center">
           <div className="flex flex-col items-center justify-center space-y-6">
             <Loader2 className="h-12 w-12 animate-spin text-indigo-500" />
             <div className="space-y-2">
@@ -310,12 +376,12 @@ export default function Appraisal() {
               <p className="text-sm text-slate-500 dark:text-slate-400">81수리와 사주 오행의 균형을 분석하고 있습니다.</p>
             </div>
           </div>
-        </div>
+        </section>
       )}
 
       {/* 2. 감정 결과 화면 */}
       {appraisalStep === 'result' && appraisalResult && (
-        <div className="space-y-6 animate-[fadeIn_0.5s_ease-out]">
+        <section className="space-y-6 animate-[fadeIn_0.5s_ease-out]">
           <div className="bg-white dark:bg-slate-900 p-8">
             <div id="capture-target">
               <div className="bg-indigo-50 dark:bg-indigo-950/20 border-2 border-indigo-200 dark:border-indigo-800 p-6 rounded-2xl flex items-center justify-between mb-8 shadow-inner">
@@ -374,9 +440,16 @@ export default function Appraisal() {
                 다른 이름 감정하기
               </button>
               <button
+                onClick={handleShareAsImage}
+                disabled={isCapturing}
                 className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-sm font-bold flex items-center gap-2 shadow-lg shadow-indigo-500/10 active:scale-99 transition-all"
               >
-                <Share2 className="w-4 h-4" /> 이미지로 결과 공유하기
+                {isCapturing ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Share2 className="w-4 h-4" />
+                )}
+                {isCapturing ? '이미지 생성 중...' : '이미지로 결과 공유하기'}
               </button>
             </div>
           </div>
@@ -409,8 +482,8 @@ export default function Appraisal() {
 
             <ShieldCheck className="absolute -right-10 -bottom-10 w-56 h-56 text-white/10 rotate-12 group-hover:scale-110 transition-transform duration-700 pointer-events-none" />
           </div> */}
-        </div>
+        </section>
       )}
-    </div>
+    </main>
   );
 }
