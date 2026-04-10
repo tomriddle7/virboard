@@ -57,22 +57,14 @@ export default function Appraisal() {
       let strokes = 0;
       let missingKanjiList: string[] = [];
 
-      // 💡 [실무 적용 시 변경 포인트]
-      // 실제 프로덕션에서는 strokeData = await getProductionStrokeCount(formData.customName) 를 호출합니다.
-      // 아래는 현재 테스트를 위한 시뮬레이션 로직입니다.
-      strokes = await getStrokeCount(formData.customName, detectedLang);
-      // strokes = getStrokeCount(formData.customName, detectedLang);
+      const strokeData = await getStrokeCount(formData.customName, detectedLang);
 
-      // 이름에 한자가 포함되어 있으면 강제로 누락된 한자로 시뮬레이션
-      const hanjaRegex = /[\u4e00-\u9faf]/g;
-      const foundHanja = formData.customName.match(hanjaRegex);
-      if (foundHanja) {
-        missingKanjiList = Array.from(new Set(foundHanja)); // 중복 제거
-      }
+      strokes = strokeData.strokes;
+      missingKanjiList = strokeData.missingChars; // DB에 진짜 없는 한자만 들어옵니다!
 
       // 💡 누락된 한자가 발견되면 백그라운드에서 구글 시트로 조용히 전송
       if (missingKanjiList.length > 0) {
-        const GOOGLE_SCRIPT_URL = '여기에_1단계에서_복사한_웹_앱_URL을_붙여넣으세요';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzP0LWNGwl54_INV8k_QNB8ktK1gyqyIk0Luwx0uerfl2kf9YL5ZjXzqy_Y5peeMuE/exec';
         fetch(GOOGLE_SCRIPT_URL, {
           method: 'POST',
           mode: 'no-cors',
@@ -321,50 +313,45 @@ export default function Appraisal() {
 
       {/* 2. 감정 결과 화면 */}
       {appraisalStep === 'result' && appraisalResult && (
-        <div id="capture-target" className="space-y-6 animate-[fadeIn_0.5s_ease-out]">
+        <div className="space-y-6 animate-[fadeIn_0.5s_ease-out]">
           <div className="bg-white dark:bg-slate-900 p-8">
-            {/* <div className="flex items-center justify-between mb-8">
-              <h3 className="text-xl font-bold">"{formData.customName}" 감정 결과</h3>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-indigo-600 dark:text-indigo-400">{appraisalResult.totalScore}</span>
-                <span className="text-lg font-bold text-slate-400">점</span>
+            <div id="capture-target">
+              <div className="bg-indigo-50 dark:bg-indigo-950/20 border-2 border-indigo-200 dark:border-indigo-800 p-6 rounded-2xl flex items-center justify-between mb-8 shadow-inner">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">"{formData.customName}" 감정 결과</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl font-black text-indigo-600 dark:text-indigo-400">{appraisalResult.totalScore}</span>
+                  <span className="text-2xl font-bold text-slate-400">점</span>
+                </div>
               </div>
-            </div> */}
-            <div className="bg-indigo-50 dark:bg-indigo-950/20 border-2 border-indigo-200 dark:border-indigo-800 p-6 rounded-2xl flex items-center justify-between mb-8 shadow-inner">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">"{formData.customName}" 감정 결과</h3>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-indigo-600 dark:text-indigo-400">{appraisalResult.totalScore}</span>
-                <span className="text-2xl font-bold text-slate-400">점</span>
-              </div>
-            </div>
 
-            {/* 점수 상세 차트 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-slate-50 dark:bg-slate-800 p-5 rounded-2xl text-center border border-slate-100 dark:border-slate-800/50 flex flex-col items-center justify-center min-h-[140px]">
-                <div className="text-xs text-slate-500 mb-1">오행 보완</div>
-                <div className={`text-3xl font-black ${appraisalResult.sajuBalance === 'S' ? 'text-blue-500' : appraisalResult.sajuBalance === 'A' ? 'text-emerald-500' : 'text-slate-600 dark:text-slate-300'}`}>
-                  {appraisalResult.sajuBalance}
+              {/* 점수 상세 차트 */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div className="bg-slate-50 dark:bg-slate-800 p-5 rounded-2xl text-center border border-slate-100 dark:border-slate-800/50 flex flex-col items-center justify-center min-h-[140px]">
+                  <div className="text-xs text-slate-500 mb-1">오행 보완</div>
+                  <div className={`text-3xl font-black ${appraisalResult.sajuBalance === 'S' ? 'text-blue-500' : appraisalResult.sajuBalance === 'A' ? 'text-emerald-500' : 'text-slate-600 dark:text-slate-300'}`}>
+                    {appraisalResult.sajuBalance}
+                  </div>
+                </div>
+                <div className="bg-slate-50 dark:bg-slate-800 p-5 rounded-2xl text-center border border-slate-100 dark:border-slate-800/50 flex flex-col items-center justify-center min-h-[140px]">
+                  <div className="text-xs text-slate-500 mb-1">성격 궁합</div>
+                  <div className={`text-3xl font-black ${appraisalResult.mbtiSynergy === 'S' ? 'text-rose-500' : appraisalResult.mbtiSynergy === 'A' ? 'text-pink-500' : 'text-slate-600 dark:text-slate-300'}`}>
+                    {appraisalResult.mbtiSynergy}
+                  </div>
+                </div>
+                <div className={`p-5 rounded-2xl text-center border-2 flex flex-col items-center justify-center min-h-[140px] ${appraisalResult.strokesLuck === '대길(大吉)' ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-400' : 'bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
+                  <div className={`text-xs mb-1 ${appraisalResult.strokesLuck === '대길(大吉)' ? 'text-amber-600 dark:text-amber-400' : 'text-slate-500'}`}>81 수리운</div>
+                  <div className={`text-3xl font-black ${appraisalResult.strokesLuck === '대길(大吉)' ? 'text-amber-600 dark:text-amber-400' : 'text-slate-600 dark:text-slate-300'}`}>
+                    {appraisalResult.strokesLuck}
+                  </div>
                 </div>
               </div>
-              <div className="bg-slate-50 dark:bg-slate-800 p-5 rounded-2xl text-center border border-slate-100 dark:border-slate-800/50 flex flex-col items-center justify-center min-h-[140px]">
-                <div className="text-xs text-slate-500 mb-1">성격 궁합</div>
-                <div className={`text-3xl font-black ${appraisalResult.mbtiSynergy === 'S' ? 'text-rose-500' : appraisalResult.mbtiSynergy === 'A' ? 'text-pink-500' : 'text-slate-600 dark:text-slate-300'}`}>
-                  {appraisalResult.mbtiSynergy}
-                </div>
-              </div>
-              <div className={`p-5 rounded-2xl text-center border-2 flex flex-col items-center justify-center min-h-[140px] ${appraisalResult.strokesLuck === '대길(大吉)' ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-400' : 'bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700'}`}>
-                <div className={`text-xs mb-1 ${appraisalResult.strokesLuck === '대길(大吉)' ? 'text-amber-600 dark:text-amber-400' : 'text-slate-500'}`}>81 수리운</div>
-                <div className={`text-3xl font-black ${appraisalResult.strokesLuck === '대길(大吉)' ? 'text-amber-600 dark:text-amber-400' : 'text-slate-600 dark:text-slate-300'}`}>
-                  {appraisalResult.strokesLuck}
-                </div>
-              </div>
-            </div>
 
-            <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 p-5 rounded-xl flex gap-3">
-              <AlertCircle className="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
-              <p className="text-sm md:text-base text-indigo-900 dark:text-indigo-100 leading-relaxed font-medium">
-                {appraisalResult.comment}
-              </p>
+              <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 p-5 rounded-xl flex gap-3">
+                <AlertCircle className="text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
+                <p className="text-sm md:text-base text-indigo-900 dark:text-indigo-100 leading-relaxed font-medium">
+                  {appraisalResult.comment}
+                </p>
+              </div>
             </div>
 
             {/* 💡 누락된 한자가 있을 때만 나타나는 솔직한 안내 UI */}
@@ -372,7 +359,7 @@ export default function Appraisal() {
               <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-xl mt-4 flex gap-3 animate-[fadeIn_0.5s_ease-out]">
                 <Info className="text-slate-400 shrink-0 mt-0.5" />
                 <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                  ※ 입력하신 이름 중 일부 한자(<strong className="text-slate-700 dark:text-slate-300">{appraisalResult.missingKanjiList.join(', ')}</strong>)의 정확한 획수 데이터가 아직 시스템에 등록되지 않아, 임시 수치로 감정되었습니다. 보다 완벽한 서비스를 위해 현재 시스템에 업데이트를 요청했습니다.
+                  ※ 입력하신 이름 중 일부 한자의 정확한 획수 데이터가 아직 시스템에 등록되지 않아, 임시 수치로 감정되었습니다. 보다 완벽한 서비스를 위해 현재 시스템에 업데이트를 요청했습니다.
                 </p>
               </div>
             )}

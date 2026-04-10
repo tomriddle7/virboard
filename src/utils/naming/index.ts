@@ -1,3 +1,12 @@
+export interface KanjiData {
+  pronunciation_five_elements?: string;
+  resource_five_elements?: string;
+  original_stroke_count?: number;
+  dictionary_stroke_count?: number;
+}
+
+let cachedKanjiDict: Record<string, KanjiData> | null = null;
+
 // --- 1. 상수 데이터 (Constants) ---
 
 export const elementLabels = {
@@ -212,30 +221,41 @@ const kanaStrokeMap: Record<string, number> = {
 };
 
 // 프로덕션용 비동기 일본어 획수 계산 함수
-const getJapaneseStrokeCount = async (name: string): Promise<number> => {
+export const getJapaneseStrokeCount = async (name: string): Promise<{ strokes: number, missingChars: string[] }> => {
   let strokes = 0;
+  const missingChars: string[] = [];
   const sanitizedName = name.replace(/\s/g, '');
 
-  // 1. 번들 용량 최적화를 위해 한자 획수 DB는 외부(public 폴더 등)에서 fetch
-  // 실제 서비스 시에는 React Query 등으로 캐싱해두면 좋습니다.
-  const response = await fetch('/assets/db/kanji_strokes.json');
-  const kanjiDb = await response.json();
+  // 💡 1. 캐싱된 딕셔너리가 없다면 최초 1회만 Fetch 및 변환 작업을 수행합니다.
+  if (!cachedKanjiDict) {
+    const response = await fetch('/db/kanji_strokes.json');
+    cachedKanjiDict = await response.json();
+  }
 
   for (const char of sanitizedName) {
     if (kanaStrokeMap[char]) {
-      strokes += kanaStrokeMap[char]; // 가나일 경우
-    } else if (kanjiDb[char]) {
-      strokes += kanjiDb[char]; // 한자일 경우 DB에서 검색
+      strokes += kanaStrokeMap[char];
+    } else if (cachedKanjiDict![char]) {
+      strokes += cachedKanjiDict![char].original_stroke_count!;
+    } else if (/[\u4e00-\u9faf]/.test(char)) {
+      strokes += 7; // DB에 없는 한자는 임시로 7획 부여
+      missingChars.push(char);
     } else {
-      strokes += 1; // DB에 없는 특수기호 등은 예외 처리 (보통 1획 또는 0획 처리)
+      strokes += 1; // 특수기호나 알파벳 등
     }
   }
-  return strokes;
+
+  return { strokes, missingChars };
 };
 
 // 프론트엔드용 결정적(Deterministic) 획수 계산기
-export const getProductionStrokeCount = async (name: string, language: string): Promise<number> => {
+export const getStrokeCount = async (
+  name: string, 
+  language: string
+): Promise<{ strokes: number, missingChars: string[] }> => {
+  
   let strokes = 0;
+  let missingChars: string[] = [];
 
   switch (language) {
     case 'korean':
@@ -245,25 +265,21 @@ export const getProductionStrokeCount = async (name: string, language: string): 
       strokes = getEnglishStrokeCount(name);
       break;
     case 'japanese':
-      strokes = await getJapaneseStrokeCount(name); // DB 조회로 인해 비동기 처리
-      break;
+      // 💡 일본어일 경우 객체를 통째로 받아와서 각각 분해해줍니다.
+      { const jpResult = await getJapaneseStrokeCount(name);
+      strokes = jpResult.strokes;
+      missingChars = jpResult.missingChars;
+      break; }
     default:
       strokes = 10; // mixed나 empty일 경우의 Fallback
   }
 
   // 81수리는 81을 초과하면 다시 1부터 순환하는 성명학 원칙 적용
-  return strokes > 81 ? (strokes % 80) + 1 : strokes;
-};
+  const finalStrokes = strokes > 81 ? (strokes % 80) + 1 : strokes;
 
-export const getMockStrokeCount = (name: string): number => {
-  let strokes = 0;
-  for (let i = 0; i < name.length; i++) {
-    strokes += (name.charCodeAt(i) % 15) + 3;
-  }
-  return strokes > 81 ? (strokes % 80) + 1 : strokes;
-};
-
-export const getStrokeCount = async (name: string, lang: string): Promise<number> => {
-  // return getMockStrokeCount(name);
-  return await getProductionStrokeCount(name, lang);
+  // 💡 최종적으로 획수와 누락된 한자 배열을 모두 담은 객체를 반환합니다.
+  return { 
+    strokes: finalStrokes, 
+    missingChars 
+  };
 };
