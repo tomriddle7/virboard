@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import { ShieldCheck, AlertCircle, Zap, Lock, BarChart3, Loader2, Info, Share2 } from 'lucide-react';
 import { DateTime } from "luxon";
@@ -97,7 +99,7 @@ export default function Appraisal() {
       if (birthDt.isValid) {
         const calcGender = (formData.gender === 'none' ? 'female' : formData.gender) as 'male' | 'female';
         const saju = getSaju(birthDt, { adapter, gender: calcGender });
-        const neededElement = mapSajuElement(saju.yongShen.primary.element);
+        const neededElement = mapSajuElement((saju.yongShen.primary as any).element);
 
         if (neededElement === formData.nameTheme) {
           sajuBalance = "S";

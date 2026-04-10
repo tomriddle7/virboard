@@ -50,8 +50,8 @@ const Labs = () => {
 
 // 간단한 인라인 스타일 (Tailwind나 CSS Modules로 대체 가능합니다)
 const styles = {
-    container: { padding: '40px 20px', maxWidth: '1000px', margin: '0 auto' },
-    header: { marginBottom: '40px', textAlign: 'center' },
+    container: { padding: '40px 20px', maxWidth: '1000px', margin: '0 auto' } as const,
+    header: { marginBottom: '40px', textAlign: 'center' } as const,
     title: { fontSize: '2.5rem', fontWeight: 'bold', color: '#333' },
     subtitle: { color: '#666', marginTop: '10px' },
     grid: {
@@ -70,7 +70,7 @@ const styles = {
         flexDirection: 'column',
         backgroundColor: '#fff',
         cursor: 'pointer'
-    },
+    } as const,
     statusBadge: {
         fontSize: '0.75rem',
         backgroundColor: '#f0f0f0',

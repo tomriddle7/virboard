@@ -54,3 +54,5 @@ export type RawVTuber = Omit<VtuberProfile, "generation" | "birth" | "debut" | "
   debut: string;
   unit: string;
 };
+
+export type Gender = 'male' | 'female';

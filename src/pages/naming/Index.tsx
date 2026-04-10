@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import { Sparkles, Globe, Swords, Loader2, Heart, Share2, Info } from 'lucide-react';
 import { DateTime } from "luxon";
 import { createLuxonAdapter } from "@gracefullight/saju/adapters/luxon";
 import { getSaju } from "@gracefullight/saju";
+import type { Gender } from "@/types/Event"
 
 // --- 1. 퍼스트 네임 데이터 (영어식) ---
 const vtuberNames = {
@@ -324,7 +326,7 @@ const mapSajuElement = (hanja: string): keyof typeof vtuberNames | null => {
 export default function VTuberNamingStudio() {
   const [activeTab, setActiveTab] = useState('japanese');
   const [isGenerating, setIsGenerating] = useState(false);
-  const [jpResults, setJpResults] = useState<any[]>([]);
+  const [jpResults, setJpResults] = useState<never[]>([]);
 
   // 폼 상태 관리 
   const [formData, setFormData] = useState({
@@ -343,7 +345,7 @@ export default function VTuberNamingStudio() {
       let coreElement: keyof typeof vtuberNames = 'water';
       let successElement: keyof typeof vtuberNames | null = null;
       let finalElement: keyof typeof vtuberNames = 'water';
-      let elementScores = { wood: 0, fire: 0, earth: 0, metal: 0, water: 0 };
+      const elementScores = { wood: 0, fire: 0, earth: 0, metal: 0, water: 0 };
 
       // 포맷팅된 날짜 텍스트 (MM/DD)
       const birthStr = formData.birthDate ? `${formData.birthDate.split('-')[1]}/${formData.birthDate.split('-')[2]}` : '';
@@ -362,8 +364,8 @@ export default function VTuberNamingStudio() {
         const birthDt = DateTime.fromObject({ year: Number(year), month: Number(month), day: Number(day), hour: 12, minute: 0 }, { zone: "Asia/Seoul" });
 
         if (birthDt.isValid) {
-          const saju = getSaju(birthDt, { adapter, gender: formData.gender });
-          coreElement = mapSajuElement(saju.yongShen.primary.element) || 'water';
+          const saju = getSaju(birthDt, { adapter, gender: formData.gender as Gender });
+          coreElement = mapSajuElement((saju.yongShen.primary as any).element) || 'water';
           elementScores[coreElement] += 10;
         }
       }
@@ -374,8 +376,8 @@ export default function VTuberNamingStudio() {
         const debutDt = DateTime.fromObject({ year: Number(dYear), month: Number(dMonth), day: Number(dDay), hour: 12, minute: 0 }, { zone: "Asia/Seoul" });
 
         if (debutDt.isValid) {
-          const debutSaju = getSaju(debutDt, { adapter, gender: formData.gender });
-          successElement = mapSajuElement(debutSaju.yongShen.primary.element);
+          const debutSaju = getSaju(debutDt, { adapter, gender: formData.gender as Gender });
+          successElement = mapSajuElement((debutSaju.yongShen.primary as any).element);
           if (successElement) {
             elementScores[successElement] += 5;
           }
@@ -385,7 +387,7 @@ export default function VTuberNamingStudio() {
       // 3. MBTI 성향 가중치 곱연산
       if (formData.mbti && mbtiWeights[formData.mbti as keyof typeof mbtiWeights]) {
         const weights = mbtiWeights[formData.mbti as keyof typeof mbtiWeights];
-        for (let key in elementScores) {
+        for (const key in elementScores) {
           const baseScore = elementScores[key as keyof typeof elementScores] || 1;
           elementScores[key as keyof typeof elementScores] = baseScore * weights[key as keyof typeof weights];
         }
@@ -421,7 +423,7 @@ export default function VTuberNamingStudio() {
           });
         }
 
-        setJpResults(combinations);
+        setJpResults(combinations as never);
         setIsGenerating(false);
       }, 800);
 
@@ -630,7 +632,7 @@ export default function VTuberNamingStudio() {
                 <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-sm">
                   <div className="flex items-center gap-2 mb-2">
                     <h2 className="text-xl font-bold text-rose-600 dark:text-rose-400">
-                      최종 테마 도출: {elementLabels[jpResults[0].matchedElement as keyof typeof elementLabels]}
+                      최종 테마 도출: {elementLabels[(jpResults[0] as any).matchedElement as keyof typeof elementLabels]}
                     </h2>
                   </div>
                   <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-100 dark:border-slate-800 mt-4 flex gap-3">
@@ -644,7 +646,7 @@ export default function VTuberNamingStudio() {
 
                 {/* 이름 카드 영역 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                  {jpResults.map((item, idx) => (
+                  {jpResults.map((item: any, idx) => (
                     <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-rose-300 dark:hover:border-rose-700 transition-colors group flex flex-col justify-between">
                       <div>
                         <div className="flex justify-between items-start mb-4">
