@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 #root {
-  height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -82,8 +82,21 @@
 
 /* --- 스타일 재사용을 위한 커스텀 스타일 --- */
 .vir-primary-label {
-    @apply block text-sm font-medium dark:text-gray-300;
+    @apply text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1;
 }
 .vir-primary-input {
-    @apply w-full mt-1 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white;
+    @apply w-full px-4 py-3 rounded-xl bg-white dark:bg-[#151b2b] border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 
+    placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500
+    dark:focus:ring-blue-400/50 dark:focus:border-blue-400 transition-all;
+}
+
+.vir-primary-btn {
+  @apply flex items-center justify-center gap-2
+        px-6 py-3 
+        rounded-xl 
+        font-bold text-lg
+        bg-indigo-600 hover:bg-indigo-700 
+        text-white 
+        shadow-xl shadow-indigo-500/20 
+        focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900
 }
