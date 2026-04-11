@@ -1,5 +1,6 @@
 [
   {
+    "id": "2026-fantasy-wreath",
     "vtuber_id": "hololive-fantasy-flare",
     "status": "ended",
     "title": "시라누이 후레아 3기생 라이브 플라스타",
@@ -18,6 +19,7 @@
     "memo": ""
   },
   {
+    "id": "2026-fuwamoco-subway",
     "vtuber_id": "hololive-advent-fuwawa",
     "status": "ended",
     "title": "후와모코 2026년 생일 지하철 광고",
@@ -36,6 +38,7 @@
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "id": "2026-koyori-subway",
     "vtuber_id": "hololive-holox-koyori",
     "status": "ended",
     "title": "하쿠이 코요리 2026년 생일 지하철 광고(서울, 도쿄)",
@@ -54,6 +57,7 @@
     "memo": "강남역: 지하상가 3번 출구"
   },
   {
+    "id": "2026-koyori-subway",
     "vtuber_id": "hololive-holox-koyori",
     "status": "ongoing",
     "title": "하쿠이 코요리 2026년 생일 지하철 광고(부산)",
@@ -72,6 +76,7 @@
     "memo": ""
   },
   {
+    "id": "2026-anya-subway",
     "vtuber_id": "hololive-holoro-anya",
     "status": "ongoing",
     "title": "아냐 멜핏사 2026년 생일 지하철 광고",
@@ -90,6 +95,7 @@
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "id": "2026-baelz-subway",
     "vtuber_id": "hololive-promise-baelz",
     "status": "ended",
     "title": "하코스 벨즈 2026년 생일 지하철 광고(서울, 도쿄)",
@@ -108,6 +114,7 @@
     "memo": "양재역: 광고가 역사 안에 있음."
   },
   {
+    "id": "2026-miko-subway",
     "vtuber_id": "hololive-zero-miko",
     "status": "ended",
     "title": "사쿠라 미코 2026년 생일 지하철 광고",
@@ -126,6 +133,7 @@
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "id": "2026-suisei-subway",
     "vtuber_id": "hololive-zero-suisei",
     "status": "ongoing",
     "title": "호시마치 스이세이 2026년 생일 & 8주년 지하철 광고",
@@ -144,6 +152,7 @@
     "memo": "광고가 역사 안에 있음."
   },
   {
+    "id": "2026-kanata-subway",
     "vtuber_id": "hololive-force-kanata",
     "status": "ongoing",
     "title": "아마네 카나타 2026년 생일 지하철 광고(서울)",
@@ -162,6 +171,7 @@
     "memo": ""
   },
   {
+    "id": "2026-kanata-subway",
     "vtuber_id": "hololive-force-kanata",
     "status": "ongoing",
     "title": "아마네 카나타 2026년 생일 지하철 광고(부산)",
@@ -180,6 +190,7 @@
     "memo": ""
   },
   {
+    "id": "2026-shibuki-subway",
     "vtuber_id": "stelive-cliche-shibuki",
     "status": "ongoing",
     "title": "2026 텐코 시부키 생일광고",
@@ -198,6 +209,7 @@
     "memo": "신촌역: 현대백화점 통로 b2 위치.\\n홍대입구역: 지하 1층 개찰구 앞에 위치.\\n서면역: 12번 출구 방향 a-7 위치."
   },
   {
+    "id": "2026-holox-wreath",
     "vtuber_id": "hololive-holox-dark",
     "status": "funding",
     "title": "HoloX 1st 라이브 기념 플라워 스탠드",
@@ -216,6 +228,7 @@
     "memo": ""
   },
   {
+    "id": "2026-holox-subway",
     "vtuber_id": "hololive-holox-dark",
     "status": "funding",
     "title": "HoloX 1st 라이브 기념 광고",
@@ -234,6 +247,7 @@
     "memo": ""
   },
   {
+    "id": "2026-kiara&ina-subway",
     "vtuber_id": "hololive-myth-kiara",
     "status": "ongoing",
     "title": "TAKOTORI Concert congratulatory AD",
@@ -252,6 +266,7 @@
     "memo": ""
   },
   {
+    "id": "2026-ina-subway",
     "vtuber_id": "hololive-myth-ina",
     "status": "funding",
     "title": "니노마에 이나니스 2026 생일 지하철 광고",
@@ -270,6 +285,7 @@
     "memo": ""
   },
   {
+    "id": "2026-liz-subway",
     "vtuber_id": "hololive-justice-liz",
     "status": "funding",
     "title": "엘리자베스 로즈 블러드플레임 지하철 광고",
@@ -288,6 +304,7 @@
     "memo": ""
   },
   {
+    "id": "2026-subaru-subway",
     "vtuber_id": "hololive-second-subaru",
     "status": "funding",
     "title": "오오조라 스바루 2026년 생일 기념 광고",
@@ -306,6 +323,7 @@
     "memo": ""
   },
   {
+    "id": "2026-hajime-subway",
     "vtuber_id": "hololive-regloss-hajime",
     "status": "funding",
     "title": "2026년 토도로키 하지메 생일 기념광고",
@@ -324,6 +342,7 @@
     "memo": ""
   },
   {
+    "id": "2026-kanade-subway",
     "vtuber_id": "hololive-regloss-kanade",
     "status": "funded",
     "title": "오토노세 카나데 2026년 생일 기념 지하철 광고",
@@ -342,6 +361,7 @@
     "memo": ""
   },
   {
+    "id": "2026-su-subway",
     "vtuber_id": "hololive-flowglow-su",
     "status": "funding",
     "title": "미즈미야 스우 2026년 생일 지하철 광고",
@@ -360,6 +380,7 @@
     "memo": ""
   },
   {
+    "id": "2026-iofi-subway",
     "vtuber_id": "hololive-area15-iofi",
     "status": "funding",
     "title": "2026 Airani Iofifteen Birthday Project",
@@ -378,6 +399,7 @@
     "memo": ""
   },
   {
+    "id": "2026-watame-subway",
     "vtuber_id": "hololive-force-watame",
     "status": "funding",
     "title": "츠노마키 와타메 2026년 생일기념 지하철 광고",
@@ -396,6 +418,7 @@
     "memo": ""
   },
   {
+    "id": "2026-yuni-subway",
     "vtuber_id": "stelive-everys-yuni",
     "status": "funding",
     "title": "2026년 아야츠노 유니 생일광고",
@@ -414,6 +437,7 @@
     "memo": "시청역 2호선 전광판 광고 추가 모금중"
   },
   {
+    "id": "2026-huya-subway",
     "vtuber_id": "stelive-everys-huya",
     "status": "funding",
     "title": "2026 사키하네 후야 생일 광고",
@@ -432,6 +456,7 @@
     "memo": "잠실역 2호선 전광판 광고 추가 모금중"
   },
   {
+    "id": "2026-cliche-exhibition",
     "vtuber_id": "stelive-cliche-rin",
     "status": "funding",
     "title": "스텔라이브 클리셰 2주년 기념 전시회",
@@ -450,6 +475,7 @@
     "memo": ""
   },
   {
+    "id": "2026-towa-subway",
     "vtuber_id": "hololive-force-towa",
     "status": "funding",
     "title": "2026 토코야미 토와 생일광고",
@@ -468,6 +494,7 @@
     "memo": "신분당선 지하 4층 플랫폼"
   },
   {
+    "id": "2026-kiara-subway",
     "vtuber_id": "hololive-myth-kiara",
     "status": "funding",
     "title": "2026년 타카나시 키아라 생일 광고",
@@ -486,6 +513,7 @@
     "memo": "신분당선 지하 4층 플랫폼"
   },
   {
+    "id": "2026-haato-subway",
     "vtuber_id": "hololive-first-haato",
     "status": "funding",
     "title": "2026년 아카이 하아토 생일 광고",
@@ -504,6 +532,7 @@
     "memo": "신분당선 지하 4층 플랫폼"
   },
   {
+    "id": "2026-kobo-subway",
     "vtuber_id": "hololive-holoh3ro-kobo",
     "status": "funding",
     "title": "2026 코보 카나에루 생일 광고",
@@ -522,6 +551,7 @@
     "memo": "신분당선 지하 4층 플랫폼"
   },
   {
+    "id": "2026-riona-subway",
     "vtuber_id": "hololive-flowglow-riona",
     "status": "funding",
     "title": "이사키 리오나 2026년 생일 기념 팬 광고",
@@ -540,6 +570,7 @@
     "memo": ""
   },
   {
+    "id": "2026-irys-subway",
     "vtuber_id": "hololive-promise-irys",
     "status": "funding",
     "title": "IRyS 5th Anniversary celebration AD",
@@ -558,6 +589,7 @@
     "memo": "지하 3층"
   },
   {
+    "id": "2026-bijou-subway",
     "vtuber_id": "hololive-advent-bijou",
     "status": "ongoing",
     "title": "코세키 비쥬 2026 생일광고",
@@ -576,12 +608,13 @@
     "memo": "지하 4층 6번 구역"
   },
   {
+    "id": "2026-justice-subway",
     "vtuber_id": "hololive-justice-raora",
     "status": "funding",
     "title": "저스티스 2주년 기념 지하철 광고",
     "thumbnail": "",
-    "funding_start_at": "2026. 4. 6 오전 12:00:00",
-    "funding_end_at": "2026. 5. 31 오후 11:59:00",
+    "funding_start_at": "2025-04-06 0:00",
+    "funding_end_at": "2026-05-31 23:59",
     "funding_over_at": "",
     "event_start_at": "2026-06-20 0:00",
     "event_end_at": "2026-07-19 0:00",
@@ -594,943 +627,1037 @@
     "memo": ""
   },
   {
-    "vtuber_id": "hololive-zero-sora",
+    "id": "hololive-zero-sora",
     "title": "🎂 토키노 소라 2026년 생일",
     "event_start_at": "2026-05-15 0:00",
     "event_end_at": "2026-05-15 23:59",
     "color": "bg-[#324ab2]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-zero-roboco",
+    "id": "hololive-zero-roboco",
     "title": "🎂 로보코 씨 2026년 생일",
     "event_start_at": "2026-05-23 0:00",
     "event_end_at": "2026-05-23 23:59",
     "color": "bg-[#e8b2bf]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-zero-suisei",
+    "id": "hololive-zero-suisei",
     "title": "🎂 호시마치 스이세이 2026년 생일",
     "event_start_at": "2026-03-22 0:00",
     "event_end_at": "2026-03-22 23:59",
     "color": "bg-[#91b7ea]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-zero-miko",
+    "id": "hololive-zero-miko",
     "title": "🎂 사쿠라 미코 2026년 생일",
     "event_start_at": "2026-03-05 0:00",
     "event_end_at": "2026-03-05 23:59",
     "color": "bg-[#ff85c2]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-zero-azki",
+    "id": "hololive-zero-azki",
     "title": "🎂 AZKi 2026년 생일",
     "event_start_at": "2026-07-01 0:00",
     "event_end_at": "2026-07-01 23:59",
     "color": "bg-[#f689cd]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-first-akirose",
+    "id": "hololive-first-akirose",
     "title": "🎂 아키 로젠탈 2026년 생일",
     "event_start_at": "2026-02-17 0:00",
     "event_end_at": "2026-02-17 23:59",
     "color": "bg-[#5161c1]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-first-fubuki",
+    "id": "hololive-first-fubuki",
     "title": "🎂 시라카미 후부키 2026년 생일",
     "event_start_at": "2026-10-05 0:00",
     "event_end_at": "2026-10-05 23:59",
     "color": "bg-white !text-black",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-first-maturi",
+    "id": "hololive-first-maturi",
     "title": "🎂 나츠이로 마츠리 2026년 생일",
     "event_start_at": "2026-07-22 0:00",
     "event_end_at": "2026-07-22 23:59",
     "color": "bg-[#febd59]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-first-haato",
+    "id": "hololive-first-haato",
     "title": "🎂 아카이 하아토 2026년 생일",
     "event_start_at": "2026-08-10 0:00",
     "event_end_at": "2026-08-10 23:59",
     "color": "bg-[#990000]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-second-aqua",
+    "id": "hololive-second-aqua",
     "title": "🎂 미나토 아쿠아 2026년 생일",
     "event_start_at": "2026-12-01 0:00",
     "event_end_at": "2026-12-01 23:59",
     "color": "bg-[#ed83b1]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-second-shion",
+    "id": "hololive-second-shion",
     "title": "🎂 무라사키 시온 2026년 생일",
     "event_start_at": "2026-12-08 0:00",
     "event_end_at": "2026-12-08 23:59",
     "color": "bg-[#8041d9]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-second-ayame",
+    "id": "hololive-second-ayame",
     "title": "🎂 나키리 아야메 2026년 생일",
     "event_start_at": "2026-12-13 0:00",
     "event_end_at": "2026-12-13 23:59",
     "color": "bg-[#bb0000]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-second-choco",
+    "id": "hololive-second-choco",
     "title": "🎂 유즈키 초코 2026년 생일",
     "event_start_at": "2026-02-14 0:00",
     "event_end_at": "2026-02-14 23:59",
     "color": "bg-[#f1c1d1]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-second-subaru",
+    "id": "hololive-second-subaru",
     "title": "🎂 오오조라 스바루 2026년 생일",
     "event_start_at": "2026-07-02 0:00",
     "event_end_at": "2026-07-02 23:59",
     "color": "bg-[#e2f558]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-gamers-mio",
+    "id": "hololive-gamers-mio",
     "title": "🎂 오오카미 미오 2026년 생일",
     "event_start_at": "2026-08-20 0:00",
     "event_end_at": "2026-08-20 23:59",
     "color": "bg-[#00012e]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-gamers-okayu",
+    "id": "hololive-gamers-okayu",
     "title": "🎂 네코마타 오카유 2026년 생일",
     "event_start_at": "2026-02-22 0:00",
     "event_end_at": "2026-02-22 23:59",
     "color": "bg-[#ae9bc8]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-gamers-korone",
+    "id": "hololive-gamers-korone",
     "title": "🎂 이누가미 코로네 2026년 생일",
     "event_start_at": "2026-10-01 0:00",
     "event_end_at": "2026-10-01 23:59",
     "color": "bg-[#aa544d]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-fantasy-pekora",
+    "id": "hololive-fantasy-pekora",
     "title": "🎂 우사다 페코라 2026년 생일",
     "event_start_at": "2026-01-12 0:00",
     "event_end_at": "2026-01-12 23:59",
     "color": "bg-[#039be5]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-fantasy-flare",
+    "id": "hololive-fantasy-flare",
     "title": "🎂 시라누이 후레아 2026년 생일",
     "event_start_at": "2026-04-02 0:00",
     "event_end_at": "2026-04-02 23:59",
     "color": "bg-[#0e4c6e]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-fantasy-noel",
+    "id": "hololive-fantasy-noel",
     "title": "🎂 시로가네 노엘 2026년 생일",
     "event_start_at": "2026-11-24 0:00",
     "event_end_at": "2026-11-24 23:59",
     "color": "bg-[#f5f5f5] !text-black",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-fantasy-marine",
+    "id": "hololive-fantasy-marine",
     "title": "🎂 호쇼 마린 2026년 생일",
     "event_start_at": "2026-07-30 0:00",
     "event_end_at": "2026-07-30 23:59",
     "color": "bg-[#bb0000]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-force-kanata",
+    "id": "hololive-force-kanata",
     "title": "🎂 아마네 카나타 2026년 생일",
     "event_start_at": "2026-04-22 0:00",
     "event_end_at": "2026-04-22 23:59",
     "color": "bg-[#87cefa]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-force-coco",
+    "id": "hololive-force-coco",
     "title": "🎂 키류 코코 2026년 생일",
     "event_start_at": "2026-06-17 0:00",
     "event_end_at": "2026-06-17 23:59",
     "color": "bg-[#fd915d]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-force-watame",
+    "id": "hololive-force-watame",
     "title": "🎂 츠노마키 와타메 2026년 생일",
     "event_start_at": "2026-06-06 0:00",
     "event_end_at": "2026-06-06 23:59",
     "color": "bg-[#fef09d]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-force-towa",
+    "id": "hololive-force-towa",
     "title": "🎂 토코야미 토와 2026년 생일",
     "event_start_at": "2026-08-08 0:00",
     "event_end_at": "2026-08-08 23:59",
     "color": "bg-[#d63ea7]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-force-luna",
+    "id": "hololive-force-luna",
     "title": "🎂 히메모리 루나 2026년 생일",
     "event_start_at": "2026-10-10 0:00",
     "event_end_at": "2026-10-10 23:59",
     "color": "bg-[#fbb0d9]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-five-lamy",
+    "id": "hololive-five-lamy",
     "title": "🎂 유키하나 라미 2026년 생일",
     "event_start_at": "2026-11-15 0:00",
     "event_end_at": "2026-11-15 23:59",
     "color": "bg-[#6bcdf8]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-five-nene",
+    "id": "hololive-five-nene",
     "title": "🎂 모모스즈 네네 2026년 생일",
     "event_start_at": "2026-03-02 0:00",
     "event_end_at": "2026-03-02 23:59",
     "color": "bg-[#ffb65d]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-five-botan",
+    "id": "hololive-five-botan",
     "title": "🎂 시시로 보탄 2026년 생일",
     "event_start_at": "2026-09-08 0:00",
     "event_end_at": "2026-09-08 23:59",
     "color": "bg-[#e4dedc]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-five-polka",
+    "id": "hololive-five-polka",
     "title": "🎂 오마루 폴카 2026년 생일",
     "event_start_at": "2026-01-30 0:00",
     "event_end_at": "2026-01-30 23:59",
     "color": "bg-[#f8e9cb]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holox-dark",
+    "id": "hololive-holox-dark",
     "title": "🎂 라플라스 다크니스 2026년 생일",
     "event_start_at": "2026-05-25 0:00",
     "event_end_at": "2026-05-25 23:59",
     "color": "bg-[#936cc6]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holox-lui",
+    "id": "hololive-holox-lui",
     "title": "🎂 타카네 루이 2026년 생일",
     "event_start_at": "2026-06-11 0:00",
     "event_end_at": "2026-06-11 23:59",
     "color": "bg-[#7f104c]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holox-koyori",
+    "id": "hololive-holox-koyori",
     "title": "🎂 하쿠이 코요리 2026년 생일",
     "event_start_at": "2026-03-15 0:00",
     "event_end_at": "2026-03-15 23:59",
     "color": "bg-[#ffacd3]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holox-chloe",
+    "id": "hololive-holox-chloe",
     "title": "🎂 사카마타 클로에 2026년 생일",
     "event_start_at": "2026-05-18 0:00",
     "event_end_at": "2026-05-18 23:59",
     "color": "bg-[#f4f4f0] !text-black",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holox-iroha",
+    "id": "hololive-holox-iroha",
     "title": "🎂 카자마 이로하 2026년 생일",
     "event_start_at": "2026-06-18 0:00",
     "event_end_at": "2026-06-18 23:59",
     "color": "bg-[#faefe4]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-area15-risu",
+    "id": "hololive-area15-risu",
     "title": "🎂 아윤다 리스 2026년 생일",
     "event_start_at": "2026-01-15 0:00",
     "event_end_at": "2026-01-15 23:59",
     "color": "bg-[#b7886f]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-area15-moona",
+    "id": "hololive-area15-moona",
     "title": "🎂 무나 호시노바 2026년 생일",
     "event_start_at": "2026-02-15 0:00",
     "event_end_at": "2026-02-15 23:59",
     "color": "bg-[#7c1bde]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-area15-iofi",
+    "id": "hololive-area15-iofi",
     "title": "🎂 아이라니 이오피프틴 2026년 생일",
     "event_start_at": "2026-07-15 0:00",
     "event_end_at": "2026-07-15 23:59",
     "color": "bg-[#f6e9e6]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holoro-ollie",
+    "id": "hololive-holoro-ollie",
     "title": "🎂 쿠레이지 올리 2026년 생일",
     "event_start_at": "2026-10-13 0:00",
     "event_end_at": "2026-10-13 23:59",
     "color": "bg-[#d2042d]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holoro-anya",
+    "id": "hololive-holoro-anya",
     "title": "🎂 아냐 멜핏사 2026년 생일",
     "event_start_at": "2026-03-12 0:00",
     "event_end_at": "2026-03-12 23:59",
     "color": "bg-[#a07e7e]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holoro-reine",
+    "id": "hololive-holoro-reine",
     "title": "🎂 파볼리아 레이네 2026년 생일",
     "event_start_at": "2026-09-09 0:00",
     "event_end_at": "2026-09-09 23:59",
     "color": "bg-[#efe2e9]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holoh3ro-zeta",
+    "id": "hololive-holoh3ro-zeta",
     "title": "🎂 베스티아 제타 2026년 생일",
     "event_start_at": "2026-11-07 0:00",
     "event_end_at": "2026-11-07 23:59",
     "color": "bg-[#4e65b1]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holoh3ro-kaela",
+    "id": "hololive-holoh3ro-kaela",
     "title": "🎂 카엘라 코발스키아 2026년 생일",
     "event_start_at": "2026-08-30 0:00",
     "event_end_at": "2026-08-30 23:59",
     "color": "bg-[#ec9948]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-holoh3ro-kobo",
+    "id": "hololive-holoh3ro-kobo",
     "title": "🎂 코보 카나에루 2026년 생일",
     "event_start_at": "2026-12-12 0:00",
     "event_end_at": "2026-12-12 23:59",
     "color": "bg-[#00add0]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-myth-calli",
+    "id": "hololive-myth-calli",
     "title": "🎂 모리 칼리오페 2026년 생일",
     "event_start_at": "2026-04-04 0:00",
     "event_end_at": "2026-04-04 23:59",
     "color": "bg-[#f090a6]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-myth-kiara",
+    "id": "hololive-myth-kiara",
     "title": "🎂 타카나시 키아라 2026년 생일",
     "event_start_at": "2026-07-06 0:00",
     "event_end_at": "2026-07-06 23:59",
     "color": "bg-[#ff7f00]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-myth-ame",
+    "id": "hololive-myth-ame",
     "title": "🎂 왓슨 아멜리아 2026년 생일",
     "event_start_at": "2026-01-06 0:00",
     "event_end_at": "2026-01-06 23:59",
     "color": "bg-[#f9db92]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-myth-ina",
+    "id": "hololive-myth-ina",
     "title": "🎂 니노마에 이나니스 2026년 생일",
     "event_start_at": "2026-05-20 0:00",
     "event_end_at": "2026-05-20 23:59",
     "color": "bg-[#695882]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-myth-gura",
+    "id": "hololive-myth-gura",
     "title": "🎂 가우르 구라 2026년 생일",
     "event_start_at": "2026-06-20 0:00",
     "event_end_at": "2026-06-20 23:59",
     "color": "bg-[#0097ff]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-promise-irys",
+    "id": "hololive-promise-irys",
     "title": "🎂 IRyS 2026년 생일",
     "event_start_at": "2026-03-07 0:00",
     "event_end_at": "2026-03-07 23:59",
     "color": "bg-[#8f00ff]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-promise-baelz",
+    "id": "hololive-promise-baelz",
     "title": "🎂 하코스 벨즈 2026년 생일 (윤년 아님)",
     "event_start_at": "2026-02-28 0:00",
     "event_end_at": "2026-02-28 23:59",
     "color": "bg-[#e5443c]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-promise-kronii",
+    "id": "hololive-promise-kronii",
     "title": "🎂 오로 크로니 2026년 생일",
     "event_start_at": "2026-03-14 0:00",
     "event_end_at": "2026-03-14 23:59",
     "color": "bg-[#515671]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-promise-fauna",
+    "id": "hololive-promise-fauna",
     "title": "🎂 세레스 파우나 2026년 생일",
     "event_start_at": "2026-03-21 0:00",
     "event_end_at": "2026-03-21 23:59",
     "color": "bg-[#84b48a]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-promise-mumei",
+    "id": "hololive-promise-mumei",
     "title": "🎂 나나시 무메이 2026년 생일",
     "event_start_at": "2026-08-04 0:00",
     "event_end_at": "2026-08-04 23:59",
     "color": "bg-[#bfad9d]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-council-sana",
+    "id": "hololive-council-sana",
     "title": "🎂 츠쿠모 사나 2026년 생일",
     "event_start_at": "2026-06-10 0:00",
     "event_end_at": "2026-06-10 23:59",
     "color": "bg-[#cf946b]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-advent-shiori",
+    "id": "hololive-advent-shiori",
     "title": "🎂 시오리 노벨라 2026년 생일",
     "event_start_at": "2026-05-02 0:00",
     "event_end_at": "2026-05-02 23:59",
     "color": "bg-[#624e74]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-advent-bijou",
+    "id": "hololive-advent-bijou",
     "title": "🎂 코세키 비쥬 2026년 생일",
     "event_start_at": "2026-04-14 0:00",
     "event_end_at": "2026-04-14 23:59",
     "color": "bg-[#9e74e0]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-advent-nerisa",
+    "id": "hololive-advent-nerisa",
     "title": "🎂 네리사 레이븐크로프트 2026년 생일",
     "event_start_at": "2026-11-21 0:00",
     "event_end_at": "2026-11-21 23:59",
     "color": "bg-[#423e3f]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-advent-fuwawa",
+    "id": "hololive-advent-fuwawa",
     "title": "🎂 후와와 어비스가드 2026년 생일",
     "event_start_at": "2026-02-01 0:00",
     "event_end_at": "2026-02-01 23:59",
     "color": "bg-[#f19bc0]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-advent-mococo",
+    "id": "hololive-advent-mococo",
     "title": "🎂 모코코 어비스가드 2026년 생일",
     "event_start_at": "2026-02-02 0:00",
     "event_end_at": "2026-02-02 23:59",
     "color": "bg-[#c9ddff]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-justice-liz",
+    "id": "hololive-justice-liz",
     "title": "🎂 엘리자베스 로즈 블러드플레임 2026년 생일",
     "event_start_at": "2026-04-25 0:00",
     "event_end_at": "2026-04-25 23:59",
     "color": "bg-[#efafa9]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-justice-gigi",
+    "id": "hololive-justice-gigi",
     "title": "🎂 지지 무린 2026년 생일",
     "event_start_at": "2026-10-18 0:00",
     "event_end_at": "2026-10-18 23:59",
     "color": "bg-[#fff2ea] !text-black",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-justice-cece",
+    "id": "hololive-justice-cece",
     "title": "🎂 세실리아 이머그린 2026년 생일",
     "event_start_at": "2026-11-11 0:00",
     "event_end_at": "2026-11-11 23:59",
     "color": "bg-[#9bfda8]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-justice-raora",
+    "id": "hololive-justice-raora",
     "title": "🎂 라오라 판테라 2026년 생일",
     "event_start_at": "2026-05-11 0:00",
     "event_end_at": "2026-05-11 23:59",
     "color": "bg-[#ffdaf1]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-regloss-ao",
+    "id": "hololive-regloss-ao",
     "title": "🎂 히오도시 아오 2026년 생일",
     "event_start_at": "2026-02-27 0:00",
     "event_end_at": "2026-02-27 23:59",
     "color": "bg-[#1d3466]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-regloss-kanade",
+    "id": "hololive-regloss-kanade",
     "title": "🎂 오토노세 카나데 2026년 생일",
     "event_start_at": "2026-04-20 0:00",
     "event_end_at": "2026-04-20 23:59",
     "color": "bg-[#fee7b5]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-regloss-ririka",
+    "id": "hololive-regloss-ririka",
     "title": "🎂 이치조 리리카 2026년 생일",
     "event_start_at": "2026-05-12 0:00",
     "event_end_at": "2026-05-12 23:59",
     "color": "bg-[#f47daa]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-regloss-raden",
+    "id": "hololive-regloss-raden",
     "title": "🎂 주우후테이 라덴 2026년 생일",
     "event_start_at": "2026-02-04 0:00",
     "event_end_at": "2026-02-04 23:59",
     "color": "bg-[#3b7c72]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-regloss-hajime",
+    "id": "hololive-regloss-hajime",
     "title": "🎂 토도로키 하지메 2026년 생일",
     "event_start_at": "2026-06-07 0:00",
     "event_end_at": "2026-06-07 23:59",
     "color": "bg-[#b6b5ff]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-flowglow-riona",
+    "id": "hololive-flowglow-riona",
     "title": "🎂 이사키 리오나 2026년 생일",
     "event_start_at": "2026-05-29 0:00",
     "event_end_at": "2026-05-29 23:59",
     "color": "bg-[#fe3480]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-flowglow-niko",
+    "id": "hololive-flowglow-niko",
     "title": "🎂 코가네이 니코 2026년 생일",
     "event_start_at": "2026-07-25 0:00",
     "event_end_at": "2026-07-25 23:59",
     "color": "bg-[#f58017]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-flowglow-su",
+    "id": "hololive-flowglow-su",
     "title": "🎂 미즈미야 스우 2026년 생일",
     "event_start_at": "2026-06-16 0:00",
     "event_end_at": "2026-06-16 23:59",
     "color": "bg-[#71e5ff]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-flowglow-chiha",
+    "id": "hololive-flowglow-chiha",
     "title": "🎂 린도 치하야 2026년 생일",
     "event_start_at": "2026-07-08 0:00",
     "event_end_at": "2026-07-08 23:59",
     "color": "bg-[#37baba]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "hololive-flowglow-vivi",
+    "id": "hololive-flowglow-vivi",
     "title": "🎂 키키라라 비비 2026년 생일",
     "event_start_at": "2026-08-27 0:00",
     "event_end_at": "2026-08-27 23:59",
     "color": "bg-[#ff90cc]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-mystic-kanna",
+    "id": "stelive-mystic-kanna",
     "title": "🎂 아이리 칸나 2026년 생일",
     "event_start_at": "2026-12-02 0:00",
     "event_end_at": "2026-12-02 23:59",
     "color": "bg-[#373584]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-everys-yuni",
+    "id": "stelive-everys-yuni",
     "title": "🎂 아야츠노 유니 2026년 생일",
     "event_start_at": "2026-05-21 0:00",
     "event_end_at": "2026-05-21 23:59",
     "color": "bg-[#857fd8]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-everys-huya",
+    "id": "stelive-everys-huya",
     "title": "🎂 사키하네 후야 2026년 생일",
     "event_start_at": "2026-07-07 0:00",
     "event_end_at": "2026-07-07 23:59",
     "color": "bg-[#8166a1]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-universe-lize",
+    "id": "stelive-universe-lize",
     "title": "🎂 아카네 리제 2026년 생일",
     "event_start_at": "2026-10-01 0:00",
     "event_end_at": "2026-10-01 23:59",
     "color": "bg-[#971b2f]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-universe-hina",
+    "id": "stelive-universe-hina",
     "title": "🎂 시라유키 히나 2026년 생일",
     "event_start_at": "2026-01-05 0:00",
     "event_end_at": "2026-01-05 23:59",
     "color": "bg-[#f2dcbf]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-universe-mashiro",
+    "id": "stelive-universe-mashiro",
     "title": "🎂 네네코 마시로 2026년 생일",
     "event_start_at": "2026-02-22 0:00",
     "event_end_at": "2026-02-22 23:59",
     "color": "bg-[#25282a]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-universe-tabi",
+    "id": "stelive-universe-tabi",
     "title": "🎂 아라하시 타비 2026년 생일",
     "event_start_at": "2026-09-07 0:00",
     "event_end_at": "2026-09-07 23:59",
     "color": "bg-[#9adaff]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-cliche-rin",
+    "id": "stelive-cliche-rin",
     "title": "🎂 아오쿠모 린 2026년 생일",
     "event_start_at": "2026-05-03 0:00",
     "event_end_at": "2026-05-03 23:59",
     "color": "bg-[#2b66c0]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-cliche-shibuki",
+    "id": "stelive-cliche-shibuki",
     "title": "🎂 텐코 시부키 2026년 생일",
     "event_start_at": "2026-03-21 0:00",
     "event_end_at": "2026-03-21 23:59",
     "color": "bg-[#f1e4ff] !text-black",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-cliche-riko",
+    "id": "stelive-cliche-riko",
     "title": "🎂 유즈하 리코 2026년 생일",
     "event_start_at": "2026-04-13 0:00",
     "event_end_at": "2026-04-13 23:59",
     "color": "bg-[#a6d0a6]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "stelive-cliche-nana",
+    "id": "stelive-cliche-nana",
     "title": "🎂 하나코 나나 2026년 생일",
     "event_start_at": "2026-08-07 0:00",
     "event_end_at": "2026-08-07 23:59",
     "color": "bg-[#df7685]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "liveruli-rosetta",
+    "id": "liveruli-rosetta",
     "title": "🎂 R로제타 2026년 생일",
     "event_start_at": "2026-11-18 0:00",
     "event_end_at": "2026-11-18 23:59",
     "color": "bg-[#e06a8e]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "liveruli-renoa",
+    "id": "liveruli-renoa",
     "title": "🎂 R리노아 2026년 생일",
     "event_start_at": "2026-00-00 0:00",
     "event_end_at": "2026-00-00 23:59",
     "color": "bg-[#e18ddc]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "liveruli-aren",
+    "id": "liveruli-aren",
     "title": "🎂 R아렌 2026년 생일",
     "event_start_at": "2026-07-30 0:00",
     "event_end_at": "2026-07-30 23:59",
     "color": "bg-[#3d8d7f]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "liveruli-amigyu",
+    "id": "liveruli-amigyu",
     "title": "🎂 R아미규 2026년 생일",
     "event_start_at": "2026-00-00 0:00",
     "event_end_at": "2026-00-00 23:59",
     "color": "bg-[#87a1bc]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "indie-sayu",
+    "id": "indie-sayu",
     "title": "🎂 서사유 2026년 생일",
     "event_start_at": "2026-04-01 0:00",
     "event_end_at": "2026-04-01 23:59",
     "color": "bg-gradient-to-br from-[#804d34] to-[#12c8cb]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "indie-soya",
+    "id": "indie-soya",
     "title": "🎂 윤소야 2026년 생일",
     "event_start_at": "2026-11-22 0:00",
     "event_end_at": "2026-11-22 23:59",
     "color": "bg-gradient-to-br from-[#cd6cb2] to-[#88d9e4]",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "indie-baejjal",
+    "id": "indie-baejjal",
     "title": "🎂 배쨜이 2026년 생일",
     "event_start_at": "2026-02-11 0:00",
     "event_end_at": "2026-02-11 23:59",
     "color": "bg-gradient-to-br from-black to-white",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "indie-lepi",
+    "id": "indie-lepi",
     "title": "🎂 레피 돌 라이트 2026년 생일",
     "event_start_at": "2026-08-14 0:00",
     "event_end_at": "2026-08-14 23:59",
     "color": "bg-olive-300",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   },
   {
-    "vtuber_id": "indie-tsubasa",
+    "id": "indie-tsubasa",
     "title": "🎂 하야부사 츠바사 2026년 생일",
     "event_start_at": "2026-05-11 0:00",
     "event_end_at": "2026-05-11 23:59",
     "color": "bg-olive-300",
     "type": "생일",
     "location": "",
-    "link": " "
+    "link": " ",
+    "status": "ongoing"
   }
 ]
