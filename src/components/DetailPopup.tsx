@@ -116,10 +116,10 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
           )}
           {selectedEvent.status && (
             <span className={`inline-block px-3 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full
-              ${selectedEvent.status === 'ongoing' ? 'bg-[#43c5f5]' : ''}
-              ${selectedEvent.status === 'ended' ? 'bg-gray-700' : ''}
               ${selectedEvent.status === 'funding' ? 'bg-orange-500' : ''}
               ${selectedEvent.status === 'funded' ? 'bg-gray-500' : ''}
+              ${selectedEvent.status === 'ongoing' ? 'bg-[#43c5f5]' : ''}
+              ${selectedEvent.status === 'ended' ? 'bg-gray-700' : ''}
               `}
             >
               {selectedEvent.status === 'funding' && t('event.funding')}

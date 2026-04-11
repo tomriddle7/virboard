@@ -148,11 +148,23 @@ function Home() {
                       const getStatusWeight = (status?: string) => {
                         if (status === 'ongoing') return 1;
                         if (status === 'ended') return 2;
-                        if (status === 'funded') return 3;
-                        if (status === 'funding') return 4;
+                        if (status === 'funding') return 3;
+                        if (status === 'funded') return 4;
                         return 5;
                       };
-                      return getStatusWeight(a.status) - getStatusWeight(b.status);
+                      const weightA = getStatusWeight(a.status);
+                      const weightB = getStatusWeight(b.status);
+
+                      if (weightA !== weightB) {
+                        return weightA - weightB;
+                      }
+
+                      const hasThumbA = a.thumbnail?.trim() !== "" ? 1 : 0;
+                      const hasThumbB = b.thumbnail?.trim() !== "" ? 1 : 0;
+
+                      if (hasThumbA !== hasThumbB) {
+                        return hasThumbB - hasThumbA;
+                      }
                     });
 
                   return (
