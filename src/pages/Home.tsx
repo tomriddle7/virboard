@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
 import { useTranslation } from 'react-i18next'
@@ -39,6 +39,9 @@ function Home() {
   const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
   const [drawerData, setDrawerData] = useState<{ date: Date, events: VtuberEvent[] } | null>(null);
 
+  // ✨ 방금 읽은 URL 파라미터 ID를 기억해 둘 ref 생성
+  const lastProcessedUrlId = useRef<string | null>(null);
+
   const favorites = useAtomValue(favoritesAtom);
 
   // 2. 이벤트 필터링 (사용하지 않는 기수/유닛 필터 로직 삭제)
@@ -62,19 +65,26 @@ function Home() {
   }, [events, vtubers, selectedAgency, favorites]);
 
   useEffect(() => {
-    // 주소창에서 'eventId' 파라미터 값을 가져옵니다.
     const eventIdFromUrl = searchParams.get('eventId');
 
-    // URL에 ID가 있고, 아직 팝업이 열리지 않았으며, 이벤트 데이터가 로드된 상태일 때
-    if (eventIdFromUrl && !selectedEventId && events.length > 0) {
-      // 해당 ID를 가진 이벤트가 실제로 존재하는지 확인합니다.
+    // URL에 파라미터가 완전히 지워졌다면(모달을 완전히 닫았다면) 도장을 지워줍니다. 
+    // (이렇게 해야 나중에 브라우저 '뒤로 가기'를 눌렀을 때 다시 정상적으로 열립니다.)
+    if (!eventIdFromUrl) {
+      lastProcessedUrlId.current = null;
+      return;
+    }
+
+    // URL 파라미터가 있고, "아직 내가 처리하지 않은" ID일 때만 팝업을 엽니다.
+    if (eventIdFromUrl !== lastProcessedUrlId.current && events.length > 0) {
       const exists = events.some(e => String(e.id) === String(eventIdFromUrl));
 
       if (exists) {
         setSelectedEventId(eventIdFromUrl);
+        lastProcessedUrlId.current = eventIdFromUrl; // ✨ 처리 완료 도장 쾅!
       }
     }
-  }, [searchParams, events, selectedEventId]);
+    // 🚨 주의: 의존성 배열에서 selectedEventId를 반드시 빼주세요!
+  }, [searchParams, events]);
 
   // 2. 팝업을 닫을 때 주소창의 쿼리 스트링도 함께 제거 (UX 관리)
   const closeDetailModal = () => {

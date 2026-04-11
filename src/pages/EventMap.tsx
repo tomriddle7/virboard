@@ -158,7 +158,7 @@ export default function EventMap() {
           center={position}
           zoom={13}
           scrollWheelZoom={true}
-          className="w-full h-full z-0"
+          className="w-full flex-1 z-0"
         >
           {/* ✨ OSM 표준 타일 레이어 */}
           <TileLayer
