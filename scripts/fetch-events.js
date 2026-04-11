@@ -113,8 +113,7 @@ async function fetchAndConvert() {
           color: vtuber.color,
           type: '생일',
           location: '',
-          link: vtuber.link || ' ',
-          status: 'ongoing'
+          link: vtuber.link || ' '
         });
       });
     });

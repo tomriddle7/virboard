@@ -159,12 +159,14 @@ function Home() {
                         return weightA - weightB;
                       }
 
-                      const hasThumbA = a.thumbnail?.trim() !== "" ? 1 : 0;
-                      const hasThumbB = b.thumbnail?.trim() !== "" ? 1 : 0;
+                      const hasThumbA = a.thumbnail && a.thumbnail.trim() !== "" ? 1 : 0;
+                      const hasThumbB = b.thumbnail && b.thumbnail.trim() !== "" ? 1 : 0;
 
                       if (hasThumbA !== hasThumbB) {
                         return hasThumbB - hasThumbA;
                       }
+
+                      return 0;
                     });
 
                   return (

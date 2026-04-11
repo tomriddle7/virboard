@@ -87,8 +87,15 @@ function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) 
                       )}
 
                       {/* ✨ 모금중 배지를 좌측 상단(top-2 left-2)에 띄웁니다 */}
-                      {event.status && (
-                        <div className="absolute top-2 left-2 z-10">
+                      <div className="absolute top-2 left-2 z-10 flex gap-1.5">
+                        {event.type && (
+                          <span
+                            className={`inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full ${event.color}`}
+                          >
+                            {t(`event_type.${event.type}`, { defaultValue: event.type })}
+                          </span>
+                        )}
+                        {event.status && (
                           <span
                             className={`inline-block px-2 py-1 text-[10px] sm:text-xs font-bold text-white rounded-full
                               ${event.status === 'funding' ? 'bg-orange-500' : ''}
@@ -102,8 +109,8 @@ function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) 
                             {event.status === 'ongoing' && t('event.ongoing')}
                             {event.status === 'ended' && t('event.ended')}
                           </span>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
 
                     {/* 2. 텍스트 컨텐츠 영역 */}
