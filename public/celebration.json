@@ -627,6 +627,25 @@
     "memo": ""
   },
   {
+    "id": "2026-riko-subway",
+    "vtuber_id": "stelive-cliche-riko",
+    "status": "ongoing",
+    "title": "2026년 유즈하 리코 생일 광고",
+    "thumbnail": "https://virboard.me/images/ads/HFjIeyEbsAAV3lF.webp",
+    "funding_start_at": "2026-01-25 0:00",
+    "funding_end_at": "2026-02-22 23:59",
+    "funding_over_at": "",
+    "event_start_at": "2026-04-10 0:00",
+    "event_end_at": "2026-05-12 23:59",
+    "color": "bg-[#a6d0a6]",
+    "type": "지하철 광고",
+    "location": "서울 서울역|서울 홍대입구역|서울 고속터미널역|서울 건대입구역|부산 서면역",
+    "latitude": "37.556228|37.55679|37.504891|37.540786|35.158282",
+    "longitude": "126.972135|126.923708|127.004916|127.071011|129.059556",
+    "link": "https://x.com/2026rikobirth",
+    "memo": "서울역: 지하 1층 4호선 환승통로 B16.\\n홍대입구역: 영상광고(역사 밖)\\n고속터미널역: 지하 1층 4번 출구 B1.\\n건대입구역: 지상 2층 7호선 환승통로 B2.\\n서면역: 12번 출구 A8"
+  },
+  {
     "id": "hololive-zero-sora",
     "title": "🎂 토키노 소라 2026년 생일",
     "event_start_at": "2026-05-15 0:00",
