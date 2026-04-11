@@ -7,8 +7,9 @@ export interface EventLocation {
 
 // 팬 광고 이벤트 인터페이스
 export interface VtuberEvent {
-  thumbnail: string;
+  id: string;
   vtuber_id: string;
+  thumbnail: string;
   status?: string;
   title: string;
   start: Date;

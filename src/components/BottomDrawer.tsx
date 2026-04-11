@@ -11,7 +11,7 @@ export interface DrawerDataType {
 interface BottomDrawerProps {
   drawerData: DrawerDataType | null;
   onClose: () => void;
-  onEventClick: (event: VtuberEvent) => void;
+  onEventClick: (eventId: string) => void;
 }
 
 function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) {
@@ -64,10 +64,10 @@ function BottomDrawer({ drawerData, onClose, onEventClick }: BottomDrawerProps) 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {/* ✨ Drawer는 필터링을 하지 않고, 부모가 준 events를 정렬해서 보여주기만 함 */}
               {drawerData?.events
-                .map((event, idx) => (
+                .map((event) => (
                   <div
-                    key={idx}
-                    onClick={() => onEventClick(event)}
+                    key={event.id}
+                    onClick={() => onEventClick(event.id)}
                     className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm cursor-pointer hover:shadow-lg transition active:scale-[0.98] overflow-hidden group border border-gray-100 dark:border-gray-700 flex flex-col"
                   >
                     {/* ✨ 1. 부모 박스에 shrink-0(flex 쪼그라듦 방지)과 overflow-hidden(삐져나옴 방지) 추가 */}

@@ -1,17 +1,32 @@
 import { format } from 'date-fns'
 import { useTranslation } from 'react-i18next'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import type { VtuberEvent, VtuberProfile } from '@/types/Event'
+import { Share } from 'lucide-react';
+import { useAtomValue } from 'jotai';
+import { eventsAtom, vtubersAtom } from '@/store/atoms';
 
 interface DetailPopupProps {
-  selectedEvent: VtuberEvent;
+  eventId: string; // ✨ 객체 대신 ID만 받습니다.
   closeModal: () => void;
-  vtuberInfo: VtuberProfile | null;
   specificLocation?: string;
 }
 
-function DetailPopup({ selectedEvent, closeModal, vtuberInfo, specificLocation }: DetailPopupProps) {
+function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps) {
   const { t } = useTranslation();
+
+  // ✨ 모달 내부에서 전역 상태를 직접 참조하여 데이터를 찾습니다.
+  const events = useAtomValue(eventsAtom);
+  const vtubers = useAtomValue(vtubersAtom);
+
+  const selectedEvent = events.find(e => {
+    // 🚨 타입 캐스팅을 통해 비교가 잘 되는지 확인 (숫자/문자열 차이 무시)
+    return String(e.id) === String(eventId);
+  });
+
+  const vtuberInfo = selectedEvent ? vtubers.find(v => v.id === selectedEvent.id) : null;
+
+  // 이벤트가 없으면 렌더링하지 않거나 에러 처리
+  if (!selectedEvent) return null;
 
   // ✨ 로고 이미지 경로 매핑 함수 (이미지 유효성 검사 포함)
   const getPlatformLogoInfo = (platform: string) => {
@@ -36,6 +51,39 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo, specificLocation }
   const displayLocation = specificLocation
     ? specificLocation // 지도에서 특정 마커를 눌러서 열었을 때
     : selectedEvent.location?.split('|').join(', ');
+
+  // ✨ 다이렉트 랜딩용 공유 URL 생성
+  const shareUrl = `${window.location.origin}/?eventId=${eventId}`;
+
+  // 𝕏 (트위터) 전용 공유 함수
+  const handleShareToX = () => {
+    const text = `🎉 [${selectedEvent.title}] 일정 확인하기!\n\n오프라인 광고 지도는 Virboard에서 🗺️✨\n`;
+    const twitterIntent = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`;
+
+    window.open(twitterIntent, '_blank', 'width=600,height=400');
+  };
+
+  // 모바일 기본 공유 & PC 클립보드 복사 함수
+  const handleShareLink = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Virboard - 광고 일정',
+          text: `🎉 [${selectedEvent.title}] 일정 확인하기!`,
+          url: shareUrl,
+        });
+      } catch (err) {
+        console.log('공유가 취소되었거나 지원하지 않습니다.', err);
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        alert('광고 다이렉트 링크가 클립보드에 복사되었습니다! ✨');
+      } catch (err) {
+        alert('링크 복사에 실패했습니다.');
+      }
+    }
+  };
 
   return (
     <div
@@ -165,13 +213,25 @@ function DetailPopup({ selectedEvent, closeModal, vtuberInfo, specificLocation }
           )}
         </div>
 
-        {/* 하단 확인 버튼 */}
-        <div className="mt-6">
+        {/* 하단 확인 및 공유 버튼 */}
+        <div className="flex gap-2 mt-6">
           <button
             onClick={closeModal}
             className="w-full py-3 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-xl hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors"
           >
             {t('common.confirm')}
+          </button>
+          {/* <button
+            onClick={handleShareToX}
+            className="flex-1 py-3 bg-black text-white text-sm font-semibold rounded-xl hover:bg-gray-800 transition-colors flex items-center justify-center gap-1.5"
+          >
+            <span className="text-lg">𝕏</span>
+          </button> */}
+          <button
+            onClick={handleShareLink}
+            className="w-12 shrink-0 py-3 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors flex items-center justify-center gap-1.5"
+          >
+            <Share className="w-[18px] h-[18px]" />
           </button>
         </div>
       </div>

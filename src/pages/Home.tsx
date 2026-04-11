@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
 import { useTranslation } from 'react-i18next'
 import { format, parse, startOfWeek, getDay } from 'date-fns'
@@ -9,7 +10,7 @@ import { CustomToolbar, CustomEvent } from '@/components/CustomToolbar'
 import DetailPopup from '@/components/DetailPopup'
 import BottomDrawer from '@/components/BottomDrawer'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import type { VtuberEvent, VtuberProfile } from '@/types/Event'
+import type { VtuberEvent } from '@/types/Event'
 import { useAtomValue } from 'jotai';
 import { selectedAgencyAtom, eventsAtom, vtubersAtom, favoritesAtom } from '@/store/atoms';
 
@@ -26,6 +27,7 @@ const localizer = dateFnsLocalizer({
 function Home() {
   const { i18n } = useTranslation();
   const currentLang = i18n.language.split('-')[0];
+  const [searchParams, setSearchParams] = useSearchParams();
 
   // 전역 상태 (Jotai)
   const selectedAgency = useAtomValue(selectedAgencyAtom);
@@ -34,23 +36,10 @@ function Home() {
 
   // 로컬 상태
   const [date, setDate] = useState<Date>(new Date());
-  const [selectedEvent, setSelectedEvent] = useState<VtuberEvent | null>(null);
+  const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
   const [drawerData, setDrawerData] = useState<{ date: Date, events: VtuberEvent[] } | null>(null);
 
   const favorites = useAtomValue(favoritesAtom);
-
-  // 1. 마스터 데이터 사전 만들기
-  interface VTuberMap {
-    [id: string]: VtuberProfile;
-  }
-
-  const vtuberMap: VTuberMap = useMemo(() => {
-    const map: VTuberMap = {};
-    vtubers.forEach((v: VtuberProfile) => {
-      map[v.id] = v;
-    });
-    return map;
-  }, [vtubers]);
 
   // 2. 이벤트 필터링 (사용하지 않는 기수/유닛 필터 로직 삭제)
   const filteredEvents = useMemo(() => {
@@ -72,12 +61,32 @@ function Home() {
     return events.filter(event => agencyVtuberIds.includes(event.vtuber_id));
   }, [events, vtubers, selectedAgency, favorites]);
 
-  const closeDetailModal = () => setSelectedEvent(null);
+  useEffect(() => {
+    // 주소창에서 'eventId' 파라미터 값을 가져옵니다.
+    const eventIdFromUrl = searchParams.get('eventId');
 
-  const selectedVtuberInfo = useMemo(() => {
-    if (!selectedEvent) return null;
-    return vtuberMap[selectedEvent.vtuber_id];
-  }, [selectedEvent, vtuberMap]);
+    // URL에 ID가 있고, 아직 팝업이 열리지 않았으며, 이벤트 데이터가 로드된 상태일 때
+    if (eventIdFromUrl && !selectedEventId && events.length > 0) {
+      // 해당 ID를 가진 이벤트가 실제로 존재하는지 확인합니다.
+      const exists = events.some(e => String(e.id) === String(eventIdFromUrl));
+
+      if (exists) {
+        setSelectedEventId(eventIdFromUrl);
+      }
+    }
+  }, [searchParams, events, selectedEventId]);
+
+  // 2. 팝업을 닫을 때 주소창의 쿼리 스트링도 함께 제거 (UX 관리)
+  const closeDetailModal = () => {
+    setSelectedEventId(null);
+
+    if (searchParams.has('eventId')) {
+      // 주소창에서 eventId 파라미터만 쏙 빼고 나머지 주소는 유지합니다.
+      const newParams = new URLSearchParams(searchParams);
+      newParams.delete('eventId');
+      setSearchParams(newParams, { replace: true }); // 뒤로가기 기록이 남지 않도록 replace 사용
+    }
+  };
 
   return (
     <main className="bg-gray-50 dark:bg-gray-950 h-[100dvh] flex flex-col">
@@ -88,7 +97,7 @@ function Home() {
             events={filteredEvents}
             date={date}
             onNavigate={(newDate) => setDate(newDate)}
-            onSelectEvent={(event) => setSelectedEvent(event)}
+            onSelectEvent={(event) => setSelectedEventId(event.id)}
             culture={currentLang}
             views={["month"]}
             popup={true}
@@ -175,12 +184,13 @@ function Home() {
 
                       {/* 생일 이벤트 버튼 렌더링 */}
                       <div className="flex flex-col gap-1 mt-1 w-full">
-                        {birthdays.map((event, i) => (
+                        {birthdays.map((event) => (
                           <button
-                            onClick={() => {
-                              setSelectedEvent(event);
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setSelectedEventId(event.id);
                             }}
-                            key={`bday-${event.vtuber_id}-${i}`}
+                            key={event.id}
                             className={`${event.color} text-white text-[10px] sm:text-xs font-semibold px-1.5 py-1 ml-1 rounded-md truncate shadow-sm ${!isCurrentMonth ? 'opacity-40' : ''}`}
                           >
                             {event.title}
@@ -199,18 +209,17 @@ function Home() {
         </div>
 
         {/* 모달 및 서랍 */}
-        {selectedEvent && (
+        {selectedEventId && (
           <DetailPopup
-            selectedEvent={selectedEvent}
+            eventId={selectedEventId}
             closeModal={closeDetailModal}
-            vtuberInfo={selectedVtuberInfo}
           />
         )}
 
         <BottomDrawer
           drawerData={drawerData}
           onClose={() => setDrawerData(null)}
-          onEventClick={(event) => setSelectedEvent(event)}
+          onEventClick={(id) => setSelectedEventId(id)}
         />
       </section>
     </main>

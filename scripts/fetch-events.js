@@ -105,7 +105,7 @@ async function fetchAndConvert() {
 
         finalEvents.push({
           // event_id: `bday-${vtuber.id}-${year}`,
-          vtuber_id: vtuber.id,
+          id: vtuber.id,
           // status: '진행중',
           title: eventTitle,
           event_start_at: `${targetDate} 0:00`,
@@ -114,6 +114,7 @@ async function fetchAndConvert() {
           type: '생일',
           location: '',
           link: vtuber.link || ' ',
+          status: 'ongoing'
         });
       });
     });
