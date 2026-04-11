@@ -152,7 +152,7 @@
     "memo": "광고가 역사 안에 있음."
   },
   {
-    "id": "2026-kanata-subway",
+    "id": "2026-kanata-subway-seoul",
     "vtuber_id": "hololive-force-kanata",
     "status": "ongoing",
     "title": "아마네 카나타 2026년 생일 지하철 광고(서울)",
@@ -171,7 +171,7 @@
     "memo": ""
   },
   {
-    "id": "2026-kanata-subway",
+    "id": "2026-kanata-subway-busan",
     "vtuber_id": "hololive-force-kanata",
     "status": "ongoing",
     "title": "아마네 카나타 2026년 생일 지하철 광고(부산)",
@@ -653,8 +653,7 @@
     "color": "bg-[#324ab2]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-zero-roboco",
@@ -664,8 +663,7 @@
     "color": "bg-[#e8b2bf]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-zero-suisei",
@@ -675,8 +673,7 @@
     "color": "bg-[#91b7ea]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-zero-miko",
@@ -686,8 +683,7 @@
     "color": "bg-[#ff85c2]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-zero-azki",
@@ -697,8 +693,7 @@
     "color": "bg-[#f689cd]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-first-akirose",
@@ -708,8 +703,7 @@
     "color": "bg-[#5161c1]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-first-fubuki",
@@ -719,8 +713,7 @@
     "color": "bg-white !text-black",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-first-maturi",
@@ -730,8 +723,7 @@
     "color": "bg-[#febd59]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-first-haato",
@@ -741,8 +733,7 @@
     "color": "bg-[#990000]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-second-aqua",
@@ -752,8 +743,7 @@
     "color": "bg-[#ed83b1]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-second-shion",
@@ -763,8 +753,7 @@
     "color": "bg-[#8041d9]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-second-ayame",
@@ -774,8 +763,7 @@
     "color": "bg-[#bb0000]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-second-choco",
@@ -785,8 +773,7 @@
     "color": "bg-[#f1c1d1]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-second-subaru",
@@ -796,8 +783,7 @@
     "color": "bg-[#e2f558]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-gamers-mio",
@@ -807,8 +793,7 @@
     "color": "bg-[#00012e]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-gamers-okayu",
@@ -818,8 +803,7 @@
     "color": "bg-[#ae9bc8]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-gamers-korone",
@@ -829,8 +813,7 @@
     "color": "bg-[#aa544d]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-fantasy-pekora",
@@ -840,8 +823,7 @@
     "color": "bg-[#039be5]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-fantasy-flare",
@@ -851,8 +833,7 @@
     "color": "bg-[#0e4c6e]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-fantasy-noel",
@@ -862,8 +843,7 @@
     "color": "bg-[#f5f5f5] !text-black",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-fantasy-marine",
@@ -873,8 +853,7 @@
     "color": "bg-[#bb0000]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-force-kanata",
@@ -884,8 +863,7 @@
     "color": "bg-[#87cefa]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-force-coco",
@@ -895,8 +873,7 @@
     "color": "bg-[#fd915d]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-force-watame",
@@ -906,8 +883,7 @@
     "color": "bg-[#fef09d]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-force-towa",
@@ -917,8 +893,7 @@
     "color": "bg-[#d63ea7]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-force-luna",
@@ -928,8 +903,7 @@
     "color": "bg-[#fbb0d9]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-five-lamy",
@@ -939,8 +913,7 @@
     "color": "bg-[#6bcdf8]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-five-nene",
@@ -950,8 +923,7 @@
     "color": "bg-[#ffb65d]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-five-botan",
@@ -961,8 +933,7 @@
     "color": "bg-[#e4dedc]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-five-polka",
@@ -972,8 +943,7 @@
     "color": "bg-[#f8e9cb]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holox-dark",
@@ -983,8 +953,7 @@
     "color": "bg-[#936cc6]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holox-lui",
@@ -994,8 +963,7 @@
     "color": "bg-[#7f104c]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holox-koyori",
@@ -1005,8 +973,7 @@
     "color": "bg-[#ffacd3]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holox-chloe",
@@ -1016,8 +983,7 @@
     "color": "bg-[#f4f4f0] !text-black",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holox-iroha",
@@ -1027,8 +993,7 @@
     "color": "bg-[#faefe4]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-area15-risu",
@@ -1038,8 +1003,7 @@
     "color": "bg-[#b7886f]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-area15-moona",
@@ -1049,8 +1013,7 @@
     "color": "bg-[#7c1bde]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-area15-iofi",
@@ -1060,8 +1023,7 @@
     "color": "bg-[#f6e9e6]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holoro-ollie",
@@ -1071,8 +1033,7 @@
     "color": "bg-[#d2042d]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holoro-anya",
@@ -1082,8 +1043,7 @@
     "color": "bg-[#a07e7e]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holoro-reine",
@@ -1093,8 +1053,7 @@
     "color": "bg-[#efe2e9]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holoh3ro-zeta",
@@ -1104,8 +1063,7 @@
     "color": "bg-[#4e65b1]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holoh3ro-kaela",
@@ -1115,8 +1073,7 @@
     "color": "bg-[#ec9948]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-holoh3ro-kobo",
@@ -1126,8 +1083,7 @@
     "color": "bg-[#00add0]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-myth-calli",
@@ -1137,8 +1093,7 @@
     "color": "bg-[#f090a6]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-myth-kiara",
@@ -1148,8 +1103,7 @@
     "color": "bg-[#ff7f00]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-myth-ame",
@@ -1159,8 +1113,7 @@
     "color": "bg-[#f9db92]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-myth-ina",
@@ -1170,8 +1123,7 @@
     "color": "bg-[#695882]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-myth-gura",
@@ -1181,8 +1133,7 @@
     "color": "bg-[#0097ff]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-promise-irys",
@@ -1192,8 +1143,7 @@
     "color": "bg-[#8f00ff]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-promise-baelz",
@@ -1203,8 +1153,7 @@
     "color": "bg-[#e5443c]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-promise-kronii",
@@ -1214,8 +1163,7 @@
     "color": "bg-[#515671]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-promise-fauna",
@@ -1225,8 +1173,7 @@
     "color": "bg-[#84b48a]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-promise-mumei",
@@ -1236,8 +1183,7 @@
     "color": "bg-[#bfad9d]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-council-sana",
@@ -1247,8 +1193,7 @@
     "color": "bg-[#cf946b]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-advent-shiori",
@@ -1258,8 +1203,7 @@
     "color": "bg-[#624e74]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-advent-bijou",
@@ -1269,8 +1213,7 @@
     "color": "bg-[#9e74e0]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-advent-nerisa",
@@ -1280,8 +1223,7 @@
     "color": "bg-[#423e3f]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-advent-fuwawa",
@@ -1291,8 +1233,7 @@
     "color": "bg-[#f19bc0]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-advent-mococo",
@@ -1302,8 +1243,7 @@
     "color": "bg-[#c9ddff]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-justice-liz",
@@ -1313,8 +1253,7 @@
     "color": "bg-[#efafa9]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-justice-gigi",
@@ -1324,8 +1263,7 @@
     "color": "bg-[#fff2ea] !text-black",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-justice-cece",
@@ -1335,8 +1273,7 @@
     "color": "bg-[#9bfda8]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-justice-raora",
@@ -1346,8 +1283,7 @@
     "color": "bg-[#ffdaf1]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-regloss-ao",
@@ -1357,8 +1293,7 @@
     "color": "bg-[#1d3466]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-regloss-kanade",
@@ -1368,8 +1303,7 @@
     "color": "bg-[#fee7b5]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-regloss-ririka",
@@ -1379,8 +1313,7 @@
     "color": "bg-[#f47daa]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-regloss-raden",
@@ -1390,8 +1323,7 @@
     "color": "bg-[#3b7c72]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-regloss-hajime",
@@ -1401,8 +1333,7 @@
     "color": "bg-[#b6b5ff]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-flowglow-riona",
@@ -1412,8 +1343,7 @@
     "color": "bg-[#fe3480]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-flowglow-niko",
@@ -1423,8 +1353,7 @@
     "color": "bg-[#f58017]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-flowglow-su",
@@ -1434,8 +1363,7 @@
     "color": "bg-[#71e5ff]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-flowglow-chiha",
@@ -1445,8 +1373,7 @@
     "color": "bg-[#37baba]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "hololive-flowglow-vivi",
@@ -1456,8 +1383,7 @@
     "color": "bg-[#ff90cc]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-mystic-kanna",
@@ -1467,8 +1393,7 @@
     "color": "bg-[#373584]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-everys-yuni",
@@ -1478,8 +1403,7 @@
     "color": "bg-[#857fd8]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-everys-huya",
@@ -1489,8 +1413,7 @@
     "color": "bg-[#8166a1]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-universe-lize",
@@ -1500,8 +1423,7 @@
     "color": "bg-[#971b2f]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-universe-hina",
@@ -1511,8 +1433,7 @@
     "color": "bg-[#f2dcbf]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-universe-mashiro",
@@ -1522,8 +1443,7 @@
     "color": "bg-[#25282a]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-universe-tabi",
@@ -1533,8 +1453,7 @@
     "color": "bg-[#9adaff]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-cliche-rin",
@@ -1544,8 +1463,7 @@
     "color": "bg-[#2b66c0]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-cliche-shibuki",
@@ -1555,8 +1473,7 @@
     "color": "bg-[#f1e4ff] !text-black",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-cliche-riko",
@@ -1566,8 +1483,7 @@
     "color": "bg-[#a6d0a6]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "stelive-cliche-nana",
@@ -1577,8 +1493,7 @@
     "color": "bg-[#df7685]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "liveruli-rosetta",
@@ -1588,8 +1503,7 @@
     "color": "bg-[#e06a8e]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "liveruli-renoa",
@@ -1599,8 +1513,7 @@
     "color": "bg-[#e18ddc]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "liveruli-aren",
@@ -1610,8 +1523,7 @@
     "color": "bg-[#3d8d7f]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "liveruli-amigyu",
@@ -1621,8 +1533,7 @@
     "color": "bg-[#87a1bc]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "indie-sayu",
@@ -1632,8 +1543,7 @@
     "color": "bg-gradient-to-br from-[#804d34] to-[#12c8cb]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "indie-soya",
@@ -1643,8 +1553,7 @@
     "color": "bg-gradient-to-br from-[#cd6cb2] to-[#88d9e4]",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "indie-baejjal",
@@ -1654,8 +1563,7 @@
     "color": "bg-gradient-to-br from-black to-white",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "indie-lepi",
@@ -1665,8 +1573,7 @@
     "color": "bg-olive-300",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   },
   {
     "id": "indie-tsubasa",
@@ -1676,7 +1583,6 @@
     "color": "bg-olive-300",
     "type": "생일",
     "location": "",
-    "link": " ",
-    "status": "ongoing"
+    "link": " "
   }
 ]
