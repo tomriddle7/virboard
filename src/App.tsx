@@ -12,7 +12,7 @@ import Labs from '@/pages/Labs';
 import LabGuard from '@/components/LabGuard';
 import Naming from '@/pages/naming/Index';
 import Appraisal from './pages/naming/Appraisal';
-import CalendarHeader from '@/components/CalendarHeader';
+import CalendarHeader from '@/components/Header';
 import Footer from '@/components/Footer';
 import SubmitPopup from '@/components/SubmitPopup';
 
