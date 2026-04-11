@@ -81,14 +81,8 @@ export default function EventMap() {
   // ✨ 서랍(Drawer)에 넘겨줄 데이터를 관리할 상태 추가
   const [drawerData, setDrawerData] = useState<DrawerDataType | null>(null);
 
-  // ✨ 서랍 안에서 개별 이벤트를 클릭했을 때 보여줄 상세 팝업용 상태 추가
-  const [selectedEventInfo, setSelectedEventInfo] = useState<{ event: VtuberEvent, specificLocation: string } | null>(null);
-
-  // 선택된 이벤트의 버튜버 정보를 찾는 로직 (Home.tsx와 동일)
-  const selectedVtuberInfo = useMemo(() => {
-    if (!selectedEventInfo) return null;
-    return vtubers.find(v => v.id === selectedEventInfo.event.vtuber_id) || null;
-  }, [selectedEventInfo, vtubers]);
+  const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
+  const [currentSpecificLocation, setCurrentSpecificLocation] = useState<string | null>(null);
 
   const filteredEvents = useMemo(() => {
     // 1. 기본 필터링 (기간이 지나지 않은 이벤트만 먼저 거름)
@@ -200,22 +194,23 @@ export default function EventMap() {
         <BottomDrawer
           drawerData={drawerData}
           onClose={() => setDrawerData(null)}
-          onEventClick={(event) => {
+          onEventClick={(id) => {
             // 서랍 안의 행사 카드를 누르면 상세 팝업을 띄웁니다!
-            setSelectedEventInfo({
-              event,
-              specificLocation: drawerData!.location || '상세 주소 없음'
-            });
+            setSelectedEventId(id);
+            setCurrentSpecificLocation(drawerData?.location || '상세 주소 없음');
           }}
         />
 
         {/* ✨ 상세 팝업 렌더링 (Home.tsx와 동일한 방식) */}
-        {selectedEventInfo && (
+        {selectedEventId && (
           <DetailPopup
-            selectedEvent={selectedEventInfo.event}
-            specificLocation={selectedEventInfo.specificLocation} // ✨ 새로 만든 prop 전달
-            closeModal={() => setSelectedEventInfo(null)}
-            vtuberInfo={selectedVtuberInfo}
+            eventId={selectedEventId} // ✨ 객체 대신 ID만 심플하게 전달!
+            specificLocation={currentSpecificLocation || undefined} // null일 경우 undefined로 처리
+            closeModal={() => {
+              // ✅ 모달을 닫을 때 두 상태를 모두 초기화
+              setSelectedEventId(null);
+              setCurrentSpecificLocation(null);
+            }}
           />
         )}
       </section>
