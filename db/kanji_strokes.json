@@ -83,7 +83,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 9
     },
-    "假": {
+    "仮": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 11,
@@ -179,7 +179,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "價": {
+    "価": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 15,
@@ -311,7 +311,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "覺": {
+    "覚": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 20,
@@ -780,12 +780,6 @@
         "dictionary_stroke_count": 16
     },
     "鑑": {
-        "pronunciation_five_elements": "木",
-        "resource_five_elements": "金",
-        "original_stroke_count": 22,
-        "dictionary_stroke_count": 22
-    },
-    "鑒": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "金",
         "original_stroke_count": 22,
@@ -1517,13 +1511,13 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "據": {
+    "拠": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 17,
         "dictionary_stroke_count": 16
     },
-    "擧": {
+    "挙": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 18,
@@ -1811,7 +1805,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "劍": {
+    "剣": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "金",
         "original_stroke_count": 15,
@@ -1829,7 +1823,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "檢": {
+    "検": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 17,
@@ -1889,7 +1883,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "揭": {
+    "掲": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 13,
@@ -2117,7 +2111,7 @@
         "original_stroke_count": 9,
         "dictionary_stroke_count": 8
     },
-    "缺": {
+    "欠": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "土",
         "original_stroke_count": 10,
@@ -2345,7 +2339,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "徑": {
+    "径": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 10,
@@ -2429,7 +2423,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "經": {
+    "経": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 13,
@@ -2447,7 +2441,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "莖": {
+    "茎": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 13,
@@ -2729,7 +2723,7 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "屆": {
+    "届": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 8,
@@ -2849,13 +2843,13 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "繼": {
+    "継": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
     },
-    "鷄": {
+    "鶏": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 21,
@@ -3998,20 +3992,14 @@
     "寛": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
-        "original_stroke_count": 14,
-        "dictionary_stroke_count": 14
+        "original_stroke_count": 13,
+        "dictionary_stroke_count": 13
     },
     "慣": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 15,
         "dictionary_stroke_count": 14
-    },
-    "寬": {
-        "pronunciation_five_elements": "木",
-        "resource_five_elements": "木",
-        "original_stroke_count": 15,
-        "dictionary_stroke_count": 15
     },
     "輨": {
         "pronunciation_five_elements": "木",
@@ -4037,7 +4025,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "關": {
+    "関": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 19,
@@ -4067,7 +4055,7 @@
         "original_stroke_count": 24,
         "dictionary_stroke_count": 24
     },
-    "觀": {
+    "観": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 25,
@@ -4277,12 +4265,6 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 10
     },
-    "廣": {
-        "pronunciation_five_elements": "木",
-        "resource_five_elements": "木",
-        "original_stroke_count": 15,
-        "dictionary_stroke_count": 15
-    },
     "壙": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "土",
@@ -4295,7 +4277,7 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "鑛": {
+    "鉱": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "金",
         "original_stroke_count": 23,
@@ -4451,7 +4433,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "壞": {
+    "壊": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "土",
         "original_stroke_count": 19,
@@ -4588,12 +4570,6 @@
         "resource_five_elements": "水",
         "original_stroke_count": 10,
         "dictionary_stroke_count": 9
-    },
-    "敎": {
-        "pronunciation_five_elements": "木",
-        "resource_five_elements": "金",
-        "original_stroke_count": 11,
-        "dictionary_stroke_count": 11
     },
     "教": {
         "pronunciation_five_elements": "木",
@@ -4973,7 +4949,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "區": {
+    "区": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "土",
         "original_stroke_count": 11,
@@ -5087,13 +5063,13 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "歐": {
+    "欧": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "毆": {
+    "殴": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "金",
         "original_stroke_count": 15,
@@ -5117,7 +5093,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "舊": {
+    "旧": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "土",
         "original_stroke_count": 18,
@@ -5141,7 +5117,7 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "驅": {
+    "駆": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "火",
         "original_stroke_count": 21,
@@ -5441,12 +5417,6 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "國": {
-        "pronunciation_five_elements": "木",
-        "resource_five_elements": "水",
-        "original_stroke_count": 11,
-        "dictionary_stroke_count": 11
-    },
     "菊": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
@@ -5645,7 +5615,7 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "卷": {
+    "巻": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "木",
         "original_stroke_count": 8,
@@ -5693,17 +5663,11 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "勸": {
+    "勧": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "土",
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
-    },
-    "權": {
-        "pronunciation_five_elements": "木",
-        "resource_five_elements": "木",
-        "original_stroke_count": 22,
-        "dictionary_stroke_count": 22
     },
     "勌": {
         "pronunciation_five_elements": "木",
@@ -5909,13 +5873,13 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "龜": {
+    "亀": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "水",
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "歸": {
+    "帰": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "土",
         "original_stroke_count": 18,
@@ -6761,7 +6725,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "氣": {
+    "気": {
         "pronunciation_five_elements": "木",
         "resource_five_elements": "水",
         "original_stroke_count": 10,
@@ -7613,7 +7577,7 @@
         "original_stroke_count": 7,
         "dictionary_stroke_count": 7
     },
-    "亂": {
+    "乱": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "木",
         "original_stroke_count": 13,
@@ -7835,7 +7799,7 @@
         "original_stroke_count": 20,
         "dictionary_stroke_count": 19
     },
-    "覽": {
+    "覧": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "火",
         "original_stroke_count": 21,
@@ -7895,7 +7859,7 @@
         "original_stroke_count": 21,
         "dictionary_stroke_count": 19
     },
-    "蠟": {
+    "蝋": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 21,
@@ -7913,7 +7877,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "囊": {
+    "嚢": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 22,
@@ -8086,12 +8050,6 @@
         "resource_five_elements": "木",
         "original_stroke_count": 7,
         "dictionary_stroke_count": 7
-    },
-    "來": {
-        "pronunciation_five_elements": "火",
-        "resource_five_elements": "火",
-        "original_stroke_count": 8,
-        "dictionary_stroke_count": 8
     },
     "崍": {
         "pronunciation_five_elements": "火",
@@ -8315,7 +8273,7 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "勞": {
+    "労": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "土",
         "original_stroke_count": 12,
@@ -8417,7 +8375,7 @@
         "original_stroke_count": 20,
         "dictionary_stroke_count": 19
     },
-    "爐": {
+    "炉": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "火",
         "original_stroke_count": 20,
@@ -8555,7 +8513,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "綠": {
+    "緑": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "木",
         "original_stroke_count": 14,
@@ -8567,7 +8525,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 12
     },
-    "錄": {
+    "録": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "金",
         "original_stroke_count": 16,
@@ -8669,7 +8627,7 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "瀧": {
+    "滝": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 20,
@@ -8813,13 +8771,13 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 8
     },
-    "惱": {
+    "悩": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "火",
         "original_stroke_count": 13,
         "dictionary_stroke_count": 12
     },
-    "腦": {
+    "脳": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 15,
@@ -8885,7 +8843,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "瀨": {
+    "瀬": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 20,
@@ -8957,7 +8915,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "淚": {
+    "涙": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 12,
@@ -8981,7 +8939,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "樓": {
+    "楼": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "木",
         "original_stroke_count": 15,
@@ -9029,7 +8987,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "壘": {
+    "塁": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "土",
         "original_stroke_count": 18,
@@ -9383,7 +9341,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 10
     },
-    "單": {
+    "単": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 12,
@@ -9419,7 +9377,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "團": {
+    "団": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 14,
@@ -9449,7 +9407,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "斷": {
+    "断": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "金",
         "original_stroke_count": 18,
@@ -9665,12 +9623,6 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 15
     },
-    "擔": {
-        "pronunciation_five_elements": "火",
-        "resource_five_elements": "木",
-        "original_stroke_count": 17,
-        "dictionary_stroke_count": 16
-    },
     "憺": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "火",
@@ -9694,12 +9646,6 @@
         "resource_five_elements": "金",
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
-    },
-    "膽": {
-        "pronunciation_five_elements": "火",
-        "resource_five_elements": "水",
-        "original_stroke_count": 19,
-        "dictionary_stroke_count": 17
     },
     "儋": {
         "pronunciation_five_elements": "火",
@@ -9821,7 +9767,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "當": {
+    "当": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "土",
         "original_stroke_count": 13,
@@ -9857,7 +9803,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "黨": {
+    "党": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 20,
@@ -10019,7 +9965,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "帶": {
+    "帯": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "木",
         "original_stroke_count": 11,
@@ -10031,13 +9977,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "臺": {
-        "pronunciation_five_elements": "火",
-        "resource_five_elements": "土",
-        "original_stroke_count": 14,
-        "dictionary_stroke_count": 14
-    },
-    "對": {
+    "対": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "土",
         "original_stroke_count": 14,
@@ -10108,12 +10048,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
-    },
-    "德": {
-        "pronunciation_five_elements": "火",
-        "resource_five_elements": "火",
-        "original_stroke_count": 15,
-        "dictionary_stroke_count": 15
     },
     "悳": {
         "pronunciation_five_elements": "火",
@@ -10187,7 +10121,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "盜": {
+    "盗": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "金",
         "original_stroke_count": 12,
@@ -10253,7 +10187,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "圖": {
+    "図": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 14,
@@ -10289,7 +10223,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "稻": {
+    "稲": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "木",
         "original_stroke_count": 15,
@@ -10523,7 +10457,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "獨": {
+    "独": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 17,
@@ -10547,7 +10481,7 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "讀": {
+    "読": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "金",
         "original_stroke_count": 22,
@@ -11057,7 +10991,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "燈": {
+    "灯": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "火",
         "original_stroke_count": 16,
@@ -11165,7 +11099,7 @@
         "original_stroke_count": 7,
         "dictionary_stroke_count": 7
     },
-    "兩": {
+    "両": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 8,
@@ -11279,7 +11213,7 @@
         "original_stroke_count": 7,
         "dictionary_stroke_count": 7
     },
-    "戾": {
+    "戻": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 8,
@@ -11315,7 +11249,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "勵": {
+    "励": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 17,
@@ -11453,13 +11387,13 @@
         "original_stroke_count": 23,
         "dictionary_stroke_count": 23
     },
-    "曆": {
+    "暦": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "歷": {
+    "歴": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 16,
@@ -11573,7 +11507,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 15
     },
-    "鍊": {
+    "錬": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 17,
@@ -11597,7 +11531,7 @@
         "original_stroke_count": 23,
         "dictionary_stroke_count": 23
     },
-    "戀": {
+    "恋": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 23,
@@ -11735,7 +11669,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "獵": {
+    "猟": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 19,
@@ -11879,13 +11813,13 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 16
     },
-    "齡": {
+    "齢": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
     },
-    "靈": {
+    "霊": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 24,
@@ -11963,23 +11897,11 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 16
     },
-    "禮": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "木",
-        "original_stroke_count": 18,
-        "dictionary_stroke_count": 18
-    },
     "醴": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
-    },
-    "隸": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "水",
-        "original_stroke_count": 17,
-        "dictionary_stroke_count": 17
     },
     "鱧": {
         "pronunciation_five_elements": "土",
@@ -12124,12 +12046,6 @@
         "resource_five_elements": "金",
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
-    },
-    "龍": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "土",
-        "original_stroke_count": 16,
-        "dictionary_stroke_count": 16
     },
     "龒": {
         "pronunciation_five_elements": "土",
@@ -13037,7 +12953,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "滿": {
+    "満": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
         "original_stroke_count": 15,
@@ -13048,12 +12964,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 15,
         "dictionary_stroke_count": 14
-    },
-    "萬": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "木",
-        "original_stroke_count": 15,
-        "dictionary_stroke_count": 13
     },
     "漫": {
         "pronunciation_five_elements": "水",
@@ -13103,13 +13013,13 @@
         "original_stroke_count": 22,
         "dictionary_stroke_count": 22
     },
-    "蠻": {
+    "蛮": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
         "original_stroke_count": 25,
         "dictionary_stroke_count": 25
     },
-    "灣": {
+    "湾": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
         "original_stroke_count": 26,
@@ -13319,7 +13229,7 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "每": {
+    "毎": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "土",
         "original_stroke_count": 7,
@@ -13385,7 +13295,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "賣": {
+    "売": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "金",
         "original_stroke_count": 15,
@@ -13457,7 +13367,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "麥": {
+    "麦": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "木",
         "original_stroke_count": 11,
@@ -13637,7 +13547,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "麵": {
+    "麺": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "木",
         "original_stroke_count": 20,
@@ -14081,7 +13991,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 9
     },
-    "沒": {
+    "没": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
         "original_stroke_count": 8,
@@ -14435,7 +14345,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "默": {
+    "黙": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
         "original_stroke_count": 16,
@@ -14597,12 +14507,6 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "弥": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "火",
-        "original_stroke_count": 8,
-        "dictionary_stroke_count": 8
-    },
     "侎": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "火",
@@ -14722,12 +14626,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
-    },
-    "彌": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "火",
-        "original_stroke_count": 17,
-        "dictionary_stroke_count": 17
     },
     "謎": {
         "pronunciation_five_elements": "水",
@@ -15407,7 +15305,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "拔": {
+    "抜": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "木",
         "original_stroke_count": 9,
@@ -15425,7 +15323,7 @@
         "original_stroke_count": 9,
         "dictionary_stroke_count": 9
     },
-    "發": {
+    "発": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "火",
         "original_stroke_count": 12,
@@ -15449,7 +15347,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "髮": {
+    "髪": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "火",
         "original_stroke_count": 15,
@@ -15773,7 +15671,7 @@
         "original_stroke_count": 9,
         "dictionary_stroke_count": 9
     },
-    "拜": {
+    "拝": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "木",
         "original_stroke_count": 9,
@@ -16012,12 +15910,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
-    },
-    "飜": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "火",
-        "original_stroke_count": 21,
-        "dictionary_stroke_count": 21
     },
     "藩": {
         "pronunciation_five_elements": "水",
@@ -16331,19 +16223,13 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "辯": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "金",
-        "original_stroke_count": 21,
-        "dictionary_stroke_count": 21
-    },
-    "邊": {
+    "辺": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "土",
         "original_stroke_count": 22,
         "dictionary_stroke_count": 18
     },
-    "變": {
+    "変": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "金",
         "original_stroke_count": 23,
@@ -16529,15 +16415,9 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "倂": {
+    "併": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "火",
-        "original_stroke_count": 10,
-        "dictionary_stroke_count": 10
-    },
-    "竝": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "金",
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
@@ -16553,7 +16433,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "甁": {
+    "瓶": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "土",
         "original_stroke_count": 13,
@@ -16565,7 +16445,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "餠": {
+    "餅": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
         "original_stroke_count": 17,
@@ -16610,12 +16490,6 @@
     "甫": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
-        "original_stroke_count": 7,
-        "dictionary_stroke_count": 7
-    },
-    "步": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "土",
         "original_stroke_count": 7,
         "dictionary_stroke_count": 7
     },
@@ -16708,12 +16582,6 @@
         "resource_five_elements": "水",
         "original_stroke_count": 16,
         "dictionary_stroke_count": 15
-    },
-    "寶": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "木",
-        "original_stroke_count": 20,
-        "dictionary_stroke_count": 20
     },
     "譜": {
         "pronunciation_five_elements": "水",
@@ -17735,7 +17603,7 @@
         "original_stroke_count": 5,
         "dictionary_stroke_count": 5
     },
-    "佛": {
+    "仏": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "火",
         "original_stroke_count": 7,
@@ -17747,7 +17615,7 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "拂": {
+    "払": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "木",
         "original_stroke_count": 9,
@@ -17962,12 +17830,6 @@
         "resource_five_elements": "水",
         "original_stroke_count": 10,
         "dictionary_stroke_count": 8
-    },
-    "祕": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "木",
-        "original_stroke_count": 10,
-        "dictionary_stroke_count": 10
     },
     "秘": {
         "pronunciation_five_elements": "水",
@@ -18455,12 +18317,6 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "濱": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "水",
-        "original_stroke_count": 18,
-        "dictionary_stroke_count": 17
-    },
     "殯": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
@@ -18656,8 +18512,8 @@
     "糸": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
-        "original_stroke_count": 10,
-        "dictionary_stroke_count": 10
+        "original_stroke_count": 6,
+        "dictionary_stroke_count": 6
     },
     "私": {
         "pronunciation_five_elements": "金",
@@ -18827,12 +18683,6 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "絲": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "木",
-        "original_stroke_count": 12,
-        "dictionary_stroke_count": 12
-    },
     "詐": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
@@ -18911,7 +18761,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "寫": {
+    "写": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 15,
@@ -18947,7 +18797,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "辭": {
+    "辞": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 19,
@@ -19367,7 +19217,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 12
     },
-    "插": {
+    "挿": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 13,
@@ -19379,7 +19229,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "澁": {
+    "渋": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 16,
@@ -19451,7 +19301,7 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "狀": {
+    "状": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 8,
@@ -19589,7 +19439,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "樣": {
+    "様": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 15,
@@ -19847,12 +19697,6 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "敍": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "金",
-        "original_stroke_count": 11,
-        "dictionary_stroke_count": 11
-    },
     "庶": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
@@ -19997,7 +19841,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 14
     },
-    "緖": {
+    "緒": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 15,
@@ -20207,7 +20051,7 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "釋": {
+    "釈": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 20,
@@ -20399,7 +20243,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "禪": {
+    "禅": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 17,
@@ -20591,7 +20435,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "說": {
+    "説": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 14,
@@ -20711,7 +20555,7 @@
         "original_stroke_count": 21,
         "dictionary_stroke_count": 21
     },
-    "纖": {
+    "繊": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 23,
@@ -20759,7 +20603,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "涉": {
+    "渉": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 11,
@@ -20771,7 +20615,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "攝": {
+    "摂": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 22,
@@ -20957,7 +20801,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "聲": {
+    "声": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 17,
@@ -21143,7 +20987,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "巢": {
+    "巣": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 11,
@@ -21269,7 +21113,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "燒": {
+    "焼": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 16,
@@ -21329,7 +21173,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "騷": {
+    "騒": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 20,
@@ -21491,13 +21335,13 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "續": {
+    "続": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 21,
         "dictionary_stroke_count": 21
     },
-    "屬": {
+    "属": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 21,
@@ -21671,7 +21515,7 @@
         "original_stroke_count": 4,
         "dictionary_stroke_count": 4
     },
-    "碎": {
+    "砕": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 13,
@@ -21737,7 +21581,7 @@
         "original_stroke_count": 5,
         "dictionary_stroke_count": 5
     },
-    "收": {
+    "収": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 6,
@@ -21929,13 +21773,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "壽": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "水",
-        "original_stroke_count": 14,
-        "dictionary_stroke_count": 14
-    },
-    "粹": {
+    "粋": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 14,
@@ -21947,7 +21785,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "搜": {
+    "捜": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 14,
@@ -21971,7 +21809,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "數": {
+    "数": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 15,
@@ -22049,12 +21887,6 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 12
     },
-    "穗": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "木",
-        "original_stroke_count": 17,
-        "dictionary_stroke_count": 17
-    },
     "雖": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
@@ -22091,13 +21923,13 @@
         "original_stroke_count": 5,
         "dictionary_stroke_count": 4
     },
-    "獸": {
+    "獣": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "隨": {
+    "随": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 21,
@@ -22133,7 +21965,7 @@
         "original_stroke_count": 22,
         "dictionary_stroke_count": 22
     },
-    "髓": {
+    "髄": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 23,
@@ -22265,7 +22097,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 11
     },
-    "肅": {
+    "粛": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 13,
@@ -22697,7 +22529,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 16
     },
-    "濕": {
+    "湿": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 18,
@@ -22757,7 +22589,7 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "乘": {
+    "乗": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 10,
@@ -22805,7 +22637,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 11
     },
-    "繩": {
+    "縄": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 19,
@@ -23363,7 +23195,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "愼": {
+    "慎": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 14,
@@ -23477,12 +23309,6 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "實": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "木",
-        "original_stroke_count": 14,
-        "dictionary_stroke_count": 14
-    },
     "蟋": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
@@ -23585,12 +23411,6 @@
         "original_stroke_count": 4,
         "dictionary_stroke_count": 4
     },
-    "雙": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "火",
-        "original_stroke_count": 18,
-        "dictionary_stroke_count": 18
-    },
     "氏": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
@@ -23620,18 +23440,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 7,
         "dictionary_stroke_count": 7
-    },
-    "兒": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "木",
-        "original_stroke_count": 8,
-        "dictionary_stroke_count": 8
-    },
-    "亞": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "火",
-        "original_stroke_count": 8,
-        "dictionary_stroke_count": 8
     },
     "妸": {
         "pronunciation_five_elements": "土",
@@ -23849,7 +23657,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "惡": {
+    "悪": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 12,
@@ -24287,7 +24095,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "壓": {
+    "圧": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 17,
@@ -24641,7 +24449,7 @@
         "original_stroke_count": 21,
         "dictionary_stroke_count": 21
     },
-    "櫻": {
+    "桜": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 21,
@@ -24773,7 +24581,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 14
     },
-    "藥": {
+    "薬": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 21,
@@ -24935,13 +24743,13 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 18
     },
-    "壤": {
+    "壌": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
     },
-    "孃": {
+    "嬢": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 20,
@@ -24959,19 +24767,19 @@
         "original_stroke_count": 22,
         "dictionary_stroke_count": 22
     },
-    "穰": {
+    "穣": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 22,
         "dictionary_stroke_count": 22
     },
-    "讓": {
+    "譲": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 24,
         "dictionary_stroke_count": 24
     },
-    "釀": {
+    "醸": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 24,
@@ -25307,12 +25115,6 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "嚴": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "水",
-        "original_stroke_count": 20,
-        "dictionary_stroke_count": 20
-    },
     "龑": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
@@ -25439,17 +25241,11 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "與": {
+    "与": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
-    },
-    "餘": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "水",
-        "original_stroke_count": 16,
-        "dictionary_stroke_count": 16
     },
     "輿": {
         "pronunciation_five_elements": "土",
@@ -25535,13 +25331,13 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "譯": {
+    "訳": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
     },
-    "驛": {
+    "駅": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 23,
@@ -25751,7 +25547,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 14
     },
-    "緣": {
+    "縁": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 15,
@@ -25889,7 +25685,7 @@
         "original_stroke_count": 23,
         "dictionary_stroke_count": 23
     },
-    "悅": {
+    "悦": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 11,
@@ -25967,15 +25763,9 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "鹽": {
+    "塩": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
-        "original_stroke_count": 24,
-        "dictionary_stroke_count": 24
-    },
-    "艷": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "土",
         "original_stroke_count": 24,
         "dictionary_stroke_count": 24
     },
@@ -26183,12 +25973,6 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 13
     },
-    "榮": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "木",
-        "original_stroke_count": 14,
-        "dictionary_stroke_count": 14
-    },
     "影": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
@@ -26237,7 +26021,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "營": {
+    "営": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 17,
@@ -26435,7 +26219,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "銳": {
+    "鋭": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 15,
@@ -26507,13 +26291,7 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "藝": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "木",
-        "original_stroke_count": 21,
-        "dictionary_stroke_count": 19
-    },
-    "譽": {
+    "誉": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 21,
@@ -26747,7 +26525,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "奧": {
+    "奥": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 13,
@@ -26993,7 +26771,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "溫": {
+    "温": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 14,
@@ -27029,7 +26807,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "穩": {
+    "穏": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 19,
@@ -27689,7 +27467,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "搖": {
+    "揺": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 14,
@@ -27737,7 +27515,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "謠": {
+    "謡": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 17,
@@ -27749,7 +27527,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "遙": {
+    "遥": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 17,
@@ -28817,12 +28595,6 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "圓": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "水",
-        "original_stroke_count": 13,
-        "dictionary_stroke_count": 13
-    },
     "援": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
@@ -29027,13 +28799,13 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "圍": {
+    "囲": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "爲": {
+    "為": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 12,
@@ -29063,7 +28835,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 13
     },
-    "僞": {
+    "偽": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 14,
@@ -29122,12 +28894,6 @@
         "resource_five_elements": "土",
         "original_stroke_count": 16,
         "dictionary_stroke_count": 13
-    },
-    "衞": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "火",
-        "original_stroke_count": 16,
-        "dictionary_stroke_count": 16
     },
     "魏": {
         "pronunciation_five_elements": "土",
@@ -30029,7 +29795,7 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "隱": {
+    "隠": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 22,
@@ -30119,7 +29885,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 11
     },
-    "飮": {
+    "飲": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 13,
@@ -30215,7 +29981,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "應": {
+    "応": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 17,
@@ -30311,7 +30077,7 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 17
     },
-    "醫": {
+    "医": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 18,
@@ -30533,7 +30299,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "貳": {
+    "弐": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 12,
@@ -30929,7 +30695,7 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "壹": {
+    "壱": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 12,
@@ -31079,7 +30845,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 8
     },
-    "剩": {
+    "剰": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
         "original_stroke_count": 12,
@@ -31541,7 +31307,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "殘": {
+    "残": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 12,
@@ -31553,7 +31319,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "棧": {
+    "桟": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 12,
@@ -31601,12 +31367,6 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "潛": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "水",
-        "original_stroke_count": 16,
-        "dictionary_stroke_count": 15
-    },
     "潜": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
@@ -31619,7 +31379,7 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "蠶": {
+    "蚕": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 24,
@@ -31631,7 +31391,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 10
     },
-    "雜": {
+    "雑": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 18,
@@ -31697,12 +31457,6 @@
         "original_stroke_count": 6,
         "dictionary_stroke_count": 6
     },
-    "壯": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "木",
-        "original_stroke_count": 7,
-        "dictionary_stroke_count": 7
-    },
     "杖": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
@@ -31726,12 +31480,6 @@
         "resource_five_elements": "土",
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
-    },
-    "將": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "土",
-        "original_stroke_count": 11,
-        "dictionary_stroke_count": 11
     },
     "張": {
         "pronunciation_five_elements": "金",
@@ -31769,19 +31517,19 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "莊": {
+    "荘": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 13,
         "dictionary_stroke_count": 11
     },
-    "裝": {
+    "装": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "奬": {
+    "奨": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 14,
@@ -31889,7 +31637,7 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 17
     },
-    "藏": {
+    "蔵": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 20,
@@ -31907,7 +31655,7 @@
         "original_stroke_count": 22,
         "dictionary_stroke_count": 22
     },
-    "臟": {
+    "臓": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 24,
@@ -32105,7 +31853,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "齋": {
+    "斎": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 17,
@@ -32159,7 +31907,7 @@
         "original_stroke_count": 23,
         "dictionary_stroke_count": 23
     },
-    "爭": {
+    "争": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 8,
@@ -32723,7 +32471,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "專": {
+    "専": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 11,
@@ -32771,7 +32519,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 12
     },
-    "傳": {
+    "伝": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 13,
@@ -32849,13 +32597,13 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "戰": {
+    "戦": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "錢": {
+    "銭": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 16,
@@ -32885,7 +32633,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "轉": {
+    "転": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 18,
@@ -33167,12 +32915,6 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "絕": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "木",
-        "original_stroke_count": 12,
-        "dictionary_stroke_count": 12
-    },
     "截": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
@@ -33191,7 +32933,7 @@
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
     },
-    "竊": {
+    "窃": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 22,
@@ -33256,12 +32998,6 @@
         "resource_five_elements": "水",
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
-    },
-    "點": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "水",
-        "original_stroke_count": 17,
-        "dictionary_stroke_count": 17
     },
     "佔": {
         "pronunciation_five_elements": "金",
@@ -33611,7 +33347,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "淨": {
+    "浄": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 12,
@@ -33953,7 +33689,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 12
     },
-    "齊": {
+    "斉": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 14,
@@ -33983,7 +33719,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "劑": {
+    "剤": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 16,
@@ -34012,12 +33748,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
-    },
-    "濟": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "水",
-        "original_stroke_count": 18,
-        "dictionary_stroke_count": 17
     },
     "際": {
         "pronunciation_five_elements": "金",
@@ -34211,7 +33941,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "條": {
+    "条": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 11,
@@ -34697,7 +34427,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "從": {
+    "従": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 11,
@@ -34781,7 +34511,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "縱": {
+    "縦": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 17,
@@ -35033,7 +34763,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 11
     },
-    "晝": {
+    "昼": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 11,
@@ -35195,7 +34925,7 @@
         "original_stroke_count": 21,
         "dictionary_stroke_count": 21
     },
-    "鑄": {
+    "鋳": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 22,
@@ -35603,12 +35333,6 @@
         "original_stroke_count": 7,
         "dictionary_stroke_count": 7
     },
-    "卽": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "水",
-        "original_stroke_count": 9,
-        "dictionary_stroke_count": 9
-    },
     "喞": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
@@ -35669,13 +35393,13 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 9
     },
-    "曾": {
+    "曽": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "增": {
+    "増": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 15,
@@ -35710,12 +35434,6 @@
         "resource_five_elements": "木",
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
-    },
-    "證": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "金",
-        "original_stroke_count": 19,
-        "dictionary_stroke_count": 19
     },
     "贈": {
         "pronunciation_five_elements": "金",
@@ -35993,7 +35711,7 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "遲": {
+    "遅": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 19,
@@ -36185,12 +35903,6 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "眞": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "木",
-        "original_stroke_count": 10,
-        "dictionary_stroke_count": 10
-    },
     "津": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
@@ -36294,12 +36006,6 @@
         "dictionary_stroke_count": 14
     },
     "賑": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "金",
-        "original_stroke_count": 14,
-        "dictionary_stroke_count": 14
-    },
-    "盡": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 14,
@@ -36413,7 +36119,7 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 16
     },
-    "鎭": {
+    "鎮": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 18,
@@ -36635,7 +36341,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "徵": {
+    "徴": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 15,
@@ -36935,12 +36641,6 @@
         "original_stroke_count": 18,
         "dictionary_stroke_count": 18
     },
-    "贊": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "金",
-        "original_stroke_count": 19,
-        "dictionary_stroke_count": 19
-    },
     "纂": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
@@ -37061,7 +36761,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "參": {
+    "参": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 11,
@@ -37091,7 +36791,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "慘": {
+    "惨": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 15,
@@ -37397,12 +37097,6 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 14
     },
-    "窗": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "水",
-        "original_stroke_count": 12,
-        "dictionary_stroke_count": 12
-    },
     "蹌": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
@@ -37613,7 +37307,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "處": {
+    "処": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 11,
@@ -37883,7 +37577,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "踐": {
+    "践": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 15,
@@ -38074,12 +37768,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
-    },
-    "鐵": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "金",
-        "original_stroke_count": 21,
-        "dictionary_stroke_count": 21
     },
     "剟": {
         "pronunciation_five_elements": "金",
@@ -38309,7 +37997,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "疊": {
+    "畳": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 22,
@@ -38393,13 +38081,13 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "聽": {
+    "聴": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
         "original_stroke_count": 22,
         "dictionary_stroke_count": 22
     },
-    "廳": {
+    "庁": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 25,
@@ -38465,7 +38153,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "滯": {
+    "滞": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 15,
@@ -38483,17 +38171,11 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "遞": {
+    "逓": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "土",
         "original_stroke_count": 17,
         "dictionary_stroke_count": 14
-    },
-    "體": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "金",
-        "original_stroke_count": 23,
-        "dictionary_stroke_count": 23
     },
     "彘": {
         "pronunciation_five_elements": "金",
@@ -38897,13 +38579,13 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
     },
-    "觸": {
+    "触": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
     },
-    "囑": {
+    "嘱": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "水",
         "original_stroke_count": 24,
@@ -39022,12 +38704,6 @@
         "resource_five_elements": "木",
         "original_stroke_count": 15,
         "dictionary_stroke_count": 14
-    },
-    "總": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "木",
-        "original_stroke_count": 17,
-        "dictionary_stroke_count": 17
     },
     "聰": {
         "pronunciation_five_elements": "金",
@@ -39203,7 +38879,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 12
     },
-    "樞": {
+    "枢": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 15,
@@ -39629,12 +39305,6 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "蟲": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "水",
-        "original_stroke_count": 18,
-        "dictionary_stroke_count": 18
-    },
     "忡": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
@@ -39743,7 +39413,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "醉": {
+    "酔": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 15,
@@ -39941,7 +39611,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "齒": {
+    "歯": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "金",
         "original_stroke_count": 15,
@@ -39976,12 +39646,6 @@
         "resource_five_elements": "木",
         "original_stroke_count": 17,
         "dictionary_stroke_count": 17
-    },
-    "癡": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "水",
-        "original_stroke_count": 19,
-        "dictionary_stroke_count": 19
     },
     "卮": {
         "pronunciation_five_elements": "金",
@@ -40103,12 +39767,6 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "敕": {
-        "pronunciation_five_elements": "金",
-        "resource_five_elements": "金",
-        "original_stroke_count": 11,
-        "dictionary_stroke_count": 11
-    },
     "親": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "火",
@@ -40187,7 +39845,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 12
     },
-    "寢": {
+    "寝": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 14,
@@ -40247,7 +39905,7 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "稱": {
+    "称": {
         "pronunciation_five_elements": "金",
         "resource_five_elements": "木",
         "original_stroke_count": 14,
@@ -40343,7 +40001,7 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "墮": {
+    "堕": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "土",
         "original_stroke_count": 15,
@@ -40604,8 +40262,8 @@
     "嘆": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
-        "original_stroke_count": 14,
-        "dictionary_stroke_count": 14
+        "original_stroke_count": 13,
+        "dictionary_stroke_count": 13
     },
     "綻": {
         "pronunciation_five_elements": "火",
@@ -40613,13 +40271,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 14
     },
-    "歎": {
-        "pronunciation_five_elements": "火",
-        "resource_five_elements": "火",
-        "original_stroke_count": 15,
-        "dictionary_stroke_count": 15
-    },
-    "彈": {
+    "弾": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "金",
         "original_stroke_count": 15,
@@ -40937,13 +40589,13 @@
         "original_stroke_count": 9,
         "dictionary_stroke_count": 9
     },
-    "擇": {
+    "択": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "木",
         "original_stroke_count": 17,
         "dictionary_stroke_count": 16
     },
-    "澤": {
+    "沢": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "水",
         "original_stroke_count": 17,
@@ -41129,7 +40781,7 @@
         "original_stroke_count": 14,
         "dictionary_stroke_count": 11
     },
-    "鬪": {
+    "闘": {
         "pronunciation_five_elements": "火",
         "resource_five_elements": "金",
         "original_stroke_count": 20,
@@ -41507,12 +41159,6 @@
         "original_stroke_count": 19,
         "dictionary_stroke_count": 19
     },
-    "霸": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "水",
-        "original_stroke_count": 21,
-        "dictionary_stroke_count": 21
-    },
     "孛": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
@@ -41813,7 +41459,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "廢": {
+    "廃": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "木",
         "original_stroke_count": 15,
@@ -42335,12 +41981,6 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "豐": {
-        "pronunciation_five_elements": "水",
-        "resource_five_elements": "木",
-        "original_stroke_count": 18,
-        "dictionary_stroke_count": 18
-    },
     "瘋": {
         "pronunciation_five_elements": "水",
         "resource_five_elements": "水",
@@ -42599,12 +42239,6 @@
         "original_stroke_count": 9,
         "dictionary_stroke_count": 9
     },
-    "欠": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "火",
-        "original_stroke_count": 4,
-        "dictionary_stroke_count": 4
-    },
     "抲": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
@@ -42754,12 +42388,6 @@
         "resource_five_elements": "水",
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
-    },
-    "學": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "水",
-        "original_stroke_count": 16,
-        "dictionary_stroke_count": 16
     },
     "謔": {
         "pronunciation_five_elements": "土",
@@ -43253,12 +42881,6 @@
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "恆": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "火",
-        "original_stroke_count": 10,
-        "dictionary_stroke_count": 9
-    },
     "項": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
@@ -43667,7 +43289,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "獻": {
+    "献": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 20,
@@ -43703,13 +43325,13 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "險": {
+    "険": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 21,
         "dictionary_stroke_count": 16
     },
-    "驗": {
+    "験": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 23,
@@ -43937,7 +43559,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "縣": {
+    "県": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 16,
@@ -43966,12 +43588,6 @@
         "resource_five_elements": "金",
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
-    },
-    "顯": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "火",
-        "original_stroke_count": 23,
-        "dictionary_stroke_count": 23
     },
     "灦": {
         "pronunciation_five_elements": "土",
@@ -44069,13 +43685,13 @@
         "original_stroke_count": 9,
         "dictionary_stroke_count": 9
     },
-    "峽": {
+    "峡": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
     },
-    "狹": {
+    "狭": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 11,
@@ -44087,7 +43703,7 @@
         "original_stroke_count": 11,
         "dictionary_stroke_count": 10
     },
-    "挾": {
+    "挟": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 11,
@@ -44117,7 +43733,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "頰": {
+    "頬": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 16,
@@ -44267,7 +43883,7 @@
         "original_stroke_count": 16,
         "dictionary_stroke_count": 16
     },
-    "螢": {
+    "蛍": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 16,
@@ -44338,12 +43954,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 10,
         "dictionary_stroke_count": 10
-    },
-    "惠": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "火",
-        "original_stroke_count": 12,
-        "dictionary_stroke_count": 12
     },
     "慧": {
         "pronunciation_five_elements": "土",
@@ -44602,12 +44212,6 @@
         "resource_five_elements": "木",
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
-    },
-    "號": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "木",
-        "original_stroke_count": 13,
-        "dictionary_stroke_count": 13
     },
     "湖": {
         "pronunciation_five_elements": "土",
@@ -45071,12 +44675,6 @@
         "original_stroke_count": 13,
         "dictionary_stroke_count": 13
     },
-    "畫": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "土",
-        "original_stroke_count": 12,
-        "dictionary_stroke_count": 12
-    },
     "話": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "金",
@@ -45161,7 +44759,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "擴": {
+    "拡": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 19,
@@ -45311,7 +44909,7 @@
         "original_stroke_count": 21,
         "dictionary_stroke_count": 21
     },
-    "歡": {
+    "歓": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 22,
@@ -45467,7 +45065,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 10
     },
-    "黃": {
+    "黄": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 12,
@@ -45695,12 +45293,6 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 12
     },
-    "會": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "火",
-        "original_stroke_count": 13,
-        "dictionary_stroke_count": 13
-    },
     "匯": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
@@ -45737,19 +45329,13 @@
         "original_stroke_count": 17,
         "dictionary_stroke_count": 16
     },
-    "繪": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "木",
-        "original_stroke_count": 19,
-        "dictionary_stroke_count": 19
-    },
     "膾": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 19,
         "dictionary_stroke_count": 17
     },
-    "懷": {
+    "懐": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 20,
@@ -45827,7 +45413,7 @@
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
     },
-    "橫": {
+    "横": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "木",
         "original_stroke_count": 16,
@@ -45874,12 +45460,6 @@
         "resource_five_elements": "金",
         "original_stroke_count": 8,
         "dictionary_stroke_count": 8
-    },
-    "效": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "金",
-        "original_stroke_count": 10,
-        "dictionary_stroke_count": 10
     },
     "哮": {
         "pronunciation_five_elements": "土",
@@ -45965,7 +45545,7 @@
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
     },
-    "曉": {
+    "暁": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "火",
         "original_stroke_count": 16,
@@ -46210,12 +45790,6 @@
         "resource_five_elements": "火",
         "original_stroke_count": 15,
         "dictionary_stroke_count": 15
-    },
-    "勳": {
-        "pronunciation_five_elements": "土",
-        "resource_five_elements": "火",
-        "original_stroke_count": 16,
-        "dictionary_stroke_count": 16
     },
     "壎": {
         "pronunciation_five_elements": "土",
@@ -46547,7 +46121,7 @@
         "original_stroke_count": 12,
         "dictionary_stroke_count": 10
     },
-    "黑": {
+    "黒": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "水",
         "original_stroke_count": 12,
@@ -46907,7 +46481,7 @@
         "original_stroke_count": 20,
         "dictionary_stroke_count": 20
     },
-    "犧": {
+    "犠": {
         "pronunciation_five_elements": "土",
         "resource_five_elements": "土",
         "original_stroke_count": 20,
