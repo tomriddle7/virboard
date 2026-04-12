@@ -7,6 +7,7 @@ import { createLuxonAdapter } from "@gracefullight/saju/adapters/luxon";
 import { getSaju } from "@gracefullight/saju";
 import {
   luckyNumbers,
+  halfLuckyNumbers,
   mbtiWeights,
   mapSajuElement,
   isGenerating,
@@ -141,7 +142,7 @@ export default function Appraisal() {
       let totalScore = 30;
       let sajuBalance = "C";
       let mbtiSynergy = "-";
-      let strokesLuck = "흉(凶)";
+      let strokesLuck = "평(平)";
       let comment = "";
 
       let strokes = 0;
@@ -166,10 +167,14 @@ export default function Appraisal() {
       }
 
       const isLucky = luckyNumbers.includes(strokes);
+      const isHalfLucky = halfLuckyNumbers.includes(strokes);
 
       if (isLucky) {
         strokesLuck = "대길(大吉)";
         totalScore += 30;
+      } else if (isHalfLucky) {
+        strokesLuck = "소길(小吉)";
+        totalScore += 20;
       } else {
         totalScore += 10;
       }

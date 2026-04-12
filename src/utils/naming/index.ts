@@ -63,7 +63,8 @@ export const mbtiWeights = {
   ESFP: { wood: 1.5, fire: 2.5, earth: 1.0, metal: 1.0, water: 2.0 }
 };
 
-export const luckyNumbers = [11, 13, 15, 16, 21, 23, 24, 25, 31, 32, 33, 35, 37, 39, 41, 45, 47, 48, 52, 63, 65, 67, 68, 81];
+export const luckyNumbers = [1, 3, 5, 6, 7, 8, 11, 13, 15, 16, 17, 18, 21, 23, 24, 25, 29, 31, 32, 33, 35, 37, 41, 45, 47, 48, 52, 57, 58, 61, 63, 65, 67, 68, 75, 81];
+export const halfLuckyNumbers = [2, 26, 30, 38, 39, 42, 49, 51, 53, 55, 71, 72, 73, 77];
 
 export const luckyStrokes = [
   { num: 21, name: "두령격(頭領格)", desc: "탁월한 리더십과 매력으로 거대한 팬덤을 이끌고 굳건히 자리 잡는 대길수입니다." },
