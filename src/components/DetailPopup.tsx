@@ -68,7 +68,7 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Virboard - 광고 일정',
+          title: 'Virboard - 행사 일정',
           text: `🎉 [${selectedEvent.title}] 일정 확인하기!`,
           url: shareUrl,
         });
