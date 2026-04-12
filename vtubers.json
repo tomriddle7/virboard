@@ -1542,6 +1542,342 @@
   },
   {
     "privacy": "Public",
+    "id": "nijisanji-first-mito",
+    "name": "츠키노 미토",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#E43F3B]",
+    "birth": "2018-09-24",
+    "debut": "2018-02-08",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-first-kaede",
+    "name": "히구치 카에데",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#FBAF71]",
+    "birth": "2018-00-00",
+    "debut": "2018-02-09",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-first-rin",
+    "name": "시즈카 린",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#745399]",
+    "birth": "2018-08-28",
+    "debut": "2018-02-08",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-first-elu",
+    "name": "에루",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#E2364F]",
+    "birth": "2018-01-24",
+    "debut": "2018-02-09",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-first-hajime",
+    "name": "시부야 하지메",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#D7FAD7]",
+    "birth": "2018-05-05",
+    "debut": "2018-02-08",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-first-moira",
+    "name": "모이라",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#91ABD0]",
+    "birth": "2018-02-10",
+    "debut": "2018-02-09",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-first-aki",
+    "name": "스즈야 아키",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#F2F9C3]",
+    "birth": "2018-11-28",
+    "debut": "2018-02-08",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-first-chihiro",
+    "name": "유우키 치히로",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "1기생"
+    ],
+    "color": "bg-[#7BB3EE]",
+    "birth": "2018-07-16",
+    "debut": "2018-02-09",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-gilzaren",
+    "name": "길자렌 3세",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#002FA7]",
+    "birth": "2018-06-06",
+    "debut": "2018-03-12",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-mugi",
+    "name": "이에나가 무기",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#FF899D]",
+    "birth": "2003-11-07",
+    "debut": "2018-03-12",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-utako",
+    "name": "스즈카 우타코",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#FA4F62]",
+    "birth": "2018-02-24",
+    "debut": "2018-03-13",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-gaku",
+    "name": "후시미 가쿠",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#FFCB5B]",
+    "birth": "1999-10-05",
+    "debut": "2018-03-13",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-ichigo",
+    "name": "우시미 이치고",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#FFCACE]",
+    "birth": "2018-04-15",
+    "debut": "2018-03-13",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-alice",
+    "name": "모노노베 아리스",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#81D4E2]",
+    "birth": "2018-11-16",
+    "debut": "2018-03-14",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-toya",
+    "name": "켄모치 토우야",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#A590AF]",
+    "birth": "2018-08-22",
+    "debut": "2018-03-14",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-kazaki",
+    "name": "모리나카 카자키",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#C8F39A]",
+    "birth": "2018-05-23",
+    "debut": "2018-03-15",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-tamaki",
+    "name": "후미노 타마키",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#EBDDB4]",
+    "birth": "2018-00-00",
+    "debut": "2018-03-16",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-second-riri",
+    "name": "유우히 리리",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "2기생"
+    ],
+    "color": "bg-[#BFFFFF]",
+    "birth": "2018-01-21",
+    "debut": "2018-03-17",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-sanbaka-lize",
+    "name": "리제 헬레스탸",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "산바카"
+    ],
+    "color": "bg-[#42FFFF]",
+    "birth": "2019-05-25",
+    "debut": "2019-03-23",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-sanbaka-amge",
+    "name": "안쥬 카트리나",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "산바카"
+    ],
+    "color": "bg-[#C83C35]",
+    "birth": "2019-09-30",
+    "debut": "2019-03-23",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "nijisanji-sanbaka-toko",
+    "name": "이누이 토코",
+    "agency": "Nijisanji",
+    "nation": "JP",
+    "generation": [
+      "산바카"
+    ],
+    "color": "bg-[#92F3A4]",
+    "birth": "2019-09-09",
+    "debut": "2019-03-23",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
     "id": "stelive-mystic-kanna",
     "name": "아이리 칸나",
     "agency": "Stelive",
