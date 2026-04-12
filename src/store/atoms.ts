@@ -7,6 +7,7 @@ export const agencyMap = new Map([
   ['Vir', 'All VTubers'],
   ['Fav', 'Favorite'],
   ['Holo', 'Hololive'],
+  ['Niji', 'Nijisanji'],
   ['Stel', 'Stelive'],
   ['Ruli', 'Liveruli'],
   ['Indie', 'Independents'],
