@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useGoogleLogin, googleLogout } from '@react-oauth/google';
 import { useTranslation } from 'react-i18next';
-import { X, Moon, Sun, Globe, House, Heart, Map, Loader2 } from 'lucide-react';
+import { X, Moon, Sun, Globe, House, Heart, Map, Pill, Loader2 } from 'lucide-react';
 import { useAtom, useSetAtom } from 'jotai';
 import { themeAtom, favoritesAtom, accessTokenAtom, driveFileIdAtom, userInfoAtom } from '@/store/atoms';
 
@@ -183,6 +183,22 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <Heart className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
                     }`} />
                   {t('common.favorites')}
+                </>
+              )}
+            </NavLink>
+            <NavLink
+              to="/naming/appraisal"
+              onClick={onClose}
+              className={({ isActive }) =>
+                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  <Pill className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
+                    }`} />
+                  {t('common.appraisal')}(βετα)
                 </>
               )}
             </NavLink>

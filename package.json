@@ -26,6 +26,7 @@
     "path": "^0.12.7",
     "react": "^19.2.4",
     "react-big-calendar": "^1.19.4",
+    "react-circular-progressbar": "^2.2.0",
     "react-dom": "^19.2.4",
     "react-hot-toast": "^2.6.0",
     "react-i18next": "^17.0.2",
