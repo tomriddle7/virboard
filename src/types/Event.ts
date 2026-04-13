@@ -35,6 +35,7 @@ export type RawEvent = Omit<VtuberEvent, "start" | "end"> & {
 export interface VtuberProfile {
   privacy: "Public" | "Private";
   id: string;
+  vtuber_id: string;
   name: string;
   name_en?: string;
   name_ja?: string;

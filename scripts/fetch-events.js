@@ -106,6 +106,7 @@ async function fetchAndConvert() {
         finalEvents.push({
           // event_id: `bday-${vtuber.id}-${year}`,
           id: vtuber.id,
+          vtuber_id: vtuber.id,
           // status: '진행중',
           title: eventTitle,
           event_start_at: `${targetDate} 0:00`,
