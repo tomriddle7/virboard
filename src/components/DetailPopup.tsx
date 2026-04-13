@@ -264,7 +264,7 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
           <div className="flex gap-2 mt-6">
             <button
               onClick={closeModal}
-              className="w-full py-3 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-xl hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors"
+              className="vir-primary-btn !w-full !font-bold !text-base"
             >
               {t('common.confirm')}
             </button>
@@ -276,7 +276,7 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
             </button> */}
             <button
               onClick={handleShareLink}
-              className="w-12 shrink-0 py-3 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors flex items-center justify-center gap-1.5"
+              className="vir-secondary-btn !w-12 !shrink-0 !px-0 !bg-indigo-50 !dark:bg-indigo-900/30 !text-indigo-600 !dark:text-indigo-400"
             >
               <Link className="w-[18px] h-[18px]" />
             </button>

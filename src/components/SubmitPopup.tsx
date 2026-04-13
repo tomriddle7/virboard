@@ -192,7 +192,7 @@ export default function SubmitPopup({ closeModal }: { closeModal: () => void }) 
 
           <div className="pt-2 sticky bottom-0 bg-white dark:bg-gray-800 pb-2">
             <button type="submit" disabled={isSubmitting}
-              className="w-full py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg shadow-md transition-colors disabled:opacity-50">
+              className="vir-primary-btn !w-full !font-bold !text-base">
               {isSubmitting ? t('submit.submitting') : t('submit.submit_btn')}
             </button>
           </div>

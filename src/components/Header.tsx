@@ -95,7 +95,7 @@ function CalenderHeader() {
         </div>
       </div>
       <button
-        className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+        className="vir-secondary-btn vir-small-btn bg-white dark:bg-gray-700"
         onClick={() => setSubmitOpen(true)}
       >
         {t('common.report')}

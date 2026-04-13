@@ -384,7 +384,7 @@ export default function Appraisal() {
 
             <button
               onClick={handleAppraise}
-              className="w-full h-14 bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold rounded-xl shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2 mt-4 active:scale-[0.98]"
+              className="vir-primary-btn !w-full !font-bold !text-base mt-4"
             >
               <BarChart3 className="w-5 h-5" /> 무료 감정 리포트 보기
             </button>
@@ -504,7 +504,7 @@ export default function Appraisal() {
             <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 p-4 rounded-xl mt-4 flex gap-3">
               <Info className="text-slate-400 shrink-0 mt-0.5 w-5 h-5" />
               <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                ※ 입력하신 이름 중 일부 한자(<strong className="text-slate-700 dark:text-slate-300">{appraisalResult.missingKanjiList.join(', ')}</strong>)의 정확한 획수 데이터가 아직 등록되지 않아 임시 수치로 감정되었습니다.
+                ※ 입력하신 이름 중 일부 한자의 정확한 획수가 아직 등록되지 않아 임시 수치로 감정되었습니다.
               </p>
             </div>
           )}
@@ -513,14 +513,14 @@ export default function Appraisal() {
           <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <button
               onClick={() => setAppraisalStep('input')}
-              className="w-full md:w-auto px-8 py-4 font-medium text-gray-700 bg-white border border-gray-300 rounded-xl text-base dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+              className="vir-secondary-btn w-full md:w-auto !text-base"
             >
               다른 이름 감정하기
             </button>
             <button
               onClick={handleShareAsImage}
               disabled={isCapturing}
-              className="w-full md:w-auto px-8 py-4 bg-[#20639B] text-white rounded-xl text-base font-bold flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 transition-all order-1 md:order-2"
+              className="vir-primary-btn w-full md:w-auto !font-bold !text-base"
             >
               {isCapturing ? (
                 <Loader2 className="w-5 h-5 animate-spin" />
