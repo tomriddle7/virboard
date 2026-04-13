@@ -56,29 +56,36 @@ export default function Appraisal() {
     }
 
     try {
-      setIsCapturing(true);
+      // 💡 1. 원본 스타일(모바일 상태) 백업
+      const originalStyle = captureElement.style.cssText;
 
-      // 💡 [핵심] 기기 화면 크기에 맞춘 동적 스케일링 계산
-      const clientWidth = captureElement.offsetWidth;
-      const clientHeight = captureElement.offsetHeight;
-      const targetWidth = 540; // 우리가 원하는 인스타그램/트위터용 고정 너비
-      const scale = targetWidth / clientWidth; // 모바일 화면을 얼마나 확대할지 비율 계산
+      // 💡 2. 캡처 요소를 데스크탑 규격(512px)으로 강제 변환
+      // 모바일의 max-width 제한을 풀고 너비를 고정합니다.
+      captureElement.style.width = '512px';
+      captureElement.style.maxWidth = '512px';
 
+      // 💡 3. 브라우저가 넓어진 너비에 맞춰 텍스트 줄바꿈과 '높이'를 다시 계산하도록 0.02초 대기
+      await new Promise(resolve => setTimeout(resolve, 20));
+
+      // 💡 4. 글씨가 넓게 재배치되면서 짧아진 정확한 '새 높이' 가져오기
+      const newHeight = captureElement.offsetHeight;
+
+      // 💡 5. 계산된 너비와 높이를 정확히 주입하여 이미지 굽기
       const blob = await toBlob(captureElement, {
         quality: 1,
         pixelRatio: 2,
-        backgroundColor: '#ffffff',
-        width: targetWidth,
-        height: clientHeight * scale,
+        backgroundColor: null,
+        width: 512,
+        height: newHeight,
         style: {
-          transform: `scale(${scale})`,
-          transformOrigin: 'top left',
-          width: `${clientWidth}px`,
-          height: `${clientHeight}px`,
           margin: '0',
-          borderRadius: '0px'
+          borderRadius: '0px',
+          transform: 'none' // 이전의 복잡한 스케일 속성 제거
         }
       });
+
+      // 💡 6. 캡처가 끝나자마자 화면을 원래 모바일 상태로 즉시 원상복구
+      captureElement.style.cssText = originalStyle;
 
       if (!blob) throw new Error("이미지 변환 실패");
 
