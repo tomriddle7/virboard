@@ -104,8 +104,7 @@ async function fetchAndConvert() {
         }
 
         finalEvents.push({
-          // event_id: `bday-${vtuber.id}-${year}`,
-          id: vtuber.id,
+          id: `bday-${vtuber.id}-${year}`,
           vtuber_id: vtuber.id,
           // status: '진행중',
           title: eventTitle,
@@ -119,6 +118,44 @@ async function fetchAndConvert() {
       });
     });
 
+    // 4-1. 데뷔 주년 자동 생성 로직
+    rawVtubers.forEach(vtuber => {
+      // 데뷔일 정보가 없거나 비공개인 경우 건너뜁니다. (컬럼명이 'debut'라고 가정)
+      if (!vtuber.debut || vtuber.privacy === 'Private') return;
+
+      const debutYear = parseInt(vtuber.debut.substring(0, 4), 10);
+      const debutMonthDay = vtuber.debut.substring(5); // "MM-DD"
+
+      // 올해 기준 몇 주년인지 계산
+      const anniversaryYear = currentYear - debutYear;
+
+      // 데뷔 연도보다 올해가 더 크다면 (즉, 1주년 이상이라면) 이벤트 생성
+      if (anniversaryYear > 0) {
+        [currentYear].forEach(year => {
+          let targetDate = `${year}-${debutMonthDay}`;
+          let eventTitle = `🎉 ${vtuber.name} 데뷔 ${anniversaryYear}주년`;
+
+          // 희박하지만 2월 29일에 데뷔한 버튜버를 위한 윤년 예외 처리
+          if (debutMonthDay === '02-29' && !isLeapYear(year)) {
+            targetDate = `${year}-02-28`;
+            eventTitle = `🎉 ${vtuber.name} 데뷔 ${anniversaryYear}주년 (윤년 아님)`;
+          }
+
+          finalEvents.push({
+            id: `anniv-${vtuber.id}-${year}`,
+            vtuber_id: vtuber.id,
+            title: eventTitle,
+            event_start_at: `${targetDate} 0:00`,
+            event_end_at: `${targetDate} 23:59`,
+            color: vtuber.color,
+            type: '주년', // '주년'이나 '기념일' 등 원하시는 타입으로 지정
+            location: '',
+            link: vtuber.link || ''
+          });
+        });
+      }
+    });
+
     // 5. public 폴더 확인 및 JSON 파일 저장
     const outputDir = path.dirname(JSON_OUTPUT_PATH);
     if (!fs.existsSync(outputDir)) {
@@ -127,7 +164,7 @@ async function fetchAndConvert() {
     }
 
     fs.writeFileSync(JSON_OUTPUT_PATH, JSON.stringify(finalEvents, null, 2), 'utf-8');
-    console.log(`✅ 성공적으로 ${rawEvents.length}개의 일정과 ${rawVtubers.length}개의 생일을 celebration.json에 저장했습니다! 🚀`);
+    console.log(`✅ 성공적으로 ${rawEvents.length}개의 일정과 ${rawVtubers.length}개의 생일 및 주년 기념일을 celebration.json에 저장했습니다! 🚀`);
     fs.writeFileSync(VTUBERS_OUTPUT_PATH, JSON.stringify(formattedVtubers, null, 2), 'utf-8');
     console.log(`✅ 성공적으로 ${formattedVtubers.length}개의 버튜버 프로필을 vtubers.json에 저장했습니다! 🚀`);
 

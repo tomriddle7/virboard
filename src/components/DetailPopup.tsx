@@ -23,7 +23,7 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
     return String(e.id) === String(eventId);
   });
 
-  const vtuberInfo = selectedEvent ? vtubers.find(v => v.id === selectedEvent.id) : null;
+  const vtuberInfo = selectedEvent ? vtubers.find(v => v.id === selectedEvent.vtuber_id) : null;
 
   // 이벤트가 없으면 렌더링하지 않거나 에러 처리
   if (!selectedEvent) return null;
@@ -189,7 +189,7 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
           </h3>
           <p className="text-sm text-gray-500 mb-6 dark:text-gray-400 transition-colors">
             🗓️ {format(selectedEvent.start, "yyyy.MM.dd")}
-            {selectedEvent.type !== '생일' && ` ~ ${format(selectedEvent.end, "yyyy.MM.dd")}`}
+            {['생일', '주년'].includes(selectedEvent.type!) && ` ~ ${format(selectedEvent.end, "yyyy.MM.dd")}`}
           </p>
 
           {/* 상세 정보 리스트 */}
@@ -206,7 +206,7 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
             )}
 
             {/* 링크 영역 렌더링 */}
-            {selectedEvent.type === '생일' ? (
+            {['생일', '주년'].includes(selectedEvent.type!) ? (
               (vtuberInfo?.platforms && Object.keys(vtuberInfo.platforms).length > 0) ? (
                 <div>
                   <div className="flex flex-wrap gap-2 items-center">

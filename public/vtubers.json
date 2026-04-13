@@ -2370,5 +2370,33 @@
       "x": "https://x.com/S2_tsubasa",
       "cafeNaver": "https://cafe.naver.com/tsubasaplace"
     }
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-dokibird",
+    "name": "도키버드",
+    "agency": "Independents",
+    "nation": "EN",
+    "generation": [],
+    "color": "bg-[#eebc5b]",
+    "birth": "2024-07-08",
+    "debut": "2024-02-08",
+    "link": "",
+    "unit": [],
+    "platforms": {}
+  },
+  {
+    "privacy": "Public",
+    "id": "indie-shylily",
+    "name": "샤이릴리",
+    "agency": "Independents",
+    "nation": "EN",
+    "generation": [],
+    "color": "bg-[#474b7b]",
+    "birth": "2022-08-05",
+    "debut": "2022-01-10",
+    "link": "",
+    "unit": [],
+    "platforms": {}
   }
 ]

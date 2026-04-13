@@ -107,7 +107,7 @@ function Home() {
             events={filteredEvents}
             date={date}
             onNavigate={(newDate) => setDate(newDate)}
-            onSelectEvent={(event) => setSelectedEventId(event.id)}
+            onSelectEvent={(event) => setSelectedEventId(event.vtuber_id)}
             culture={currentLang}
             views={["month"]}
             popup={true}
@@ -143,7 +143,8 @@ function Home() {
                   });
 
                   const birthdays = dayEvents.filter((event) => event.type === '생일');
-                  const otherEvents = dayEvents.filter((event) => event.type !== '생일')
+                  const annivdays = dayEvents.filter((event) => event.type === '주년');
+                  const otherEvents = dayEvents.filter((event) => !['생일', '주년'].includes(event.type!))
                     .toSorted((a, b) => {
                       const getStatusWeight = (status?: string) => {
                         if (status === 'ongoing') return 1;
@@ -185,7 +186,7 @@ function Home() {
                             setDrawerData({ date: headerDate, events: otherEvents });
                           }}>
                             {otherEvents.map((event, i) => {
-                                const isFunding = event.type !== '생일' && (event.status === 'funding' || event.status === 'funded');
+                                const isFunding = !['생일', '주년'].includes(event.type!) && (event.status === 'funding' || event.status === 'funded');
                                 const opacityClass = !isCurrentMonth ? 'opacity-40' : '';
 
                                 return isFunding ? (
@@ -209,6 +210,18 @@ function Home() {
                       {/* 생일 이벤트 버튼 렌더링 */}
                       <div className="flex flex-col gap-1 mt-1 w-full">
                         {birthdays.map((event) => (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setSelectedEventId(event.id);
+                            }}
+                            key={event.id}
+                            className={`${event.color} text-white text-[10px] sm:text-xs font-semibold px-1.5 py-1 ml-1 rounded-md truncate shadow-sm ${!isCurrentMonth ? 'opacity-40' : ''}`}
+                          >
+                            {event.title}
+                          </button>
+                        ))}
+                        {annivdays.map((event) => (
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
