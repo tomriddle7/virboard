@@ -189,7 +189,7 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
           </h3>
           <p className="text-sm text-gray-500 mb-6 dark:text-gray-400 transition-colors">
             🗓️ {format(selectedEvent.start, "yyyy.MM.dd")}
-            {['생일', '주년'].includes(selectedEvent.type!) && ` ~ ${format(selectedEvent.end, "yyyy.MM.dd")}`}
+            {!['생일', '주년'].includes(selectedEvent.type!) && ` ~ ${format(selectedEvent.end, "yyyy.MM.dd")}`}
           </p>
 
           {/* 상세 정보 리스트 */}
