@@ -65,3 +65,6 @@ export const userInfoAtom = atomWithStorage<{
   null,
   sessionStorageConfig
 );
+
+export const showInactiveAtom = atomWithStorage('show-inactive', false); // 기본값: 숨김
+export const showGraduatedAtom = atomWithStorage('show-graduated', false); // 기본값: 숨김

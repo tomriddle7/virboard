@@ -11,6 +11,8 @@
         "appraisal": "버튜버 이름 감정",
         "settings": "설정",
         "dark_mode": "다크 모드",
+        "show_graduated": "졸업 멤버 표시",
+        "show_inactive": "활동종료 멤버 표시",
         "language": "언어",
         "google_sign_in": "구글 계정으로 로그인",
         "sign_out": "로그아웃",

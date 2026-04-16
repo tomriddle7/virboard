@@ -2,16 +2,18 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useGoogleLogin, googleLogout } from '@react-oauth/google';
 import { useTranslation } from 'react-i18next';
-import { X, Moon, Sun, Globe, House, Heart, Map, Pill, Loader2 } from 'lucide-react';
+// ✨ GraduationCap(졸업), UserMinus(비활동) 아이콘 추가
+import { X, Moon, Sun, Globe, House, Heart, Map, Pill, Loader2, GraduationCap, UserMinus } from 'lucide-react';
 import { useAtom, useSetAtom } from 'jotai';
-import { themeAtom, favoritesAtom, accessTokenAtom, driveFileIdAtom, userInfoAtom } from '@/store/atoms';
+// ✨ showInactiveAtom, showGraduatedAtom 추가
+import { themeAtom, favoritesAtom, accessTokenAtom, driveFileIdAtom, userInfoAtom, showInactiveAtom, showGraduatedAtom } from '@/store/atoms';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-// ✨ 구글 드라이브 API 통신 함수 (파일 상단에 배치하여 깔끔하게 분리)
+// 구글 드라이브 API 통신 함수
 const FILE_NAME = 'virboard_favorites.json';
 
 const findFavoritesFileId = async (accessToken: string) => {
@@ -41,6 +43,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [userInfo, setUserInfo] = useAtom(userInfoAtom);
   const setDriveFileId = useSetAtom(driveFileIdAtom);
 
+  // ✨ 필터링 토글 상태 연동
+  const [showInactive, setShowInactive] = useAtom(showInactiveAtom);
+  const [showGraduated, setShowGraduated] = useAtom(showGraduatedAtom);
+
   const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   const [theme, setTheme] = useAtom(themeAtom);
@@ -60,7 +66,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     setTheme(isDarkMode ? 'light' : 'dark');
   };
 
-  // ✨ 구글 로그인 및 드라이브 동기화 처리
+  // 구글 로그인 및 드라이브 동기화 처리
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       const token = tokenResponse.access_token;
@@ -68,14 +74,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       setIsLoggingIn(true);
 
       try {
-        // 1. 구글 프로필 정보 가져오기 (이름, 사진)
         const userInfoRes = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
           headers: { Authorization: `Bearer ${token}` }
         });
         const userData = await userInfoRes.json();
         setUserInfo({ name: userData.name, picture: userData.picture });
 
-        // 2. 기존 드라이브 동기화 로직 (백그라운드 실행)
         const fileId = await findFavoritesFileId(token);
         setDriveFileId(fileId);
         if (fileId) {
@@ -88,7 +92,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         setIsLoggingIn(false);
       }
     },
-    // ✨ 프로필 정보를 가져오기 위해 scope 추가
     scope: 'https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/userinfo.profile',
   });
 
@@ -116,7 +119,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="flex items-center gap-3">
               <img src={accessToken && userInfo ? userInfo.picture : '/images/platforms/google.svg'} alt="profile" className="w-12 h-12 rounded-full border border-gray-100 dark:border-gray-700" />
               <div>
-
                 {accessToken ? (
                   <>
                     {userInfo && <p className="font-bold text-gray-800 dark:text-gray-100 truncate max-w-[150px]">
@@ -135,21 +137,19 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"><X /></button>
           </div>
 
-          {/* 즐겨찾기 영역 */}
+          {/* 메뉴(즐겨찾기 등) 영역 */}
           <div className="mb-8">
+            {/* ... (기존 네비게이션 메뉴들 동일 유지) ... */}
             <NavLink
               to="/"
               onClick={onClose}
               className={({ isActive }) =>
-                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-                }`
+                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`
               }
             >
               {({ isActive }) => (
                 <>
-                  <House className={`w-5 h-5 transition-colors ${
-                    isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
-                    }`} />
+                  <House className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'}`} />
                   {t('common.home')}
                 </>
               )}
@@ -158,14 +158,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               to="/map"
               onClick={onClose}
               className={({ isActive }) =>
-                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-                }`
+                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`
               }
             >
               {({ isActive }) => (
                 <>
-                  <Map className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
-                    }`} />
+                  <Map className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'}`} />
                   {t('common.map')}
                 </>
               )}
@@ -174,14 +172,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               to="/streamer"
               onClick={onClose}
               className={({ isActive }) =>
-                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-                }`
+                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`
               }
             >
               {({ isActive }) => (
                 <>
-                  <Heart className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
-                    }`} />
+                  <Heart className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'}`} />
                   {t('common.favorites')}
                 </>
               )}
@@ -190,27 +186,16 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               to="/naming/appraisal"
               onClick={onClose}
               className={({ isActive }) =>
-                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-                }`
+                `flex items-center gap-2 mb-5 font-semibold px-2 transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`
               }
             >
               {({ isActive }) => (
                 <>
-                  <Pill className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'
-                    }`} />
+                  <Pill className={`w-5 h-5 transition-colors ${isActive ? 'text-gray-900 fill-gray-900/30 dark:text-white dark:fill-white/40' : 'text-gray-500 fill-transparent'}`} />
                   {t('common.appraisal')}(βετα)
                 </>
               )}
             </NavLink>
-            <div className="space-y-1">
-              {/* Note: 현재 favorites는 id 배열이므로, 차후 vtubers 데이터와 매핑하여 이름과 이미지를 보여주는 작업이 필요합니다. */}
-              {/* {favorites.map((id, idx) => (
-                <button key={idx} className="w-full flex items-center gap-3 p-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-colors truncate">
-                  <Star className="w-4 h-4 text-yellow-400 fill-yellow-400 min-w-4" />
-                  {id}
-                </button>
-              ))} */}
-            </div>
           </div>
 
           {/* 설정 영역 */}
@@ -227,6 +212,34 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 className={`w-12 h-6 rounded-full p-1 flex items-center transition-colors duration-300 ${isDarkMode ? 'bg-indigo-500' : 'bg-gray-300'}`}
               >
                 <div className={`w-4 h-4 rounded-full bg-white transform transition-transform duration-300 ${isDarkMode ? 'translate-x-6' : 'translate-x-0'}`} />
+              </button>
+            </div>
+
+            {/* ✨ 졸업 멤버 보기 토글 추가 */}
+            <div className="flex items-center justify-between px-2">
+              <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300 text-sm font-medium">
+                <GraduationCap className="w-5 h-5 text-purple-500" />
+                {t('common.show_graduated')}
+              </div>
+              <button
+                onClick={() => setShowGraduated(!showGraduated)}
+                className={`w-12 h-6 rounded-full p-1 flex items-center transition-colors duration-300 ${showGraduated ? 'bg-purple-500' : 'bg-gray-300'}`}
+              >
+                <div className={`w-4 h-4 rounded-full bg-white transform transition-transform duration-300 ${showGraduated ? 'translate-x-6' : 'translate-x-0'}`} />
+              </button>
+            </div>
+
+            {/* ✨ 활동 종료 멤버 보기 토글 추가 */}
+            <div className="flex items-center justify-between px-2">
+              <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300 text-sm font-medium">
+                <UserMinus className="w-5 h-5 text-red-400" />
+                {t('common.show_inactive')}
+              </div>
+              <button
+                onClick={() => setShowInactive(!showInactive)}
+                className={`w-12 h-6 rounded-full p-1 flex items-center transition-colors duration-300 ${showInactive ? 'bg-red-400' : 'bg-gray-300'}`}
+              >
+                <div className={`w-4 h-4 rounded-full bg-white transform transition-transform duration-300 ${showInactive ? 'translate-x-6' : 'translate-x-0'}`} />
               </button>
             </div>
 

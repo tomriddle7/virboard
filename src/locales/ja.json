@@ -11,6 +11,8 @@
         "appraisal": "VTuber 姓名判断",
         "settings": "設定",
         "dark_mode": "ダークモード",
+        "show_graduated": "卒業メンバー表示",
+        "show_inactive": "活動終了 メンバー表示",
         "language": "言語",
         "google_sign_in": "Googleアカウントでログイン",
         "sign_out": "ログアウト",

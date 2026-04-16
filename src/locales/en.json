@@ -11,6 +11,8 @@
         "appraisal": "VTuber Name Appraisal",
         "settings": "Settings",
         "dark_mode": "Dark Mode",
+        "show_graduated": "Display Graduated Members",
+        "show_inactive": "Display Deactivated Members",
         "language": "Language",
         "google_sign_in": "Sign in with Google",
         "sign_out": "Sign Out",

@@ -37,7 +37,7 @@ function DetailPopup({ eventId, closeModal, specificLocation }: DetailPopupProps
       youtube: { name: 'YouTube', src: '/images/platforms/youtube.svg' },
       x: { name: 'X', src: '/images/platforms/x.svg' },
       hololive: { name: 'Hololive', src: '/images/platforms/hololive.svg' },
-      Nijisanji: { name: 'Nijisanji', src: '/images/platforms/nijisanji.svg' },
+      nijisanji: { name: 'Nijisanji', src: '/images/platforms/nijisanji.svg' },
       chzzk: { name: '치지직', src: '/images/platforms/chzzk.svg' },
       twitch: { name: 'Twitch', src: '/images/platforms/twitch.svg' },
       cafenaver: { name: '네이버 카페', src: '/images/platforms/cafe-naver.svg' },

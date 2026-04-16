@@ -12,7 +12,14 @@ import BottomDrawer from '@/components/BottomDrawer'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import type { VtuberEvent } from '@/types/Event'
 import { useAtomValue } from 'jotai';
-import { selectedAgencyAtom, eventsAtom, vtubersAtom, favoritesAtom } from '@/store/atoms';
+import {
+  selectedAgencyAtom,
+  eventsAtom,
+  vtubersAtom,
+  favoritesAtom,
+  showInactiveAtom,  // ✨ 추가
+  showGraduatedAtom
+} from '@/store/atoms';
 
 const locales = { ko, en: enUS, ja };
 
@@ -45,24 +52,53 @@ function Home() {
   const favorites = useAtomValue(favoritesAtom);
 
   // 2. 이벤트 필터링 (사용하지 않는 기수/유닛 필터 로직 삭제)
+  const showInactive = useAtomValue(showInactiveAtom);
+  const showGraduated = useAtomValue(showGraduatedAtom);
+
   const filteredEvents = useMemo(() => {
-    // 1. "전체 보기"일 때는 모든 이벤트 표시
-    if (selectedAgency === 'All VTubers') return events;
+    // 1. 빠른 참조를 위해 public 상태인 버튜버만 ID를 키값으로 하는 Map 구조로 만듭니다.
+    const publicVtubersMap = new Map(
+      vtubers.filter(v => v.privacy === 'Public').map(v => [v.id, v])
+    );
 
-    // 2. "즐겨찾기"일 때는 favorites 배열에 포함된 vtuber_id만 필터링
-    if (selectedAgency === 'Favorite') {
-      return events.filter(event => favorites.includes(event.vtuber_id));
-    }
+    // 2. 전체 이벤트 목록을 순회하며 조건에 맞는 이벤트만 남깁니다.
+    return events.filter(event => {
+      const vtuber = publicVtubersMap.get(event.vtuber_id);
 
-    // 3. 특정 소속(Hololive 등)이 선택된 경우
-    // 먼저 해당 소속에 포함된 버튜버들의 ID 목록을 만듭니다.
-    const agencyVtuberIds = vtubers
-      .filter(v => v.agency === selectedAgency)
-      .map(v => v.id);
+      // [조건 1] 버튜버가 존재하지 않거나 private 상태이면 이벤트 숨김
+      if (!vtuber) return false;
 
-    // 그 ID 목록에 속한 버튜버의 이벤트만 결과에 포함시킵니다.
-    return events.filter(event => agencyVtuberIds.includes(event.vtuber_id));
-  }, [events, vtubers, selectedAgency, favorites]);
+      // [조건 2] 소속사(Agency) 및 즐겨찾기(Favorite) 필터 적용
+      if (selectedAgency === 'Favorite') {
+        if (!favorites.includes(event.vtuber_id)) return false;
+      } else if (selectedAgency !== 'All VTubers') {
+        // 선택된 소속사가 포함되어 있는지 검사 (니지산지 EN 등 하위 지부 대응)
+        if (!vtuber.agency || !vtuber.agency.toLowerCase().includes(selectedAgency.toLowerCase())) {
+          return false;
+        }
+      }
+
+      // [조건 3] 활동 상태 및 이벤트 타입에 따른 노출 여부 결정
+      const isAutoEvent = event.type === '생일' || event.type === '주년';
+
+      if (vtuber.activity === 'Active') {
+        return true; // 현역 멤버는 모든 행사(자동/팬 광고) 노출
+      }
+
+      if (vtuber.activity === 'Graduated') {
+        // 졸업 멤버: 생일/주년은 토글을 따라가고, 팬 광고는 항상 노출
+        return isAutoEvent ? showGraduated : true;
+      }
+
+      if (vtuber.activity === 'Inactive') {
+        // 활동 종료 멤버: 생일/주년은 토글을 따라가고, 팬 광고는 항상 노출
+        return isAutoEvent ? showInactive : true;
+      }
+
+      // terminated(계약해지) 등 그 외 상태는 모든 행사 숨김 처리
+      return false;
+    });
+  }, [events, vtubers, selectedAgency, favorites, showInactive, showGraduated]);
 
   useEffect(() => {
     const eventIdFromUrl = searchParams.get('eventId');
@@ -186,23 +222,23 @@ function Home() {
                             setDrawerData({ date: headerDate, events: otherEvents });
                           }}>
                             {otherEvents.map((event, i) => {
-                                const isFunding = !['생일', '주년'].includes(event.type!) && (event.status === 'funding' || event.status === 'funded');
-                                const opacityClass = !isCurrentMonth ? 'opacity-40' : '';
+                              const isFunding = !['생일', '주년'].includes(event.type!) && (event.status === 'funding' || event.status === 'funded');
+                              const opacityClass = !isCurrentMonth ? 'opacity-40' : '';
 
-                                return isFunding ? (
-                                  <span
-                                    key={`dot-${event.vtuber_id}-${i}`}
-                                    className={`size-1.5 p-[1px] rounded-full ${event.color} ${opacityClass}`}
-                                  >
-                                    <span className="block w-full h-full rounded-full bg-gray-50" />
-                                  </span>
-                                ) : (
-                                  <span
-                                    key={`dot-${event.vtuber_id}-${i}`}
-                                    className={`size-1.5 rounded-full ${event.color} ${opacityClass}`}
-                                  />
-                                );
-                              })}
+                              return isFunding ? (
+                                <span
+                                  key={`dot-${event.vtuber_id}-${i}`}
+                                  className={`size-1.5 p-[1px] rounded-full ${event.color} ${opacityClass}`}
+                                >
+                                  <span className="block w-full h-full rounded-full bg-gray-50" />
+                                </span>
+                              ) : (
+                                <span
+                                  key={`dot-${event.vtuber_id}-${i}`}
+                                  className={`size-1.5 rounded-full ${event.color} ${opacityClass}`}
+                                />
+                              );
+                            })}
                           </button>
                         </div>
                       )}
