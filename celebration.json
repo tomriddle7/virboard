@@ -555,7 +555,7 @@
     "vtuber_id": "hololive-flowglow-riona",
     "status": "funding",
     "title": "이사키 리오나 2026년 생일 기념 팬 광고",
-    "thumbnail": "",
+    "thumbnail": "https://virboard.me/images/ads/HG1Wf_2aYAE1jjX.webp",
     "funding_start_at": "2026-04-06 0:00",
     "funding_end_at": "2026-04-24 23:59",
     "funding_over_at": "",
@@ -586,7 +586,7 @@
     "latitude": "1.294895627",
     "longitude": "103.8555902",
     "link": "https://x.com/irysinghope",
-    "memo": "지하 3층"
+    "memo": ""
   },
   {
     "id": "2026-bijou-subway",
@@ -648,14 +648,14 @@
   {
     "id": "2026-iroha-subway",
     "vtuber_id": "hololive-holox-iroha",
-    "status": "funding",
+    "status": "ended",
     "title": "1st 콘서트 기념 카자마 이로하 플라워 스탠드 광고",
     "thumbnail": "https://virboard.me/images/ads/HFXiTJsa8AEJCfN.webp",
     "funding_start_at": "2026-03-24 0:00",
     "funding_end_at": "2026-04-15 23:59",
     "funding_over_at": "",
-    "event_start_at": "",
-    "event_end_at": "",
+    "event_start_at": "2026-04-29 0:00",
+    "event_end_at": "2026-04-29 23:59",
     "color": "bg-[#faefe4]",
     "type": "화환",
     "location": "일본 Pia Arena MM",
