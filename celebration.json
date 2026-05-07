@@ -135,7 +135,7 @@
   {
     "id": "2026-suisei-subway",
     "vtuber_id": "hololive-zero-suisei",
-    "status": "ongoing",
+    "status": "ended",
     "title": "호시마치 스이세이 2026년 생일 & 8주년 지하철 광고",
     "thumbnail": "https://hololivepro.com/wp-content/uploads/2026/03/%EC%8A%A4%EC%9D%B4%EC%84%B8%EC%9D%B4_%EC%99%84%EC%84%B1_RGB-1-1440x694.webp",
     "funding_start_at": "",
@@ -192,7 +192,7 @@
   {
     "id": "2026-shibuki-subway",
     "vtuber_id": "stelive-cliche-shibuki",
-    "status": "ongoing",
+    "status": "ended",
     "title": "2026 텐코 시부키 생일광고",
     "thumbnail": "https://virboard.me/images/ads/G-EPbfra0AAnaq1.webp",
     "funding_start_at": "",
@@ -211,7 +211,7 @@
   {
     "id": "2026-holox-wreath",
     "vtuber_id": "hololive-holox-dark",
-    "status": "ongoing",
+    "status": "ended",
     "title": "HoloX 1st 라이브 기념 플라워 스탠드",
     "thumbnail": "https://virboard.me/images/ads/HE4ow2FaUAAVtg4.webp",
     "funding_start_at": "2026-02-23 0:00",
@@ -230,7 +230,7 @@
   {
     "id": "2026-holox-subway",
     "vtuber_id": "hololive-holox-dark",
-    "status": "ongoing",
+    "status": "ended",
     "title": "HoloX 1st 라이브 기념 광고",
     "thumbnail": "https://virboard.me/images/ads/HDWdnwRaMAA6Mr3.webp",
     "funding_start_at": "2026-02-23 0:00",
@@ -268,7 +268,7 @@
   {
     "id": "2026-ina-subway",
     "vtuber_id": "hololive-myth-ina",
-    "status": "funding",
+    "status": "ongoing",
     "title": "니노마에 이나니스 2026 생일 지하철 광고",
     "thumbnail": "https://virboard.me/images/ads/HHn_P0Da8AEEeWn.webp",
     "funding_start_at": "2026-03-02 0:00",
