@@ -411,11 +411,11 @@
     "event_end_at": "2026-06-30",
     "color": "bg-[#fef09d]",
     "type": "지하철 광고",
-    "location": "",
-    "latitude": "",
-    "longitude": "",
+    "location": "서울 강남역(2, 신분당)",
+    "latitude": "37.49799",
+    "longitude": "127.027912",
     "link": "https://x.com/watame0606bd",
-    "memo": ""
+    "memo": "신분당선 6번(상행)"
   },
   {
     "id": "2026-yuni-subway",
