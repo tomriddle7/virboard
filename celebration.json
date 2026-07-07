@@ -2028,6 +2028,17 @@
     "link": " "
   },
   {
+    "id": "bday-kizuna-ai-2026",
+    "vtuber_id": "kizuna-ai",
+    "title": "🎂 키즈나 아이 2026년 생일",
+    "event_start_at": "2026-06-30 0:00",
+    "event_end_at": "2026-06-30 23:59",
+    "color": "bg-[#FF9CC2]",
+    "type": "생일",
+    "location": "",
+    "link": " "
+  },
+  {
     "id": "anniv-hololive-zero-sora-2026",
     "vtuber_id": "hololive-zero-sora",
     "title": "🎉 토키노 소라 데뷔 9주년",
@@ -3299,6 +3310,17 @@
     "event_start_at": "2026-01-10 0:00",
     "event_end_at": "2026-01-10 23:59",
     "color": "bg-[#474b7b]",
+    "type": "주년",
+    "location": "",
+    "link": ""
+  },
+  {
+    "id": "anniv-kizuna-ai-2026",
+    "vtuber_id": "kizuna-ai",
+    "title": "🎉 키즈나 아이 데뷔 10주년",
+    "event_start_at": "2026-12-01 0:00",
+    "event_end_at": "2026-12-01 23:59",
+    "color": "bg-[#FF9CC2]",
     "type": "주년",
     "location": "",
     "link": ""
