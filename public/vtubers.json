@@ -2621,7 +2621,11 @@
     "link": "",
     "unit": [],
     "thumbnail": "https://yt3.ggpht.com/3H2nFlB-HSID7--rYQVirRxMZW1Ld3BxDuH8g8ObAcRQSlNuR_JKkO6Wn9bjkLEcN-BB31x6lI8=s800-c-k-c0x00ffffff-no-rj",
-    "platforms": {}
+    "platforms": {
+      "youtube": "https://www.youtube.com/@Dokibird",
+      "twitch": "https://www.twitch.tv/dokibird",
+      "x": "https://x.com/dokibird"
+    }
   },
   {
     "privacy": "Public",
@@ -2637,6 +2641,29 @@
     "link": "",
     "unit": [],
     "thumbnail": "https://yt3.ggpht.com/LjD4QdFDyCPW_8ge1ypmmjUzHh-9POjO-TtdYuQrNCZFg80Ri-OIDRsTJMKCyl_FxZuybT-P96o=s800-c-k-c0x00ffffff-no-rj",
-    "platforms": {}
+    "platforms": {
+      "twitch": "https://www.twitch.tv/shylily",
+      "x": "https://x.com/shylilytwitch"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "kizuna-ai",
+    "name": "키즈나 아이",
+    "agency": "Independents",
+    "nation": "JP",
+    "generation": [],
+    "color": "bg-[#FF9CC2]",
+    "birth": "2016-06-30",
+    "debut": "2016-12-01",
+    "link": "",
+    "unit": [],
+    "thumbnail": "https://yt3.ggpht.com/LjD4QdFDyCPW_8ge1ypmmjUzHh-9POjO-TtdYuQrNCZFg80Ri-OIDRsTJMKCyl_FxZuybT-P96o=s800-c-k-c0x00ffffff-no-rj",
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AIChannel",
+      "x": "https://x.com/aichan_nel",
+      "kizunaai": "https://kizunaai.com/"
+    }
   }
 ]
