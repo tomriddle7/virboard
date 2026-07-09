@@ -760,6 +760,25 @@
     "memo": ""
   },
   {
+    "id": "2026-sora-subway",
+    "vtuber_id": "hololive-zero-sora",
+    "status": "funding",
+    "title": "토키노 소라 9주년 기념&11월 솔로라이브 홍보 광고",
+    "thumbnail": "",
+    "funding_start_at": "2026-06-06",
+    "funding_end_at": "2027-07-25",
+    "funding_over_at": "",
+    "event_start_at": "",
+    "event_end_at": "",
+    "color": "bg-[#324ab2]",
+    "type": "지하철 광고",
+    "location": "서울 강남역(2, 신분당)",
+    "latitude": "37.49799",
+    "longitude": "127.027912",
+    "link": "https://x.com/KRtokisorafanAD",
+    "memo": ""
+  },
+  {
     "id": "bday-hololive-zero-sora-2026",
     "vtuber_id": "hololive-zero-sora",
     "title": "🎂 토키노 소라 2026년 생일",
