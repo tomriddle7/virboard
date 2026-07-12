@@ -779,6 +779,25 @@
     "memo": ""
   },
   {
+    "id": "2026-everys-subway",
+    "vtuber_id": "stelive-everys-yuni",
+    "status": "funding",
+    "title": "2026 에버리스 1주년 기념 광고",
+    "thumbnail": "",
+    "funding_start_at": "2026-06-20",
+    "funding_end_at": "2026-07-20",
+    "funding_over_at": "",
+    "event_start_at": "",
+    "event_end_at": "",
+    "color": "bg-[#857fd8]",
+    "type": "지하철 광고",
+    "location": "서울 홍대입구역",
+    "latitude": "",
+    "longitude": "",
+    "link": "https://x.com/forever_everys",
+    "memo": ""
+  },
+  {
     "id": "bday-hololive-zero-sora-2026",
     "vtuber_id": "hololive-zero-sora",
     "title": "🎂 토키노 소라 2026년 생일",
