@@ -2665,5 +2665,26 @@
       "x": "https://x.com/aichan_nel",
       "kizunaai": "https://kizunaai.com/"
     }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "indie-penyo",
+    "name": "히나리 페뇨",
+    "agency": "Independents",
+    "nation": "KR",
+    "generation": [],
+    "color": "bg-[#FF91AF]",
+    "birth": "1993-09-23",
+    "debut": "2017-12-07",
+    "link": "",
+    "unit": [],
+    "thumbnail": "https://yt3.ggpht.com/LjD4QdFDyCPW_8ge1ypmmjUzHh-9POjO-TtdYuQrNCZFg80Ri-OIDRsTJMKCyl_FxZuybT-P96o=s800-c-k-c0x00ffffff-no-rj",
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/f2607c885c65b6776b9cf5bfb473753c",
+      "youtube": "https://www.youtube.com/@HinariPenyo",
+      "x": "https://x.com/HinariPenyo",
+      "cafeNaver": "https://cafe.naver.com/penyo"
+    }
   }
 ]

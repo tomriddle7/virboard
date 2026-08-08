@@ -705,7 +705,7 @@
   {
     "id": "2026-flare-subway",
     "vtuber_id": "hololive-fantasy-flare",
-    "status": "funding",
+    "status": "ongoing",
     "title": "시라누이 후레아 7주년 기념 지하철 광고",
     "thumbnail": "https://virboard.me/images/ads/HMDdkWVXMAApX0A.webp",
     "funding_start_at": "2026-05-31",
@@ -2096,6 +2096,17 @@
     "link": " "
   },
   {
+    "id": "bday-indie-penyo-2026",
+    "vtuber_id": "indie-penyo",
+    "title": "🎂 히나리 페뇨 2026년 생일",
+    "event_start_at": "2026-09-23 0:00",
+    "event_end_at": "2026-09-23 23:59",
+    "color": "bg-[#FF91AF]",
+    "type": "생일",
+    "location": "",
+    "link": " "
+  },
+  {
     "id": "anniv-hololive-zero-sora-2026",
     "vtuber_id": "hololive-zero-sora",
     "title": "🎉 토키노 소라 데뷔 9주년",
@@ -3378,6 +3389,17 @@
     "event_start_at": "2026-12-01 0:00",
     "event_end_at": "2026-12-01 23:59",
     "color": "bg-[#FF9CC2]",
+    "type": "주년",
+    "location": "",
+    "link": ""
+  },
+  {
+    "id": "anniv-indie-penyo-2026",
+    "vtuber_id": "indie-penyo",
+    "title": "🎉 히나리 페뇨 데뷔 9주년",
+    "event_start_at": "2026-12-07 0:00",
+    "event_end_at": "2026-12-07 23:59",
+    "color": "bg-[#FF91AF]",
     "type": "주년",
     "location": "",
     "link": ""
