@@ -71,6 +71,22 @@ function App() {
             }
           }
 
+          // 2-3. DB엔 'funding'이라 적혀있지만, 행사 시작일이 지났을 때
+          if (computedStatus === 'funding' || computedStatus === 'funded') {
+            if (event.event_start_at && event.event_end_at) {
+              const eventStartDate = new Date(event.event_start_at);
+              eventStartDate.setHours(0, 0, 0, 0);
+              const eventEndDate = new Date(event.event_end_at);
+              eventEndDate.setHours(23, 59, 59, 999);
+              if (now >= eventStartDate) {
+                computedStatus = 'ongoing'; // 행사 시작일이 지났으므로 'ongoing'으로 덮어쓰기
+              }
+              if (now > eventEndDate) {
+                computedStatus = 'ended'; // 행사 종료일이 지났으므로 'ended'로 덮어쓰기
+              }
+            }
+          }
+
           // ✨ 3단계: 날짜(Date) 할당
           // computedStatus가 현재 시점 기준으로 'funding'이나 'funded'일때만 모금 기간을 달력에 보여주고,
           // 일반 광고('ongoing', 'ended')는 실제 행사 기간을 달력에 보여줍니다.
