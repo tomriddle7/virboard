@@ -1650,6 +1650,50 @@
     "link": " "
   },
   {
+    "id": "bday-hololive-asobi-mela-2026",
+    "vtuber_id": "hololive-asobi-mela",
+    "title": "🎂 아치치 메라 2026년 생일",
+    "event_start_at": "2026-04-16 0:00",
+    "event_end_at": "2026-04-16 23:59",
+    "color": "bg-gradient-to-br from-[#939dff] to-[#9defed]",
+    "type": "생일",
+    "location": "",
+    "link": " "
+  },
+  {
+    "id": "bday-hololive-asobi-sopia-2026",
+    "vtuber_id": "hololive-asobi-sopia",
+    "title": "🎂 소라시나 소피아 2026년 생일",
+    "event_start_at": "2026-06-13 0:00",
+    "event_end_at": "2026-06-13 23:59",
+    "color": "bg-gradient-to-br from-[#7b85ff] to-[#fffe03]",
+    "type": "생일",
+    "location": "",
+    "link": " "
+  },
+  {
+    "id": "bday-hololive-asobi-tsuzuri-2026",
+    "vtuber_id": "hololive-asobi-tsuzuri",
+    "title": "🎂 스즈나 츠즈리 2026년 생일",
+    "event_start_at": "2026-06-28 0:00",
+    "event_end_at": "2026-06-28 23:59",
+    "color": "bg-gradient-to-br from-[#bb1f25] to-[#ffeecf]",
+    "type": "생일",
+    "location": "",
+    "link": " "
+  },
+  {
+    "id": "bday-hololive-asobi-kyoko-2026",
+    "vtuber_id": "hololive-asobi-kyoko",
+    "title": "🎂 하쿠토 쿄코 2026년 생일",
+    "event_start_at": "2026-05-08 0:00",
+    "event_end_at": "2026-05-08 23:59",
+    "color": "bg-[#ff862e]",
+    "type": "생일",
+    "location": "",
+    "link": " "
+  },
+  {
     "id": "bday-nijisanji-first-mito-2026",
     "vtuber_id": "nijisanji-first-mito",
     "title": "🎂 츠키노 미토 2026년 생일",

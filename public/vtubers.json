@@ -1697,6 +1697,94 @@
   {
     "privacy": "Public",
     "activity": "Active",
+    "id": "hololive-asobi-mela",
+    "name": "아치치 메라",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "ASOBI★MAWARITAI!"
+    ],
+    "color": "bg-gradient-to-br from-[#939dff] to-[#9defed]",
+    "birth": "2026-04-16",
+    "debut": "2026-09-24",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "youtube": "https://www.youtube.com/@AchichiMela",
+      "x": "https://www.youtube.com/@AchichiMela",
+      "hololive": "https://hololive.hololivepro.com/talents/achichi-mela/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "hololive-asobi-sopia",
+    "name": "소라시나 소피아",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "ASOBI★MAWARITAI!"
+    ],
+    "color": "bg-gradient-to-br from-[#7b85ff] to-[#fffe03]",
+    "birth": "2026-06-13",
+    "debut": "2026-09-24",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "youtube": "https://www.youtube.com/@SorashinaSopia",
+      "x": "https://x.com/sorashina_sopia",
+      "hololive": "https://hololive.hololivepro.com/talents/sorashina-sopia/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "hololive-asobi-tsuzuri",
+    "name": "스즈나 츠즈리",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "ASOBI★MAWARITAI!"
+    ],
+    "color": "bg-gradient-to-br from-[#bb1f25] to-[#ffeecf]",
+    "birth": "2026-06-28",
+    "debut": "2026-09-25",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "youtube": "https://www.youtube.com/@SuzunaTsuzuri",
+      "x": "https://x.com/suzuna_tsuzuri",
+      "hololive": "https://hololive.hololivepro.com/talents/suzuna-tsuzuri/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "hololive-asobi-kyoko",
+    "name": "하쿠토 쿄코",
+    "agency": "Hololive",
+    "nation": "JP",
+    "generation": [
+      "ASOBI★MAWARITAI!"
+    ],
+    "color": "bg-[#ff862e]",
+    "birth": "2026-05-08",
+    "debut": "2026-09-25",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "youtube": "https://www.youtube.com/@HyakutoKyoko",
+      "x": "https://x.com/hyakuto_kyoko",
+      "hololive": "https://hololive.hololivepro.com/talents/hyakuto-kyoko/"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
     "id": "nijisanji-first-mito",
     "name": "츠키노 미토",
     "agency": "Nijisanji",
@@ -2418,6 +2506,114 @@
       "cafeNaver": "https://cafe.naver.com/stellive",
       "stellive": "https://stellive.me/nana"
     }
+  },
+  {
+    "privacy": "Private",
+    "activity": "Active",
+    "id": "projecti-honeyz-churros",
+    "name": "허니츄러스",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "HONEYZ"
+    ],
+    "color": "bg-[#ffd8d9]",
+    "birth": "2000-03-04",
+    "debut": "2023-01-07",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {}
+  },
+  {
+    "privacy": "Private",
+    "activity": "Active",
+    "id": "projecti-honeyz-aya",
+    "name": "아야",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "HONEYZ"
+    ],
+    "color": "bg-[#d1afe3]",
+    "birth": "2003-04-13",
+    "debut": "2024-01-21",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {}
+  },
+  {
+    "privacy": "Private",
+    "activity": "Active",
+    "id": "projecti-honeyz-yui",
+    "name": "담유이",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "HONEYZ"
+    ],
+    "color": "bg-[#b7e8ff]",
+    "birth": "2001-09-21",
+    "debut": "2024-01-20",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {}
+  },
+  {
+    "privacy": "Private",
+    "activity": "Active",
+    "id": "projecti-honeyz-dddd",
+    "name": "디디디용",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "HONEYZ"
+    ],
+    "color": "bg-[#ffbf00]",
+    "birth": "2002-06-09",
+    "debut": "2024-01-21",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {}
+  },
+  {
+    "privacy": "Private",
+    "activity": "Active",
+    "id": "projecti-honeyz-ohwayo",
+    "name": "오화요",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "HONEYZ"
+    ],
+    "color": "bg-[#8c8c8c]",
+    "birth": "2024-12-02",
+    "debut": "2024-01-20",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {}
+  },
+  {
+    "privacy": "Private",
+    "activity": "Terminated",
+    "id": "projecti-honeyz-mangnae",
+    "name": "망내",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "HONEYZ"
+    ],
+    "color": "bg-[#1f1e24]",
+    "birth": "2003-07-25",
+    "debut": "2024-01-21",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {}
   },
   {
     "privacy": "Public",
