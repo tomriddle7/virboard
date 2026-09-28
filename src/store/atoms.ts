@@ -9,6 +9,7 @@ export const agencyMap = new Map([
   ['Holo', 'Hololive'],
   ['Niji', 'Nijisanji'],
   ['Stel', 'Stelive'],
+  ['ProjI', 'ProjectI'],
   ['Ruli', 'Liveruli'],
   ['Indie', 'Independents'],
 ]);
