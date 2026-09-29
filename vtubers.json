@@ -2508,7 +2508,7 @@
     }
   },
   {
-    "privacy": "Private",
+    "privacy": "Public",
     "activity": "Active",
     "id": "projecti-honeyz-churros",
     "name": "허니츄러스",
@@ -2523,10 +2523,15 @@
     "link": "",
     "unit": [],
     "thumbnail": "",
-    "platforms": {}
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/c0d9723cbb75dc223c6aa8a9d4f56002",
+      "youtube": "https://www.youtube.com/@Honey__Churros",
+      "x": "https://x.com/honeychurros1",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
   },
   {
-    "privacy": "Private",
+    "privacy": "Public",
     "activity": "Active",
     "id": "projecti-honeyz-aya",
     "name": "아야",
@@ -2541,10 +2546,15 @@
     "link": "",
     "unit": [],
     "thumbnail": "",
-    "platforms": {}
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/abe8aa82baf3d3ef54ad8468ee73e7fc",
+      "youtube": "https://www.youtube.com/@AyaUke_Projecti",
+      "x": "https://x.com/AyaUke_V",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
   },
   {
-    "privacy": "Private",
+    "privacy": "Public",
     "activity": "Active",
     "id": "projecti-honeyz-yui",
     "name": "담유이",
@@ -2559,10 +2569,15 @@
     "link": "",
     "unit": [],
     "thumbnail": "",
-    "platforms": {}
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/b82e8bc2505e37156b2d1140ba1fc05c",
+      "youtube": "https://www.youtube.com/@DamYui_Projecti",
+      "x": "https://x.com/damyui_",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
   },
   {
-    "privacy": "Private",
+    "privacy": "Public",
     "activity": "Active",
     "id": "projecti-honeyz-dddd",
     "name": "디디디용",
@@ -2577,10 +2592,15 @@
     "link": "",
     "unit": [],
     "thumbnail": "",
-    "platforms": {}
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/798e100206987b59805cfb75f927e965",
+      "youtube": "https://www.youtube.com/@DDDDragon_Projecti",
+      "x": "https://x.com/DDDDragon_",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
   },
   {
-    "privacy": "Private",
+    "privacy": "Public",
     "activity": "Active",
     "id": "projecti-honeyz-ohwayo",
     "name": "오화요",
@@ -2595,7 +2615,12 @@
     "link": "",
     "unit": [],
     "thumbnail": "",
-    "platforms": {}
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/65a53076fe1a39636082dd6dba8b8a4b",
+      "youtube": "https://www.youtube.com/@Ohwayo_Projecti",
+      "x": "https://x.com/oi52ohighyo",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
   },
   {
     "privacy": "Private",
@@ -2613,7 +2638,127 @@
     "link": "",
     "unit": [],
     "thumbnail": "",
-    "platforms": {}
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/bd07973b6021d72512240c01a386d5c9",
+      "youtube": "https://www.youtube.com/@MangNae_Projecti",
+      "x": "https://x.com/Mang_nae_",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "projecti-acaxia-popopopo",
+    "name": "포포포포",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "ACAXIA"
+    ],
+    "color": "bg-[#afcdf9]",
+    "birth": "2004-04-04",
+    "debut": "2025-09-13",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/3e3781d3bd20dadc2f6f6d5d30091195",
+      "youtube": "https://www.youtube.com/@POPOPOPO_Projecti",
+      "x": "https://x.com/POx4_Projecti",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "projecti-acaxia-mone",
+    "name": "비올레타 모네",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "ACAXIA"
+    ],
+    "color": "bg-[#f0abf8]",
+    "birth": "2004-11-18",
+    "debut": "2025-09-13",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/5c897b3e639045ca6e314bbaff991f73",
+      "youtube": "https://www.youtube.com/@VioletaMone_Projecti",
+      "x": "https://x.com/Mone_Projecti",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "projecti-acaxia-rose",
+    "name": "블레어 로즈",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "ACAXIA"
+    ],
+    "color": "bg-[#da1017]",
+    "birth": "2005-12-29",
+    "debut": "2025-09-13",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/dae2de8eaa005a59163f2e4c045e1aa1",
+      "youtube": "https://www.youtube.com/@BlaireRose_Projecti",
+      "x": "https://x.com/Rose_Projecti",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "projecti-acaxia-hasiyo",
+    "name": "하시요",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "ACAXIA"
+    ],
+    "color": "bg-[#c4c1d4]",
+    "birth": "2000-05-03",
+    "debut": "2025-09-14",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/b33c957eac9335d38e4043c3dca97675",
+      "youtube": "https://www.youtube.com/@HaSiyo_Projecti",
+      "x": "https://x.com/HaSiyo_Projecti",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
+  },
+  {
+    "privacy": "Public",
+    "activity": "Active",
+    "id": "projecti-acaxia-ryusiho",
+    "name": "류시호",
+    "agency": "ProjectI",
+    "nation": "KR",
+    "generation": [
+      "ACAXIA"
+    ],
+    "color": "bg-[#ffe1a9]",
+    "birth": "2002-05-25",
+    "debut": "2025-09-14",
+    "link": "",
+    "unit": [],
+    "thumbnail": "",
+    "platforms": {
+      "chzzk": "https://chzzk.naver.com/f36320c432d9f06095ce2cfbbf681c26",
+      "youtube": "",
+      "x": "",
+      "cafeNaver": "https://cafe.naver.com/projectiofficial"
+    }
   },
   {
     "privacy": "Public",
